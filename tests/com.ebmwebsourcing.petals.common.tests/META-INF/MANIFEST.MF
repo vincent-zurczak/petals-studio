@@ -5,10 +5,10 @@ Bundle-SymbolicName: com.ebmwebsourcing.petals.common.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Linagora
 Require-Bundle: com.ebmwebsourcing.petals.common,
- org.eclipse.swtbot.eclipse.gef.finder;bundle-version="2.0.4",
+ org.eclipse.swtbot.eclipse.gef.finder,
  com.ebmwebsourcing.petals.tests.common,
- org.junit4,
  com.ebmwebsourcing.petals.common.generation,
- org.eclipse.ui
+ org.eclipse.ui,
+ org.junit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy

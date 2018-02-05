@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
  <copyright>
-	 Copyright (c) 2009-2013, Linagora
+	 Copyright (c) 2009-2018, Linagora
 
 	 All rights reserved. This program and the accompanying materials
  	 are made available under the terms of the Eclipse Public License v1.0
@@ -13,7 +12,6 @@
      	 	Linagora - initial API and implementation
  </copyright>
 -->
-
 <feature
       id="com.ebmwebsourcing.petals.studio.rcp.feature"
       label="Petals Studio - RCP Feature"
@@ -41,13 +39,6 @@ Petals Link is a registered trademark of Linagora
          id="org.eclipse.equinox.p2.user.ui"
          version="0.0.0"/>
 
-   <plugin
-         id="com.ebmwebsourcing.petals.studio"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
    <includes
          id="org.eclipse.m2e.feature"
          version="0.0.0"/>
@@ -55,6 +46,25 @@ Petals Link is a registered trademark of Linagora
    <includes
          id="org.eclipse.m2e.logback.feature"
          version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.help"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.egit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.jgit"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.ebmwebsourcing.petals.studio"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.ui.ide"
@@ -211,34 +221,6 @@ Petals Link is a registered trademark of Linagora
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.help"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.help.appserver"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.help.base"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.help.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.team.core"
          download-size="0"
          install-size="0"
@@ -281,21 +263,7 @@ Petals Link is a registered trademark of Linagora
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.help.webapp"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.update.configurator"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.update.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -512,27 +480,13 @@ Petals Link is a registered trademark of Linagora
          unpack="false"/>
 
    <plugin
-         id="org.junit4"
+         id="org.junit"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
 
    <plugin
          id="org.eclipse.wst.standard.schemas"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.core.runtime.compatibility.registry"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"/>
-
-   <plugin
-         id="org.eclipse.core.runtime.compatibility"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -593,5 +547,11 @@ Petals Link is a registered trademark of Linagora
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ui.themes"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
 </feature>

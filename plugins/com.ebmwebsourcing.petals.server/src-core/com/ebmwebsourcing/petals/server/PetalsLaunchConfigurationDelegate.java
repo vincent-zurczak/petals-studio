@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2009-2013, Linagora
+ * Copyright (c) 2009-2018, Linagora
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.server;
 
 import java.io.File;
@@ -43,6 +43,7 @@ ILaunchConfigurationDelegate2 {
 	 * 		java.lang.String, org.eclipse.debug.core.ILaunch,
 	 * 		org.eclipse.core.runtime.IProgressMonitor)
 	 */
+	@Override
 	public void launch(
 				ILaunchConfiguration configuration,
 				String mode,
@@ -73,7 +74,7 @@ ILaunchConfigurationDelegate2 {
 					getProgramArguments( configuration ));
 
 		String[] envp = getEnvironment( configuration );
-		Map<?,?> vmAttributesMap = getVMSpecificAttributesMap( configuration );
+		Map<String,Object> vmAttributesMap = getVMSpecificAttributesMap( configuration );
 
 
 		// The server libraries should be put in the launch configuration

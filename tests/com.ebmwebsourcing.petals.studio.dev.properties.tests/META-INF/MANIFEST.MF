@@ -8,4 +8,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ClassPath: .
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.ebmwebsourcing.petals.studio.dev.properties,
- org.junit4
+ org.junit

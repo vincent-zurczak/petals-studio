@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (c) 2009-2013, Linagora
+ * Copyright (c) 2009-2018, Linagora
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -14,7 +14,6 @@ package com.ebmwebsourcing.petals.server;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.core.runtime.CoreException;
@@ -380,7 +379,7 @@ public class PetalsServerBehavior extends ServerBehaviourDelegate {
 		List<String> classpath = new ArrayList<String>();
 		for( Object o : workingCopy.getAttribute(
 					IJavaLaunchConfigurationConstants.ATTR_CLASSPATH,
-					Collections.emptyList())) {
+					new ArrayList<String>( 0 ))) {
 
 			if( o instanceof String )
 				classpath.add((String) o);

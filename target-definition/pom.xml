@@ -11,7 +11,6 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	
-	<groupId>com.ebmwebsourcing.petals</groupId>
 	<artifactId>target-definition</artifactId>
 	<packaging>eclipse-target-definition</packaging>
 
