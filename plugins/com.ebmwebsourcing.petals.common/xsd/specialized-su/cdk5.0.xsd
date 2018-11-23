@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema 
+<xs:schema
 	xmlns="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://petals.ow2.org/components/extensions/version-5"
 	xmlns:petalsCDK="http://petals.ow2.org/components/extensions/version-5"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	elementFormDefault="qualified"
-	
+
 	xmlns:bpel10="http://petals.ow2.org/components/petals-bpel-engine/version-1"
 	xmlns:ejb13="http://petals.ow2.org/components/ejb/version-1"
 	xmlns:ft24="http://petals.ow2.org/components/filetransfer/version-2"
@@ -22,11 +22,11 @@
 	xmlns:xslt23="http://petals.ow2.org/components/xslt/version-2"
 	xmlns:soap40="http://petals.ow2.org/components/soap/version-4"
 	xmlns:eip24="http://petals.ow2.org/components/eip/version-2"
-	xmlns:kpi10="http://petals.ow2.org/petals-se-kpi"
+	xmlns:rest12="http://petals.ow2.org/components/rest/version-1"
 	xmlns:talend10="http://petals.ow2.org/components/talend/version-1"
 	xmlns:sca11="http://petals.ow2.org/components/sca/version-1">
-	
-	
+
+
 	<!-- Imports -->
 	<xs:import namespace="http://petals.ow2.org/components/petals-bpel-engine/version-1" schemaLocation="components-cdk5.0/bpel1.0.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/ejb/version-1" schemaLocation="components-cdk5.0/ejb1.3.xsd" />
@@ -43,20 +43,20 @@
 	<xs:import namespace="http://petals.ow2.org/components/xslt/version-2" schemaLocation="components-cdk5.0/xslt2.3.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/soap/version-4" schemaLocation="components-cdk5.0/soap4.0.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/eip/version-2" schemaLocation="components-cdk5.0/eip2.4.xsd" />
-	<xs:import namespace="http://petals.ow2.org/petals-se-kpi" schemaLocation="components-cdk5.0/kpi1.0.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/talend/version-1" schemaLocation="components-cdk5.0/talend1.0.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/sca/version-1" schemaLocation="components-cdk5.0/sca1.1.xsd" />
-	
+	<xs:import namespace="http://petals.ow2.org/components/rest/version-1" schemaLocation="components-cdk5.0/rest1.2.xsd" />
+
 	<!-- The component schema (tns included) did not change between the versions 1.0 and 1.1 -->
 	<xs:import namespace="http://petals.ow2.org/components/sftp/version-1" schemaLocation="components-cdk5.0/sftp1.x.xsd" />
-	
-	
+
+
 	<!-- Empty group -->
 	<xs:group name="EmptyGroup">
 		<xs:sequence></xs:sequence>
 	</xs:group>
-	
-	
+
+
 	<!-- CDK 5.0 // provides -->
 	<xs:group name="CdkInProvides">
 		<xs:sequence>
@@ -70,11 +70,11 @@
 			<xs:element ref="petalsCDK:forward-message-properties" maxOccurs="1" minOccurs="0" />
 			<xs:element ref="petalsCDK:forward-attachments" maxOccurs="1" minOccurs="0" />
 			<xs:element ref="petalsCDK:wsdl" maxOccurs="1" minOccurs="1" />
-			
+
 			<xs:choice minOccurs="0" maxOccurs="1">
 				<xs:group ref="petalsCDK:EmptyGroup" />
 				<!-- Let it be the first choice -->
-			
+
 				<xs:group ref="bpel10:BpelInProvides" />
 				<xs:group ref="ejb13:EjbInProvides" />
 				<xs:group ref="ft24:FileTransferInProvides" />
@@ -92,11 +92,12 @@
 				<xs:group ref="eip24:EipInProvides" />
 				<xs:group ref="talend10:TalendInProvides" />
 				<xs:group ref="sca11:ScaInProvides" />
+				<xs:group ref="rest12:RestInProvides" />
 			</xs:choice>
 		</xs:sequence>
 	</xs:group>
-	
-	
+
+
 	<!-- CDK 5.0 // consumes -->
 	<xs:group name="CdkInConsumes">
 		<xs:sequence>
@@ -106,23 +107,23 @@
 			<xs:element ref="petalsCDK:exchange-properties" maxOccurs="1" minOccurs="0" />
 			<xs:element ref="petalsCDK:message-properties" maxOccurs="1" minOccurs="0" />
 			<xs:element ref="petalsCDK:mep" maxOccurs="1" minOccurs="1" />
-			
+
 			<xs:choice  minOccurs="0" maxOccurs="1">
 				<xs:group ref="petalsCDK:EmptyGroup" />
 				<!-- Let it be the first choice -->
-			
+
 				<xs:group ref="ft24:FileTransferInConsumes" />
 				<xs:group ref="ft30:FileTransferInConsumes" />
 				<xs:group ref="jms31:JmsInConsumes" />
 				<xs:group ref="mail31:MailInConsumes" />
 				<xs:group ref="quartz11:QuartzInConsumes" />
 				<xs:group ref="soap40:SoapInConsumes" />
-				<xs:group ref="kpi10:KpiInConsumes" />
+				<xs:group ref="rest12:RestInConsumes" />
 			</xs:choice>
 		</xs:sequence>
 	</xs:group>
-	
-	
+
+
 	<!-- CDK 5.0 // components -->
 	<xs:group name="CdkComponents">
 		<xs:sequence>
@@ -143,18 +144,18 @@
 			<xs:element ref="petalsCDK:component-interceptors" maxOccurs="1" minOccurs="0" />
 			<xs:element ref="petalsCDK:jbi-listener-class-name" maxOccurs="1" minOccurs="1" />
 			<xs:element ref="petalsCDK:external-listener-class-name" maxOccurs="1" minOccurs="0" />
-			
+
 			<xs:choice minOccurs="0" maxOccurs="1">
 				<xs:group ref="petalsCDK:EmptyGroup" />
 				<!-- Let it be the first choice -->
-				
+
 				<xs:group ref="bpel10:BpelComponent" />
 				<xs:group ref="soap40:SoapComponent" />
 				<xs:group ref="talend10:TalendComponent" />
 			</xs:choice>
 		</xs:sequence>
 	</xs:group>
-	
+
 
 	<!-- Generic interceptor parameter type -->
 	<xs:complexType name="Param">
@@ -164,7 +165,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:simpleType name="MessageType">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="in" />
@@ -172,7 +173,7 @@
 			<xs:enumeration value="fault" />
 		</xs:restriction>
 	</xs:simpleType>
-	
+
 	<xs:complexType name="MessageParam">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
@@ -181,8 +182,8 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	
-		
+
+
 	<!--  Component interceptor type -->
 	<xs:complexType name="ComponentInterceptor">
 		<xs:sequence>
@@ -192,14 +193,14 @@
 		<xs:attribute name="name" type="xs:string" use="required" />
 		<xs:attribute name="active" type="xs:boolean" use="required" />
 	</xs:complexType>
-	
+
 	<xs:complexType name="ComponentInterceptors">
 		<xs:sequence>
 			<xs:element name="interceptor" type="petalsCDK:ComponentInterceptor" maxOccurs="unbounded" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!--  Service Unit interceptor type -->
 	<xs:complexType name="SUInterceptor">
 		<xs:sequence>
@@ -207,31 +208,31 @@
 		</xs:sequence>
 		<xs:attribute name="name" type="string" />
 	</xs:complexType>
-	
+
 	<xs:complexType name="Send">
 		<xs:sequence>
 			<xs:element name="interceptor" type="petalsCDK:SUInterceptor" maxOccurs="unbounded" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="Accept">
 		<xs:sequence>
 			<xs:element name="interceptor" type="petalsCDK:SUInterceptor" maxOccurs="unbounded" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="SendResponse">
 		<xs:sequence>
 			<xs:element name="Interceptor" type="petalsCDK:SUInterceptor" maxOccurs="unbounded" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="AcceptResponse">
 		<xs:sequence>
 			<xs:element name="Interceptor" type="petalsCDK:SUInterceptor" maxOccurs="unbounded" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="SUInterceptors">
 		<xs:sequence>
 			<xs:element name="send" type="petalsCDK:Send" maxOccurs="1" minOccurs="0" />
@@ -240,8 +241,8 @@
 			<xs:element name="accept-response" type="petalsCDK:AcceptResponse" maxOccurs="1" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Simple dynamic parameter types -->
 	<!-- Settable types can be reset during the installation of the component -->
 	<!-- Runtime types can be reset at any times during the component life -->
@@ -250,49 +251,49 @@
 			<xs:extension base="xs:string" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="runtimestring">
 		<xs:simpleContent>
 			<xs:extension base="xs:string" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="settablelong">
 		<xs:simpleContent>
 			<xs:extension base="xs:long" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="runtimelong">
 		<xs:simpleContent>
 			<xs:extension base="xs:long" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="settableint">
 		<xs:simpleContent>
 			<xs:extension base="xs:int" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="runtimeint">
 		<xs:simpleContent>
 			<xs:extension base="xs:int" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="settableboolean">
 		<xs:simpleContent>
 			<xs:extension base="xs:boolean" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="runtimeboolean">
 		<xs:simpleContent>
 			<xs:extension base="xs:boolean" />
 		</xs:simpleContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="settableanyURI">
 		<xs:simpleContent>
 			<xs:extension base="xs:anyURI" />
@@ -328,8 +329,8 @@
 	<xs:element name="forward-security-subject" type="xs:boolean" default="false" />
 	<xs:element name="forward-message-properties" type="xs:boolean" default="false" />
 	<xs:element name="forward-attachments" type="xs:boolean" default="false" />
-	
-	
+
+
 	<!-- MEP : InOnly, InOut, RobustInOut, InOptionalOut -->
 	<xs:simpleType name="MEPType">
 		<xs:restriction base="xs:token">
@@ -349,7 +350,7 @@
 	<xs:element name="operation" type="xs:QName" />
 	<xs:element name="mep" type="petalsCDK:MEPType" nillable="true" />
 	<xs:element name="timeout" type="xs:long" default="30000" />
-	
+
 	<xs:element name="exchange-properties">
 		<xs:complexType>
 			<xs:sequence>
@@ -357,7 +358,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="message-properties">
 		<xs:complexType>
 			<xs:sequence>
@@ -365,7 +366,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="acceptor-retry-number" type="xs:int" default="40">
 		<xs:annotation>
 			<xs:documentation>Number of tries to submit a message exchange
@@ -373,7 +374,7 @@
 				processed. Default value: 40 tries.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	
+
 	<xs:element name="acceptor-retry-wait" type="xs:long" default="250">
 		<xs:annotation>
 			<xs:documentation>Base duration, in milliseconds, to wait between two
@@ -382,7 +383,7 @@
 			</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	
+
 	<xs:element name="message-processor-max-pool-size" type="xs:int" default="50">
 		<xs:annotation>
 			<xs:documentation>Max size of the object pool containing message
@@ -391,32 +392,32 @@
 			</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	
+
 	<xs:element name="processor-keep-alive-time" type="xs:int" default="300" >
 		<xs:annotation>
-	    	<xs:documentation>When the number of processors is greater than the core, this is the maximum time that excess idle processors 
+	    	<xs:documentation>When the number of processors is greater than the core, this is the maximum time that excess idle processors
 	    	will wait for new tasks before terminating, in seconds. Default value 5 minutes.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	  
+
 	<xs:element name="processor-stop-max-wait" type="xs:long" default="15000">
 		<xs:annotation>
 			<xs:documentation>Define the max duration (in milliseconds) of message exchange processing on stop phase</xs:documentation>
 	    </xs:annotation>
 	</xs:element>
-	  
+
 	<xs:element name="time-beetween-async-cleaner-runs" type="xs:long" default="2000" >
 		<xs:annotation>
 			<xs:documentation>Define the time (in milliseconds) between two runs of the asynchronous message exchange cleaner. Default value 2000 milliseconds.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	
+
 	<xs:element name="acceptor-stop-max-wait" type="xs:long" default="500" >
 		<xs:annotation>
 			<xs:documentation>Define the max duration (in milliseconds) of the stop of an acceptor before to force it to stop. Default value 500 milliseconds.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	
+
 
 	<!-- Provides Extensions -->
 	<xs:element name="wsdl" type="xs:string" nillable="true" />
@@ -436,8 +437,8 @@
 	<xs:simpleType name="File">
 		<xs:restriction base="string"></xs:restriction>
 	</xs:simpleType>
-	
-	
+
+
 	<!-- Monitoring parameters -->
 	<xs:element name="monitoring-sampling-period" type="xs:long" default="300">
     	<xs:annotation>

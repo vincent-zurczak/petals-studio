@@ -42,6 +42,7 @@
 		<module>plugins/com.ebmwebsourcing.petals.services.mail</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.pojo</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.quartz</module>
+		<module>plugins/com.ebmwebsourcing.petals.services.rest</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.sftp</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.soap</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.sql</module>
@@ -115,11 +116,13 @@
 
 					<environments>
 						<!-- Win 32 -->
+						<!--
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
 							<arch>x86</arch>
 						</environment>
+						-->
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
@@ -127,11 +130,13 @@
 						</environment>
 
 						<!-- Linux -->
+						<!--
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
 							<arch>x86</arch>
 						</environment>
+						-->
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
@@ -139,12 +144,13 @@
 						</environment>
 						
 						<!-- Mac OS -->
+						<!--
 						<environment> 
 							<os>macosx</os> 
 							<ws>cocoa</ws> 
 							<arch>x86_64</arch> 
 						</environment>
-						
+						-->
 					</environments>
 				</configuration>
 			</plugin>

@@ -14,5 +14,5 @@
 	<groupId>com.ebmwebsourcing.petals.plugins</groupId>
 	<artifactId>com.ebmwebsourcing.petals.services.sql</artifactId> 
 	<packaging>eclipse-plugin</packaging>
-	
+
 </project>

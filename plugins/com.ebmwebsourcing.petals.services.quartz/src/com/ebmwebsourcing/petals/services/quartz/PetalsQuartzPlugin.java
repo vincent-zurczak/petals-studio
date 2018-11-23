@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.quartz;
 
 import org.eclipse.core.runtime.IStatus;
@@ -19,7 +19,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
- * The activator class controls the plug-in life cycle
+ * The activator class controls the plug-in life cycle.
  * @author Vincent Zurczak - EBM WebSourcing
  */
 public class PetalsQuartzPlugin extends AbstractUIPlugin {

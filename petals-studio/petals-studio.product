@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Petals Studio" uid="com.ebmwebsourcing.petals.studio.product" id="com.ebmwebsourcing.petals.studio.product" application="org.eclipse.ui.ide.workbench" version="1.4.0" useFeatures="true" includeLaunchers="true">
+<product name="Petals Studio" uid="com.ebmwebsourcing.petals.studio.product" id="com.ebmwebsourcing.petals.studio.product" application="org.eclipse.ui.ide.workbench" version="1.5.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="petals-studio/icons/prod/aboutPetalsStudio.png"/>
@@ -14,10 +14,13 @@
       <programArgs>-plugincustomization 
 plugin_customization.ini 
 --launcher.XXMaxPermSize
-256m</programArgs>
+256m
+      </programArgs>
       <vmArgs>-Xms40m
--Xmx512m</vmArgs>
-      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+-Xmx512m
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
    </launcherArgs>
 
    <windowImages i16="petals-studio/icons/prod/pstudio_16x16.png" i32="petals-studio/icons/prod/pstudio_32x32.png" i48="petals-studio/icons/prod/pstudio_48x48.png" i64="petals-studio/icons/prod/pstudio_64x64.png" i128="petals-studio/icons/prod/pstudio_128x128.png"/>
@@ -29,7 +32,6 @@ plugin_customization.ini
       startupForegroundColor="000000" />
    <launcher name="PetalsStudio">
       <linux icon="petals-studio/icons/prod/PetalsStudio_linux.xpm"/>
-      <solaris/>
       <win useIco="true">
          <ico path="petals-studio/icons/prod/PetalsStudio_win32.ico"/>
          <bmp/>
@@ -39,8 +41,8 @@ plugin_customization.ini
    <intro introId="com.ebmwebsourcing.petals.studio.intro"/>
 
    <vm>
-      <linux include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JRE-1.1</linux>
-      <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
+      <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</linux>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
    </vm>
 
    <license>

@@ -225,5 +225,96 @@
          </command>
       </menuContribution>
    </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Petals Studio">
+         <property
+               name="windowImages"
+               value="petals-studio/icons/prod/pstudio_16x16.png,petals-studio/icons/prod/pstudio_32x32.png,petals-studio/icons/prod/pstudio_48x48.png,petals-studio/icons/prod/pstudio_64x64.png,petals-studio/icons/prod/pstudio_128x128.png">
+         </property>
+         <property
+               name="aboutImage"
+               value="petals-studio/icons/prod/aboutPetalsStudio.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Petals Studio">
+         <property
+               name="windowImages"
+               value="petals-studio/icons/prod/pstudio_16x16.png,petals-studio/icons/prod/pstudio_32x32.png,petals-studio/icons/prod/pstudio_48x48.png,petals-studio/icons/prod/pstudio_64x64.png,petals-studio/icons/prod/pstudio_128x128.png">
+         </property>
+         <property
+               name="aboutImage"
+               value="petals-studio/icons/prod/aboutPetalsStudio.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="preferenceCustomization">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Petals Studio">
+         <property
+               name="windowImages"
+               value="petals-studio/icons/prod/pstudio_16x16.png,petals-studio/icons/prod/pstudio_32x32.png,petals-studio/icons/prod/pstudio_48x48.png,petals-studio/icons/prod/pstudio_64x64.png,petals-studio/icons/prod/pstudio_128x128.png">
+         </property>
+         <property
+               name="aboutImage"
+               value="petals-studio/icons/prod/aboutPetalsStudio.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
 
 </plugin>

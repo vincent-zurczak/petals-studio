@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	targetNamespace="http://petals.ow2.org/components/rest/version-1"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:rest="http://petals.ow2.org/components/rest/version-1"
+	elementFormDefault="qualified">
+	
+	
+	<xs:group name="RestInProvides">
+		<xs:sequence>
+			<xs:element ref="rest:base-path" minOccurs="1" maxOccurs="1" />
+			<xs:element name="mapping" type="rest:ProvidesMapping" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:group>
+	
+	
+	<xs:group name="RestInConsumes">
+		<xs:sequence>
+			<xs:element ref="rest:base-path" minOccurs="1" maxOccurs="1" />
+			<xs:element name="mapping" type="rest:ConsumesMapping" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:group>
+	
+	
+	<!-- Service elements (provides) -->
+
+	<xs:element name="base-path" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>The base path to access REST resources</xs:documentation>
+			<xs:documentation xml:lang="fr">Le chemin de base pour accéder aux ressources REST</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:complexType name="ProvidesMapping">
+		<xs:sequence>
+			<xs:element name="operation" type="rest:ProvidesOperation" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ProvidesOperation">
+			<xs:sequence>
+
+				<!-- It's a choice first! -->
+				<xs:choice>
+					<xs:sequence>
+						<xs:element name="http-method" type="rest:RestOperation">
+							<xs:annotation>
+								<xs:documentation>The REST method to invoke.</xs:documentation>
+								<xs:documentation xml:lang="fr">L'opération REST à invoquer.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+
+						<xs:element name="uri" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>The URL of the REST end-point to invoke.</xs:documentation>
+								<xs:documentation xml:lang="fr">L'URL du service REST à appeler.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+
+					<xs:element name="wadl" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>An URL pointing to a WASL file.</xs:documentation>
+							<xs:documentation xml:lang="fr">L'URL d'un fichier WADL.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element name="wsdl2" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>An URL pointing to a WSDL 2.0 file.</xs:documentation>
+							<xs:documentation xml:lang="fr">L'URL d'un WSDL 2.0.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:choice>
+
+				<!-- And then common elements -->
+				<xs:element name="http-body-type" type="rest:HttpBodyType" />
+				<xs:element name="buffer-request" type="xs:boolean" default="false" />
+				<xs:element name="trust-all-certificates" type="xs:boolean" default="false" />
+				<xs:element name="xpath-param" type="rest:RestParam" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="authentication" type="rest:RestAuthentication" />
+				<xs:element name="headers" type="rest:RestHeaders" minOccurs="0" maxOccurs="1" />
+				<xs:element name="xsl" type="rest:XslParameter" minOccurs="0" maxOccurs="1" />
+				<xs:element name="response-body-as" type="rest:ResponseBodyAs" minOccurs="0" maxOccurs="1" />
+				<xs:element name="json-xml-mapping-convention" type="rest:JsonXmlMappingConvention" minOccurs="0" maxOccurs="1" />
+				<xs:element name="form-data" type="rest:FormData" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="on-http-status" type="rest:OnHttpStatus" minOccurs="0" maxOccurs="unbounded" />
+
+				<xs:element ref="rest:http-body-to-json-multiple-pi" minOccurs="0" />
+				<xs:element ref="rest:http-body-from-json-multiple-pi" minOccurs="0" />
+				<xs:element ref="rest:http-body-to-json-virtual-root" minOccurs="0" />
+				<xs:element ref="rest:http-body-from-json-virtual-root" minOccurs="0" />
+				<xs:element ref="rest:http-body-to-json-auto-array" minOccurs="0" />
+				<xs:element ref="rest:http-body-to-json-auto-primitive" minOccurs="0" />
+				<xs:element ref="rest:http-body-to-json-pretty-print" minOccurs="0" />
+				<xs:element ref="rest:http-body-to-json-ns-declarations" minOccurs="0" />
+				<xs:element ref="rest:namespace-mapping" minOccurs="0" />
+			</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="RestOperation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="GET" />
+			<xs:enumeration value="POST" />
+			<xs:enumeration value="PUT" />
+			<xs:enumeration value="PATCH" />
+			<xs:enumeration value="DELETE" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="HttpBodyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NO_BODY" />
+			<xs:enumeration value="XML" />
+			<xs:enumeration value="JSON" />
+			<xs:enumeration value="POST_QUERY_STRING" />
+			<xs:enumeration value="MULTIPART_FORMDATA" />
+			<xs:enumeration value="ATTACHMENT" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="RestParam">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="name" type="xs:string" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:complexType name="RestAuthentication">
+		<xs:choice>
+			<xs:element name="basic" type="rest:RestBasicAuthentication" />
+			<xs:element name="jwt" type="rest:RestJwtAuthentication" />
+			<xs:element name="ntlm" type="rest:RestNtlmAuthentication" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="RestBasicAuthentication">
+		<xs:sequence>
+			<xs:element name="username" type="rest:RestProperty" />
+			<xs:element name="password" type="rest:RestProperty" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RestJwtAuthentication">
+		<xs:sequence>
+			<xs:element name="claim" type="rest:JwtClaim" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="compress-with" type="rest:JwtCompression" />
+			<xs:element name="sign-with" type="rest:JwtSignature" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="JwtClaim">
+		<xs:sequence>
+			<xs:element name="name" type="rest:RestProperty" />
+			<xs:element name="value" type="rest:RestProperty" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="JwtCompression">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DEF" />
+			<xs:enumeration value="GZIP" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="JwtSignature">
+		<xs:sequence>
+			<xs:element name="key-file-url" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="algorithm" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="RestNtlmAuthentication">
+		<xs:sequence>
+			<xs:element name="username" type="rest:RestProperty" />
+			<xs:element name="password" type="rest:RestProperty" />
+			<xs:element name="domain" type="rest:RestProperty" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RestProperty">
+		<xs:choice>
+			<xs:element name="constant" type="xs:string" />
+			<xs:element name="xpath" type="xs:string" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="OnHttpStatus">
+		<xs:sequence>
+			<xs:element name="out" type="rest:Condition" />
+			<xs:element name="fault" type="rest:Condition" />
+			<xs:element name="error" type="rest:Condition" />
+
+			<xs:element name="otherwise-out" type="rest:Otherwise" />
+			<xs:element name="otherwise-fault" type="rest:Otherwise" />
+			<xs:element name="otherwise-error" type="rest:Otherwise" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Otherwise">
+		<xs:sequence>
+			<xs:element name="transformation" type="rest:Transformation" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Condition">
+		<xs:sequence>
+			<xs:element name="condition" type="rest:XPathCondition" />
+			<xs:element name="transformation" type="rest:Transformation" />
+		</xs:sequence>
+		<xs:attribute name="order-id" type="xs:int" />
+	</xs:complexType>
+
+	<xs:complexType name="Transformation">
+		<xs:sequence>
+			<xs:element name="xsl" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="XPathCondition">
+		<xs:sequence>
+			<xs:element name="xpath" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RestHeaders">
+		<xs:sequence>
+			<xs:element name="header" type="rest:RestHeader" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RestHeader">
+		<xs:sequence>
+			<xs:element name="constant" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" />
+	</xs:complexType>
+
+	<xs:simpleType name="JsonXmlMappingConvention">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MAPPED_CONVENTION" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="FormData">
+		<xs:sequence>
+			<xs:element name="extracted-by-xpath" type="xs:string" />
+			<xs:element name="attachment-name" type="rest:RestProperty" />
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="as-attachment" type="xs:boolean" />
+	</xs:complexType>
+
+	<xs:complexType name="XslParameter">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="is-json-result" type="xs:boolean" default="false" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:simpleType name="ResponseBodyAs">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="auto" />
+			<xs:enumeration value="xml" />
+			<xs:enumeration value="json" />
+			<xs:enumeration value="attachment" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<!-- Service elements (consumes) -->
+
+	<xs:complexType name="ConsumesMapping">
+		<xs:sequence>
+			<xs:element name="operation" type="rest:ConsumesOperation" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ConsumesOperation">
+			<xs:sequence>
+				<xs:element name="http-method" type="rest:RestOperation" />
+				<xs:element name="path-template" type="xs:string" />
+				<xs:element name="http-body-from-json-virtual-root" type="xs:string" />
+				<xs:element name="incoming-payload" type="rest:IncomingPayload" />
+				<xs:element ref="rest:http-body-from-json-multiple-pi" minOccurs="0" />
+				<xs:element ref="rest:http-body-from-json-virtual-root" minOccurs="0" />
+
+				<!-- FIXME: XML template should in fact be a string (wrapped-up inside a CDATA section) -->
+				<xs:element name="xml-template" type="xs:anyType" minOccurs="0" />
+				<xs:element name="on-jbi-response" type="rest:OnJbiResponse" />
+			</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="IncomingPayload">
+		<xs:sequence>
+			<xs:element name="transformation" type="rest:Transformation" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="OnJbiResponse">
+		<xs:sequence>
+			<xs:element name="on-out" type="rest:Condition" />
+			<xs:element name="on-fault" type="rest:Condition" />
+			<xs:element name="on-error" type="rest:Condition" />
+
+			<xs:element name="on-default-out" type="rest:OnCase" />
+			<xs:element name="on-default-error" type="rest:OnCase" />
+			<xs:element name="on-default-fault" type="rest:OnCase" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="OnCase">
+		<xs:complexContent>
+			<xs:extension base="rest:Condition">
+				<xs:sequence>
+					<xs:element name="http-response" type="rest:HttpResponse" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="HttpResponse">
+		<xs:sequence>
+			<xs:element name="header" type="rest:RestHeader" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element ref="rest:http-body-to-json-multiple-pi" minOccurs="0" />
+			<xs:element ref="rest:http-body-to-json-virtual-root" minOccurs="0" />
+			<xs:element ref="rest:http-body-to-json-auto-array" minOccurs="0" />
+			<xs:element ref="rest:http-body-to-json-auto-primitive" minOccurs="0" />
+			<xs:element ref="rest:http-body-to-json-pretty-print" minOccurs="0" />
+			<xs:element ref="rest:http-body-to-json-ns-declarations" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="code" type="xs:int" />
+	</xs:complexType>
+
+
+	<!-- Common elements -->
+
+	<xs:element name="http-body-from-json-multiple-pi" type="xs:boolean" default="false">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the JSON-XML conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre JSON et XML. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="http-body-from-json-virtual-root" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the JSON-XML conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre JSON et XML. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="http-body-to-json-multiple-pi" type="xs:boolean" default="false">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the XML-JSON conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre XML et JSON. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="http-body-to-json-virtual-root" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the XML-JSON conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre XML et JSON. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="http-body-to-json-auto-array" type="xs:boolean" default="false">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the XML-JSON conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre XML et JSON. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="http-body-to-json-auto-primitive" type="xs:boolean" default="false">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the XML-JSON conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre XML et JSON. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="http-body-to-json-pretty-print" type="xs:boolean" default="false">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the XML-JSON conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre XML et JSON. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="http-body-to-json-ns-declarations" type="xs:boolean" default="false">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the XML-JSON conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre XML et JSON. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="namespace-mapping" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>This parameter drives the XML-JSON conversion. See https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+			<xs:documentation xml:lang="fr">Ce paramètre pilote la conversion entre XML et JSON. Voir https://github.com/beckchr/staxon/wiki/Factory-Configuration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

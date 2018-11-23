@@ -1,5 +1,8 @@
-Petals Studio
-==============
+# Petals Studio
+
+[![Build Status](https://travis-ci.org/petalslink/petals-studio.svg?branch=master)](https://travis-ci.org/petalslink/petals-studio)
+[![License](https://img.shields.io/badge/license-EPL%201.0-blue.svg)](https://www.eclipse.org/legal/epl-v10.html)
+[![Web site](https://img.shields.io/badge/website-petals.ow2.org-712e7f.svg)](http://petals.ow2.org)
 
 Petals Studio is an Eclipse distribution dedicated to Petals ESB.
 
