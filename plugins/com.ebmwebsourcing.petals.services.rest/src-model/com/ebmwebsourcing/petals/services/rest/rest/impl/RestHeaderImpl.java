@@ -12,7 +12,7 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.RestHeader;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Header</b></em>'.
+ * An implementation of the model object '<em><b>Header</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -92,7 +92,7 @@ public class RestHeaderImpl extends MinimalEObjectImpl.Container implements Rest
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_HEADER;
+		return RestPackage.Literals.REST_HEADER;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class RestHeaderImpl extends MinimalEObjectImpl.Container implements Rest
 		String oldConstant = constant;
 		constant = newConstant;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_HEADER__CONSTANT, oldConstant, constant));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_HEADER__CONSTANT, oldConstant, constant));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class RestHeaderImpl extends MinimalEObjectImpl.Container implements Rest
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_HEADER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_HEADER__NAME, oldName, name));
 	}
 
 	/**
@@ -145,9 +145,9 @@ public class RestHeaderImpl extends MinimalEObjectImpl.Container implements Rest
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_HEADER__CONSTANT:
+			case RestPackage.REST_HEADER__CONSTANT:
 				return getConstant();
-			case restPackage.REST_HEADER__NAME:
+			case RestPackage.REST_HEADER__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public class RestHeaderImpl extends MinimalEObjectImpl.Container implements Rest
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_HEADER__CONSTANT:
+			case RestPackage.REST_HEADER__CONSTANT:
 				setConstant((String)newValue);
 				return;
-			case restPackage.REST_HEADER__NAME:
+			case RestPackage.REST_HEADER__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -179,10 +179,10 @@ public class RestHeaderImpl extends MinimalEObjectImpl.Container implements Rest
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_HEADER__CONSTANT:
+			case RestPackage.REST_HEADER__CONSTANT:
 				setConstant(CONSTANT_EDEFAULT);
 				return;
-			case restPackage.REST_HEADER__NAME:
+			case RestPackage.REST_HEADER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -197,9 +197,9 @@ public class RestHeaderImpl extends MinimalEObjectImpl.Container implements Rest
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_HEADER__CONSTANT:
+			case RestPackage.REST_HEADER__CONSTANT:
 				return CONSTANT_EDEFAULT == null ? constant != null : !CONSTANT_EDEFAULT.equals(constant);
-			case restPackage.REST_HEADER__NAME:
+			case RestPackage.REST_HEADER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);

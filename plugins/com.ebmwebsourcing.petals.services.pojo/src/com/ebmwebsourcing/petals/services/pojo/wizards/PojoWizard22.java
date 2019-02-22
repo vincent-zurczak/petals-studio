@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.pojo.wizards;
 
 import java.io.File;
@@ -43,7 +43,7 @@ import com.sun.java.xml.ns.jbi.Provides;
 
 /**
  * @author Vincent Zurczak - EBM WebSourcing
- * @author Micka�l Istria - EBM WebSourcing
+ * @author Mickaël Istria - EBM WebSourcing
  */
 public class PojoWizard22 extends AbstractServiceUnitWizard {
 

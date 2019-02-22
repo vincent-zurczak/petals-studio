@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.JwtClaim#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getJwtClaim()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getJwtClaim()
  * @model extendedMetaData="name='JwtClaim' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface JwtClaim extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' containment reference.
 	 * @see #setName(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getJwtClaim_Name()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getJwtClaim_Name()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='name' namespace='##targetNamespace'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface JwtClaim extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getJwtClaim_Value()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getJwtClaim_Value()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='value' namespace='##targetNamespace'"
 	 * @generated

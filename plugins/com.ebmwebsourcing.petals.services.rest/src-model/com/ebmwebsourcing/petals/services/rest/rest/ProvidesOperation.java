@@ -50,7 +50,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.ProvidesOperation#getNamespaceMapping <em>Namespace Mapping</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation()
  * @model extendedMetaData="name='ProvidesOperation' kind='elementOnly'"
  * @generated
  */
@@ -69,7 +69,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpMethod()
 	 * @see #unsetHttpMethod()
 	 * @see #setHttpMethod(RestOperation)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpMethod()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpMethod()
 	 * @model unsettable="true"
 	 *        extendedMetaData="kind='element' name='http-method' namespace='##targetNamespace'"
 	 * @generated
@@ -122,7 +122,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Uri</em>' attribute.
 	 * @see #setUri(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_Uri()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_Uri()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='uri' namespace='##targetNamespace'"
 	 * @generated
@@ -149,7 +149,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Wadl</em>' attribute.
 	 * @see #setWadl(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_Wadl()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_Wadl()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='wadl' namespace='##targetNamespace'"
 	 * @generated
@@ -176,7 +176,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Wsdl2</em>' attribute.
 	 * @see #setWsdl2(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_Wsdl2()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_Wsdl2()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='wsdl2' namespace='##targetNamespace'"
 	 * @generated
@@ -207,7 +207,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpBodyType()
 	 * @see #unsetHttpBodyType()
 	 * @see #setHttpBodyType(HttpBodyType)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyType()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyType()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='element' name='http-body-type' namespace='##targetNamespace'"
 	 * @generated
@@ -263,7 +263,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetBufferRequest()
 	 * @see #unsetBufferRequest()
 	 * @see #setBufferRequest(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_BufferRequest()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_BufferRequest()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean" required="true"
 	 *        extendedMetaData="kind='element' name='buffer-request' namespace='##targetNamespace'"
 	 * @generated
@@ -318,7 +318,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetTrustAllCertificates()
 	 * @see #unsetTrustAllCertificates()
 	 * @see #setTrustAllCertificates(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_TrustAllCertificates()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_TrustAllCertificates()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean" required="true"
 	 *        extendedMetaData="kind='element' name='trust-all-certificates' namespace='##targetNamespace'"
 	 * @generated
@@ -370,7 +370,7 @@ public interface ProvidesOperation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xpath Param</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_XpathParam()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_XpathParam()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='xpath-param' namespace='##targetNamespace'"
 	 * @generated
@@ -387,7 +387,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Authentication</em>' containment reference.
 	 * @see #setAuthentication(RestAuthentication)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_Authentication()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_Authentication()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='authentication' namespace='##targetNamespace'"
 	 * @generated
@@ -414,7 +414,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Headers</em>' containment reference.
 	 * @see #setHeaders(RestHeaders)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_Headers()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_Headers()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='headers' namespace='##targetNamespace'"
 	 * @generated
@@ -441,7 +441,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xsl</em>' containment reference.
 	 * @see #setXsl(XslParameter)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_Xsl()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_Xsl()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='xsl' namespace='##targetNamespace'"
 	 * @generated
@@ -472,7 +472,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetResponseBodyAs()
 	 * @see #unsetResponseBodyAs()
 	 * @see #setResponseBodyAs(ResponseBodyAs)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_ResponseBodyAs()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_ResponseBodyAs()
 	 * @model unsettable="true"
 	 *        extendedMetaData="kind='element' name='response-body-as' namespace='##targetNamespace'"
 	 * @generated
@@ -529,7 +529,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetJsonXmlMappingConvention()
 	 * @see #unsetJsonXmlMappingConvention()
 	 * @see #setJsonXmlMappingConvention(JsonXmlMappingConvention)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_JsonXmlMappingConvention()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_JsonXmlMappingConvention()
 	 * @model unsettable="true"
 	 *        extendedMetaData="kind='element' name='json-xml-mapping-convention' namespace='##targetNamespace'"
 	 * @generated
@@ -582,7 +582,7 @@ public interface ProvidesOperation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Form Data</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_FormData()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_FormData()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='form-data' namespace='##targetNamespace'"
 	 * @generated
@@ -599,7 +599,7 @@ public interface ProvidesOperation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Http Status</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_OnHttpStatus()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_OnHttpStatus()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='on-http-status' namespace='##targetNamespace'"
 	 * @generated
@@ -618,7 +618,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpBodyToJsonMultiplePi()
 	 * @see #unsetHttpBodyToJsonMultiplePi()
 	 * @see #setHttpBodyToJsonMultiplePi(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyToJsonMultiplePi()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyToJsonMultiplePi()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-multiple-pi' namespace='##targetNamespace'"
 	 * @generated
@@ -672,7 +672,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpBodyFromJsonMultiplePi()
 	 * @see #unsetHttpBodyFromJsonMultiplePi()
 	 * @see #setHttpBodyFromJsonMultiplePi(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyFromJsonMultiplePi()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyFromJsonMultiplePi()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-from-json-multiple-pi' namespace='##targetNamespace'"
 	 * @generated
@@ -723,7 +723,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Virtual Root</em>' attribute.
 	 * @see #setHttpBodyToJsonVirtualRoot(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyToJsonVirtualRoot()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyToJsonVirtualRoot()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-virtual-root' namespace='##targetNamespace'"
 	 * @generated
@@ -749,7 +749,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body From Json Virtual Root</em>' attribute.
 	 * @see #setHttpBodyFromJsonVirtualRoot(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyFromJsonVirtualRoot()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyFromJsonVirtualRoot()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='http-body-from-json-virtual-root' namespace='##targetNamespace'"
 	 * @generated
@@ -778,7 +778,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpBodyToJsonAutoArray()
 	 * @see #unsetHttpBodyToJsonAutoArray()
 	 * @see #setHttpBodyToJsonAutoArray(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyToJsonAutoArray()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyToJsonAutoArray()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-auto-array' namespace='##targetNamespace'"
 	 * @generated
@@ -832,7 +832,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpBodyToJsonAutoPrimitive()
 	 * @see #unsetHttpBodyToJsonAutoPrimitive()
 	 * @see #setHttpBodyToJsonAutoPrimitive(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyToJsonAutoPrimitive()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyToJsonAutoPrimitive()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-auto-primitive' namespace='##targetNamespace'"
 	 * @generated
@@ -886,7 +886,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpBodyToJsonPrettyPrint()
 	 * @see #unsetHttpBodyToJsonPrettyPrint()
 	 * @see #setHttpBodyToJsonPrettyPrint(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyToJsonPrettyPrint()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyToJsonPrettyPrint()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-pretty-print' namespace='##targetNamespace'"
 	 * @generated
@@ -940,7 +940,7 @@ public interface ProvidesOperation extends EObject {
 	 * @see #isSetHttpBodyToJsonNsDeclarations()
 	 * @see #unsetHttpBodyToJsonNsDeclarations()
 	 * @see #setHttpBodyToJsonNsDeclarations(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_HttpBodyToJsonNsDeclarations()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_HttpBodyToJsonNsDeclarations()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-ns-declarations' namespace='##targetNamespace'"
 	 * @generated
@@ -991,7 +991,7 @@ public interface ProvidesOperation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Namespace Mapping</em>' attribute.
 	 * @see #setNamespaceMapping(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesOperation_NamespaceMapping()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesOperation_NamespaceMapping()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='namespace-mapping' namespace='##targetNamespace'"
 	 * @generated

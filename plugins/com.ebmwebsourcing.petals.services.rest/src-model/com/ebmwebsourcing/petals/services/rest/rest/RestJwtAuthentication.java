@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Jwt Authentication</b></em>'.
+ * A representation of the model object '<em><b>Jwt Authentication</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestJwtAuthentication#getSignWith <em>Sign With</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestJwtAuthentication()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestJwtAuthentication()
  * @model extendedMetaData="name='RestJwtAuthentication' kind='elementOnly'"
  * @generated
  */
@@ -44,7 +44,7 @@ public interface RestJwtAuthentication extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Claim</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestJwtAuthentication_Claim()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestJwtAuthentication_Claim()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='claim' namespace='##targetNamespace'"
 	 * @generated
@@ -65,7 +65,7 @@ public interface RestJwtAuthentication extends EObject {
 	 * @see #isSetCompressWith()
 	 * @see #unsetCompressWith()
 	 * @see #setCompressWith(JwtCompression)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestJwtAuthentication_CompressWith()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestJwtAuthentication_CompressWith()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='element' name='compress-with' namespace='##targetNamespace'"
 	 * @generated
@@ -118,7 +118,7 @@ public interface RestJwtAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sign With</em>' containment reference.
 	 * @see #setSignWith(JwtSignature)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestJwtAuthentication_SignWith()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestJwtAuthentication_SignWith()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='sign-with' namespace='##targetNamespace'"
 	 * @generated

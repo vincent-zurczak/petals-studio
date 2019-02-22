@@ -12,8 +12,8 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.IncomingPayload;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.Transformation;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -64,7 +64,7 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.INCOMING_PAYLOAD;
+		return RestPackage.Literals.INCOMING_PAYLOAD;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 		Transformation oldTransformation = transformation;
 		transformation = newTransformation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.INCOMING_PAYLOAD__TRANSFORMATION, oldTransformation, newTransformation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.INCOMING_PAYLOAD__TRANSFORMATION, oldTransformation, newTransformation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -100,14 +100,14 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 		if (newTransformation != transformation) {
 			NotificationChain msgs = null;
 			if (transformation != null)
-				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.INCOMING_PAYLOAD__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.INCOMING_PAYLOAD__TRANSFORMATION, null, msgs);
 			if (newTransformation != null)
-				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.INCOMING_PAYLOAD__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.INCOMING_PAYLOAD__TRANSFORMATION, null, msgs);
 			msgs = basicSetTransformation(newTransformation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.INCOMING_PAYLOAD__TRANSFORMATION, newTransformation, newTransformation));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.INCOMING_PAYLOAD__TRANSFORMATION, newTransformation, newTransformation));
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.INCOMING_PAYLOAD__TRANSFORMATION:
+			case RestPackage.INCOMING_PAYLOAD__TRANSFORMATION:
 				return basicSetTransformation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -132,7 +132,7 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.INCOMING_PAYLOAD__TRANSFORMATION:
+			case RestPackage.INCOMING_PAYLOAD__TRANSFORMATION:
 				return getTransformation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -146,7 +146,7 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.INCOMING_PAYLOAD__TRANSFORMATION:
+			case RestPackage.INCOMING_PAYLOAD__TRANSFORMATION:
 				setTransformation((Transformation)newValue);
 				return;
 		}
@@ -161,7 +161,7 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.INCOMING_PAYLOAD__TRANSFORMATION:
+			case RestPackage.INCOMING_PAYLOAD__TRANSFORMATION:
 				setTransformation((Transformation)null);
 				return;
 		}
@@ -176,7 +176,7 @@ public class IncomingPayloadImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.INCOMING_PAYLOAD__TRANSFORMATION:
+			case RestPackage.INCOMING_PAYLOAD__TRANSFORMATION:
 				return transformation != null;
 		}
 		return super.eIsSet(featureID);

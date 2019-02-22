@@ -15,7 +15,7 @@ import com.ebmwebsourcing.petals.services.rest.rest.ConsumesOperation;
 import com.ebmwebsourcing.petals.services.rest.rest.IncomingPayload;
 import com.ebmwebsourcing.petals.services.rest.rest.OnJbiResponse;
 import com.ebmwebsourcing.petals.services.rest.rest.RestOperation;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -212,7 +212,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.CONSUMES_OPERATION;
+		return RestPackage.Literals.CONSUMES_OPERATION;
 	}
 
 	/**
@@ -235,7 +235,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpMethodESet = httpMethodESet;
 		httpMethodESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__HTTP_METHOD, oldHttpMethod, httpMethod, !oldHttpMethodESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__HTTP_METHOD, oldHttpMethod, httpMethod, !oldHttpMethodESet));
 	}
 
 	/**
@@ -249,7 +249,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpMethod = HTTP_METHOD_EDEFAULT;
 		httpMethodESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.CONSUMES_OPERATION__HTTP_METHOD, oldHttpMethod, HTTP_METHOD_EDEFAULT, oldHttpMethodESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.CONSUMES_OPERATION__HTTP_METHOD, oldHttpMethod, HTTP_METHOD_EDEFAULT, oldHttpMethodESet));
 	}
 
 	/**
@@ -279,7 +279,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldPathTemplate = pathTemplate;
 		pathTemplate = newPathTemplate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__PATH_TEMPLATE, oldPathTemplate, pathTemplate));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__PATH_TEMPLATE, oldPathTemplate, pathTemplate));
 	}
 
 	/**
@@ -300,7 +300,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldHttpBodyFromJsonVirtualRoot = httpBodyFromJsonVirtualRoot;
 		httpBodyFromJsonVirtualRoot = newHttpBodyFromJsonVirtualRoot;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, oldHttpBodyFromJsonVirtualRoot, httpBodyFromJsonVirtualRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, oldHttpBodyFromJsonVirtualRoot, httpBodyFromJsonVirtualRoot));
 	}
 
 	/**
@@ -321,7 +321,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		IncomingPayload oldIncomingPayload = incomingPayload;
 		incomingPayload = newIncomingPayload;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, oldIncomingPayload, newIncomingPayload);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, oldIncomingPayload, newIncomingPayload);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -336,14 +336,14 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		if (newIncomingPayload != incomingPayload) {
 			NotificationChain msgs = null;
 			if (incomingPayload != null)
-				msgs = ((InternalEObject)incomingPayload).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, null, msgs);
+				msgs = ((InternalEObject)incomingPayload).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, null, msgs);
 			if (newIncomingPayload != null)
-				msgs = ((InternalEObject)newIncomingPayload).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, null, msgs);
+				msgs = ((InternalEObject)newIncomingPayload).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, null, msgs);
 			msgs = basicSetIncomingPayload(newIncomingPayload, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, newIncomingPayload, newIncomingPayload));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD, newIncomingPayload, newIncomingPayload));
 	}
 
 	/**
@@ -366,7 +366,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyFromJsonMultiplePiESet = httpBodyFromJsonMultiplePiESet;
 		httpBodyFromJsonMultiplePiESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, httpBodyFromJsonMultiplePi, !oldHttpBodyFromJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, httpBodyFromJsonMultiplePi, !oldHttpBodyFromJsonMultiplePiESet));
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyFromJsonMultiplePi = HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT;
 		httpBodyFromJsonMultiplePiESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyFromJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyFromJsonMultiplePiESet));
 	}
 
 	/**
@@ -410,7 +410,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldHttpBodyFromJsonVirtualRoot1 = httpBodyFromJsonVirtualRoot1;
 		httpBodyFromJsonVirtualRoot1 = newHttpBodyFromJsonVirtualRoot1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1, oldHttpBodyFromJsonVirtualRoot1, httpBodyFromJsonVirtualRoot1));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1, oldHttpBodyFromJsonVirtualRoot1, httpBodyFromJsonVirtualRoot1));
 	}
 
 	/**
@@ -431,7 +431,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		EObject oldXmlTemplate = xmlTemplate;
 		xmlTemplate = newXmlTemplate;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__XML_TEMPLATE, oldXmlTemplate, newXmlTemplate);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__XML_TEMPLATE, oldXmlTemplate, newXmlTemplate);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -446,14 +446,14 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		if (newXmlTemplate != xmlTemplate) {
 			NotificationChain msgs = null;
 			if (xmlTemplate != null)
-				msgs = ((InternalEObject)xmlTemplate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.CONSUMES_OPERATION__XML_TEMPLATE, null, msgs);
+				msgs = ((InternalEObject)xmlTemplate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONSUMES_OPERATION__XML_TEMPLATE, null, msgs);
 			if (newXmlTemplate != null)
-				msgs = ((InternalEObject)newXmlTemplate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.CONSUMES_OPERATION__XML_TEMPLATE, null, msgs);
+				msgs = ((InternalEObject)newXmlTemplate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONSUMES_OPERATION__XML_TEMPLATE, null, msgs);
 			msgs = basicSetXmlTemplate(newXmlTemplate, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__XML_TEMPLATE, newXmlTemplate, newXmlTemplate));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__XML_TEMPLATE, newXmlTemplate, newXmlTemplate));
 	}
 
 	/**
@@ -474,7 +474,7 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		OnJbiResponse oldOnJbiResponse = onJbiResponse;
 		onJbiResponse = newOnJbiResponse;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, oldOnJbiResponse, newOnJbiResponse);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, oldOnJbiResponse, newOnJbiResponse);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -489,14 +489,14 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 		if (newOnJbiResponse != onJbiResponse) {
 			NotificationChain msgs = null;
 			if (onJbiResponse != null)
-				msgs = ((InternalEObject)onJbiResponse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, null, msgs);
+				msgs = ((InternalEObject)onJbiResponse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, null, msgs);
 			if (newOnJbiResponse != null)
-				msgs = ((InternalEObject)newOnJbiResponse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, null, msgs);
+				msgs = ((InternalEObject)newOnJbiResponse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, null, msgs);
 			msgs = basicSetOnJbiResponse(newOnJbiResponse, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, newOnJbiResponse, newOnJbiResponse));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE, newOnJbiResponse, newOnJbiResponse));
 	}
 
 	/**
@@ -507,11 +507,11 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
+			case RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
 				return basicSetIncomingPayload(null, msgs);
-			case restPackage.CONSUMES_OPERATION__XML_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__XML_TEMPLATE:
 				return basicSetXmlTemplate(null, msgs);
-			case restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
+			case RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
 				return basicSetOnJbiResponse(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -525,21 +525,21 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.CONSUMES_OPERATION__HTTP_METHOD:
+			case RestPackage.CONSUMES_OPERATION__HTTP_METHOD:
 				return getHttpMethod();
-			case restPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
 				return getPathTemplate();
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				return getHttpBodyFromJsonVirtualRoot();
-			case restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
+			case RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
 				return getIncomingPayload();
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				return isHttpBodyFromJsonMultiplePi();
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
 				return getHttpBodyFromJsonVirtualRoot1();
-			case restPackage.CONSUMES_OPERATION__XML_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__XML_TEMPLATE:
 				return getXmlTemplate();
-			case restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
+			case RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
 				return getOnJbiResponse();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -553,28 +553,28 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.CONSUMES_OPERATION__HTTP_METHOD:
+			case RestPackage.CONSUMES_OPERATION__HTTP_METHOD:
 				setHttpMethod((RestOperation)newValue);
 				return;
-			case restPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
 				setPathTemplate((String)newValue);
 				return;
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				setHttpBodyFromJsonVirtualRoot((String)newValue);
 				return;
-			case restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
+			case RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
 				setIncomingPayload((IncomingPayload)newValue);
 				return;
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				setHttpBodyFromJsonMultiplePi((Boolean)newValue);
 				return;
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
 				setHttpBodyFromJsonVirtualRoot1((String)newValue);
 				return;
-			case restPackage.CONSUMES_OPERATION__XML_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__XML_TEMPLATE:
 				setXmlTemplate((EObject)newValue);
 				return;
-			case restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
+			case RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
 				setOnJbiResponse((OnJbiResponse)newValue);
 				return;
 		}
@@ -589,28 +589,28 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.CONSUMES_OPERATION__HTTP_METHOD:
+			case RestPackage.CONSUMES_OPERATION__HTTP_METHOD:
 				unsetHttpMethod();
 				return;
-			case restPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
 				setPathTemplate(PATH_TEMPLATE_EDEFAULT);
 				return;
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				setHttpBodyFromJsonVirtualRoot(HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT);
 				return;
-			case restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
+			case RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
 				setIncomingPayload((IncomingPayload)null);
 				return;
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				unsetHttpBodyFromJsonMultiplePi();
 				return;
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
 				setHttpBodyFromJsonVirtualRoot1(HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1_EDEFAULT);
 				return;
-			case restPackage.CONSUMES_OPERATION__XML_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__XML_TEMPLATE:
 				setXmlTemplate((EObject)null);
 				return;
-			case restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
+			case RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
 				setOnJbiResponse((OnJbiResponse)null);
 				return;
 		}
@@ -625,21 +625,21 @@ public class ConsumesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.CONSUMES_OPERATION__HTTP_METHOD:
+			case RestPackage.CONSUMES_OPERATION__HTTP_METHOD:
 				return isSetHttpMethod();
-			case restPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__PATH_TEMPLATE:
 				return PATH_TEMPLATE_EDEFAULT == null ? pathTemplate != null : !PATH_TEMPLATE_EDEFAULT.equals(pathTemplate);
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				return HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT == null ? httpBodyFromJsonVirtualRoot != null : !HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT.equals(httpBodyFromJsonVirtualRoot);
-			case restPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
+			case RestPackage.CONSUMES_OPERATION__INCOMING_PAYLOAD:
 				return incomingPayload != null;
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				return isSetHttpBodyFromJsonMultiplePi();
-			case restPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
+			case RestPackage.CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1:
 				return HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1_EDEFAULT == null ? httpBodyFromJsonVirtualRoot1 != null : !HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1_EDEFAULT.equals(httpBodyFromJsonVirtualRoot1);
-			case restPackage.CONSUMES_OPERATION__XML_TEMPLATE:
+			case RestPackage.CONSUMES_OPERATION__XML_TEMPLATE:
 				return xmlTemplate != null;
-			case restPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
+			case RestPackage.CONSUMES_OPERATION__ON_JBI_RESPONSE:
 				return onJbiResponse != null;
 		}
 		return super.eIsSet(featureID);

@@ -4,7 +4,7 @@ Bundle-Name: Tests for WSDL tools
 Bundle-SymbolicName: com.ebmwebsourcing.petals.common.wsdlext.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Linagora
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Require-Bundle: org.junit,
  com.ebmwebsourcing.petals.common.wsdlext,
  org.eclipse.core.runtime,

@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.ConsumesOperation#getOnJbiResponse <em>On Jbi Response</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation()
  * @model extendedMetaData="name='ConsumesOperation' kind='elementOnly'"
  * @generated
  */
@@ -51,7 +51,7 @@ public interface ConsumesOperation extends EObject {
 	 * @see #isSetHttpMethod()
 	 * @see #unsetHttpMethod()
 	 * @see #setHttpMethod(RestOperation)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_HttpMethod()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_HttpMethod()
 	 * @model unsettable="true" required="true"
 	 *        extendedMetaData="kind='element' name='http-method' namespace='##targetNamespace'"
 	 * @generated
@@ -104,7 +104,7 @@ public interface ConsumesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Path Template</em>' attribute.
 	 * @see #setPathTemplate(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_PathTemplate()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_PathTemplate()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='element' name='path-template' namespace='##targetNamespace'"
 	 * @generated
@@ -131,7 +131,7 @@ public interface ConsumesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Http Body From Json Virtual Root</em>' attribute.
 	 * @see #setHttpBodyFromJsonVirtualRoot(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_HttpBodyFromJsonVirtualRoot()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_HttpBodyFromJsonVirtualRoot()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='element' name='http-body-from-json-virtual-root' namespace='##targetNamespace'"
 	 * @generated
@@ -158,7 +158,7 @@ public interface ConsumesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Incoming Payload</em>' containment reference.
 	 * @see #setIncomingPayload(IncomingPayload)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_IncomingPayload()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_IncomingPayload()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='incoming-payload' namespace='##targetNamespace'"
 	 * @generated
@@ -187,7 +187,7 @@ public interface ConsumesOperation extends EObject {
 	 * @see #isSetHttpBodyFromJsonMultiplePi()
 	 * @see #unsetHttpBodyFromJsonMultiplePi()
 	 * @see #setHttpBodyFromJsonMultiplePi(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_HttpBodyFromJsonMultiplePi()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_HttpBodyFromJsonMultiplePi()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-from-json-multiple-pi' namespace='##targetNamespace'"
 	 * @generated
@@ -238,7 +238,7 @@ public interface ConsumesOperation extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body From Json Virtual Root1</em>' attribute.
 	 * @see #setHttpBodyFromJsonVirtualRoot1(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_HttpBodyFromJsonVirtualRoot1()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_HttpBodyFromJsonVirtualRoot1()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='http-body-from-json-virtual-root' namespace='##targetNamespace'"
 	 * @generated
@@ -265,7 +265,7 @@ public interface ConsumesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xml Template</em>' containment reference.
 	 * @see #setXmlTemplate(EObject)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_XmlTemplate()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_XmlTemplate()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='xml-template' namespace='##targetNamespace'"
 	 * @generated
@@ -292,7 +292,7 @@ public interface ConsumesOperation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Jbi Response</em>' containment reference.
 	 * @see #setOnJbiResponse(OnJbiResponse)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesOperation_OnJbiResponse()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesOperation_OnJbiResponse()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='on-jbi-response' namespace='##targetNamespace'"
 	 * @generated

@@ -20,9 +20,9 @@ import com.ebmwebsourcing.petals.services.rest.rest.ResponseBodyAs;
 import com.ebmwebsourcing.petals.services.rest.rest.RestAuthentication;
 import com.ebmwebsourcing.petals.services.rest.rest.RestHeaders;
 import com.ebmwebsourcing.petals.services.rest.rest.RestOperation;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.RestParam;
 import com.ebmwebsourcing.petals.services.rest.rest.XslParameter;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import java.util.Collection;
 
@@ -621,7 +621,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.PROVIDES_OPERATION;
+		return RestPackage.Literals.PROVIDES_OPERATION;
 	}
 
 	/**
@@ -644,7 +644,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpMethodESet = httpMethodESet;
 		httpMethodESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_METHOD, oldHttpMethod, httpMethod, !oldHttpMethodESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_METHOD, oldHttpMethod, httpMethod, !oldHttpMethodESet));
 	}
 
 	/**
@@ -658,7 +658,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpMethod = HTTP_METHOD_EDEFAULT;
 		httpMethodESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_METHOD, oldHttpMethod, HTTP_METHOD_EDEFAULT, oldHttpMethodESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_METHOD, oldHttpMethod, HTTP_METHOD_EDEFAULT, oldHttpMethodESet));
 	}
 
 	/**
@@ -688,7 +688,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldUri = uri;
 		uri = newUri;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__URI, oldUri, uri));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__URI, oldUri, uri));
 	}
 
 	/**
@@ -709,7 +709,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldWadl = wadl;
 		wadl = newWadl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__WADL, oldWadl, wadl));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__WADL, oldWadl, wadl));
 	}
 
 	/**
@@ -730,7 +730,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldWsdl2 = wsdl2;
 		wsdl2 = newWsdl2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__WSDL2, oldWsdl2, wsdl2));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__WSDL2, oldWsdl2, wsdl2));
 	}
 
 	/**
@@ -753,7 +753,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyTypeESet = httpBodyTypeESet;
 		httpBodyTypeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE, oldHttpBodyType, httpBodyType, !oldHttpBodyTypeESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE, oldHttpBodyType, httpBodyType, !oldHttpBodyTypeESet));
 	}
 
 	/**
@@ -767,7 +767,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyType = HTTP_BODY_TYPE_EDEFAULT;
 		httpBodyTypeESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE, oldHttpBodyType, HTTP_BODY_TYPE_EDEFAULT, oldHttpBodyTypeESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE, oldHttpBodyType, HTTP_BODY_TYPE_EDEFAULT, oldHttpBodyTypeESet));
 	}
 
 	/**
@@ -799,7 +799,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldBufferRequestESet = bufferRequestESet;
 		bufferRequestESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__BUFFER_REQUEST, oldBufferRequest, bufferRequest, !oldBufferRequestESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__BUFFER_REQUEST, oldBufferRequest, bufferRequest, !oldBufferRequestESet));
 	}
 
 	/**
@@ -813,7 +813,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		bufferRequest = BUFFER_REQUEST_EDEFAULT;
 		bufferRequestESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__BUFFER_REQUEST, oldBufferRequest, BUFFER_REQUEST_EDEFAULT, oldBufferRequestESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__BUFFER_REQUEST, oldBufferRequest, BUFFER_REQUEST_EDEFAULT, oldBufferRequestESet));
 	}
 
 	/**
@@ -845,7 +845,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldTrustAllCertificatesESet = trustAllCertificatesESet;
 		trustAllCertificatesESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES, oldTrustAllCertificates, trustAllCertificates, !oldTrustAllCertificatesESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES, oldTrustAllCertificates, trustAllCertificates, !oldTrustAllCertificatesESet));
 	}
 
 	/**
@@ -859,7 +859,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		trustAllCertificates = TRUST_ALL_CERTIFICATES_EDEFAULT;
 		trustAllCertificatesESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES, oldTrustAllCertificates, TRUST_ALL_CERTIFICATES_EDEFAULT, oldTrustAllCertificatesESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES, oldTrustAllCertificates, TRUST_ALL_CERTIFICATES_EDEFAULT, oldTrustAllCertificatesESet));
 	}
 
 	/**
@@ -878,7 +878,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<RestParam> getXpathParam() {
 		if (xpathParam == null) {
-			xpathParam = new EObjectContainmentEList<RestParam>(RestParam.class, this, restPackage.PROVIDES_OPERATION__XPATH_PARAM);
+			xpathParam = new EObjectContainmentEList<RestParam>(RestParam.class, this, RestPackage.PROVIDES_OPERATION__XPATH_PARAM);
 		}
 		return xpathParam;
 	}
@@ -901,7 +901,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		RestAuthentication oldAuthentication = authentication;
 		authentication = newAuthentication;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__AUTHENTICATION, oldAuthentication, newAuthentication);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__AUTHENTICATION, oldAuthentication, newAuthentication);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -916,14 +916,14 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		if (newAuthentication != authentication) {
 			NotificationChain msgs = null;
 			if (authentication != null)
-				msgs = ((InternalEObject)authentication).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.PROVIDES_OPERATION__AUTHENTICATION, null, msgs);
+				msgs = ((InternalEObject)authentication).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.PROVIDES_OPERATION__AUTHENTICATION, null, msgs);
 			if (newAuthentication != null)
-				msgs = ((InternalEObject)newAuthentication).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.PROVIDES_OPERATION__AUTHENTICATION, null, msgs);
+				msgs = ((InternalEObject)newAuthentication).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.PROVIDES_OPERATION__AUTHENTICATION, null, msgs);
 			msgs = basicSetAuthentication(newAuthentication, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__AUTHENTICATION, newAuthentication, newAuthentication));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__AUTHENTICATION, newAuthentication, newAuthentication));
 	}
 
 	/**
@@ -944,7 +944,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		RestHeaders oldHeaders = headers;
 		headers = newHeaders;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HEADERS, oldHeaders, newHeaders);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HEADERS, oldHeaders, newHeaders);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -959,14 +959,14 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		if (newHeaders != headers) {
 			NotificationChain msgs = null;
 			if (headers != null)
-				msgs = ((InternalEObject)headers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.PROVIDES_OPERATION__HEADERS, null, msgs);
+				msgs = ((InternalEObject)headers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.PROVIDES_OPERATION__HEADERS, null, msgs);
 			if (newHeaders != null)
-				msgs = ((InternalEObject)newHeaders).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.PROVIDES_OPERATION__HEADERS, null, msgs);
+				msgs = ((InternalEObject)newHeaders).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.PROVIDES_OPERATION__HEADERS, null, msgs);
 			msgs = basicSetHeaders(newHeaders, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HEADERS, newHeaders, newHeaders));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HEADERS, newHeaders, newHeaders));
 	}
 
 	/**
@@ -987,7 +987,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		XslParameter oldXsl = xsl;
 		xsl = newXsl;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__XSL, oldXsl, newXsl);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__XSL, oldXsl, newXsl);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -1002,14 +1002,14 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		if (newXsl != xsl) {
 			NotificationChain msgs = null;
 			if (xsl != null)
-				msgs = ((InternalEObject)xsl).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.PROVIDES_OPERATION__XSL, null, msgs);
+				msgs = ((InternalEObject)xsl).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.PROVIDES_OPERATION__XSL, null, msgs);
 			if (newXsl != null)
-				msgs = ((InternalEObject)newXsl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.PROVIDES_OPERATION__XSL, null, msgs);
+				msgs = ((InternalEObject)newXsl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.PROVIDES_OPERATION__XSL, null, msgs);
 			msgs = basicSetXsl(newXsl, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__XSL, newXsl, newXsl));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__XSL, newXsl, newXsl));
 	}
 
 	/**
@@ -1032,7 +1032,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldResponseBodyAsESet = responseBodyAsESet;
 		responseBodyAsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS, oldResponseBodyAs, responseBodyAs, !oldResponseBodyAsESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS, oldResponseBodyAs, responseBodyAs, !oldResponseBodyAsESet));
 	}
 
 	/**
@@ -1046,7 +1046,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		responseBodyAs = RESPONSE_BODY_AS_EDEFAULT;
 		responseBodyAsESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS, oldResponseBodyAs, RESPONSE_BODY_AS_EDEFAULT, oldResponseBodyAsESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS, oldResponseBodyAs, RESPONSE_BODY_AS_EDEFAULT, oldResponseBodyAsESet));
 	}
 
 	/**
@@ -1078,7 +1078,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldJsonXmlMappingConventionESet = jsonXmlMappingConventionESet;
 		jsonXmlMappingConventionESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION, oldJsonXmlMappingConvention, jsonXmlMappingConvention, !oldJsonXmlMappingConventionESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION, oldJsonXmlMappingConvention, jsonXmlMappingConvention, !oldJsonXmlMappingConventionESet));
 	}
 
 	/**
@@ -1092,7 +1092,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		jsonXmlMappingConvention = JSON_XML_MAPPING_CONVENTION_EDEFAULT;
 		jsonXmlMappingConventionESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION, oldJsonXmlMappingConvention, JSON_XML_MAPPING_CONVENTION_EDEFAULT, oldJsonXmlMappingConventionESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION, oldJsonXmlMappingConvention, JSON_XML_MAPPING_CONVENTION_EDEFAULT, oldJsonXmlMappingConventionESet));
 	}
 
 	/**
@@ -1111,7 +1111,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<FormData> getFormData() {
 		if (formData == null) {
-			formData = new EObjectContainmentEList<FormData>(FormData.class, this, restPackage.PROVIDES_OPERATION__FORM_DATA);
+			formData = new EObjectContainmentEList<FormData>(FormData.class, this, RestPackage.PROVIDES_OPERATION__FORM_DATA);
 		}
 		return formData;
 	}
@@ -1123,7 +1123,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public EList<OnHttpStatus> getOnHttpStatus() {
 		if (onHttpStatus == null) {
-			onHttpStatus = new EObjectContainmentEList<OnHttpStatus>(OnHttpStatus.class, this, restPackage.PROVIDES_OPERATION__ON_HTTP_STATUS);
+			onHttpStatus = new EObjectContainmentEList<OnHttpStatus>(OnHttpStatus.class, this, RestPackage.PROVIDES_OPERATION__ON_HTTP_STATUS);
 		}
 		return onHttpStatus;
 	}
@@ -1148,7 +1148,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyToJsonMultiplePiESet = httpBodyToJsonMultiplePiESet;
 		httpBodyToJsonMultiplePiESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, httpBodyToJsonMultiplePi, !oldHttpBodyToJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, httpBodyToJsonMultiplePi, !oldHttpBodyToJsonMultiplePiESet));
 	}
 
 	/**
@@ -1162,7 +1162,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyToJsonMultiplePi = HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT;
 		httpBodyToJsonMultiplePiESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyToJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyToJsonMultiplePiESet));
 	}
 
 	/**
@@ -1194,7 +1194,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyFromJsonMultiplePiESet = httpBodyFromJsonMultiplePiESet;
 		httpBodyFromJsonMultiplePiESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, httpBodyFromJsonMultiplePi, !oldHttpBodyFromJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, httpBodyFromJsonMultiplePi, !oldHttpBodyFromJsonMultiplePiESet));
 	}
 
 	/**
@@ -1208,7 +1208,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyFromJsonMultiplePi = HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT;
 		httpBodyFromJsonMultiplePiESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyFromJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI, oldHttpBodyFromJsonMultiplePi, HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyFromJsonMultiplePiESet));
 	}
 
 	/**
@@ -1238,7 +1238,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldHttpBodyToJsonVirtualRoot = httpBodyToJsonVirtualRoot;
 		httpBodyToJsonVirtualRoot = newHttpBodyToJsonVirtualRoot;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, oldHttpBodyToJsonVirtualRoot, httpBodyToJsonVirtualRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, oldHttpBodyToJsonVirtualRoot, httpBodyToJsonVirtualRoot));
 	}
 
 	/**
@@ -1259,7 +1259,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldHttpBodyFromJsonVirtualRoot = httpBodyFromJsonVirtualRoot;
 		httpBodyFromJsonVirtualRoot = newHttpBodyFromJsonVirtualRoot;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, oldHttpBodyFromJsonVirtualRoot, httpBodyFromJsonVirtualRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, oldHttpBodyFromJsonVirtualRoot, httpBodyFromJsonVirtualRoot));
 	}
 
 	/**
@@ -1282,7 +1282,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyToJsonAutoArrayESet = httpBodyToJsonAutoArrayESet;
 		httpBodyToJsonAutoArrayESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, httpBodyToJsonAutoArray, !oldHttpBodyToJsonAutoArrayESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, httpBodyToJsonAutoArray, !oldHttpBodyToJsonAutoArrayESet));
 	}
 
 	/**
@@ -1296,7 +1296,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyToJsonAutoArray = HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT;
 		httpBodyToJsonAutoArrayESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT, oldHttpBodyToJsonAutoArrayESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT, oldHttpBodyToJsonAutoArrayESet));
 	}
 
 	/**
@@ -1328,7 +1328,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyToJsonAutoPrimitiveESet = httpBodyToJsonAutoPrimitiveESet;
 		httpBodyToJsonAutoPrimitiveESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, httpBodyToJsonAutoPrimitive, !oldHttpBodyToJsonAutoPrimitiveESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, httpBodyToJsonAutoPrimitive, !oldHttpBodyToJsonAutoPrimitiveESet));
 	}
 
 	/**
@@ -1342,7 +1342,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyToJsonAutoPrimitive = HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT;
 		httpBodyToJsonAutoPrimitiveESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT, oldHttpBodyToJsonAutoPrimitiveESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT, oldHttpBodyToJsonAutoPrimitiveESet));
 	}
 
 	/**
@@ -1374,7 +1374,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyToJsonPrettyPrintESet = httpBodyToJsonPrettyPrintESet;
 		httpBodyToJsonPrettyPrintESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, httpBodyToJsonPrettyPrint, !oldHttpBodyToJsonPrettyPrintESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, httpBodyToJsonPrettyPrint, !oldHttpBodyToJsonPrettyPrintESet));
 	}
 
 	/**
@@ -1388,7 +1388,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyToJsonPrettyPrint = HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT;
 		httpBodyToJsonPrettyPrintESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT, oldHttpBodyToJsonPrettyPrintESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT, oldHttpBodyToJsonPrettyPrintESet));
 	}
 
 	/**
@@ -1420,7 +1420,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		boolean oldHttpBodyToJsonNsDeclarationsESet = httpBodyToJsonNsDeclarationsESet;
 		httpBodyToJsonNsDeclarationsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, httpBodyToJsonNsDeclarations, !oldHttpBodyToJsonNsDeclarationsESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, httpBodyToJsonNsDeclarations, !oldHttpBodyToJsonNsDeclarationsESet));
 	}
 
 	/**
@@ -1434,7 +1434,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		httpBodyToJsonNsDeclarations = HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT;
 		httpBodyToJsonNsDeclarationsESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT, oldHttpBodyToJsonNsDeclarationsESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT, oldHttpBodyToJsonNsDeclarationsESet));
 	}
 
 	/**
@@ -1464,7 +1464,7 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 		String oldNamespaceMapping = namespaceMapping;
 		namespaceMapping = newNamespaceMapping;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING, oldNamespaceMapping, namespaceMapping));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING, oldNamespaceMapping, namespaceMapping));
 	}
 
 	/**
@@ -1475,17 +1475,17 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.PROVIDES_OPERATION__XPATH_PARAM:
+			case RestPackage.PROVIDES_OPERATION__XPATH_PARAM:
 				return ((InternalEList<?>)getXpathParam()).basicRemove(otherEnd, msgs);
-			case restPackage.PROVIDES_OPERATION__AUTHENTICATION:
+			case RestPackage.PROVIDES_OPERATION__AUTHENTICATION:
 				return basicSetAuthentication(null, msgs);
-			case restPackage.PROVIDES_OPERATION__HEADERS:
+			case RestPackage.PROVIDES_OPERATION__HEADERS:
 				return basicSetHeaders(null, msgs);
-			case restPackage.PROVIDES_OPERATION__XSL:
+			case RestPackage.PROVIDES_OPERATION__XSL:
 				return basicSetXsl(null, msgs);
-			case restPackage.PROVIDES_OPERATION__FORM_DATA:
+			case RestPackage.PROVIDES_OPERATION__FORM_DATA:
 				return ((InternalEList<?>)getFormData()).basicRemove(otherEnd, msgs);
-			case restPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
+			case RestPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
 				return ((InternalEList<?>)getOnHttpStatus()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -1499,53 +1499,53 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.PROVIDES_OPERATION__HTTP_METHOD:
+			case RestPackage.PROVIDES_OPERATION__HTTP_METHOD:
 				return getHttpMethod();
-			case restPackage.PROVIDES_OPERATION__URI:
+			case RestPackage.PROVIDES_OPERATION__URI:
 				return getUri();
-			case restPackage.PROVIDES_OPERATION__WADL:
+			case RestPackage.PROVIDES_OPERATION__WADL:
 				return getWadl();
-			case restPackage.PROVIDES_OPERATION__WSDL2:
+			case RestPackage.PROVIDES_OPERATION__WSDL2:
 				return getWsdl2();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
 				return getHttpBodyType();
-			case restPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
+			case RestPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
 				return isBufferRequest();
-			case restPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
+			case RestPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
 				return isTrustAllCertificates();
-			case restPackage.PROVIDES_OPERATION__XPATH_PARAM:
+			case RestPackage.PROVIDES_OPERATION__XPATH_PARAM:
 				return getXpathParam();
-			case restPackage.PROVIDES_OPERATION__AUTHENTICATION:
+			case RestPackage.PROVIDES_OPERATION__AUTHENTICATION:
 				return getAuthentication();
-			case restPackage.PROVIDES_OPERATION__HEADERS:
+			case RestPackage.PROVIDES_OPERATION__HEADERS:
 				return getHeaders();
-			case restPackage.PROVIDES_OPERATION__XSL:
+			case RestPackage.PROVIDES_OPERATION__XSL:
 				return getXsl();
-			case restPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
+			case RestPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
 				return getResponseBodyAs();
-			case restPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
+			case RestPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
 				return getJsonXmlMappingConvention();
-			case restPackage.PROVIDES_OPERATION__FORM_DATA:
+			case RestPackage.PROVIDES_OPERATION__FORM_DATA:
 				return getFormData();
-			case restPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
+			case RestPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
 				return getOnHttpStatus();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				return isHttpBodyToJsonMultiplePi();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				return isHttpBodyFromJsonMultiplePi();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				return getHttpBodyToJsonVirtualRoot();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				return getHttpBodyFromJsonVirtualRoot();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				return isHttpBodyToJsonAutoArray();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				return isHttpBodyToJsonAutoPrimitive();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				return isHttpBodyToJsonPrettyPrint();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				return isHttpBodyToJsonNsDeclarations();
-			case restPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
+			case RestPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
 				return getNamespaceMapping();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -1560,79 +1560,79 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.PROVIDES_OPERATION__HTTP_METHOD:
+			case RestPackage.PROVIDES_OPERATION__HTTP_METHOD:
 				setHttpMethod((RestOperation)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__URI:
+			case RestPackage.PROVIDES_OPERATION__URI:
 				setUri((String)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__WADL:
+			case RestPackage.PROVIDES_OPERATION__WADL:
 				setWadl((String)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__WSDL2:
+			case RestPackage.PROVIDES_OPERATION__WSDL2:
 				setWsdl2((String)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
 				setHttpBodyType((HttpBodyType)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
+			case RestPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
 				setBufferRequest((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
+			case RestPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
 				setTrustAllCertificates((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__XPATH_PARAM:
+			case RestPackage.PROVIDES_OPERATION__XPATH_PARAM:
 				getXpathParam().clear();
 				getXpathParam().addAll((Collection<? extends RestParam>)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__AUTHENTICATION:
+			case RestPackage.PROVIDES_OPERATION__AUTHENTICATION:
 				setAuthentication((RestAuthentication)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HEADERS:
+			case RestPackage.PROVIDES_OPERATION__HEADERS:
 				setHeaders((RestHeaders)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__XSL:
+			case RestPackage.PROVIDES_OPERATION__XSL:
 				setXsl((XslParameter)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
+			case RestPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
 				setResponseBodyAs((ResponseBodyAs)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
+			case RestPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
 				setJsonXmlMappingConvention((JsonXmlMappingConvention)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__FORM_DATA:
+			case RestPackage.PROVIDES_OPERATION__FORM_DATA:
 				getFormData().clear();
 				getFormData().addAll((Collection<? extends FormData>)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
+			case RestPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
 				getOnHttpStatus().clear();
 				getOnHttpStatus().addAll((Collection<? extends OnHttpStatus>)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				setHttpBodyToJsonMultiplePi((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				setHttpBodyFromJsonMultiplePi((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				setHttpBodyToJsonVirtualRoot((String)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				setHttpBodyFromJsonVirtualRoot((String)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				setHttpBodyToJsonAutoArray((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				setHttpBodyToJsonAutoPrimitive((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				setHttpBodyToJsonPrettyPrint((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				setHttpBodyToJsonNsDeclarations((Boolean)newValue);
 				return;
-			case restPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
+			case RestPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
 				setNamespaceMapping((String)newValue);
 				return;
 		}
@@ -1647,76 +1647,76 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.PROVIDES_OPERATION__HTTP_METHOD:
+			case RestPackage.PROVIDES_OPERATION__HTTP_METHOD:
 				unsetHttpMethod();
 				return;
-			case restPackage.PROVIDES_OPERATION__URI:
+			case RestPackage.PROVIDES_OPERATION__URI:
 				setUri(URI_EDEFAULT);
 				return;
-			case restPackage.PROVIDES_OPERATION__WADL:
+			case RestPackage.PROVIDES_OPERATION__WADL:
 				setWadl(WADL_EDEFAULT);
 				return;
-			case restPackage.PROVIDES_OPERATION__WSDL2:
+			case RestPackage.PROVIDES_OPERATION__WSDL2:
 				setWsdl2(WSDL2_EDEFAULT);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
 				unsetHttpBodyType();
 				return;
-			case restPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
+			case RestPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
 				unsetBufferRequest();
 				return;
-			case restPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
+			case RestPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
 				unsetTrustAllCertificates();
 				return;
-			case restPackage.PROVIDES_OPERATION__XPATH_PARAM:
+			case RestPackage.PROVIDES_OPERATION__XPATH_PARAM:
 				getXpathParam().clear();
 				return;
-			case restPackage.PROVIDES_OPERATION__AUTHENTICATION:
+			case RestPackage.PROVIDES_OPERATION__AUTHENTICATION:
 				setAuthentication((RestAuthentication)null);
 				return;
-			case restPackage.PROVIDES_OPERATION__HEADERS:
+			case RestPackage.PROVIDES_OPERATION__HEADERS:
 				setHeaders((RestHeaders)null);
 				return;
-			case restPackage.PROVIDES_OPERATION__XSL:
+			case RestPackage.PROVIDES_OPERATION__XSL:
 				setXsl((XslParameter)null);
 				return;
-			case restPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
+			case RestPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
 				unsetResponseBodyAs();
 				return;
-			case restPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
+			case RestPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
 				unsetJsonXmlMappingConvention();
 				return;
-			case restPackage.PROVIDES_OPERATION__FORM_DATA:
+			case RestPackage.PROVIDES_OPERATION__FORM_DATA:
 				getFormData().clear();
 				return;
-			case restPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
+			case RestPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
 				getOnHttpStatus().clear();
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				unsetHttpBodyToJsonMultiplePi();
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				unsetHttpBodyFromJsonMultiplePi();
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				setHttpBodyToJsonVirtualRoot(HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				setHttpBodyFromJsonVirtualRoot(HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT);
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				unsetHttpBodyToJsonAutoArray();
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				unsetHttpBodyToJsonAutoPrimitive();
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				unsetHttpBodyToJsonPrettyPrint();
 				return;
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				unsetHttpBodyToJsonNsDeclarations();
 				return;
-			case restPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
+			case RestPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
 				setNamespaceMapping(NAMESPACE_MAPPING_EDEFAULT);
 				return;
 		}
@@ -1731,53 +1731,53 @@ public class ProvidesOperationImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.PROVIDES_OPERATION__HTTP_METHOD:
+			case RestPackage.PROVIDES_OPERATION__HTTP_METHOD:
 				return isSetHttpMethod();
-			case restPackage.PROVIDES_OPERATION__URI:
+			case RestPackage.PROVIDES_OPERATION__URI:
 				return URI_EDEFAULT == null ? uri != null : !URI_EDEFAULT.equals(uri);
-			case restPackage.PROVIDES_OPERATION__WADL:
+			case RestPackage.PROVIDES_OPERATION__WADL:
 				return WADL_EDEFAULT == null ? wadl != null : !WADL_EDEFAULT.equals(wadl);
-			case restPackage.PROVIDES_OPERATION__WSDL2:
+			case RestPackage.PROVIDES_OPERATION__WSDL2:
 				return WSDL2_EDEFAULT == null ? wsdl2 != null : !WSDL2_EDEFAULT.equals(wsdl2);
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TYPE:
 				return isSetHttpBodyType();
-			case restPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
+			case RestPackage.PROVIDES_OPERATION__BUFFER_REQUEST:
 				return isSetBufferRequest();
-			case restPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
+			case RestPackage.PROVIDES_OPERATION__TRUST_ALL_CERTIFICATES:
 				return isSetTrustAllCertificates();
-			case restPackage.PROVIDES_OPERATION__XPATH_PARAM:
+			case RestPackage.PROVIDES_OPERATION__XPATH_PARAM:
 				return xpathParam != null && !xpathParam.isEmpty();
-			case restPackage.PROVIDES_OPERATION__AUTHENTICATION:
+			case RestPackage.PROVIDES_OPERATION__AUTHENTICATION:
 				return authentication != null;
-			case restPackage.PROVIDES_OPERATION__HEADERS:
+			case RestPackage.PROVIDES_OPERATION__HEADERS:
 				return headers != null;
-			case restPackage.PROVIDES_OPERATION__XSL:
+			case RestPackage.PROVIDES_OPERATION__XSL:
 				return xsl != null;
-			case restPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
+			case RestPackage.PROVIDES_OPERATION__RESPONSE_BODY_AS:
 				return isSetResponseBodyAs();
-			case restPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
+			case RestPackage.PROVIDES_OPERATION__JSON_XML_MAPPING_CONVENTION:
 				return isSetJsonXmlMappingConvention();
-			case restPackage.PROVIDES_OPERATION__FORM_DATA:
+			case RestPackage.PROVIDES_OPERATION__FORM_DATA:
 				return formData != null && !formData.isEmpty();
-			case restPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
+			case RestPackage.PROVIDES_OPERATION__ON_HTTP_STATUS:
 				return onHttpStatus != null && !onHttpStatus.isEmpty();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				return isSetHttpBodyToJsonMultiplePi();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				return isSetHttpBodyFromJsonMultiplePi();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				return HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT == null ? httpBodyToJsonVirtualRoot != null : !HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT.equals(httpBodyToJsonVirtualRoot);
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				return HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT == null ? httpBodyFromJsonVirtualRoot != null : !HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT.equals(httpBodyFromJsonVirtualRoot);
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				return isSetHttpBodyToJsonAutoArray();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				return isSetHttpBodyToJsonAutoPrimitive();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				return isSetHttpBodyToJsonPrettyPrint();
-			case restPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.PROVIDES_OPERATION__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				return isSetHttpBodyToJsonNsDeclarations();
-			case restPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
+			case RestPackage.PROVIDES_OPERATION__NAMESPACE_MAPPING:
 				return NAMESPACE_MAPPING_EDEFAULT == null ? namespaceMapping != null : !NAMESPACE_MAPPING_EDEFAULT.equals(namespaceMapping);
 		}
 		return super.eIsSet(featureID);

@@ -12,7 +12,7 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.DocumentRoot;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -203,7 +203,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.DOCUMENT_ROOT;
+		return RestPackage.Literals.DOCUMENT_ROOT;
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 */
 	public FeatureMap getMixed() {
 		if (mixed == null) {
-			mixed = new BasicFeatureMap(this, restPackage.DOCUMENT_ROOT__MIXED);
+			mixed = new BasicFeatureMap(this, RestPackage.DOCUMENT_ROOT__MIXED);
 		}
 		return mixed;
 	}
@@ -225,7 +225,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 */
 	public EMap<String, String> getXMLNSPrefixMap() {
 		if (xMLNSPrefixMap == null) {
-			xMLNSPrefixMap = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, restPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
+			xMLNSPrefixMap = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, RestPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
 		}
 		return xMLNSPrefixMap;
 	}
@@ -237,7 +237,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 */
 	public EMap<String, String> getXSISchemaLocation() {
 		if (xSISchemaLocation == null) {
-			xSISchemaLocation = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, restPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
+			xSISchemaLocation = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, RestPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
 		}
 		return xSISchemaLocation;
 	}
@@ -248,7 +248,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public String getBasePath() {
-		return (String)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__BASE_PATH, true);
+		return (String)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__BASE_PATH, true);
 	}
 
 	/**
@@ -257,7 +257,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setBasePath(String newBasePath) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__BASE_PATH, newBasePath);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__BASE_PATH, newBasePath);
 	}
 
 	/**
@@ -266,7 +266,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public boolean isHttpBodyFromJsonMultiplePi() {
-		return (Boolean)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI, true);
+		return (Boolean)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI, true);
 	}
 
 	/**
@@ -275,7 +275,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyFromJsonMultiplePi(boolean newHttpBodyFromJsonMultiplePi) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI, newHttpBodyFromJsonMultiplePi);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI, newHttpBodyFromJsonMultiplePi);
 	}
 
 	/**
@@ -284,7 +284,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public String getHttpBodyFromJsonVirtualRoot() {
-		return (String)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, true);
+		return (String)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, true);
 	}
 
 	/**
@@ -293,7 +293,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyFromJsonVirtualRoot(String newHttpBodyFromJsonVirtualRoot) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, newHttpBodyFromJsonVirtualRoot);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT, newHttpBodyFromJsonVirtualRoot);
 	}
 
 	/**
@@ -302,7 +302,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public boolean isHttpBodyToJsonAutoArray() {
-		return (Boolean)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY, true);
+		return (Boolean)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY, true);
 	}
 
 	/**
@@ -311,7 +311,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyToJsonAutoArray(boolean newHttpBodyToJsonAutoArray) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY, newHttpBodyToJsonAutoArray);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY, newHttpBodyToJsonAutoArray);
 	}
 
 	/**
@@ -320,7 +320,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public boolean isHttpBodyToJsonAutoPrimitive() {
-		return (Boolean)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, true);
+		return (Boolean)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, true);
 	}
 
 	/**
@@ -329,7 +329,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyToJsonAutoPrimitive(boolean newHttpBodyToJsonAutoPrimitive) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, newHttpBodyToJsonAutoPrimitive);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, newHttpBodyToJsonAutoPrimitive);
 	}
 
 	/**
@@ -338,7 +338,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public boolean isHttpBodyToJsonMultiplePi() {
-		return (Boolean)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI, true);
+		return (Boolean)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI, true);
 	}
 
 	/**
@@ -347,7 +347,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyToJsonMultiplePi(boolean newHttpBodyToJsonMultiplePi) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI, newHttpBodyToJsonMultiplePi);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI, newHttpBodyToJsonMultiplePi);
 	}
 
 	/**
@@ -356,7 +356,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public boolean isHttpBodyToJsonNsDeclarations() {
-		return (Boolean)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS, true);
+		return (Boolean)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS, true);
 	}
 
 	/**
@@ -365,7 +365,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyToJsonNsDeclarations(boolean newHttpBodyToJsonNsDeclarations) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS, newHttpBodyToJsonNsDeclarations);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS, newHttpBodyToJsonNsDeclarations);
 	}
 
 	/**
@@ -374,7 +374,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public boolean isHttpBodyToJsonPrettyPrint() {
-		return (Boolean)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT, true);
+		return (Boolean)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT, true);
 	}
 
 	/**
@@ -383,7 +383,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyToJsonPrettyPrint(boolean newHttpBodyToJsonPrettyPrint) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT, newHttpBodyToJsonPrettyPrint);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT, newHttpBodyToJsonPrettyPrint);
 	}
 
 	/**
@@ -392,7 +392,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public String getHttpBodyToJsonVirtualRoot() {
-		return (String)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, true);
+		return (String)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, true);
 	}
 
 	/**
@@ -401,7 +401,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setHttpBodyToJsonVirtualRoot(String newHttpBodyToJsonVirtualRoot) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, newHttpBodyToJsonVirtualRoot);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, newHttpBodyToJsonVirtualRoot);
 	}
 
 	/**
@@ -410,7 +410,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public String getNamespaceMapping() {
-		return (String)getMixed().get(restPackage.Literals.DOCUMENT_ROOT__NAMESPACE_MAPPING, true);
+		return (String)getMixed().get(RestPackage.Literals.DOCUMENT_ROOT__NAMESPACE_MAPPING, true);
 	}
 
 	/**
@@ -419,7 +419,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setNamespaceMapping(String newNamespaceMapping) {
-		((FeatureMap.Internal)getMixed()).set(restPackage.Literals.DOCUMENT_ROOT__NAMESPACE_MAPPING, newNamespaceMapping);
+		((FeatureMap.Internal)getMixed()).set(RestPackage.Literals.DOCUMENT_ROOT__NAMESPACE_MAPPING, newNamespaceMapping);
 	}
 
 	/**
@@ -430,11 +430,11 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.DOCUMENT_ROOT__MIXED:
+			case RestPackage.DOCUMENT_ROOT__MIXED:
 				return ((InternalEList<?>)getMixed()).basicRemove(otherEnd, msgs);
-			case restPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+			case RestPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
 				return ((InternalEList<?>)getXMLNSPrefixMap()).basicRemove(otherEnd, msgs);
-			case restPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+			case RestPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
 				return ((InternalEList<?>)getXSISchemaLocation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -448,34 +448,34 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.DOCUMENT_ROOT__MIXED:
+			case RestPackage.DOCUMENT_ROOT__MIXED:
 				if (coreType) return getMixed();
 				return ((FeatureMap.Internal)getMixed()).getWrapper();
-			case restPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+			case RestPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
 				if (coreType) return getXMLNSPrefixMap();
 				else return getXMLNSPrefixMap().map();
-			case restPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+			case RestPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
 				if (coreType) return getXSISchemaLocation();
 				else return getXSISchemaLocation().map();
-			case restPackage.DOCUMENT_ROOT__BASE_PATH:
+			case RestPackage.DOCUMENT_ROOT__BASE_PATH:
 				return getBasePath();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				return isHttpBodyFromJsonMultiplePi();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				return getHttpBodyFromJsonVirtualRoot();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				return isHttpBodyToJsonAutoArray();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				return isHttpBodyToJsonAutoPrimitive();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				return isHttpBodyToJsonMultiplePi();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				return isHttpBodyToJsonNsDeclarations();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				return isHttpBodyToJsonPrettyPrint();
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				return getHttpBodyToJsonVirtualRoot();
-			case restPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
+			case RestPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
 				return getNamespaceMapping();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -489,43 +489,43 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.DOCUMENT_ROOT__MIXED:
+			case RestPackage.DOCUMENT_ROOT__MIXED:
 				((FeatureMap.Internal)getMixed()).set(newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+			case RestPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
 				((EStructuralFeature.Setting)getXMLNSPrefixMap()).set(newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+			case RestPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
 				((EStructuralFeature.Setting)getXSISchemaLocation()).set(newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__BASE_PATH:
+			case RestPackage.DOCUMENT_ROOT__BASE_PATH:
 				setBasePath((String)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				setHttpBodyFromJsonMultiplePi((Boolean)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				setHttpBodyFromJsonVirtualRoot((String)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				setHttpBodyToJsonAutoArray((Boolean)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				setHttpBodyToJsonAutoPrimitive((Boolean)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				setHttpBodyToJsonMultiplePi((Boolean)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				setHttpBodyToJsonNsDeclarations((Boolean)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				setHttpBodyToJsonPrettyPrint((Boolean)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				setHttpBodyToJsonVirtualRoot((String)newValue);
 				return;
-			case restPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
+			case RestPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
 				setNamespaceMapping((String)newValue);
 				return;
 		}
@@ -540,43 +540,43 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.DOCUMENT_ROOT__MIXED:
+			case RestPackage.DOCUMENT_ROOT__MIXED:
 				getMixed().clear();
 				return;
-			case restPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+			case RestPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
 				getXMLNSPrefixMap().clear();
 				return;
-			case restPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+			case RestPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
 				getXSISchemaLocation().clear();
 				return;
-			case restPackage.DOCUMENT_ROOT__BASE_PATH:
+			case RestPackage.DOCUMENT_ROOT__BASE_PATH:
 				setBasePath(BASE_PATH_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				setHttpBodyFromJsonMultiplePi(HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				setHttpBodyFromJsonVirtualRoot(HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				setHttpBodyToJsonAutoArray(HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				setHttpBodyToJsonAutoPrimitive(HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				setHttpBodyToJsonMultiplePi(HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				setHttpBodyToJsonNsDeclarations(HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				setHttpBodyToJsonPrettyPrint(HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				setHttpBodyToJsonVirtualRoot(HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT);
 				return;
-			case restPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
+			case RestPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
 				setNamespaceMapping(NAMESPACE_MAPPING_EDEFAULT);
 				return;
 		}
@@ -591,31 +591,31 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.DOCUMENT_ROOT__MIXED:
+			case RestPackage.DOCUMENT_ROOT__MIXED:
 				return mixed != null && !mixed.isEmpty();
-			case restPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
+			case RestPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP:
 				return xMLNSPrefixMap != null && !xMLNSPrefixMap.isEmpty();
-			case restPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
+			case RestPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
 				return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
-			case restPackage.DOCUMENT_ROOT__BASE_PATH:
+			case RestPackage.DOCUMENT_ROOT__BASE_PATH:
 				return BASE_PATH_EDEFAULT == null ? getBasePath() != null : !BASE_PATH_EDEFAULT.equals(getBasePath());
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI:
 				return isHttpBodyFromJsonMultiplePi() != HTTP_BODY_FROM_JSON_MULTIPLE_PI_EDEFAULT;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT:
 				return HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT == null ? getHttpBodyFromJsonVirtualRoot() != null : !HTTP_BODY_FROM_JSON_VIRTUAL_ROOT_EDEFAULT.equals(getHttpBodyFromJsonVirtualRoot());
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				return isHttpBodyToJsonAutoArray() != HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				return isHttpBodyToJsonAutoPrimitive() != HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				return isHttpBodyToJsonMultiplePi() != HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				return isHttpBodyToJsonNsDeclarations() != HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				return isHttpBodyToJsonPrettyPrint() != HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT;
-			case restPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				return HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT == null ? getHttpBodyToJsonVirtualRoot() != null : !HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT.equals(getHttpBodyToJsonVirtualRoot());
-			case restPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
+			case RestPackage.DOCUMENT_ROOT__NAMESPACE_MAPPING:
 				return NAMESPACE_MAPPING_EDEFAULT == null ? getNamespaceMapping() != null : !NAMESPACE_MAPPING_EDEFAULT.equals(getNamespaceMapping());
 		}
 		return super.eIsSet(featureID);

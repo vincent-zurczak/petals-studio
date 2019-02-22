@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Param</b></em>'.
+ * A representation of the model object '<em><b>Param</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestParam#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestParam()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestParam()
  * @model extendedMetaData="name='RestParam' kind='simple'"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface RestParam extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestParam_Value()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestParam_Value()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface RestParam extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestParam_Name()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestParam_Name()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='attribute' name='name'"
 	 * @generated

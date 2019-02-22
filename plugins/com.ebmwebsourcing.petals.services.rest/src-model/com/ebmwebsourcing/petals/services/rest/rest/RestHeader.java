@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Header</b></em>'.
+ * A representation of the model object '<em><b>Header</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestHeader#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestHeader()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestHeader()
  * @model extendedMetaData="name='RestHeader' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface RestHeader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constant</em>' attribute.
 	 * @see #setConstant(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestHeader_Constant()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestHeader_Constant()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='element' name='constant' namespace='##targetNamespace'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface RestHeader extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestHeader_Name()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestHeader_Name()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='attribute' name='name'"
 	 * @generated

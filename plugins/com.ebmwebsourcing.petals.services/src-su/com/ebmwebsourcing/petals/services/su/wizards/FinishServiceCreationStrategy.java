@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.su.wizards;
 
 import org.eclipse.core.resources.IProject;
@@ -18,7 +18,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import com.sun.java.xml.ns.jbi.AbstractEndpoint;
 
 /**
- * @author Micka�l Istria - EBM WebSourcing
+ * @author Mickael Istria - EBM WebSourcing
  */
 public interface FinishServiceCreationStrategy {
 

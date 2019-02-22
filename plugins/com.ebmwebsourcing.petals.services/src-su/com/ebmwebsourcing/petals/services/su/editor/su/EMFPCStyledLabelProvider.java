@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.su.editor.su;
 
 import java.util.List;
@@ -276,22 +276,27 @@ public class EMFPCStyledLabelProvider extends LabelProvider implements IStyledLa
 
 		StyledString styledString = new StyledString( "" );
 
-		String itfName = elt.getInterfaceName().getLocalPart();
+		String itfName = null;
+		if(elt.getInterfaceName() != null) {
+			itfName = elt.getInterfaceName().getLocalPart();
+		}
+
 		String srvName = null;
 		if (elt.getServiceName() != null) {
 			srvName = elt.getServiceName().getLocalPart();
 		}
-		String edptName = elt.getEndpointName();
 
+		String edptName = elt.getEndpointName();
 		Styler styler = null;
 		if( elt instanceof Provides) {
 			styler = this.providesKeyWordsStyle;
 		} else if( elt instanceof Consumes) {
 			styler = this.consumesKeyWordsStyle;
 		}
+
 		styledString.append(  srvName != null && srvName.length() > 0 ? srvName : "*", this.propertiesStyle );
 		styledString.append( " implements ", styler );
-		styledString.append( itfName.length() > 0 ? itfName : "?", this.propertiesStyle );
+		styledString.append( itfName != null && itfName.length() > 0 ? itfName : "?", this.propertiesStyle );
 		styledString.append( " @ ", styler );
 		styledString.append( edptName != null && edptName.length() > 0 ? edptName : "*", this.propertiesStyle );
 

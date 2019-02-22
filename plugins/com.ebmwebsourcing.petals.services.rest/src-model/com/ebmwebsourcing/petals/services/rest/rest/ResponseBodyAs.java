@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Response Body As</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getResponseBodyAs()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getResponseBodyAs()
  * @model extendedMetaData="name='ResponseBodyAs'"
  * @generated
  */

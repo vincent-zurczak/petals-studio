@@ -84,7 +84,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn="com.ebmwebsourcing.petals.services.su.wizards.ComponentCreationWizard:"/>
+                  <meta.attribute kind="java" basedOn="com.ebmwebsourcing.petals.services.su.wizards.AbstractServiceUnitWizard:"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -94,7 +94,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn="com.ebmwebsourcing.petals.services.su.wizards.ComponentCreationWizard:"/>
+                  <meta.attribute kind="java" basedOn="com.ebmwebsourcing.petals.services.su.wizards.AbstractServiceUnitWizard:"/>
                </appinfo>
             </annotation>
          </attribute>

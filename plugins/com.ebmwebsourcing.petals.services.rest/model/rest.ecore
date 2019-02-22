@@ -31,10 +31,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Consumes" eSuperTypes="../../com.ebmwebsourcing.jbi.core.metamodel/model/jbi.ecore#//Consumes">
+  <eClassifiers xsi:type="ecore:EClass" name="RestConsumes" eSuperTypes="../../com.ebmwebsourcing.petals.services.cdk/model/cdk5.ecore#//CDK5Consumes">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="name" value="Consumes"/>
-      <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="basePath" lowerBound="1"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/XMLType.ecore#//String">
@@ -660,10 +658,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Provides" eSuperTypes="../../com.ebmwebsourcing.jbi.core.metamodel/model/jbi.ecore#//Provides">
+  <eClassifiers xsi:type="ecore:EClass" name="RestProvides" eSuperTypes="../../com.ebmwebsourcing.petals.services.cdk/model/cdk5.ecore#//CDK5Provides">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-      <details key="name" value="Provides"/>
-      <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="basePath" lowerBound="1"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/XMLType.ecore#//String">

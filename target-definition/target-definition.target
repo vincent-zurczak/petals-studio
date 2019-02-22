@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="Eclipse 4.7 - Oxygen" sequenceNumber="25">
+<?pde version="3.8"?><target name="Eclipse 4.8 - Photon" sequenceNumber="25">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.swtbot.eclipse.feature.group" version="0.0.0" />
@@ -16,11 +16,16 @@
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.jdom" version="0.0.0" />
+<unit id="javax.wsdl" version="1.5.1.v201012040544" />
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository/" />
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.wst.sse.sieditor.feature.feature.group" version="0.0.0" />
 <repository location="http://download.eclipse.org/webtools/incubator/repository/sieditor/snapshot" />
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="com.github.cameltooling.lsp.eclipse.client.feature.feature.group" version="0.0.0" />
+<repository location="https://camel-tooling.github.io/camel-lsp-client-eclipse-update-site/updatesite/nightly/" />
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.rcp.feature.group" version="0.0.0" />
@@ -37,7 +42,6 @@
 <unit id="org.eclipse.wst.xsl.feature.feature.group" version="0.0.0" />
 <unit id="org.eclipse.jst.server_ui.feature.feature.group" version="0.0.0" />
 <unit id="org.eclipse.wst.server_adapters.feature.feature.group" version="0.0.0" />
-<unit id="org.eclipse.wst.ws_wsdl15.feature.feature.group" version="0.0.0" />
 <unit id="org.eclipse.wst.server_core.feature.feature.group" version="0.0.0" />
 <unit id="org.eclipse.wst.server_ui.feature.feature.group" version="0.0.0" />
 <unit id="org.eclipse.wst.ws_core.feature.feature.group" version="0.0.0" />
@@ -45,7 +49,7 @@
 <unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0" />
 <unit id="org.eclipse.m2e.logback.feature.feature.group" version="0.0.0" />
 <unit id="org.eclipse.egit.feature.group" version="0.0.0" />
-<repository location="http://download.eclipse.org/releases/oxygen/" />
+<repository location="http://download.eclipse.org/releases/photon/" />
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.jet.sdk.feature.group" version="0.0.0" />

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.ProvidesMapping#getOperation <em>Operation</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesMapping()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesMapping()
  * @model extendedMetaData="name='ProvidesMapping' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ProvidesMapping extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getProvidesMapping_Operation()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getProvidesMapping_Operation()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='operation' namespace='##targetNamespace'"
 	 * @generated

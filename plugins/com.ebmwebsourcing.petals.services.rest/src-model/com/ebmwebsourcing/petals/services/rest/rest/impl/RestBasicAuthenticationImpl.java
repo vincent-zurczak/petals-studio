@@ -12,8 +12,8 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.RestBasicAuthentication;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.RestProperty;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Basic Authentication</b></em>'.
+ * An implementation of the model object '<em><b>Basic Authentication</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -75,7 +75,7 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_BASIC_AUTHENTICATION;
+		return RestPackage.Literals.REST_BASIC_AUTHENTICATION;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 		RestProperty oldUsername = username;
 		username = newUsername;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_BASIC_AUTHENTICATION__USERNAME, oldUsername, newUsername);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_BASIC_AUTHENTICATION__USERNAME, oldUsername, newUsername);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -111,14 +111,14 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 		if (newUsername != username) {
 			NotificationChain msgs = null;
 			if (username != null)
-				msgs = ((InternalEObject)username).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_BASIC_AUTHENTICATION__USERNAME, null, msgs);
+				msgs = ((InternalEObject)username).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_BASIC_AUTHENTICATION__USERNAME, null, msgs);
 			if (newUsername != null)
-				msgs = ((InternalEObject)newUsername).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_BASIC_AUTHENTICATION__USERNAME, null, msgs);
+				msgs = ((InternalEObject)newUsername).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_BASIC_AUTHENTICATION__USERNAME, null, msgs);
 			msgs = basicSetUsername(newUsername, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_BASIC_AUTHENTICATION__USERNAME, newUsername, newUsername));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_BASIC_AUTHENTICATION__USERNAME, newUsername, newUsername));
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 		RestProperty oldPassword = password;
 		password = newPassword;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_BASIC_AUTHENTICATION__PASSWORD, oldPassword, newPassword);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD, oldPassword, newPassword);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -154,14 +154,14 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 		if (newPassword != password) {
 			NotificationChain msgs = null;
 			if (password != null)
-				msgs = ((InternalEObject)password).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_BASIC_AUTHENTICATION__PASSWORD, null, msgs);
+				msgs = ((InternalEObject)password).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD, null, msgs);
 			if (newPassword != null)
-				msgs = ((InternalEObject)newPassword).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_BASIC_AUTHENTICATION__PASSWORD, null, msgs);
+				msgs = ((InternalEObject)newPassword).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD, null, msgs);
 			msgs = basicSetPassword(newPassword, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_BASIC_AUTHENTICATION__PASSWORD, newPassword, newPassword));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD, newPassword, newPassword));
 	}
 
 	/**
@@ -172,9 +172,9 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.REST_BASIC_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_BASIC_AUTHENTICATION__USERNAME:
 				return basicSetUsername(null, msgs);
-			case restPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
 				return basicSetPassword(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -188,9 +188,9 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_BASIC_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_BASIC_AUTHENTICATION__USERNAME:
 				return getUsername();
-			case restPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
 				return getPassword();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -204,10 +204,10 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_BASIC_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_BASIC_AUTHENTICATION__USERNAME:
 				setUsername((RestProperty)newValue);
 				return;
-			case restPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
 				setPassword((RestProperty)newValue);
 				return;
 		}
@@ -222,10 +222,10 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_BASIC_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_BASIC_AUTHENTICATION__USERNAME:
 				setUsername((RestProperty)null);
 				return;
-			case restPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
 				setPassword((RestProperty)null);
 				return;
 		}
@@ -240,9 +240,9 @@ public class RestBasicAuthenticationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_BASIC_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_BASIC_AUTHENTICATION__USERNAME:
 				return username != null;
-			case restPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_BASIC_AUTHENTICATION__PASSWORD:
 				return password != null;
 		}
 		return super.eIsSet(featureID);

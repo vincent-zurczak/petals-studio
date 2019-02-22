@@ -12,8 +12,8 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.RestNtlmAuthentication;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.RestProperty;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Ntlm Authentication</b></em>'.
+ * An implementation of the model object '<em><b>Ntlm Authentication</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -86,7 +86,7 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_NTLM_AUTHENTICATION;
+		return RestPackage.Literals.REST_NTLM_AUTHENTICATION;
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 		RestProperty oldUsername = username;
 		username = newUsername;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_NTLM_AUTHENTICATION__USERNAME, oldUsername, newUsername);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_NTLM_AUTHENTICATION__USERNAME, oldUsername, newUsername);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -122,14 +122,14 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 		if (newUsername != username) {
 			NotificationChain msgs = null;
 			if (username != null)
-				msgs = ((InternalEObject)username).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_NTLM_AUTHENTICATION__USERNAME, null, msgs);
+				msgs = ((InternalEObject)username).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_NTLM_AUTHENTICATION__USERNAME, null, msgs);
 			if (newUsername != null)
-				msgs = ((InternalEObject)newUsername).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_NTLM_AUTHENTICATION__USERNAME, null, msgs);
+				msgs = ((InternalEObject)newUsername).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_NTLM_AUTHENTICATION__USERNAME, null, msgs);
 			msgs = basicSetUsername(newUsername, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_NTLM_AUTHENTICATION__USERNAME, newUsername, newUsername));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_NTLM_AUTHENTICATION__USERNAME, newUsername, newUsername));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 		RestProperty oldPassword = password;
 		password = newPassword;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_NTLM_AUTHENTICATION__PASSWORD, oldPassword, newPassword);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD, oldPassword, newPassword);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -165,14 +165,14 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 		if (newPassword != password) {
 			NotificationChain msgs = null;
 			if (password != null)
-				msgs = ((InternalEObject)password).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_NTLM_AUTHENTICATION__PASSWORD, null, msgs);
+				msgs = ((InternalEObject)password).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD, null, msgs);
 			if (newPassword != null)
-				msgs = ((InternalEObject)newPassword).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_NTLM_AUTHENTICATION__PASSWORD, null, msgs);
+				msgs = ((InternalEObject)newPassword).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD, null, msgs);
 			msgs = basicSetPassword(newPassword, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_NTLM_AUTHENTICATION__PASSWORD, newPassword, newPassword));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD, newPassword, newPassword));
 	}
 
 	/**
@@ -193,7 +193,7 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 		RestProperty oldDomain = domain;
 		domain = newDomain;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_NTLM_AUTHENTICATION__DOMAIN, oldDomain, newDomain);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN, oldDomain, newDomain);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -208,14 +208,14 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 		if (newDomain != domain) {
 			NotificationChain msgs = null;
 			if (domain != null)
-				msgs = ((InternalEObject)domain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_NTLM_AUTHENTICATION__DOMAIN, null, msgs);
+				msgs = ((InternalEObject)domain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN, null, msgs);
 			if (newDomain != null)
-				msgs = ((InternalEObject)newDomain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_NTLM_AUTHENTICATION__DOMAIN, null, msgs);
+				msgs = ((InternalEObject)newDomain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN, null, msgs);
 			msgs = basicSetDomain(newDomain, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_NTLM_AUTHENTICATION__DOMAIN, newDomain, newDomain));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN, newDomain, newDomain));
 	}
 
 	/**
@@ -226,11 +226,11 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.REST_NTLM_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_NTLM_AUTHENTICATION__USERNAME:
 				return basicSetUsername(null, msgs);
-			case restPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
 				return basicSetPassword(null, msgs);
-			case restPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
+			case RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
 				return basicSetDomain(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -244,11 +244,11 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_NTLM_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_NTLM_AUTHENTICATION__USERNAME:
 				return getUsername();
-			case restPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
 				return getPassword();
-			case restPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
+			case RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
 				return getDomain();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -262,13 +262,13 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_NTLM_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_NTLM_AUTHENTICATION__USERNAME:
 				setUsername((RestProperty)newValue);
 				return;
-			case restPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
 				setPassword((RestProperty)newValue);
 				return;
-			case restPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
+			case RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
 				setDomain((RestProperty)newValue);
 				return;
 		}
@@ -283,13 +283,13 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_NTLM_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_NTLM_AUTHENTICATION__USERNAME:
 				setUsername((RestProperty)null);
 				return;
-			case restPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
 				setPassword((RestProperty)null);
 				return;
-			case restPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
+			case RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
 				setDomain((RestProperty)null);
 				return;
 		}
@@ -304,11 +304,11 @@ public class RestNtlmAuthenticationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_NTLM_AUTHENTICATION__USERNAME:
+			case RestPackage.REST_NTLM_AUTHENTICATION__USERNAME:
 				return username != null;
-			case restPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
+			case RestPackage.REST_NTLM_AUTHENTICATION__PASSWORD:
 				return password != null;
-			case restPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
+			case RestPackage.REST_NTLM_AUTHENTICATION__DOMAIN:
 				return domain != null;
 		}
 		return super.eIsSet(featureID);

@@ -14,6 +14,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.bpel.common.wsdl,
  org.eclipse.ui.navigator.resources,
  org.eclipse.ui.navigator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: com.ebmwebsourcing.petals.components.PetalsComponentsPlugin

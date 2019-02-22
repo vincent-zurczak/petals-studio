@@ -1,0 +1,10 @@
+<xs:schema 
+	elementFormDefault="qualified" 
+	targetNamespace="http://petals.ow2.org/components/petals-se-camel/jbi/version-1.0"
+	xmlns="http://petals.ow2.org/components/petals-se-camel/jbi/version-1.0" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+		<xs:element name="java-routes" type="xs:string" />
+		<xs:element name="xml-routes" type="xs:string" />
+	
+</xs:schema>

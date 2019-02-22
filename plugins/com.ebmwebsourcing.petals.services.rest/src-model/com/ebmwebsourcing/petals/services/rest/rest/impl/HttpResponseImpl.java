@@ -13,7 +13,7 @@ package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.HttpResponse;
 import com.ebmwebsourcing.petals.services.rest.rest.RestHeader;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import java.util.Collection;
 
@@ -272,7 +272,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.HTTP_RESPONSE;
+		return RestPackage.Literals.HTTP_RESPONSE;
 	}
 
 	/**
@@ -282,7 +282,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 	 */
 	public EList<RestHeader> getHeader() {
 		if (header == null) {
-			header = new EObjectContainmentEList<RestHeader>(RestHeader.class, this, restPackage.HTTP_RESPONSE__HEADER);
+			header = new EObjectContainmentEList<RestHeader>(RestHeader.class, this, RestPackage.HTTP_RESPONSE__HEADER);
 		}
 		return header;
 	}
@@ -307,7 +307,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		boolean oldHttpBodyToJsonMultiplePiESet = httpBodyToJsonMultiplePiESet;
 		httpBodyToJsonMultiplePiESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, httpBodyToJsonMultiplePi, !oldHttpBodyToJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, httpBodyToJsonMultiplePi, !oldHttpBodyToJsonMultiplePiESet));
 	}
 
 	/**
@@ -321,7 +321,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		httpBodyToJsonMultiplePi = HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT;
 		httpBodyToJsonMultiplePiESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyToJsonMultiplePiESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI, oldHttpBodyToJsonMultiplePi, HTTP_BODY_TO_JSON_MULTIPLE_PI_EDEFAULT, oldHttpBodyToJsonMultiplePiESet));
 	}
 
 	/**
@@ -351,7 +351,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		String oldHttpBodyToJsonVirtualRoot = httpBodyToJsonVirtualRoot;
 		httpBodyToJsonVirtualRoot = newHttpBodyToJsonVirtualRoot;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, oldHttpBodyToJsonVirtualRoot, httpBodyToJsonVirtualRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT, oldHttpBodyToJsonVirtualRoot, httpBodyToJsonVirtualRoot));
 	}
 
 	/**
@@ -374,7 +374,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		boolean oldHttpBodyToJsonAutoArrayESet = httpBodyToJsonAutoArrayESet;
 		httpBodyToJsonAutoArrayESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, httpBodyToJsonAutoArray, !oldHttpBodyToJsonAutoArrayESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, httpBodyToJsonAutoArray, !oldHttpBodyToJsonAutoArrayESet));
 	}
 
 	/**
@@ -388,7 +388,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		httpBodyToJsonAutoArray = HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT;
 		httpBodyToJsonAutoArrayESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT, oldHttpBodyToJsonAutoArrayESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY, oldHttpBodyToJsonAutoArray, HTTP_BODY_TO_JSON_AUTO_ARRAY_EDEFAULT, oldHttpBodyToJsonAutoArrayESet));
 	}
 
 	/**
@@ -420,7 +420,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		boolean oldHttpBodyToJsonAutoPrimitiveESet = httpBodyToJsonAutoPrimitiveESet;
 		httpBodyToJsonAutoPrimitiveESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, httpBodyToJsonAutoPrimitive, !oldHttpBodyToJsonAutoPrimitiveESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, httpBodyToJsonAutoPrimitive, !oldHttpBodyToJsonAutoPrimitiveESet));
 	}
 
 	/**
@@ -434,7 +434,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		httpBodyToJsonAutoPrimitive = HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT;
 		httpBodyToJsonAutoPrimitiveESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT, oldHttpBodyToJsonAutoPrimitiveESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE, oldHttpBodyToJsonAutoPrimitive, HTTP_BODY_TO_JSON_AUTO_PRIMITIVE_EDEFAULT, oldHttpBodyToJsonAutoPrimitiveESet));
 	}
 
 	/**
@@ -466,7 +466,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		boolean oldHttpBodyToJsonPrettyPrintESet = httpBodyToJsonPrettyPrintESet;
 		httpBodyToJsonPrettyPrintESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, httpBodyToJsonPrettyPrint, !oldHttpBodyToJsonPrettyPrintESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, httpBodyToJsonPrettyPrint, !oldHttpBodyToJsonPrettyPrintESet));
 	}
 
 	/**
@@ -480,7 +480,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		httpBodyToJsonPrettyPrint = HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT;
 		httpBodyToJsonPrettyPrintESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT, oldHttpBodyToJsonPrettyPrintESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT, oldHttpBodyToJsonPrettyPrint, HTTP_BODY_TO_JSON_PRETTY_PRINT_EDEFAULT, oldHttpBodyToJsonPrettyPrintESet));
 	}
 
 	/**
@@ -512,7 +512,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		boolean oldHttpBodyToJsonNsDeclarationsESet = httpBodyToJsonNsDeclarationsESet;
 		httpBodyToJsonNsDeclarationsESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, httpBodyToJsonNsDeclarations, !oldHttpBodyToJsonNsDeclarationsESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, httpBodyToJsonNsDeclarations, !oldHttpBodyToJsonNsDeclarationsESet));
 	}
 
 	/**
@@ -526,7 +526,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		httpBodyToJsonNsDeclarations = HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT;
 		httpBodyToJsonNsDeclarationsESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT, oldHttpBodyToJsonNsDeclarationsESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS, oldHttpBodyToJsonNsDeclarations, HTTP_BODY_TO_JSON_NS_DECLARATIONS_EDEFAULT, oldHttpBodyToJsonNsDeclarationsESet));
 	}
 
 	/**
@@ -558,7 +558,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		boolean oldCodeESet = codeESet;
 		codeESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.HTTP_RESPONSE__CODE, oldCode, code, !oldCodeESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.HTTP_RESPONSE__CODE, oldCode, code, !oldCodeESet));
 	}
 
 	/**
@@ -572,7 +572,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 		code = CODE_EDEFAULT;
 		codeESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.HTTP_RESPONSE__CODE, oldCode, CODE_EDEFAULT, oldCodeESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.HTTP_RESPONSE__CODE, oldCode, CODE_EDEFAULT, oldCodeESet));
 	}
 
 	/**
@@ -592,7 +592,7 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.HTTP_RESPONSE__HEADER:
+			case RestPackage.HTTP_RESPONSE__HEADER:
 				return ((InternalEList<?>)getHeader()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -606,21 +606,21 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.HTTP_RESPONSE__HEADER:
+			case RestPackage.HTTP_RESPONSE__HEADER:
 				return getHeader();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				return isHttpBodyToJsonMultiplePi();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				return getHttpBodyToJsonVirtualRoot();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				return isHttpBodyToJsonAutoArray();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				return isHttpBodyToJsonAutoPrimitive();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				return isHttpBodyToJsonPrettyPrint();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				return isHttpBodyToJsonNsDeclarations();
-			case restPackage.HTTP_RESPONSE__CODE:
+			case RestPackage.HTTP_RESPONSE__CODE:
 				return getCode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -635,29 +635,29 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.HTTP_RESPONSE__HEADER:
+			case RestPackage.HTTP_RESPONSE__HEADER:
 				getHeader().clear();
 				getHeader().addAll((Collection<? extends RestHeader>)newValue);
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				setHttpBodyToJsonMultiplePi((Boolean)newValue);
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				setHttpBodyToJsonVirtualRoot((String)newValue);
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				setHttpBodyToJsonAutoArray((Boolean)newValue);
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				setHttpBodyToJsonAutoPrimitive((Boolean)newValue);
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				setHttpBodyToJsonPrettyPrint((Boolean)newValue);
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				setHttpBodyToJsonNsDeclarations((Boolean)newValue);
 				return;
-			case restPackage.HTTP_RESPONSE__CODE:
+			case RestPackage.HTTP_RESPONSE__CODE:
 				setCode((Integer)newValue);
 				return;
 		}
@@ -672,28 +672,28 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.HTTP_RESPONSE__HEADER:
+			case RestPackage.HTTP_RESPONSE__HEADER:
 				getHeader().clear();
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				unsetHttpBodyToJsonMultiplePi();
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				setHttpBodyToJsonVirtualRoot(HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT);
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				unsetHttpBodyToJsonAutoArray();
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				unsetHttpBodyToJsonAutoPrimitive();
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				unsetHttpBodyToJsonPrettyPrint();
 				return;
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				unsetHttpBodyToJsonNsDeclarations();
 				return;
-			case restPackage.HTTP_RESPONSE__CODE:
+			case RestPackage.HTTP_RESPONSE__CODE:
 				unsetCode();
 				return;
 		}
@@ -708,21 +708,21 @@ public class HttpResponseImpl extends MinimalEObjectImpl.Container implements Ht
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.HTTP_RESPONSE__HEADER:
+			case RestPackage.HTTP_RESPONSE__HEADER:
 				return header != null && !header.isEmpty();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_MULTIPLE_PI:
 				return isSetHttpBodyToJsonMultiplePi();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_VIRTUAL_ROOT:
 				return HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT == null ? httpBodyToJsonVirtualRoot != null : !HTTP_BODY_TO_JSON_VIRTUAL_ROOT_EDEFAULT.equals(httpBodyToJsonVirtualRoot);
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_ARRAY:
 				return isSetHttpBodyToJsonAutoArray();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE:
 				return isSetHttpBodyToJsonAutoPrimitive();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_PRETTY_PRINT:
 				return isSetHttpBodyToJsonPrettyPrint();
-			case restPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
+			case RestPackage.HTTP_RESPONSE__HTTP_BODY_TO_JSON_NS_DECLARATIONS:
 				return isSetHttpBodyToJsonNsDeclarations();
-			case restPackage.HTTP_RESPONSE__CODE:
+			case RestPackage.HTTP_RESPONSE__CODE:
 				return isSetCode();
 		}
 		return super.eIsSet(featureID);

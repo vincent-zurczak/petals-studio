@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Ntlm Authentication</b></em>'.
+ * A representation of the model object '<em><b>Ntlm Authentication</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestNtlmAuthentication#getDomain <em>Domain</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestNtlmAuthentication()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestNtlmAuthentication()
  * @model extendedMetaData="name='RestNtlmAuthentication' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface RestNtlmAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Username</em>' containment reference.
 	 * @see #setUsername(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestNtlmAuthentication_Username()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestNtlmAuthentication_Username()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='username' namespace='##targetNamespace'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface RestNtlmAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Password</em>' containment reference.
 	 * @see #setPassword(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestNtlmAuthentication_Password()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestNtlmAuthentication_Password()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='password' namespace='##targetNamespace'"
 	 * @generated
@@ -96,7 +96,7 @@ public interface RestNtlmAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domain</em>' containment reference.
 	 * @see #setDomain(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestNtlmAuthentication_Domain()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestNtlmAuthentication_Domain()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='domain' namespace='##targetNamespace'"
 	 * @generated

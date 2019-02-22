@@ -11,8 +11,8 @@
  */
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.XPathCondition;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -71,7 +71,7 @@ public class XPathConditionImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.XPATH_CONDITION;
+		return RestPackage.Literals.XPATH_CONDITION;
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class XPathConditionImpl extends MinimalEObjectImpl.Container implements 
 		String oldXpath = xpath;
 		xpath = newXpath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.XPATH_CONDITION__XPATH, oldXpath, xpath));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.XPATH_CONDITION__XPATH, oldXpath, xpath));
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class XPathConditionImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.XPATH_CONDITION__XPATH:
+			case RestPackage.XPATH_CONDITION__XPATH:
 				return getXpath();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -117,7 +117,7 @@ public class XPathConditionImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.XPATH_CONDITION__XPATH:
+			case RestPackage.XPATH_CONDITION__XPATH:
 				setXpath((String)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class XPathConditionImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.XPATH_CONDITION__XPATH:
+			case RestPackage.XPATH_CONDITION__XPATH:
 				setXpath(XPATH_EDEFAULT);
 				return;
 		}
@@ -147,7 +147,7 @@ public class XPathConditionImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.XPATH_CONDITION__XPATH:
+			case RestPackage.XPATH_CONDITION__XPATH:
 				return XPATH_EDEFAULT == null ? xpath != null : !XPATH_EDEFAULT.equals(xpath);
 		}
 		return super.eIsSet(featureID);

@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Http Body Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpBodyType()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpBodyType()
  * @model extendedMetaData="name='HttpBodyType'"
  * @generated
  */

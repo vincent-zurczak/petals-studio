@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.DocumentRoot#getNamespaceMapping <em>Namespace Mapping</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot()
  * @model extendedMetaData="name='' kind='mixed'"
  * @generated
  */
@@ -56,7 +56,7 @@ public interface DocumentRoot extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mixed</em>' attribute list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_Mixed()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_Mixed()
 	 * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
 	 *        extendedMetaData="kind='elementWildcard' name=':mixed'"
 	 * @generated
@@ -74,7 +74,7 @@ public interface DocumentRoot extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XMLNS Prefix Map</em>' map.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_XMLNSPrefixMap()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_XMLNSPrefixMap()
 	 * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;" transient="true"
 	 *        extendedMetaData="kind='attribute' name='xmlns:prefix'"
 	 * @generated
@@ -92,7 +92,7 @@ public interface DocumentRoot extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XSI Schema Location</em>' map.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_XSISchemaLocation()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_XSISchemaLocation()
 	 * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;" transient="true"
 	 *        extendedMetaData="kind='attribute' name='xsi:schemaLocation'"
 	 * @generated
@@ -109,7 +109,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Base Path</em>' attribute.
 	 * @see #setBasePath(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_BasePath()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_BasePath()
 	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='base-path' namespace='##targetNamespace'"
 	 * @generated
@@ -137,7 +137,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body From Json Multiple Pi</em>' attribute.
 	 * @see #setHttpBodyFromJsonMultiplePi(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyFromJsonMultiplePi()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyFromJsonMultiplePi()
 	 * @model default="false" unique="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-from-json-multiple-pi' namespace='##targetNamespace'"
 	 * @generated
@@ -164,7 +164,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body From Json Virtual Root</em>' attribute.
 	 * @see #setHttpBodyFromJsonVirtualRoot(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyFromJsonVirtualRoot()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyFromJsonVirtualRoot()
 	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-from-json-virtual-root' namespace='##targetNamespace'"
 	 * @generated
@@ -192,7 +192,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Auto Array</em>' attribute.
 	 * @see #setHttpBodyToJsonAutoArray(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyToJsonAutoArray()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyToJsonAutoArray()
 	 * @model default="false" unique="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-auto-array' namespace='##targetNamespace'"
 	 * @generated
@@ -220,7 +220,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Auto Primitive</em>' attribute.
 	 * @see #setHttpBodyToJsonAutoPrimitive(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyToJsonAutoPrimitive()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyToJsonAutoPrimitive()
 	 * @model default="false" unique="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-auto-primitive' namespace='##targetNamespace'"
 	 * @generated
@@ -248,7 +248,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Multiple Pi</em>' attribute.
 	 * @see #setHttpBodyToJsonMultiplePi(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyToJsonMultiplePi()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyToJsonMultiplePi()
 	 * @model default="false" unique="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-multiple-pi' namespace='##targetNamespace'"
 	 * @generated
@@ -276,7 +276,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Ns Declarations</em>' attribute.
 	 * @see #setHttpBodyToJsonNsDeclarations(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyToJsonNsDeclarations()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyToJsonNsDeclarations()
 	 * @model default="false" unique="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-ns-declarations' namespace='##targetNamespace'"
 	 * @generated
@@ -304,7 +304,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Pretty Print</em>' attribute.
 	 * @see #setHttpBodyToJsonPrettyPrint(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyToJsonPrettyPrint()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyToJsonPrettyPrint()
 	 * @model default="false" unique="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-pretty-print' namespace='##targetNamespace'"
 	 * @generated
@@ -331,7 +331,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Virtual Root</em>' attribute.
 	 * @see #setHttpBodyToJsonVirtualRoot(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_HttpBodyToJsonVirtualRoot()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_HttpBodyToJsonVirtualRoot()
 	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-virtual-root' namespace='##targetNamespace'"
 	 * @generated
@@ -358,7 +358,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Namespace Mapping</em>' attribute.
 	 * @see #setNamespaceMapping(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getDocumentRoot_NamespaceMapping()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getDocumentRoot_NamespaceMapping()
 	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String" upper="-2" transient="true" volatile="true" derived="true"
 	 *        extendedMetaData="kind='element' name='namespace-mapping' namespace='##targetNamespace'"
 	 * @generated

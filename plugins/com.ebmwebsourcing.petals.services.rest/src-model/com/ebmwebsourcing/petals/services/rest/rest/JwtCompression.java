@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Jwt Compression</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getJwtCompression()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getJwtCompression()
  * @model extendedMetaData="name='JwtCompression'"
  * @generated
  */

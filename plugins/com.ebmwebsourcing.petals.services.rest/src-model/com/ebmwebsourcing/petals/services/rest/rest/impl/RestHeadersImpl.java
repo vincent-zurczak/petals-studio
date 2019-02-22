@@ -13,7 +13,7 @@ package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.RestHeader;
 import com.ebmwebsourcing.petals.services.rest.rest.RestHeaders;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import java.util.Collection;
 
@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Headers</b></em>'.
+ * An implementation of the model object '<em><b>Headers</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -69,7 +69,7 @@ public class RestHeadersImpl extends MinimalEObjectImpl.Container implements Res
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_HEADERS;
+		return RestPackage.Literals.REST_HEADERS;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class RestHeadersImpl extends MinimalEObjectImpl.Container implements Res
 	 */
 	public EList<RestHeader> getHeader() {
 		if (header == null) {
-			header = new EObjectContainmentEList<RestHeader>(RestHeader.class, this, restPackage.REST_HEADERS__HEADER);
+			header = new EObjectContainmentEList<RestHeader>(RestHeader.class, this, RestPackage.REST_HEADERS__HEADER);
 		}
 		return header;
 	}
@@ -92,7 +92,7 @@ public class RestHeadersImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.REST_HEADERS__HEADER:
+			case RestPackage.REST_HEADERS__HEADER:
 				return ((InternalEList<?>)getHeader()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -106,7 +106,7 @@ public class RestHeadersImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_HEADERS__HEADER:
+			case RestPackage.REST_HEADERS__HEADER:
 				return getHeader();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -121,7 +121,7 @@ public class RestHeadersImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_HEADERS__HEADER:
+			case RestPackage.REST_HEADERS__HEADER:
 				getHeader().clear();
 				getHeader().addAll((Collection<? extends RestHeader>)newValue);
 				return;
@@ -137,7 +137,7 @@ public class RestHeadersImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_HEADERS__HEADER:
+			case RestPackage.REST_HEADERS__HEADER:
 				getHeader().clear();
 				return;
 		}
@@ -152,7 +152,7 @@ public class RestHeadersImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_HEADERS__HEADER:
+			case RestPackage.REST_HEADERS__HEADER:
 				return header != null && !header.isEmpty();
 		}
 		return super.eIsSet(featureID);

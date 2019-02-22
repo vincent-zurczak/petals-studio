@@ -70,6 +70,7 @@ import com.ebmwebsourcing.petals.common.internal.provisional.swt.LinkWithImageCo
 import com.ebmwebsourcing.petals.common.internal.provisional.swt.ListWithButtonComposite;
 import com.ebmwebsourcing.petals.common.internal.provisional.swt.QNameText;
 import com.ebmwebsourcing.petals.common.internal.provisional.swt.TextWithButtonComposite;
+import com.ebmwebsourcing.petals.common.internal.provisional.swt.WrappedText;
 
 /**
  * A set of utilities to create SWT and JFace widgets.
@@ -127,6 +128,20 @@ public final class SwtFactory {
 			t.setLayoutData( new GridData( GridData.FILL_HORIZONTAL ));
 
 		return t;
+	}
+
+
+	/**
+	 * Creates a text field, wrapped into a composite with a border.
+	 * <p>
+	 * The rendering is similar to {@link QNameText}s.
+	 * </p>
+	 *
+	 * @param container the parent
+	 * @return the created styled text field
+	 */
+	public static WrappedText createWrappedTextField( Composite container ) {
+		return new WrappedText( container );
 	}
 
 

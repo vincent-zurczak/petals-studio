@@ -24,7 +24,7 @@ package com.ebmwebsourcing.petals.services.rest.rest;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.OnCase#getHttpResponse <em>Http Response</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnCase()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnCase()
  * @model extendedMetaData="name='OnCase' kind='elementOnly'"
  * @generated
  */
@@ -39,7 +39,7 @@ public interface OnCase extends Condition {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Http Response</em>' containment reference.
 	 * @see #setHttpResponse(HttpResponse)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnCase_HttpResponse()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnCase_HttpResponse()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='http-response' namespace='##targetNamespace'"
 	 * @generated

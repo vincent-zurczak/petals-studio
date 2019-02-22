@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.XPathCondition#getXpath <em>Xpath</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getXPathCondition()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getXPathCondition()
  * @model extendedMetaData="name='XPathCondition' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface XPathCondition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xpath</em>' attribute.
 	 * @see #setXpath(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getXPathCondition_Xpath()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getXPathCondition_Xpath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='element' name='xpath' namespace='##targetNamespace'"
 	 * @generated

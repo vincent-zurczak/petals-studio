@@ -12,9 +12,9 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.Condition;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.Transformation;
 import com.ebmwebsourcing.petals.services.rest.rest.XPathCondition;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -106,7 +106,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.CONDITION;
+		return RestPackage.Literals.CONDITION;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		XPathCondition oldCondition = condition;
 		condition = newCondition;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.CONDITION__CONDITION, oldCondition, newCondition);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.CONDITION__CONDITION, oldCondition, newCondition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -142,14 +142,14 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
 			if (condition != null)
-				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.CONDITION__CONDITION, null, msgs);
+				msgs = ((InternalEObject)condition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONDITION__CONDITION, null, msgs);
 			if (newCondition != null)
-				msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.CONDITION__CONDITION, null, msgs);
+				msgs = ((InternalEObject)newCondition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONDITION__CONDITION, null, msgs);
 			msgs = basicSetCondition(newCondition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONDITION__CONDITION, newCondition, newCondition));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONDITION__CONDITION, newCondition, newCondition));
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		Transformation oldTransformation = transformation;
 		transformation = newTransformation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.CONDITION__TRANSFORMATION, oldTransformation, newTransformation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.CONDITION__TRANSFORMATION, oldTransformation, newTransformation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -185,14 +185,14 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		if (newTransformation != transformation) {
 			NotificationChain msgs = null;
 			if (transformation != null)
-				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.CONDITION__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONDITION__TRANSFORMATION, null, msgs);
 			if (newTransformation != null)
-				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.CONDITION__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.CONDITION__TRANSFORMATION, null, msgs);
 			msgs = basicSetTransformation(newTransformation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONDITION__TRANSFORMATION, newTransformation, newTransformation));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONDITION__TRANSFORMATION, newTransformation, newTransformation));
 	}
 
 	/**
@@ -215,7 +215,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		boolean oldOrderIdESet = orderIdESet;
 		orderIdESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.CONDITION__ORDER_ID, oldOrderId, orderId, !oldOrderIdESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.CONDITION__ORDER_ID, oldOrderId, orderId, !oldOrderIdESet));
 	}
 
 	/**
@@ -229,7 +229,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 		orderId = ORDER_ID_EDEFAULT;
 		orderIdESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.CONDITION__ORDER_ID, oldOrderId, ORDER_ID_EDEFAULT, oldOrderIdESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.CONDITION__ORDER_ID, oldOrderId, ORDER_ID_EDEFAULT, oldOrderIdESet));
 	}
 
 	/**
@@ -249,9 +249,9 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.CONDITION__CONDITION:
+			case RestPackage.CONDITION__CONDITION:
 				return basicSetCondition(null, msgs);
-			case restPackage.CONDITION__TRANSFORMATION:
+			case RestPackage.CONDITION__TRANSFORMATION:
 				return basicSetTransformation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -265,11 +265,11 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.CONDITION__CONDITION:
+			case RestPackage.CONDITION__CONDITION:
 				return getCondition();
-			case restPackage.CONDITION__TRANSFORMATION:
+			case RestPackage.CONDITION__TRANSFORMATION:
 				return getTransformation();
-			case restPackage.CONDITION__ORDER_ID:
+			case RestPackage.CONDITION__ORDER_ID:
 				return getOrderId();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -283,13 +283,13 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.CONDITION__CONDITION:
+			case RestPackage.CONDITION__CONDITION:
 				setCondition((XPathCondition)newValue);
 				return;
-			case restPackage.CONDITION__TRANSFORMATION:
+			case RestPackage.CONDITION__TRANSFORMATION:
 				setTransformation((Transformation)newValue);
 				return;
-			case restPackage.CONDITION__ORDER_ID:
+			case RestPackage.CONDITION__ORDER_ID:
 				setOrderId((Integer)newValue);
 				return;
 		}
@@ -304,13 +304,13 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.CONDITION__CONDITION:
+			case RestPackage.CONDITION__CONDITION:
 				setCondition((XPathCondition)null);
 				return;
-			case restPackage.CONDITION__TRANSFORMATION:
+			case RestPackage.CONDITION__TRANSFORMATION:
 				setTransformation((Transformation)null);
 				return;
-			case restPackage.CONDITION__ORDER_ID:
+			case RestPackage.CONDITION__ORDER_ID:
 				unsetOrderId();
 				return;
 		}
@@ -325,11 +325,11 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.CONDITION__CONDITION:
+			case RestPackage.CONDITION__CONDITION:
 				return condition != null;
-			case restPackage.CONDITION__TRANSFORMATION:
+			case RestPackage.CONDITION__TRANSFORMATION:
 				return transformation != null;
-			case restPackage.CONDITION__ORDER_ID:
+			case RestPackage.CONDITION__ORDER_ID:
 				return isSetOrderId();
 		}
 		return super.eIsSet(featureID);

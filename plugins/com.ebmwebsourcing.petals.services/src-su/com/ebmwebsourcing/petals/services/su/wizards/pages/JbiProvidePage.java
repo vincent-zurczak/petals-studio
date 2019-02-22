@@ -90,6 +90,7 @@ public class JbiProvidePage extends JbiAbstractPage {
 	@Override
 	public void createCustomControls( Composite container ) {
 
+		// Update the UI
 		if( getWizard().getSettings().showWsdl)
 			addWsdlBrowser( container );
 
@@ -107,6 +108,12 @@ public class JbiProvidePage extends JbiAbstractPage {
 				JbiProvidePage.this.edptText.setText( srv.length() == 0 ? "" : srv + "Endpoint" );
 			}
 		});
+
+		// In provides, there should be default values for triplets
+		getNewlyCreatedEndpoint().setInterfaceName( this.itfQText.getDefaultValue());
+		getNewlyCreatedEndpoint().setServiceName( this.srvQText.getDefaultValue());
+		this.edptText.setText( this.srvQText.getDefaultLocalPart() + "Endpoint" );
+		validate();
 	}
 
 
@@ -123,10 +130,10 @@ public class JbiProvidePage extends JbiAbstractPage {
 		layoutData.horizontalSpan = 2;
 		layoutData.verticalIndent = 30;
 		layoutData.widthHint = 380;
-		layoutData.heightHint = 100;
+		layoutData.heightHint = 110;
 		ft.setLayoutData( layoutData );
 
-		ft.setBackground( getShell().getDisplay().getSystemColor( SWT.COLOR_INFO_BACKGROUND ));
+		ft.setBackground( this.yellowColor );
 		ft.setImage( "tip", this.tipImage );
 
 		StringBuilder sb = new StringBuilder();

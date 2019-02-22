@@ -9,19 +9,21 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.su.wizards.pages;
 
 import org.eclipse.jface.dialogs.IMessageProvider;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
 
 import com.ebmwebsourcing.petals.common.internal.provisional.swt.QNameText;
+import com.ebmwebsourcing.petals.common.internal.provisional.swt.WrappedText;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.StringUtils;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.SwtFactory;
 import com.ebmwebsourcing.petals.services.PetalsServicesPlugin;
@@ -37,8 +39,9 @@ public abstract class JbiAbstractPage extends AbstractSuWizardPage {
 	public static final String PAGE_NAME = "JbiPage";
 
 	protected QNameText itfQText, srvQText;
-	protected Text edptText;
+	protected WrappedText edptText;
 	protected Image tipImage;
+	protected Color yellowColor;
 
 
 	/**
@@ -49,6 +52,7 @@ public abstract class JbiAbstractPage extends AbstractSuWizardPage {
 	public JbiAbstractPage() {
 		super( PAGE_NAME );
 		this.tipImage = PetalsServicesPlugin.loadImage( "icons/obj16/smartmode_co.gif" );
+		this.yellowColor = new Color( Display.getCurrent(), 255, 255, 225 );
 	}
 
 
@@ -62,6 +66,9 @@ public abstract class JbiAbstractPage extends AbstractSuWizardPage {
 
 		if( this.tipImage != null && ! this.tipImage.isDisposed())
 			this.tipImage.dispose();
+
+		if( this.yellowColor != null && ! this.yellowColor.isDisposed())
+			this.yellowColor.dispose();
 
 		super.dispose();
 	}
@@ -111,7 +118,9 @@ public abstract class JbiAbstractPage extends AbstractSuWizardPage {
 		Label l = SwtFactory.createLabel( container, "Interface Name *:", "The qualified name of the service contract" );
 		SwtFactory.applyGridData( l, 1, marginTop );
 
-		this.itfQText = SwtFactory.createQNameTextField( container, false, "Interface", "http://Your.Interface.Namespace/" );
+		// If there is no WSDL, it is necessary to use the same namespace (at least for SOAP).
+		// So, let's use the same here.
+		this.itfQText = SwtFactory.createQNameTextField( container, false, "Interface", "http://your.Namespace" );
 		SwtFactory.applyHorizontalGridData( this.itfQText, 1, marginTop );
 		if( ! settings.activateInterfaceName )
 			this.itfQText.setEditable( false );
@@ -127,7 +136,7 @@ public abstract class JbiAbstractPage extends AbstractSuWizardPage {
 
 		// Service name
 		SwtFactory.createLabel( container, "Service Name:", "The qualified name of the service implementation" );
-		this.srvQText = SwtFactory.createQNameTextField( container, true, "Service  ", "http://Your.Service.Namespace/" );
+		this.srvQText = SwtFactory.createQNameTextField( container, true, "Service  ", "http://your.Namespace" );
 		if( settings.activateServiceNameOnly )
 			this.srvQText.setNamespacePartEditable( false );
 		else if( ! settings.activateServiceName )
@@ -147,14 +156,14 @@ public abstract class JbiAbstractPage extends AbstractSuWizardPage {
 
 		// End-point name
 		SwtFactory.createLabel( container, "End-point Name:", "The name of the service deployment point" );
-		this.edptText = SwtFactory.createSimpleTextField( container, true );
+		this.edptText = SwtFactory.createWrappedTextField( container );
 		if( ! settings.activateEndpointName )
-			this.edptText.setEditable( false );
+			this.edptText.getStyledText().setEditable( false );
 
-		this.edptText.addModifyListener( new ModifyListener() {
+		this.edptText.getStyledText().addModifyListener( new ModifyListener() {
 			@Override
 			public void modifyText( ModifyEvent e ) {
-				if( ! ((Text) e.widget).isEnabled())
+				if( ! ((StyledText) e.widget).isEnabled())
 					return;
 
 				String edpt = JbiAbstractPage.this.edptText.getText();

@@ -11,8 +11,8 @@
  */
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.Transformation;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -71,7 +71,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.TRANSFORMATION;
+		return RestPackage.Literals.TRANSFORMATION;
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
 		String oldXsl = xsl;
 		xsl = newXsl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.TRANSFORMATION__XSL, oldXsl, xsl));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.TRANSFORMATION__XSL, oldXsl, xsl));
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.TRANSFORMATION__XSL:
+			case RestPackage.TRANSFORMATION__XSL:
 				return getXsl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -117,7 +117,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.TRANSFORMATION__XSL:
+			case RestPackage.TRANSFORMATION__XSL:
 				setXsl((String)newValue);
 				return;
 		}
@@ -132,7 +132,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.TRANSFORMATION__XSL:
+			case RestPackage.TRANSFORMATION__XSL:
 				setXsl(XSL_EDEFAULT);
 				return;
 		}
@@ -147,7 +147,7 @@ public class TransformationImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.TRANSFORMATION__XSL:
+			case RestPackage.TRANSFORMATION__XSL:
 				return XSL_EDEFAULT == null ? xsl != null : !XSL_EDEFAULT.equals(xsl);
 		}
 		return super.eIsSet(featureID);

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.Transformation#getXsl <em>Xsl</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getTransformation()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getTransformation()
  * @model extendedMetaData="name='Transformation' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface Transformation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xsl</em>' attribute.
 	 * @see #setXsl(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getTransformation_Xsl()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getTransformation_Xsl()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='element' name='xsl' namespace='##targetNamespace'"
 	 * @generated

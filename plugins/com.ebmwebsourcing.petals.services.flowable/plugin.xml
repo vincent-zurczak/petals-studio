@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+	 Copyright (c) 2017-2018, Linagora
+
+	 All rights reserved. This program and the accompanying materials
+ 	 are made available under the terms of the Eclipse Public License v1.0
+ 	 which accompanies this distribution, and is available at
+ 	 http://www.eclipse.org/legal/epl-v10.html
+ 
+ 	 Contributors:
+     	 	Linagora - initial API and implementation
+ </copyright>
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated rest -->
+      <package
+            uri="http://petals.ow2.org/components/petals-se-flowable/jbi/version-1.0"
+            class="com.ebmwebsourcing.petals.services.flowable.flowable.FlowablePackage"
+            genModel="model/camel.genmodel"/>
+   </extension>
+   
+   <extension
+         point="com.ebmwebsourcing.petals.services.componentExtension">
+      <ComponentSupport id="flowable">
+         <ComponentVersionSupport
+               componentVersionDescription="com.ebmwebsourcing.petals.services.flowable.FlowableDescription13"
+               editorExtension="com.ebmwebsourcing.petals.services.flowable.editor.FlowableEditorContribution"
+               id="Flowable 1.2"
+               namespace="http://petals.ow2.org/components/flowable/1.0"
+               providesExtensionWizard="com.ebmwebsourcing.petals.services.flowable.v1x.FlowableWizard1x">
+         </ComponentVersionSupport>
+      </ComponentSupport>
+   </extension>
+</plugin>

@@ -19,10 +19,10 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Rest Operation</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Operation</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestOperation()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestOperation()
  * @model extendedMetaData="name='RestOperation'"
  * @generated
  */
@@ -153,7 +153,7 @@ public enum RestOperation implements Enumerator {
 	public static final int DELETE_VALUE = 4;
 
 	/**
-	 * An array of all the '<em><b>Rest Operation</b></em>' enumerators.
+	 * An array of all the '<em><b>Operation</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -168,7 +168,7 @@ public enum RestOperation implements Enumerator {
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Rest Operation</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Operation</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -176,7 +176,7 @@ public enum RestOperation implements Enumerator {
 	public static final List<RestOperation> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Rest Operation</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Operation</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
@@ -194,7 +194,7 @@ public enum RestOperation implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Rest Operation</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Operation</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
@@ -212,7 +212,7 @@ public enum RestOperation implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Rest Operation</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Operation</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.

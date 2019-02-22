@@ -13,7 +13,7 @@ package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.HttpResponse;
 import com.ebmwebsourcing.petals.services.rest.rest.OnCase;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -63,7 +63,7 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.ON_CASE;
+		return RestPackage.Literals.ON_CASE;
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 		HttpResponse oldHttpResponse = httpResponse;
 		httpResponse = newHttpResponse;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_CASE__HTTP_RESPONSE, oldHttpResponse, newHttpResponse);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_CASE__HTTP_RESPONSE, oldHttpResponse, newHttpResponse);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -99,14 +99,14 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 		if (newHttpResponse != httpResponse) {
 			NotificationChain msgs = null;
 			if (httpResponse != null)
-				msgs = ((InternalEObject)httpResponse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_CASE__HTTP_RESPONSE, null, msgs);
+				msgs = ((InternalEObject)httpResponse).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_CASE__HTTP_RESPONSE, null, msgs);
 			if (newHttpResponse != null)
-				msgs = ((InternalEObject)newHttpResponse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_CASE__HTTP_RESPONSE, null, msgs);
+				msgs = ((InternalEObject)newHttpResponse).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_CASE__HTTP_RESPONSE, null, msgs);
 			msgs = basicSetHttpResponse(newHttpResponse, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_CASE__HTTP_RESPONSE, newHttpResponse, newHttpResponse));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_CASE__HTTP_RESPONSE, newHttpResponse, newHttpResponse));
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.ON_CASE__HTTP_RESPONSE:
+			case RestPackage.ON_CASE__HTTP_RESPONSE:
 				return basicSetHttpResponse(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -131,7 +131,7 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.ON_CASE__HTTP_RESPONSE:
+			case RestPackage.ON_CASE__HTTP_RESPONSE:
 				return getHttpResponse();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -145,7 +145,7 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.ON_CASE__HTTP_RESPONSE:
+			case RestPackage.ON_CASE__HTTP_RESPONSE:
 				setHttpResponse((HttpResponse)newValue);
 				return;
 		}
@@ -160,7 +160,7 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.ON_CASE__HTTP_RESPONSE:
+			case RestPackage.ON_CASE__HTTP_RESPONSE:
 				setHttpResponse((HttpResponse)null);
 				return;
 		}
@@ -175,7 +175,7 @@ public class OnCaseImpl extends ConditionImpl implements OnCase {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.ON_CASE__HTTP_RESPONSE:
+			case RestPackage.ON_CASE__HTTP_RESPONSE:
 				return httpResponse != null;
 		}
 		return super.eIsSet(featureID);

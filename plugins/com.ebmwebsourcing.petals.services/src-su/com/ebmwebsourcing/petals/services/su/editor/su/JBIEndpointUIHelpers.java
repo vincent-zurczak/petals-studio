@@ -14,6 +14,7 @@ package com.ebmwebsourcing.petals.services.su.editor.su;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import javax.xml.namespace.QName;
 
@@ -45,7 +46,6 @@ import com.ebmwebsourcing.petals.common.internal.provisional.databinding.LocalQN
 import com.ebmwebsourcing.petals.common.internal.provisional.databinding.NamespaceQNameToStringConverter;
 import com.ebmwebsourcing.petals.common.internal.provisional.emf.EObjectUIHelper;
 import com.ebmwebsourcing.petals.common.internal.provisional.formeditor.ISharedEdition;
-import com.ebmwebsourcing.petals.common.internal.provisional.utils.CommonUtils;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.StringUtils;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.SwtFactory;
 import com.sun.java.xml.ns.jbi.AbstractEndpoint;
@@ -272,7 +272,7 @@ public final class JBIEndpointUIHelpers {
 				if( o instanceof QName ) {
 					String currentNs = ((QName) o).getNamespaceURI();
 					String currentName = ((QName) o).getLocalPart();
-					needsUpdate = ! CommonUtils.areEqual( ns, currentNs ) || ! CommonUtils.areEqual( name, currentName );
+					needsUpdate = ! Objects.equals( ns, currentNs ) || ! Objects.equals( name, currentName );
 				}
 
 				if( needsUpdate ) {

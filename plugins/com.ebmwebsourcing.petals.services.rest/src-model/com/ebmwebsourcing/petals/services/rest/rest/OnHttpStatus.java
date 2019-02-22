@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.OnHttpStatus#getOtherwiseError <em>Otherwise Error</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnHttpStatus()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnHttpStatus()
  * @model extendedMetaData="name='OnHttpStatus' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +45,7 @@ public interface OnHttpStatus extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Out</em>' containment reference.
 	 * @see #setOut(Condition)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnHttpStatus_Out()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnHttpStatus_Out()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='out' namespace='##targetNamespace'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface OnHttpStatus extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fault</em>' containment reference.
 	 * @see #setFault(Condition)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnHttpStatus_Fault()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnHttpStatus_Fault()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='fault' namespace='##targetNamespace'"
 	 * @generated
@@ -99,7 +99,7 @@ public interface OnHttpStatus extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Error</em>' containment reference.
 	 * @see #setError(Condition)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnHttpStatus_Error()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnHttpStatus_Error()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='error' namespace='##targetNamespace'"
 	 * @generated
@@ -126,7 +126,7 @@ public interface OnHttpStatus extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Otherwise Out</em>' containment reference.
 	 * @see #setOtherwiseOut(Otherwise)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnHttpStatus_OtherwiseOut()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnHttpStatus_OtherwiseOut()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='otherwise-out' namespace='##targetNamespace'"
 	 * @generated
@@ -153,7 +153,7 @@ public interface OnHttpStatus extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Otherwise Fault</em>' containment reference.
 	 * @see #setOtherwiseFault(Otherwise)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnHttpStatus_OtherwiseFault()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnHttpStatus_OtherwiseFault()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='otherwise-fault' namespace='##targetNamespace'"
 	 * @generated
@@ -180,7 +180,7 @@ public interface OnHttpStatus extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Otherwise Error</em>' containment reference.
 	 * @see #setOtherwiseError(Otherwise)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnHttpStatus_OtherwiseError()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnHttpStatus_OtherwiseError()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='otherwise-error' namespace='##targetNamespace'"
 	 * @generated

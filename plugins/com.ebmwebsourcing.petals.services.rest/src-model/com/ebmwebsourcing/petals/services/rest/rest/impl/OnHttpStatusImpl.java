@@ -14,7 +14,7 @@ package com.ebmwebsourcing.petals.services.rest.rest.impl;
 import com.ebmwebsourcing.petals.services.rest.rest.Condition;
 import com.ebmwebsourcing.petals.services.rest.rest.OnHttpStatus;
 import com.ebmwebsourcing.petals.services.rest.rest.Otherwise;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -120,7 +120,7 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.ON_HTTP_STATUS;
+		return RestPackage.Literals.ON_HTTP_STATUS;
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		Condition oldOut = out;
 		out = newOut;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OUT, oldOut, newOut);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OUT, oldOut, newOut);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -156,14 +156,14 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		if (newOut != out) {
 			NotificationChain msgs = null;
 			if (out != null)
-				msgs = ((InternalEObject)out).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OUT, null, msgs);
+				msgs = ((InternalEObject)out).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OUT, null, msgs);
 			if (newOut != null)
-				msgs = ((InternalEObject)newOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OUT, null, msgs);
+				msgs = ((InternalEObject)newOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OUT, null, msgs);
 			msgs = basicSetOut(newOut, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OUT, newOut, newOut));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OUT, newOut, newOut));
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		Condition oldFault = fault;
 		fault = newFault;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__FAULT, oldFault, newFault);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__FAULT, oldFault, newFault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -199,14 +199,14 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		if (newFault != fault) {
 			NotificationChain msgs = null;
 			if (fault != null)
-				msgs = ((InternalEObject)fault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__FAULT, null, msgs);
+				msgs = ((InternalEObject)fault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__FAULT, null, msgs);
 			if (newFault != null)
-				msgs = ((InternalEObject)newFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__FAULT, null, msgs);
+				msgs = ((InternalEObject)newFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__FAULT, null, msgs);
 			msgs = basicSetFault(newFault, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__FAULT, newFault, newFault));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__FAULT, newFault, newFault));
 	}
 
 	/**
@@ -227,7 +227,7 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		Condition oldError = error;
 		error = newError;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__ERROR, oldError, newError);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__ERROR, oldError, newError);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -242,14 +242,14 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		if (newError != error) {
 			NotificationChain msgs = null;
 			if (error != null)
-				msgs = ((InternalEObject)error).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__ERROR, null, msgs);
+				msgs = ((InternalEObject)error).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__ERROR, null, msgs);
 			if (newError != null)
-				msgs = ((InternalEObject)newError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__ERROR, null, msgs);
+				msgs = ((InternalEObject)newError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__ERROR, null, msgs);
 			msgs = basicSetError(newError, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__ERROR, newError, newError));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__ERROR, newError, newError));
 	}
 
 	/**
@@ -270,7 +270,7 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		Otherwise oldOtherwiseOut = otherwiseOut;
 		otherwiseOut = newOtherwiseOut;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OTHERWISE_OUT, oldOtherwiseOut, newOtherwiseOut);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT, oldOtherwiseOut, newOtherwiseOut);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -285,14 +285,14 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		if (newOtherwiseOut != otherwiseOut) {
 			NotificationChain msgs = null;
 			if (otherwiseOut != null)
-				msgs = ((InternalEObject)otherwiseOut).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OTHERWISE_OUT, null, msgs);
+				msgs = ((InternalEObject)otherwiseOut).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT, null, msgs);
 			if (newOtherwiseOut != null)
-				msgs = ((InternalEObject)newOtherwiseOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OTHERWISE_OUT, null, msgs);
+				msgs = ((InternalEObject)newOtherwiseOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT, null, msgs);
 			msgs = basicSetOtherwiseOut(newOtherwiseOut, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OTHERWISE_OUT, newOtherwiseOut, newOtherwiseOut));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT, newOtherwiseOut, newOtherwiseOut));
 	}
 
 	/**
@@ -313,7 +313,7 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		Otherwise oldOtherwiseFault = otherwiseFault;
 		otherwiseFault = newOtherwiseFault;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, oldOtherwiseFault, newOtherwiseFault);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, oldOtherwiseFault, newOtherwiseFault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -328,14 +328,14 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		if (newOtherwiseFault != otherwiseFault) {
 			NotificationChain msgs = null;
 			if (otherwiseFault != null)
-				msgs = ((InternalEObject)otherwiseFault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, null, msgs);
+				msgs = ((InternalEObject)otherwiseFault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, null, msgs);
 			if (newOtherwiseFault != null)
-				msgs = ((InternalEObject)newOtherwiseFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, null, msgs);
+				msgs = ((InternalEObject)newOtherwiseFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, null, msgs);
 			msgs = basicSetOtherwiseFault(newOtherwiseFault, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, newOtherwiseFault, newOtherwiseFault));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT, newOtherwiseFault, newOtherwiseFault));
 	}
 
 	/**
@@ -356,7 +356,7 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		Otherwise oldOtherwiseError = otherwiseError;
 		otherwiseError = newOtherwiseError;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, oldOtherwiseError, newOtherwiseError);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, oldOtherwiseError, newOtherwiseError);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -371,14 +371,14 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 		if (newOtherwiseError != otherwiseError) {
 			NotificationChain msgs = null;
 			if (otherwiseError != null)
-				msgs = ((InternalEObject)otherwiseError).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, null, msgs);
+				msgs = ((InternalEObject)otherwiseError).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, null, msgs);
 			if (newOtherwiseError != null)
-				msgs = ((InternalEObject)newOtherwiseError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, null, msgs);
+				msgs = ((InternalEObject)newOtherwiseError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, null, msgs);
 			msgs = basicSetOtherwiseError(newOtherwiseError, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, newOtherwiseError, newOtherwiseError));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR, newOtherwiseError, newOtherwiseError));
 	}
 
 	/**
@@ -389,17 +389,17 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.ON_HTTP_STATUS__OUT:
+			case RestPackage.ON_HTTP_STATUS__OUT:
 				return basicSetOut(null, msgs);
-			case restPackage.ON_HTTP_STATUS__FAULT:
+			case RestPackage.ON_HTTP_STATUS__FAULT:
 				return basicSetFault(null, msgs);
-			case restPackage.ON_HTTP_STATUS__ERROR:
+			case RestPackage.ON_HTTP_STATUS__ERROR:
 				return basicSetError(null, msgs);
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
 				return basicSetOtherwiseOut(null, msgs);
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
 				return basicSetOtherwiseFault(null, msgs);
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
 				return basicSetOtherwiseError(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -413,17 +413,17 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.ON_HTTP_STATUS__OUT:
+			case RestPackage.ON_HTTP_STATUS__OUT:
 				return getOut();
-			case restPackage.ON_HTTP_STATUS__FAULT:
+			case RestPackage.ON_HTTP_STATUS__FAULT:
 				return getFault();
-			case restPackage.ON_HTTP_STATUS__ERROR:
+			case RestPackage.ON_HTTP_STATUS__ERROR:
 				return getError();
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
 				return getOtherwiseOut();
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
 				return getOtherwiseFault();
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
 				return getOtherwiseError();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -437,22 +437,22 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.ON_HTTP_STATUS__OUT:
+			case RestPackage.ON_HTTP_STATUS__OUT:
 				setOut((Condition)newValue);
 				return;
-			case restPackage.ON_HTTP_STATUS__FAULT:
+			case RestPackage.ON_HTTP_STATUS__FAULT:
 				setFault((Condition)newValue);
 				return;
-			case restPackage.ON_HTTP_STATUS__ERROR:
+			case RestPackage.ON_HTTP_STATUS__ERROR:
 				setError((Condition)newValue);
 				return;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
 				setOtherwiseOut((Otherwise)newValue);
 				return;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
 				setOtherwiseFault((Otherwise)newValue);
 				return;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
 				setOtherwiseError((Otherwise)newValue);
 				return;
 		}
@@ -467,22 +467,22 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.ON_HTTP_STATUS__OUT:
+			case RestPackage.ON_HTTP_STATUS__OUT:
 				setOut((Condition)null);
 				return;
-			case restPackage.ON_HTTP_STATUS__FAULT:
+			case RestPackage.ON_HTTP_STATUS__FAULT:
 				setFault((Condition)null);
 				return;
-			case restPackage.ON_HTTP_STATUS__ERROR:
+			case RestPackage.ON_HTTP_STATUS__ERROR:
 				setError((Condition)null);
 				return;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
 				setOtherwiseOut((Otherwise)null);
 				return;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
 				setOtherwiseFault((Otherwise)null);
 				return;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
 				setOtherwiseError((Otherwise)null);
 				return;
 		}
@@ -497,17 +497,17 @@ public class OnHttpStatusImpl extends MinimalEObjectImpl.Container implements On
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.ON_HTTP_STATUS__OUT:
+			case RestPackage.ON_HTTP_STATUS__OUT:
 				return out != null;
-			case restPackage.ON_HTTP_STATUS__FAULT:
+			case RestPackage.ON_HTTP_STATUS__FAULT:
 				return fault != null;
-			case restPackage.ON_HTTP_STATUS__ERROR:
+			case RestPackage.ON_HTTP_STATUS__ERROR:
 				return error != null;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_OUT:
 				return otherwiseOut != null;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_FAULT:
 				return otherwiseFault != null;
-			case restPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
+			case RestPackage.ON_HTTP_STATUS__OTHERWISE_ERROR:
 				return otherwiseError != null;
 		}
 		return super.eIsSet(featureID);

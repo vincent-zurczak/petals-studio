@@ -81,6 +81,7 @@ public abstract class AbstractServiceUnitWizard extends Wizard implements IExecu
 	protected SuWizardSettings settings;
 	protected Set<IResource> resourcesToSelect;
 	protected String finalWsdlFileLocation;
+	protected boolean usedInEditor = false;
 
 
 	/**
@@ -378,6 +379,22 @@ public abstract class AbstractServiceUnitWizard extends Wizard implements IExecu
 	 */
 	public SuWizardSettings getSettings() {
 		return this.settings;
+	}
+
+
+	/**
+	 * @return the usedInEditor
+	 */
+	public boolean isUsedInEditor() {
+		return this.usedInEditor;
+	}
+
+
+	/**
+	 * @param usedInEditor the usedInEditor to set
+	 */
+	public void setUsedInEditor( boolean usedInEditor ) {
+		this.usedInEditor = usedInEditor;
 	}
 
 

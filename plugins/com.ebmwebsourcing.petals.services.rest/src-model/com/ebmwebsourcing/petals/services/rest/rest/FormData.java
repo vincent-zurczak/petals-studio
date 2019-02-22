@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.FormData#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getFormData()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getFormData()
  * @model extendedMetaData="name='FormData' kind='elementOnly'"
  * @generated
  */
@@ -43,7 +43,7 @@ public interface FormData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extracted By Xpath</em>' attribute.
 	 * @see #setExtractedByXpath(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getFormData_ExtractedByXpath()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getFormData_ExtractedByXpath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='element' name='extracted-by-xpath' namespace='##targetNamespace'"
 	 * @generated
@@ -70,7 +70,7 @@ public interface FormData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attachment Name</em>' containment reference.
 	 * @see #setAttachmentName(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getFormData_AttachmentName()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getFormData_AttachmentName()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='attachment-name' namespace='##targetNamespace'"
 	 * @generated
@@ -99,7 +99,7 @@ public interface FormData extends EObject {
 	 * @see #isSetAsAttachment()
 	 * @see #unsetAsAttachment()
 	 * @see #setAsAttachment(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getFormData_AsAttachment()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getFormData_AsAttachment()
 	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='attribute' name='as-attachment'"
 	 * @generated
@@ -151,7 +151,7 @@ public interface FormData extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getFormData_Name()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getFormData_Name()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='attribute' name='name'"
 	 * @generated

@@ -12,8 +12,8 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.FormData;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.RestProperty;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -136,7 +136,7 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.FORM_DATA;
+		return RestPackage.Literals.FORM_DATA;
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 		String oldExtractedByXpath = extractedByXpath;
 		extractedByXpath = newExtractedByXpath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.FORM_DATA__EXTRACTED_BY_XPATH, oldExtractedByXpath, extractedByXpath));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.FORM_DATA__EXTRACTED_BY_XPATH, oldExtractedByXpath, extractedByXpath));
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 		RestProperty oldAttachmentName = attachmentName;
 		attachmentName = newAttachmentName;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.FORM_DATA__ATTACHMENT_NAME, oldAttachmentName, newAttachmentName);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.FORM_DATA__ATTACHMENT_NAME, oldAttachmentName, newAttachmentName);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -193,14 +193,14 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 		if (newAttachmentName != attachmentName) {
 			NotificationChain msgs = null;
 			if (attachmentName != null)
-				msgs = ((InternalEObject)attachmentName).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.FORM_DATA__ATTACHMENT_NAME, null, msgs);
+				msgs = ((InternalEObject)attachmentName).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.FORM_DATA__ATTACHMENT_NAME, null, msgs);
 			if (newAttachmentName != null)
-				msgs = ((InternalEObject)newAttachmentName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.FORM_DATA__ATTACHMENT_NAME, null, msgs);
+				msgs = ((InternalEObject)newAttachmentName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.FORM_DATA__ATTACHMENT_NAME, null, msgs);
 			msgs = basicSetAttachmentName(newAttachmentName, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.FORM_DATA__ATTACHMENT_NAME, newAttachmentName, newAttachmentName));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.FORM_DATA__ATTACHMENT_NAME, newAttachmentName, newAttachmentName));
 	}
 
 	/**
@@ -223,7 +223,7 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 		boolean oldAsAttachmentESet = asAttachmentESet;
 		asAttachmentESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.FORM_DATA__AS_ATTACHMENT, oldAsAttachment, asAttachment, !oldAsAttachmentESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.FORM_DATA__AS_ATTACHMENT, oldAsAttachment, asAttachment, !oldAsAttachmentESet));
 	}
 
 	/**
@@ -237,7 +237,7 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 		asAttachment = AS_ATTACHMENT_EDEFAULT;
 		asAttachmentESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.FORM_DATA__AS_ATTACHMENT, oldAsAttachment, AS_ATTACHMENT_EDEFAULT, oldAsAttachmentESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.FORM_DATA__AS_ATTACHMENT, oldAsAttachment, AS_ATTACHMENT_EDEFAULT, oldAsAttachmentESet));
 	}
 
 	/**
@@ -267,7 +267,7 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.FORM_DATA__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.FORM_DATA__NAME, oldName, name));
 	}
 
 	/**
@@ -278,7 +278,7 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.FORM_DATA__ATTACHMENT_NAME:
+			case RestPackage.FORM_DATA__ATTACHMENT_NAME:
 				return basicSetAttachmentName(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -292,13 +292,13 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.FORM_DATA__EXTRACTED_BY_XPATH:
+			case RestPackage.FORM_DATA__EXTRACTED_BY_XPATH:
 				return getExtractedByXpath();
-			case restPackage.FORM_DATA__ATTACHMENT_NAME:
+			case RestPackage.FORM_DATA__ATTACHMENT_NAME:
 				return getAttachmentName();
-			case restPackage.FORM_DATA__AS_ATTACHMENT:
+			case RestPackage.FORM_DATA__AS_ATTACHMENT:
 				return isAsAttachment();
-			case restPackage.FORM_DATA__NAME:
+			case RestPackage.FORM_DATA__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -312,16 +312,16 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.FORM_DATA__EXTRACTED_BY_XPATH:
+			case RestPackage.FORM_DATA__EXTRACTED_BY_XPATH:
 				setExtractedByXpath((String)newValue);
 				return;
-			case restPackage.FORM_DATA__ATTACHMENT_NAME:
+			case RestPackage.FORM_DATA__ATTACHMENT_NAME:
 				setAttachmentName((RestProperty)newValue);
 				return;
-			case restPackage.FORM_DATA__AS_ATTACHMENT:
+			case RestPackage.FORM_DATA__AS_ATTACHMENT:
 				setAsAttachment((Boolean)newValue);
 				return;
-			case restPackage.FORM_DATA__NAME:
+			case RestPackage.FORM_DATA__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -336,16 +336,16 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.FORM_DATA__EXTRACTED_BY_XPATH:
+			case RestPackage.FORM_DATA__EXTRACTED_BY_XPATH:
 				setExtractedByXpath(EXTRACTED_BY_XPATH_EDEFAULT);
 				return;
-			case restPackage.FORM_DATA__ATTACHMENT_NAME:
+			case RestPackage.FORM_DATA__ATTACHMENT_NAME:
 				setAttachmentName((RestProperty)null);
 				return;
-			case restPackage.FORM_DATA__AS_ATTACHMENT:
+			case RestPackage.FORM_DATA__AS_ATTACHMENT:
 				unsetAsAttachment();
 				return;
-			case restPackage.FORM_DATA__NAME:
+			case RestPackage.FORM_DATA__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -360,13 +360,13 @@ public class FormDataImpl extends MinimalEObjectImpl.Container implements FormDa
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.FORM_DATA__EXTRACTED_BY_XPATH:
+			case RestPackage.FORM_DATA__EXTRACTED_BY_XPATH:
 				return EXTRACTED_BY_XPATH_EDEFAULT == null ? extractedByXpath != null : !EXTRACTED_BY_XPATH_EDEFAULT.equals(extractedByXpath);
-			case restPackage.FORM_DATA__ATTACHMENT_NAME:
+			case RestPackage.FORM_DATA__ATTACHMENT_NAME:
 				return attachmentName != null;
-			case restPackage.FORM_DATA__AS_ATTACHMENT:
+			case RestPackage.FORM_DATA__AS_ATTACHMENT:
 				return isSetAsAttachment();
-			case restPackage.FORM_DATA__NAME:
+			case RestPackage.FORM_DATA__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);

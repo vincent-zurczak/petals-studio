@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.OnJbiResponse#getOnDefaultFault <em>On Default Fault</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnJbiResponse()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnJbiResponse()
  * @model extendedMetaData="name='OnJbiResponse' kind='elementOnly'"
  * @generated
  */
@@ -45,7 +45,7 @@ public interface OnJbiResponse extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Out</em>' containment reference.
 	 * @see #setOnOut(Condition)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnJbiResponse_OnOut()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnJbiResponse_OnOut()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='on-out' namespace='##targetNamespace'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface OnJbiResponse extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Fault</em>' containment reference.
 	 * @see #setOnFault(Condition)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnJbiResponse_OnFault()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnJbiResponse_OnFault()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='on-fault' namespace='##targetNamespace'"
 	 * @generated
@@ -99,7 +99,7 @@ public interface OnJbiResponse extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Error</em>' containment reference.
 	 * @see #setOnError(Condition)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnJbiResponse_OnError()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnJbiResponse_OnError()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='on-error' namespace='##targetNamespace'"
 	 * @generated
@@ -126,7 +126,7 @@ public interface OnJbiResponse extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Default Out</em>' containment reference.
 	 * @see #setOnDefaultOut(OnCase)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnJbiResponse_OnDefaultOut()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnJbiResponse_OnDefaultOut()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='on-default-out' namespace='##targetNamespace'"
 	 * @generated
@@ -153,7 +153,7 @@ public interface OnJbiResponse extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Default Error</em>' containment reference.
 	 * @see #setOnDefaultError(OnCase)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnJbiResponse_OnDefaultError()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnJbiResponse_OnDefaultError()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='on-default-error' namespace='##targetNamespace'"
 	 * @generated
@@ -180,7 +180,7 @@ public interface OnJbiResponse extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Default Fault</em>' containment reference.
 	 * @see #setOnDefaultFault(OnCase)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getOnJbiResponse_OnDefaultFault()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getOnJbiResponse_OnDefaultFault()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='on-default-fault' namespace='##targetNamespace'"
 	 * @generated

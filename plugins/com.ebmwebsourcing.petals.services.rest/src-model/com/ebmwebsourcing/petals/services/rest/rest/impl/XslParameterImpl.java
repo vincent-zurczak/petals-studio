@@ -11,8 +11,8 @@
  */
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.XslParameter;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -101,7 +101,7 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.XSL_PARAMETER;
+		return RestPackage.Literals.XSL_PARAMETER;
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.XSL_PARAMETER__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.XSL_PARAMETER__VALUE, oldValue, value));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 		boolean oldIsJsonResultESet = isJsonResultESet;
 		isJsonResultESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.XSL_PARAMETER__IS_JSON_RESULT, oldIsJsonResult, isJsonResult, !oldIsJsonResultESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.XSL_PARAMETER__IS_JSON_RESULT, oldIsJsonResult, isJsonResult, !oldIsJsonResultESet));
 	}
 
 	/**
@@ -159,7 +159,7 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 		isJsonResult = IS_JSON_RESULT_EDEFAULT;
 		isJsonResultESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.XSL_PARAMETER__IS_JSON_RESULT, oldIsJsonResult, IS_JSON_RESULT_EDEFAULT, oldIsJsonResultESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.XSL_PARAMETER__IS_JSON_RESULT, oldIsJsonResult, IS_JSON_RESULT_EDEFAULT, oldIsJsonResultESet));
 	}
 
 	/**
@@ -179,9 +179,9 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.XSL_PARAMETER__VALUE:
+			case RestPackage.XSL_PARAMETER__VALUE:
 				return getValue();
-			case restPackage.XSL_PARAMETER__IS_JSON_RESULT:
+			case RestPackage.XSL_PARAMETER__IS_JSON_RESULT:
 				return isIsJsonResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,10 +195,10 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.XSL_PARAMETER__VALUE:
+			case RestPackage.XSL_PARAMETER__VALUE:
 				setValue((String)newValue);
 				return;
-			case restPackage.XSL_PARAMETER__IS_JSON_RESULT:
+			case RestPackage.XSL_PARAMETER__IS_JSON_RESULT:
 				setIsJsonResult((Boolean)newValue);
 				return;
 		}
@@ -213,10 +213,10 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.XSL_PARAMETER__VALUE:
+			case RestPackage.XSL_PARAMETER__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case restPackage.XSL_PARAMETER__IS_JSON_RESULT:
+			case RestPackage.XSL_PARAMETER__IS_JSON_RESULT:
 				unsetIsJsonResult();
 				return;
 		}
@@ -231,9 +231,9 @@ public class XslParameterImpl extends MinimalEObjectImpl.Container implements Xs
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.XSL_PARAMETER__VALUE:
+			case RestPackage.XSL_PARAMETER__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case restPackage.XSL_PARAMETER__IS_JSON_RESULT:
+			case RestPackage.XSL_PARAMETER__IS_JSON_RESULT:
 				return isSetIsJsonResult();
 		}
 		return super.eIsSet(featureID);

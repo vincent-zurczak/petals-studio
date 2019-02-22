@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.common.internal.formeditor;
 
 import java.io.FileNotFoundException;
@@ -55,7 +55,6 @@ import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
@@ -548,7 +547,6 @@ implements IEditorPart, ISelectionProvider, ISharedEdition {
 		GridLayout layout = new GridLayout();
 		layout.marginBottom = 4;
 		this.mainForm.getBody().setLayout( layout );
-		this.mainForm.setLayoutData ( new GridData( GridData.FILL_BOTH ));
 
 		if( pers != null )
 			pers.createControl( this.mainForm.getBody(), this );

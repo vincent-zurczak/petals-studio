@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.common.internal.provisional.swt;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -29,8 +29,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Text;
 
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.StringUtils;
+import com.ebmwebsourcing.petals.common.internal.provisional.utils.SwtFactory;
 
 /**
  * A widget for QNames, made up of two {@link Text}s separated by a {@link Label}.
@@ -47,7 +49,7 @@ public class QNameText extends Composite {
 	private final static String DEFAULT_LOCAL_PART = "local part";
 	private final static String DEFAULT_NAMESPACE = "http://your.namespace.uri";
 
-	private final String defaultLocalPart;
+	private final String defaultLocalPart, defaultNamespace;
 	private final PhantomText namespacePhantomText;
 	private final StyledText localPartPhantomText;
 	private final Label separatorLabel;
@@ -69,21 +71,24 @@ public class QNameText extends Composite {
 	 * @param parent
 	 * @param defaultLocalPart
 	 * @param defaultNamespace
+	 * @see SwtFactory#createWrappedTextField(Composite)
 	 */
 	public QNameText( Composite parent, String defaultLocalPart, String defaultNamespace ) {
 		super( parent, SWT.BORDER );
 		setBackground( getDisplay().getSystemColor( SWT.COLOR_WHITE ));
 		this.defaultLocalPart = defaultLocalPart == null ? DEFAULT_LOCAL_PART : defaultLocalPart;
+		this.defaultNamespace = defaultNamespace == null ? DEFAULT_NAMESPACE : defaultNamespace;
 
 		GridLayout layout = new GridLayout( 3, false );
-		layout.marginHeight = 1;
-		layout.marginWidth = 1;
+		layout.marginHeight = 3;
+		layout.marginWidth = 4;
 		setLayout( layout );
 
 		// The local part
 		this.localPartPhantomText = new StyledText( this, SWT.SINGLE );
 		this.localPartPhantomText.setText( DEFAULT_LOCAL_PART );
 		this.localPartPhantomText.setLayoutData( new GridData());
+		this.localPartPhantomText.setBackground( getDisplay().getSystemColor( SWT.COLOR_WHITE ));
 		this.localPartPhantomText.addModifyListener( new ModifyListener() {
 			@Override
 			public void modifyText( ModifyEvent e ) {
@@ -109,7 +114,7 @@ public class QNameText extends Composite {
 
 		// The name space
 		this.namespacePhantomText = new PhantomText( this, SWT.SINGLE );
-		this.namespacePhantomText.setDefaultValue( defaultNamespace == null ? DEFAULT_NAMESPACE : defaultNamespace );
+		this.namespacePhantomText.setDefaultValue( this.defaultNamespace );
 
 		GridData layoutData = new GridData( GridData.FILL_HORIZONTAL );
 		layoutData.minimumWidth = 60;
@@ -239,13 +244,12 @@ public class QNameText extends Composite {
 	public QName getValue() {
 
 		QName result;
-		String ns = this.namespacePhantomText.getTextValue();
-		String name = this.localPartPhantomText.getText();
-		name = this.defaultLocalPart.equals( name ) ? null : name;
+		String ns = this.namespacePhantomText.getTextValue().trim();
+		String name = this.localPartPhantomText.getText().trim();
 
 		if( StringUtils.isEmpty( name ))
 			result = null;
-		else if( ns == null || ns.length() == 0 )
+		else if( StringUtils.isEmpty( ns ))
 			result = new QName( name );
 		else
 			result = new QName( ns, name );
@@ -298,5 +302,40 @@ public class QNameText extends Composite {
 	 */
 	public void removeModifyListener( ModifyListener modifyListener ) {
 		this.modifyListeners.remove( modifyListener );
+	}
+
+
+	/**
+	 * @return the defaultLocalPart
+	 */
+	public String getDefaultLocalPart() {
+		return this.defaultLocalPart;
+	}
+
+
+	/**
+	 * @return the defaultNamespace
+	 */
+	public String getDefaultNamespace() {
+		return this.defaultNamespace;
+	}
+
+
+	/**
+	 * @return the default QName for this widget
+	 */
+	public QName getDefaultValue() {
+		String ns = this.defaultNamespace.trim();
+		String name = this.defaultLocalPart.trim();
+
+		QName result;
+		if( StringUtils.isEmpty( name ))
+			result = null;
+		else if( StringUtils.isEmpty( ns ))
+			result = new QName( name );
+		else
+			result = new QName( ns, name );
+
+		return result;
 	}
 }

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.IncomingPayload#getTransformation <em>Transformation</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getIncomingPayload()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getIncomingPayload()
  * @model extendedMetaData="name='IncomingPayload' kind='elementOnly'"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface IncomingPayload extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transformation</em>' containment reference.
 	 * @see #setTransformation(Transformation)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getIncomingPayload_Transformation()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getIncomingPayload_Transformation()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='transformation' namespace='##targetNamespace'"
 	 * @generated

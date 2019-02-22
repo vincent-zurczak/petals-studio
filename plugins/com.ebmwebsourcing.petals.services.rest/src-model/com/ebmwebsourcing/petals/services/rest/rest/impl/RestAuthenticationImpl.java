@@ -15,7 +15,7 @@ import com.ebmwebsourcing.petals.services.rest.rest.RestAuthentication;
 import com.ebmwebsourcing.petals.services.rest.rest.RestBasicAuthentication;
 import com.ebmwebsourcing.petals.services.rest.rest.RestJwtAuthentication;
 import com.ebmwebsourcing.petals.services.rest.rest.RestNtlmAuthentication;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Authentication</b></em>'.
+ * An implementation of the model object '<em><b>Authentication</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -88,7 +88,7 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_AUTHENTICATION;
+		return RestPackage.Literals.REST_AUTHENTICATION;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 		RestBasicAuthentication oldBasic = basic;
 		basic = newBasic;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_AUTHENTICATION__BASIC, oldBasic, newBasic);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_AUTHENTICATION__BASIC, oldBasic, newBasic);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -124,14 +124,14 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 		if (newBasic != basic) {
 			NotificationChain msgs = null;
 			if (basic != null)
-				msgs = ((InternalEObject)basic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_AUTHENTICATION__BASIC, null, msgs);
+				msgs = ((InternalEObject)basic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_AUTHENTICATION__BASIC, null, msgs);
 			if (newBasic != null)
-				msgs = ((InternalEObject)newBasic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_AUTHENTICATION__BASIC, null, msgs);
+				msgs = ((InternalEObject)newBasic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_AUTHENTICATION__BASIC, null, msgs);
 			msgs = basicSetBasic(newBasic, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_AUTHENTICATION__BASIC, newBasic, newBasic));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_AUTHENTICATION__BASIC, newBasic, newBasic));
 	}
 
 	/**
@@ -152,7 +152,7 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 		RestJwtAuthentication oldJwt = jwt;
 		jwt = newJwt;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_AUTHENTICATION__JWT, oldJwt, newJwt);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_AUTHENTICATION__JWT, oldJwt, newJwt);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -167,14 +167,14 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 		if (newJwt != jwt) {
 			NotificationChain msgs = null;
 			if (jwt != null)
-				msgs = ((InternalEObject)jwt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_AUTHENTICATION__JWT, null, msgs);
+				msgs = ((InternalEObject)jwt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_AUTHENTICATION__JWT, null, msgs);
 			if (newJwt != null)
-				msgs = ((InternalEObject)newJwt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_AUTHENTICATION__JWT, null, msgs);
+				msgs = ((InternalEObject)newJwt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_AUTHENTICATION__JWT, null, msgs);
 			msgs = basicSetJwt(newJwt, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_AUTHENTICATION__JWT, newJwt, newJwt));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_AUTHENTICATION__JWT, newJwt, newJwt));
 	}
 
 	/**
@@ -195,7 +195,7 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 		RestNtlmAuthentication oldNtlm = ntlm;
 		ntlm = newNtlm;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_AUTHENTICATION__NTLM, oldNtlm, newNtlm);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_AUTHENTICATION__NTLM, oldNtlm, newNtlm);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -210,14 +210,14 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 		if (newNtlm != ntlm) {
 			NotificationChain msgs = null;
 			if (ntlm != null)
-				msgs = ((InternalEObject)ntlm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_AUTHENTICATION__NTLM, null, msgs);
+				msgs = ((InternalEObject)ntlm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_AUTHENTICATION__NTLM, null, msgs);
 			if (newNtlm != null)
-				msgs = ((InternalEObject)newNtlm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_AUTHENTICATION__NTLM, null, msgs);
+				msgs = ((InternalEObject)newNtlm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_AUTHENTICATION__NTLM, null, msgs);
 			msgs = basicSetNtlm(newNtlm, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_AUTHENTICATION__NTLM, newNtlm, newNtlm));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_AUTHENTICATION__NTLM, newNtlm, newNtlm));
 	}
 
 	/**
@@ -228,11 +228,11 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.REST_AUTHENTICATION__BASIC:
+			case RestPackage.REST_AUTHENTICATION__BASIC:
 				return basicSetBasic(null, msgs);
-			case restPackage.REST_AUTHENTICATION__JWT:
+			case RestPackage.REST_AUTHENTICATION__JWT:
 				return basicSetJwt(null, msgs);
-			case restPackage.REST_AUTHENTICATION__NTLM:
+			case RestPackage.REST_AUTHENTICATION__NTLM:
 				return basicSetNtlm(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -246,11 +246,11 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_AUTHENTICATION__BASIC:
+			case RestPackage.REST_AUTHENTICATION__BASIC:
 				return getBasic();
-			case restPackage.REST_AUTHENTICATION__JWT:
+			case RestPackage.REST_AUTHENTICATION__JWT:
 				return getJwt();
-			case restPackage.REST_AUTHENTICATION__NTLM:
+			case RestPackage.REST_AUTHENTICATION__NTLM:
 				return getNtlm();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -264,13 +264,13 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_AUTHENTICATION__BASIC:
+			case RestPackage.REST_AUTHENTICATION__BASIC:
 				setBasic((RestBasicAuthentication)newValue);
 				return;
-			case restPackage.REST_AUTHENTICATION__JWT:
+			case RestPackage.REST_AUTHENTICATION__JWT:
 				setJwt((RestJwtAuthentication)newValue);
 				return;
-			case restPackage.REST_AUTHENTICATION__NTLM:
+			case RestPackage.REST_AUTHENTICATION__NTLM:
 				setNtlm((RestNtlmAuthentication)newValue);
 				return;
 		}
@@ -285,13 +285,13 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_AUTHENTICATION__BASIC:
+			case RestPackage.REST_AUTHENTICATION__BASIC:
 				setBasic((RestBasicAuthentication)null);
 				return;
-			case restPackage.REST_AUTHENTICATION__JWT:
+			case RestPackage.REST_AUTHENTICATION__JWT:
 				setJwt((RestJwtAuthentication)null);
 				return;
-			case restPackage.REST_AUTHENTICATION__NTLM:
+			case RestPackage.REST_AUTHENTICATION__NTLM:
 				setNtlm((RestNtlmAuthentication)null);
 				return;
 		}
@@ -306,11 +306,11 @@ public class RestAuthenticationImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_AUTHENTICATION__BASIC:
+			case RestPackage.REST_AUTHENTICATION__BASIC:
 				return basic != null;
-			case restPackage.REST_AUTHENTICATION__JWT:
+			case RestPackage.REST_AUTHENTICATION__JWT:
 				return jwt != null;
-			case restPackage.REST_AUTHENTICATION__NTLM:
+			case RestPackage.REST_AUTHENTICATION__NTLM:
 				return ntlm != null;
 		}
 		return super.eIsSet(featureID);

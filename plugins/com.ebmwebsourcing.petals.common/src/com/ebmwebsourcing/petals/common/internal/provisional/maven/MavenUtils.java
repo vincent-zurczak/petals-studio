@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.common.internal.provisional.maven;
 
 import java.io.File;
@@ -36,6 +36,7 @@ import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
 import com.ebmwebsourcing.petals.common.internal.PetalsCommonPlugin;
+import com.ebmwebsourcing.petals.common.internal.provisional.maven.MavenBean.Scope;
 import com.ebmwebsourcing.petals.common.internal.provisional.preferences.PreferencesManager;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.StringUtils;
 
@@ -292,6 +293,12 @@ public class MavenUtils {
 				Element versionElement = ns == null ? new Element( "version" ) : new Element( "version", ns );
 				versionElement.setText( bean.getVersion());
 				dependencyElement.addContent( versionElement );
+
+				if( bean.getScope() != Scope.DEFAULT ) {
+					Element scopeElement = ns == null ? new Element( "scope" ) : new Element( "scope", ns );
+					scopeElement.setText( bean.getScope().toString().toLowerCase());
+					dependencyElement.addContent( scopeElement );
+				}
 
 				Element typeElement = ns == null ? new Element( "type" ) : new Element( "type", ns );
 				typeElement.setText( "jbi-service-unit" );

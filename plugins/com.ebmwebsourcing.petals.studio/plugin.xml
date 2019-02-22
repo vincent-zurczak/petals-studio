@@ -251,6 +251,14 @@
                name="startupMessageRect"
                value="7,252,445,20">
          </property>
+         <property
+               name="appName"
+               value="Petals Studio">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
       </product>
    </extension>
    <extension
@@ -279,9 +287,11 @@
                name="startupMessageRect"
                value="7,252,445,20">
          </property>
+         <!--
          <property
                name="preferenceCustomization">
          </property>
+         -->
       </product>
    </extension>
    <extension

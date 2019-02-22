@@ -14,7 +14,7 @@ package com.ebmwebsourcing.petals.services.rest.rest.impl;
 import com.ebmwebsourcing.petals.services.rest.rest.Condition;
 import com.ebmwebsourcing.petals.services.rest.rest.OnCase;
 import com.ebmwebsourcing.petals.services.rest.rest.OnJbiResponse;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -120,7 +120,7 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.ON_JBI_RESPONSE;
+		return RestPackage.Literals.ON_JBI_RESPONSE;
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		Condition oldOnOut = onOut;
 		onOut = newOnOut;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_OUT, oldOnOut, newOnOut);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_OUT, oldOnOut, newOnOut);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -156,14 +156,14 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		if (newOnOut != onOut) {
 			NotificationChain msgs = null;
 			if (onOut != null)
-				msgs = ((InternalEObject)onOut).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_OUT, null, msgs);
+				msgs = ((InternalEObject)onOut).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_OUT, null, msgs);
 			if (newOnOut != null)
-				msgs = ((InternalEObject)newOnOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_OUT, null, msgs);
+				msgs = ((InternalEObject)newOnOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_OUT, null, msgs);
 			msgs = basicSetOnOut(newOnOut, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_OUT, newOnOut, newOnOut));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_OUT, newOnOut, newOnOut));
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		Condition oldOnFault = onFault;
 		onFault = newOnFault;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_FAULT, oldOnFault, newOnFault);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_FAULT, oldOnFault, newOnFault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -199,14 +199,14 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		if (newOnFault != onFault) {
 			NotificationChain msgs = null;
 			if (onFault != null)
-				msgs = ((InternalEObject)onFault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_FAULT, null, msgs);
+				msgs = ((InternalEObject)onFault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_FAULT, null, msgs);
 			if (newOnFault != null)
-				msgs = ((InternalEObject)newOnFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_FAULT, null, msgs);
+				msgs = ((InternalEObject)newOnFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_FAULT, null, msgs);
 			msgs = basicSetOnFault(newOnFault, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_FAULT, newOnFault, newOnFault));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_FAULT, newOnFault, newOnFault));
 	}
 
 	/**
@@ -227,7 +227,7 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		Condition oldOnError = onError;
 		onError = newOnError;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_ERROR, oldOnError, newOnError);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_ERROR, oldOnError, newOnError);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -242,14 +242,14 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		if (newOnError != onError) {
 			NotificationChain msgs = null;
 			if (onError != null)
-				msgs = ((InternalEObject)onError).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_ERROR, null, msgs);
+				msgs = ((InternalEObject)onError).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_ERROR, null, msgs);
 			if (newOnError != null)
-				msgs = ((InternalEObject)newOnError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_ERROR, null, msgs);
+				msgs = ((InternalEObject)newOnError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_ERROR, null, msgs);
 			msgs = basicSetOnError(newOnError, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_ERROR, newOnError, newOnError));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_ERROR, newOnError, newOnError));
 	}
 
 	/**
@@ -270,7 +270,7 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		OnCase oldOnDefaultOut = onDefaultOut;
 		onDefaultOut = newOnDefaultOut;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, oldOnDefaultOut, newOnDefaultOut);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, oldOnDefaultOut, newOnDefaultOut);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -285,14 +285,14 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		if (newOnDefaultOut != onDefaultOut) {
 			NotificationChain msgs = null;
 			if (onDefaultOut != null)
-				msgs = ((InternalEObject)onDefaultOut).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, null, msgs);
+				msgs = ((InternalEObject)onDefaultOut).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, null, msgs);
 			if (newOnDefaultOut != null)
-				msgs = ((InternalEObject)newOnDefaultOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, null, msgs);
+				msgs = ((InternalEObject)newOnDefaultOut).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, null, msgs);
 			msgs = basicSetOnDefaultOut(newOnDefaultOut, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, newOnDefaultOut, newOnDefaultOut));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT, newOnDefaultOut, newOnDefaultOut));
 	}
 
 	/**
@@ -313,7 +313,7 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		OnCase oldOnDefaultError = onDefaultError;
 		onDefaultError = newOnDefaultError;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, oldOnDefaultError, newOnDefaultError);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, oldOnDefaultError, newOnDefaultError);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -328,14 +328,14 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		if (newOnDefaultError != onDefaultError) {
 			NotificationChain msgs = null;
 			if (onDefaultError != null)
-				msgs = ((InternalEObject)onDefaultError).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, null, msgs);
+				msgs = ((InternalEObject)onDefaultError).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, null, msgs);
 			if (newOnDefaultError != null)
-				msgs = ((InternalEObject)newOnDefaultError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, null, msgs);
+				msgs = ((InternalEObject)newOnDefaultError).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, null, msgs);
 			msgs = basicSetOnDefaultError(newOnDefaultError, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, newOnDefaultError, newOnDefaultError));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR, newOnDefaultError, newOnDefaultError));
 	}
 
 	/**
@@ -356,7 +356,7 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		OnCase oldOnDefaultFault = onDefaultFault;
 		onDefaultFault = newOnDefaultFault;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, oldOnDefaultFault, newOnDefaultFault);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, oldOnDefaultFault, newOnDefaultFault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -371,14 +371,14 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 		if (newOnDefaultFault != onDefaultFault) {
 			NotificationChain msgs = null;
 			if (onDefaultFault != null)
-				msgs = ((InternalEObject)onDefaultFault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, null, msgs);
+				msgs = ((InternalEObject)onDefaultFault).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, null, msgs);
 			if (newOnDefaultFault != null)
-				msgs = ((InternalEObject)newOnDefaultFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, null, msgs);
+				msgs = ((InternalEObject)newOnDefaultFault).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, null, msgs);
 			msgs = basicSetOnDefaultFault(newOnDefaultFault, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, newOnDefaultFault, newOnDefaultFault));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT, newOnDefaultFault, newOnDefaultFault));
 	}
 
 	/**
@@ -389,17 +389,17 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.ON_JBI_RESPONSE__ON_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_OUT:
 				return basicSetOnOut(null, msgs);
-			case restPackage.ON_JBI_RESPONSE__ON_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_FAULT:
 				return basicSetOnFault(null, msgs);
-			case restPackage.ON_JBI_RESPONSE__ON_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_ERROR:
 				return basicSetOnError(null, msgs);
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
 				return basicSetOnDefaultOut(null, msgs);
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
 				return basicSetOnDefaultError(null, msgs);
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
 				return basicSetOnDefaultFault(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -413,17 +413,17 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.ON_JBI_RESPONSE__ON_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_OUT:
 				return getOnOut();
-			case restPackage.ON_JBI_RESPONSE__ON_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_FAULT:
 				return getOnFault();
-			case restPackage.ON_JBI_RESPONSE__ON_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_ERROR:
 				return getOnError();
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
 				return getOnDefaultOut();
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
 				return getOnDefaultError();
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
 				return getOnDefaultFault();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -437,22 +437,22 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.ON_JBI_RESPONSE__ON_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_OUT:
 				setOnOut((Condition)newValue);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_FAULT:
 				setOnFault((Condition)newValue);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_ERROR:
 				setOnError((Condition)newValue);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
 				setOnDefaultOut((OnCase)newValue);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
 				setOnDefaultError((OnCase)newValue);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
 				setOnDefaultFault((OnCase)newValue);
 				return;
 		}
@@ -467,22 +467,22 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.ON_JBI_RESPONSE__ON_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_OUT:
 				setOnOut((Condition)null);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_FAULT:
 				setOnFault((Condition)null);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_ERROR:
 				setOnError((Condition)null);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
 				setOnDefaultOut((OnCase)null);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
 				setOnDefaultError((OnCase)null);
 				return;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
 				setOnDefaultFault((OnCase)null);
 				return;
 		}
@@ -497,17 +497,17 @@ public class OnJbiResponseImpl extends MinimalEObjectImpl.Container implements O
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.ON_JBI_RESPONSE__ON_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_OUT:
 				return onOut != null;
-			case restPackage.ON_JBI_RESPONSE__ON_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_FAULT:
 				return onFault != null;
-			case restPackage.ON_JBI_RESPONSE__ON_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_ERROR:
 				return onError != null;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_OUT:
 				return onDefaultOut != null;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_ERROR:
 				return onDefaultError != null;
-			case restPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
+			case RestPackage.ON_JBI_RESPONSE__ON_DEFAULT_FAULT:
 				return onDefaultFault != null;
 		}
 		return super.eIsSet(featureID);

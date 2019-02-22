@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.wsdl.Definition;
@@ -433,11 +434,11 @@ public final class WsdlUtils {
 		 */
 		public boolean haveSameIdentifiers( String itfName, String itfNs, String srvName, String srvNs, String edptName ) {
 
-			return CommonUtils.areEqual( itfName, this.itfName.getLocalPart())
-			&& CommonUtils.areEqual( itfNs, this.itfName.getNamespaceURI())
-			&& CommonUtils.areEqual( srvName, this.srvName.getLocalPart())
-			&& CommonUtils.areEqual( srvNs, this.srvName.getNamespaceURI())
-			&& CommonUtils.areEqual( edptName, this.endpointName );
+			return Objects.equals( itfName, this.itfName.getLocalPart())
+			&& Objects.equals( itfNs, this.itfName.getNamespaceURI())
+			&& Objects.equals( srvName, this.srvName.getLocalPart())
+			&& Objects.equals( srvNs, this.srvName.getNamespaceURI())
+			&& Objects.equals( edptName, this.endpointName );
 		}
 	}
 

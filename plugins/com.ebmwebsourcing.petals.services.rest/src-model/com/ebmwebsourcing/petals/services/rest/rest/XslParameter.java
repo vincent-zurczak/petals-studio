@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.XslParameter#isIsJsonResult <em>Is Json Result</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getXslParameter()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getXslParameter()
  * @model extendedMetaData="name='XslParameter' kind='simple'"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface XslParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getXslParameter_Value()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getXslParameter_Value()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface XslParameter extends EObject {
 	 * @see #isSetIsJsonResult()
 	 * @see #unsetIsJsonResult()
 	 * @see #setIsJsonResult(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getXslParameter_IsJsonResult()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getXslParameter_IsJsonResult()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='attribute' name='is-json-result'"
 	 * @generated

@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.HttpResponse#getCode <em>Code</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse()
  * @model extendedMetaData="name='HttpResponse' kind='elementOnly'"
  * @generated
  */
@@ -49,7 +49,7 @@ public interface HttpResponse extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Header</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_Header()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_Header()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='header' namespace='##targetNamespace'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface HttpResponse extends EObject {
 	 * @see #isSetHttpBodyToJsonMultiplePi()
 	 * @see #unsetHttpBodyToJsonMultiplePi()
 	 * @see #setHttpBodyToJsonMultiplePi(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_HttpBodyToJsonMultiplePi()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_HttpBodyToJsonMultiplePi()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-multiple-pi' namespace='##targetNamespace'"
 	 * @generated
@@ -119,7 +119,7 @@ public interface HttpResponse extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Http Body To Json Virtual Root</em>' attribute.
 	 * @see #setHttpBodyToJsonVirtualRoot(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_HttpBodyToJsonVirtualRoot()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_HttpBodyToJsonVirtualRoot()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-virtual-root' namespace='##targetNamespace'"
 	 * @generated
@@ -148,7 +148,7 @@ public interface HttpResponse extends EObject {
 	 * @see #isSetHttpBodyToJsonAutoArray()
 	 * @see #unsetHttpBodyToJsonAutoArray()
 	 * @see #setHttpBodyToJsonAutoArray(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_HttpBodyToJsonAutoArray()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_HttpBodyToJsonAutoArray()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-auto-array' namespace='##targetNamespace'"
 	 * @generated
@@ -202,7 +202,7 @@ public interface HttpResponse extends EObject {
 	 * @see #isSetHttpBodyToJsonAutoPrimitive()
 	 * @see #unsetHttpBodyToJsonAutoPrimitive()
 	 * @see #setHttpBodyToJsonAutoPrimitive(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_HttpBodyToJsonAutoPrimitive()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_HttpBodyToJsonAutoPrimitive()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-auto-primitive' namespace='##targetNamespace'"
 	 * @generated
@@ -256,7 +256,7 @@ public interface HttpResponse extends EObject {
 	 * @see #isSetHttpBodyToJsonPrettyPrint()
 	 * @see #unsetHttpBodyToJsonPrettyPrint()
 	 * @see #setHttpBodyToJsonPrettyPrint(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_HttpBodyToJsonPrettyPrint()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_HttpBodyToJsonPrettyPrint()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-pretty-print' namespace='##targetNamespace'"
 	 * @generated
@@ -310,7 +310,7 @@ public interface HttpResponse extends EObject {
 	 * @see #isSetHttpBodyToJsonNsDeclarations()
 	 * @see #unsetHttpBodyToJsonNsDeclarations()
 	 * @see #setHttpBodyToJsonNsDeclarations(boolean)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_HttpBodyToJsonNsDeclarations()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_HttpBodyToJsonNsDeclarations()
 	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='element' name='http-body-to-json-ns-declarations' namespace='##targetNamespace'"
 	 * @generated
@@ -364,7 +364,7 @@ public interface HttpResponse extends EObject {
 	 * @see #isSetCode()
 	 * @see #unsetCode()
 	 * @see #setCode(int)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getHttpResponse_Code()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getHttpResponse_Code()
 	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int"
 	 *        extendedMetaData="kind='attribute' name='code'"
 	 * @generated

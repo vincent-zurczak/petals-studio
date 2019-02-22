@@ -11,8 +11,8 @@
  */
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.RestProperty;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Property</b></em>'.
+ * An implementation of the model object '<em><b>Property</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -92,7 +92,7 @@ public class RestPropertyImpl extends MinimalEObjectImpl.Container implements Re
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_PROPERTY;
+		return RestPackage.Literals.REST_PROPERTY;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class RestPropertyImpl extends MinimalEObjectImpl.Container implements Re
 		String oldConstant = constant;
 		constant = newConstant;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_PROPERTY__CONSTANT, oldConstant, constant));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_PROPERTY__CONSTANT, oldConstant, constant));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class RestPropertyImpl extends MinimalEObjectImpl.Container implements Re
 		String oldXpath = xpath;
 		xpath = newXpath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_PROPERTY__XPATH, oldXpath, xpath));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_PROPERTY__XPATH, oldXpath, xpath));
 	}
 
 	/**
@@ -145,9 +145,9 @@ public class RestPropertyImpl extends MinimalEObjectImpl.Container implements Re
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_PROPERTY__CONSTANT:
+			case RestPackage.REST_PROPERTY__CONSTANT:
 				return getConstant();
-			case restPackage.REST_PROPERTY__XPATH:
+			case RestPackage.REST_PROPERTY__XPATH:
 				return getXpath();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public class RestPropertyImpl extends MinimalEObjectImpl.Container implements Re
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_PROPERTY__CONSTANT:
+			case RestPackage.REST_PROPERTY__CONSTANT:
 				setConstant((String)newValue);
 				return;
-			case restPackage.REST_PROPERTY__XPATH:
+			case RestPackage.REST_PROPERTY__XPATH:
 				setXpath((String)newValue);
 				return;
 		}
@@ -179,10 +179,10 @@ public class RestPropertyImpl extends MinimalEObjectImpl.Container implements Re
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_PROPERTY__CONSTANT:
+			case RestPackage.REST_PROPERTY__CONSTANT:
 				setConstant(CONSTANT_EDEFAULT);
 				return;
-			case restPackage.REST_PROPERTY__XPATH:
+			case RestPackage.REST_PROPERTY__XPATH:
 				setXpath(XPATH_EDEFAULT);
 				return;
 		}
@@ -197,9 +197,9 @@ public class RestPropertyImpl extends MinimalEObjectImpl.Container implements Re
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_PROPERTY__CONSTANT:
+			case RestPackage.REST_PROPERTY__CONSTANT:
 				return CONSTANT_EDEFAULT == null ? constant != null : !CONSTANT_EDEFAULT.equals(constant);
-			case restPackage.REST_PROPERTY__XPATH:
+			case RestPackage.REST_PROPERTY__XPATH:
 				return XPATH_EDEFAULT == null ? xpath != null : !XPATH_EDEFAULT.equals(xpath);
 		}
 		return super.eIsSet(featureID);

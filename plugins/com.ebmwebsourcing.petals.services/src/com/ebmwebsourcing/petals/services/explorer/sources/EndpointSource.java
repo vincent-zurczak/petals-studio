@@ -14,6 +14,7 @@ package com.ebmwebsourcing.petals.services.explorer.sources;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.Objects;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
@@ -21,7 +22,6 @@ import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
 
-import com.ebmwebsourcing.petals.common.internal.provisional.utils.CommonUtils;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.JbiXmlUtils;
 import com.ebmwebsourcing.petals.services.PetalsServicesPlugin;
 import com.ebmwebsourcing.petals.services.explorer.model.EndpointBean;
@@ -169,7 +169,7 @@ public abstract class EndpointSource {
 	@Override
 	public boolean equals( Object obj ) {
 		return obj instanceof EndpointSource
-				&& CommonUtils.areEqual(((EndpointSource) obj).id, this.id );
+				&& Objects.equals(((EndpointSource) obj).id, this.id );
 	}
 
 

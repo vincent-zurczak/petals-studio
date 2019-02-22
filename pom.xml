@@ -34,8 +34,10 @@
 		
 		<module>plugins/com.ebmwebsourcing.petals.services</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.cdk</module>
+		<module>plugins/com.ebmwebsourcing.petals.services.camel</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.eip</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.filetransfer</module>
+		<module>plugins/com.ebmwebsourcing.petals.services.flowable</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.ftp</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.jms</module>
 		<module>plugins/com.ebmwebsourcing.petals.services.jsr181</module>

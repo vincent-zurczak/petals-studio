@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.JwtSignature#getAlgorithm <em>Algorithm</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getJwtSignature()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getJwtSignature()
  * @model extendedMetaData="name='JwtSignature' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface JwtSignature extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Key File Url</em>' attribute.
 	 * @see #setKeyFileUrl(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getJwtSignature_KeyFileUrl()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getJwtSignature_KeyFileUrl()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='element' name='key-file-url' namespace='##targetNamespace'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface JwtSignature extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Algorithm</em>' attribute.
 	 * @see #setAlgorithm(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getJwtSignature_Algorithm()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getJwtSignature_Algorithm()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
 	 *        extendedMetaData="kind='attribute' name='algorithm'"
 	 * @generated

@@ -11,8 +11,8 @@
  */
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.RestParam;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Param</b></em>'.
+ * An implementation of the model object '<em><b>Param</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -92,7 +92,7 @@ public class RestParamImpl extends MinimalEObjectImpl.Container implements RestP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_PARAM;
+		return RestPackage.Literals.REST_PARAM;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class RestParamImpl extends MinimalEObjectImpl.Container implements RestP
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_PARAM__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_PARAM__VALUE, oldValue, value));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class RestParamImpl extends MinimalEObjectImpl.Container implements RestP
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_PARAM__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_PARAM__NAME, oldName, name));
 	}
 
 	/**
@@ -145,9 +145,9 @@ public class RestParamImpl extends MinimalEObjectImpl.Container implements RestP
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_PARAM__VALUE:
+			case RestPackage.REST_PARAM__VALUE:
 				return getValue();
-			case restPackage.REST_PARAM__NAME:
+			case RestPackage.REST_PARAM__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public class RestParamImpl extends MinimalEObjectImpl.Container implements RestP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_PARAM__VALUE:
+			case RestPackage.REST_PARAM__VALUE:
 				setValue((String)newValue);
 				return;
-			case restPackage.REST_PARAM__NAME:
+			case RestPackage.REST_PARAM__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -179,10 +179,10 @@ public class RestParamImpl extends MinimalEObjectImpl.Container implements RestP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_PARAM__VALUE:
+			case RestPackage.REST_PARAM__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case restPackage.REST_PARAM__NAME:
+			case RestPackage.REST_PARAM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -197,9 +197,9 @@ public class RestParamImpl extends MinimalEObjectImpl.Container implements RestP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_PARAM__VALUE:
+			case RestPackage.REST_PARAM__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case restPackage.REST_PARAM__NAME:
+			case RestPackage.REST_PARAM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);

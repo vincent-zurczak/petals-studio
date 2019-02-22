@@ -416,7 +416,7 @@ public final class JbiXmlUtils {
 	 * @throws FileNotFoundException if the jbi.xml file does not exist
 	 */
 	public static Jbi getJbiXmlModel( IProject project )
-			throws InvalidJbiXmlException, FileNotFoundException {
+	throws InvalidJbiXmlException, FileNotFoundException {
 
 		IFile jbiXmlFile = getJbiXmlFile( project );
 		return getJbiXmlModel( jbiXmlFile );

@@ -7,6 +7,7 @@
 	elementFormDefault="qualified"
 
 	xmlns:bpel10="http://petals.ow2.org/components/petals-bpel-engine/version-1"
+	xmlns:camel1x="http://petals.ow2.org/components/petals-se-camel/jbi/version-1.0"
 	xmlns:ejb13="http://petals.ow2.org/components/ejb/version-1"
 	xmlns:ft24="http://petals.ow2.org/components/filetransfer/version-2"
 	xmlns:ft30="http://petals.ow2.org/components/filetransfer/version-3"
@@ -29,6 +30,7 @@
 
 	<!-- Imports -->
 	<xs:import namespace="http://petals.ow2.org/components/petals-bpel-engine/version-1" schemaLocation="components-cdk5.0/bpel1.0.xsd" />
+	<xs:import namespace="http://petals.ow2.org/components/petals-se-camel/jbi/version-1.0" schemaLocation="components-cdk5.0/camel1.x.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/ejb/version-1" schemaLocation="components-cdk5.0/ejb1.3.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/filetransfer/version-2" schemaLocation="components-cdk5.0/fileTransfer2.4.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/filetransfer/version-3" schemaLocation="components-cdk5.0/fileTransfer3.0.xsd" />
@@ -112,6 +114,7 @@
 				<xs:group ref="petalsCDK:EmptyGroup" />
 				<!-- Let it be the first choice -->
 
+				<xs:group ref="camel1x:CamelInConsumes" />
 				<xs:group ref="ft24:FileTransferInConsumes" />
 				<xs:group ref="ft30:FileTransferInConsumes" />
 				<xs:group ref="jms31:JmsInConsumes" />

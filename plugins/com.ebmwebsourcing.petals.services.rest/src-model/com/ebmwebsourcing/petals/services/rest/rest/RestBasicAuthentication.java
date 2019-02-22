@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Basic Authentication</b></em>'.
+ * A representation of the model object '<em><b>Basic Authentication</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestBasicAuthentication#getPassword <em>Password</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestBasicAuthentication()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestBasicAuthentication()
  * @model extendedMetaData="name='RestBasicAuthentication' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface RestBasicAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Username</em>' containment reference.
 	 * @see #setUsername(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestBasicAuthentication_Username()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestBasicAuthentication_Username()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='username' namespace='##targetNamespace'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface RestBasicAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Password</em>' containment reference.
 	 * @see #setPassword(RestProperty)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestBasicAuthentication_Password()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestBasicAuthentication_Password()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='password' namespace='##targetNamespace'"
 	 * @generated

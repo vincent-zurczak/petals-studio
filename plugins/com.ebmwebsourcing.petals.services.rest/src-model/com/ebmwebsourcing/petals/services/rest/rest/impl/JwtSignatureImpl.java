@@ -12,7 +12,7 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.JwtSignature;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -92,7 +92,7 @@ public class JwtSignatureImpl extends MinimalEObjectImpl.Container implements Jw
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.JWT_SIGNATURE;
+		return RestPackage.Literals.JWT_SIGNATURE;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class JwtSignatureImpl extends MinimalEObjectImpl.Container implements Jw
 		String oldKeyFileUrl = keyFileUrl;
 		keyFileUrl = newKeyFileUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.JWT_SIGNATURE__KEY_FILE_URL, oldKeyFileUrl, keyFileUrl));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.JWT_SIGNATURE__KEY_FILE_URL, oldKeyFileUrl, keyFileUrl));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class JwtSignatureImpl extends MinimalEObjectImpl.Container implements Jw
 		String oldAlgorithm = algorithm;
 		algorithm = newAlgorithm;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.JWT_SIGNATURE__ALGORITHM, oldAlgorithm, algorithm));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.JWT_SIGNATURE__ALGORITHM, oldAlgorithm, algorithm));
 	}
 
 	/**
@@ -145,9 +145,9 @@ public class JwtSignatureImpl extends MinimalEObjectImpl.Container implements Jw
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.JWT_SIGNATURE__KEY_FILE_URL:
+			case RestPackage.JWT_SIGNATURE__KEY_FILE_URL:
 				return getKeyFileUrl();
-			case restPackage.JWT_SIGNATURE__ALGORITHM:
+			case RestPackage.JWT_SIGNATURE__ALGORITHM:
 				return getAlgorithm();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -161,10 +161,10 @@ public class JwtSignatureImpl extends MinimalEObjectImpl.Container implements Jw
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.JWT_SIGNATURE__KEY_FILE_URL:
+			case RestPackage.JWT_SIGNATURE__KEY_FILE_URL:
 				setKeyFileUrl((String)newValue);
 				return;
-			case restPackage.JWT_SIGNATURE__ALGORITHM:
+			case RestPackage.JWT_SIGNATURE__ALGORITHM:
 				setAlgorithm((String)newValue);
 				return;
 		}
@@ -179,10 +179,10 @@ public class JwtSignatureImpl extends MinimalEObjectImpl.Container implements Jw
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.JWT_SIGNATURE__KEY_FILE_URL:
+			case RestPackage.JWT_SIGNATURE__KEY_FILE_URL:
 				setKeyFileUrl(KEY_FILE_URL_EDEFAULT);
 				return;
-			case restPackage.JWT_SIGNATURE__ALGORITHM:
+			case RestPackage.JWT_SIGNATURE__ALGORITHM:
 				setAlgorithm(ALGORITHM_EDEFAULT);
 				return;
 		}
@@ -197,9 +197,9 @@ public class JwtSignatureImpl extends MinimalEObjectImpl.Container implements Jw
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.JWT_SIGNATURE__KEY_FILE_URL:
+			case RestPackage.JWT_SIGNATURE__KEY_FILE_URL:
 				return KEY_FILE_URL_EDEFAULT == null ? keyFileUrl != null : !KEY_FILE_URL_EDEFAULT.equals(keyFileUrl);
-			case restPackage.JWT_SIGNATURE__ALGORITHM:
+			case RestPackage.JWT_SIGNATURE__ALGORITHM:
 				return ALGORITHM_EDEFAULT == null ? algorithm != null : !ALGORITHM_EDEFAULT.equals(algorithm);
 		}
 		return super.eIsSet(featureID);

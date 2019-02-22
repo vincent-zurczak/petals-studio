@@ -920,6 +920,10 @@
        <handler
              class="com.ebmwebsourcing.petals.common.internal.commands.PetalsRenameHandler"
              commandId="org.eclipse.ui.edit.rename">
+          <activeWhen>
+             <reference
+                   definitionId="com.ebmwebsourcing.petals.common.inPetalsView">
+             </reference></activeWhen>
        </handler>
        <handler
              class="com.ebmwebsourcing.petals.common.internal.commands.PetalsCopyHandler"
@@ -995,5 +999,17 @@
        <Category
              class="com.ebmwebsourcing.petals.common.croquis.internal.projectscnf.CroquisProjectCategory">
        </Category>
+    </extension>
+    <extension
+          point="org.eclipse.core.expressions.definitions">
+       <definition
+             id="com.ebmwebsourcing.petals.common.inPetalsView">
+          <with
+                variable="activePartId">
+             <equals
+                   value="com.ebmwebsourcing.petals.common.projects">
+             </equals>
+          </with>
+       </definition>
     </extension>
 </plugin>

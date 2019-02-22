@@ -13,7 +13,7 @@ package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.ProvidesMapping;
 import com.ebmwebsourcing.petals.services.rest.rest.ProvidesOperation;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import java.util.Collection;
 
@@ -69,7 +69,7 @@ public class ProvidesMappingImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.PROVIDES_MAPPING;
+		return RestPackage.Literals.PROVIDES_MAPPING;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class ProvidesMappingImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<ProvidesOperation> getOperation() {
 		if (operation == null) {
-			operation = new EObjectContainmentEList<ProvidesOperation>(ProvidesOperation.class, this, restPackage.PROVIDES_MAPPING__OPERATION);
+			operation = new EObjectContainmentEList<ProvidesOperation>(ProvidesOperation.class, this, RestPackage.PROVIDES_MAPPING__OPERATION);
 		}
 		return operation;
 	}
@@ -92,7 +92,7 @@ public class ProvidesMappingImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.PROVIDES_MAPPING__OPERATION:
+			case RestPackage.PROVIDES_MAPPING__OPERATION:
 				return ((InternalEList<?>)getOperation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -106,7 +106,7 @@ public class ProvidesMappingImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.PROVIDES_MAPPING__OPERATION:
+			case RestPackage.PROVIDES_MAPPING__OPERATION:
 				return getOperation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -121,7 +121,7 @@ public class ProvidesMappingImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.PROVIDES_MAPPING__OPERATION:
+			case RestPackage.PROVIDES_MAPPING__OPERATION:
 				getOperation().clear();
 				getOperation().addAll((Collection<? extends ProvidesOperation>)newValue);
 				return;
@@ -137,7 +137,7 @@ public class ProvidesMappingImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.PROVIDES_MAPPING__OPERATION:
+			case RestPackage.PROVIDES_MAPPING__OPERATION:
 				getOperation().clear();
 				return;
 		}
@@ -152,7 +152,7 @@ public class ProvidesMappingImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.PROVIDES_MAPPING__OPERATION:
+			case RestPackage.PROVIDES_MAPPING__OPERATION:
 				return operation != null && !operation.isEmpty();
 		}
 		return super.eIsSet(featureID);

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.ConsumesMapping#getOperation <em>Operation</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesMapping()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesMapping()
  * @model extendedMetaData="name='ConsumesMapping' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ConsumesMapping extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getConsumesMapping_Operation()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getConsumesMapping_Operation()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='operation' namespace='##targetNamespace'"
 	 * @generated

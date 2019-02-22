@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.su.editor;
 
 import java.util.ArrayList;
@@ -258,7 +258,7 @@ public class SuEditionComposite extends SashForm implements ISharedEdition {
 		newProvidesButton.setLayoutData( new GridData( SWT.FILL, SWT.TOP, false, true, 1, 1 ));
 		newProvidesButton.setImage( PetalsImages.INSTANCE.getAdd());
 
-		final IWizard providesWizard = findNewWizard( PetalsMode.provides );
+		IWizard providesWizard = findNewWizard( PetalsMode.provides );
 		if( providesWizard == null ) {
 			newProvidesButton.setEnabled( false );
 			newProvidesButton.setToolTipText( "The component is not supported." );
@@ -267,6 +267,9 @@ public class SuEditionComposite extends SashForm implements ISharedEdition {
 			newProvidesButton.addSelectionListener( new SelectionAdapter() {
 				@Override
 				public void widgetSelected( SelectionEvent e ) {
+
+					// We instantiate a new wizard on every click (resource are disposed after the first usage)
+					final IWizard providesWizard = findNewWizard( PetalsMode.provides );
 					if( new WizardDialog( getShell(), providesWizard ).open() == Dialog.OK )
 						SuEditionComposite.this.providesViewer.refresh();
 				}
@@ -316,7 +319,7 @@ public class SuEditionComposite extends SashForm implements ISharedEdition {
 		newConsumesButton.setLayoutData( new GridData( SWT.FILL, SWT.TOP, false, false, 1, 1 ));
 		newConsumesButton.setImage( PetalsImages.INSTANCE.getAdd());
 
-		final IWizard consumesWizard = findNewWizard( PetalsMode.consumes );
+		IWizard consumesWizard = findNewWizard( PetalsMode.consumes );
 		if( consumesWizard == null ) {
 			newConsumesButton.setEnabled( false );
 			newConsumesButton.setToolTipText( "The component is not supported." );
@@ -325,6 +328,9 @@ public class SuEditionComposite extends SashForm implements ISharedEdition {
 			newConsumesButton.addSelectionListener( new SelectionAdapter() {
 				@Override
 				public void widgetSelected( SelectionEvent e ) {
+
+					// We instantiate a new wizard on every click (resource are disposed after the first usage)
+					final IWizard consumesWizard = findNewWizard( PetalsMode.consumes );
 					if( new WizardDialog( getShell(), consumesWizard ).open() == Dialog.OK )
 						SuEditionComposite.this.consumesViewer.refresh();
 				}
@@ -674,16 +680,16 @@ public class SuEditionComposite extends SashForm implements ISharedEdition {
 			Properties projectProperties = PetalsSPPropertiesManager.getProperties( getEditedFile().getProject());
 			String suTypeVersion = projectProperties.getProperty( PetalsSPPropertiesManager.COMPONENT_VERSION, "" );
 			String componentName = projectProperties.getProperty( PetalsSPPropertiesManager.COMPONENT_NAME, "" );
-			
+
 			// first let's try with the project configuration
 			ComponentVersionDescription componentDesc = ExtensionManager.INSTANCE.findDescriptionByComponentNameAndVersion( componentName, suTypeVersion );
-			
+
 			if (componentDesc == null) {
 				// if none is found (or if there is no project configuration file or no correct data in it)
 				// let's rely on the namespaces
 				componentDesc = ExtensionManager.INSTANCE.findComponentDescription( this.selectedEndpoint );
 			}
-			
+
 			if( componentDesc != null ) {
 				EditorContributionSupport support = componentDesc.createNewExtensionSupport();
 				if( support != null )
@@ -783,7 +789,9 @@ public class SuEditionComposite extends SashForm implements ISharedEdition {
 			FinishServiceCreationStrategy strategy = petalsMode == PetalsMode.provides ?
 					new AddProvidesToExistingJbiStrategy( getJbiModel(), getEditingDomain(), getEditedFile().getProject())
 					: new AddConsumesToExistingJbiStrategy( getJbiModel(), getEditingDomain(), getEditedFile().getProject());
+
 			handler.setStrategy( strategy );
+			handler.setUsedInEditor( true );
 			result = handler;
 			break;
 		}

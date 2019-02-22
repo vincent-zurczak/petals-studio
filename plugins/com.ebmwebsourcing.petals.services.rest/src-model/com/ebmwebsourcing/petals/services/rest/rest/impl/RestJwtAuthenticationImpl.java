@@ -15,7 +15,7 @@ import com.ebmwebsourcing.petals.services.rest.rest.JwtClaim;
 import com.ebmwebsourcing.petals.services.rest.rest.JwtCompression;
 import com.ebmwebsourcing.petals.services.rest.rest.JwtSignature;
 import com.ebmwebsourcing.petals.services.rest.rest.RestJwtAuthentication;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 
 import java.util.Collection;
 
@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rest Jwt Authentication</b></em>'.
+ * An implementation of the model object '<em><b>Jwt Authentication</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -114,7 +114,7 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.REST_JWT_AUTHENTICATION;
+		return RestPackage.Literals.REST_JWT_AUTHENTICATION;
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 	 */
 	public EList<JwtClaim> getClaim() {
 		if (claim == null) {
-			claim = new EObjectContainmentEList<JwtClaim>(JwtClaim.class, this, restPackage.REST_JWT_AUTHENTICATION__CLAIM);
+			claim = new EObjectContainmentEList<JwtClaim>(JwtClaim.class, this, RestPackage.REST_JWT_AUTHENTICATION__CLAIM);
 		}
 		return claim;
 	}
@@ -149,7 +149,7 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 		boolean oldCompressWithESet = compressWithESet;
 		compressWithESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH, oldCompressWith, compressWith, !oldCompressWithESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH, oldCompressWith, compressWith, !oldCompressWithESet));
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 		compressWith = COMPRESS_WITH_EDEFAULT;
 		compressWithESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, restPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH, oldCompressWith, COMPRESS_WITH_EDEFAULT, oldCompressWithESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RestPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH, oldCompressWith, COMPRESS_WITH_EDEFAULT, oldCompressWithESet));
 	}
 
 	/**
@@ -193,7 +193,7 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 		JwtSignature oldSignWith = signWith;
 		signWith = newSignWith;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, oldSignWith, newSignWith);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, oldSignWith, newSignWith);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -208,14 +208,14 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 		if (newSignWith != signWith) {
 			NotificationChain msgs = null;
 			if (signWith != null)
-				msgs = ((InternalEObject)signWith).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, null, msgs);
+				msgs = ((InternalEObject)signWith).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, null, msgs);
 			if (newSignWith != null)
-				msgs = ((InternalEObject)newSignWith).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, null, msgs);
+				msgs = ((InternalEObject)newSignWith).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, null, msgs);
 			msgs = basicSetSignWith(newSignWith, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, newSignWith, newSignWith));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH, newSignWith, newSignWith));
 	}
 
 	/**
@@ -226,9 +226,9 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.REST_JWT_AUTHENTICATION__CLAIM:
+			case RestPackage.REST_JWT_AUTHENTICATION__CLAIM:
 				return ((InternalEList<?>)getClaim()).basicRemove(otherEnd, msgs);
-			case restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
 				return basicSetSignWith(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -242,11 +242,11 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.REST_JWT_AUTHENTICATION__CLAIM:
+			case RestPackage.REST_JWT_AUTHENTICATION__CLAIM:
 				return getClaim();
-			case restPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
 				return getCompressWith();
-			case restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
 				return getSignWith();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -261,14 +261,14 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.REST_JWT_AUTHENTICATION__CLAIM:
+			case RestPackage.REST_JWT_AUTHENTICATION__CLAIM:
 				getClaim().clear();
 				getClaim().addAll((Collection<? extends JwtClaim>)newValue);
 				return;
-			case restPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
 				setCompressWith((JwtCompression)newValue);
 				return;
-			case restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
 				setSignWith((JwtSignature)newValue);
 				return;
 		}
@@ -283,13 +283,13 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_JWT_AUTHENTICATION__CLAIM:
+			case RestPackage.REST_JWT_AUTHENTICATION__CLAIM:
 				getClaim().clear();
 				return;
-			case restPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
 				unsetCompressWith();
 				return;
-			case restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
 				setSignWith((JwtSignature)null);
 				return;
 		}
@@ -304,11 +304,11 @@ public class RestJwtAuthenticationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.REST_JWT_AUTHENTICATION__CLAIM:
+			case RestPackage.REST_JWT_AUTHENTICATION__CLAIM:
 				return claim != null && !claim.isEmpty();
-			case restPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__COMPRESS_WITH:
 				return isSetCompressWith();
-			case restPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
+			case RestPackage.REST_JWT_AUTHENTICATION__SIGN_WITH:
 				return signWith != null;
 		}
 		return super.eIsSet(featureID);

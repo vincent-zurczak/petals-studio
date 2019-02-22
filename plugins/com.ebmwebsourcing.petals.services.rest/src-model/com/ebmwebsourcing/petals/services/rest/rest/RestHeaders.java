@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Headers</b></em>'.
+ * A representation of the model object '<em><b>Headers</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestHeaders#getHeader <em>Header</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestHeaders()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestHeaders()
  * @model extendedMetaData="name='RestHeaders' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface RestHeaders extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Header</em>' containment reference list.
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestHeaders_Header()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestHeaders_Header()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='header' namespace='##targetNamespace'"
 	 * @generated

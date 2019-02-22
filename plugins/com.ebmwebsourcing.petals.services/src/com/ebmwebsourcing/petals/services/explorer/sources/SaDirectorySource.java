@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
@@ -41,7 +42,6 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.progress.IProgressService;
 
 import com.ebmwebsourcing.petals.common.internal.provisional.emf.InvalidJbiXmlException;
-import com.ebmwebsourcing.petals.common.internal.provisional.utils.CommonUtils;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.IoUtils;
 import com.ebmwebsourcing.petals.common.internal.provisional.utils.JbiXmlUtils;
 import com.ebmwebsourcing.petals.services.PetalsServicesPlugin;
@@ -461,7 +461,7 @@ public class SaDirectorySource extends EndpointSource {
 	@Override
 	public boolean equals( Object obj ) {
 		return obj instanceof SaDirectorySource
-				&& CommonUtils.areEqual( this.directoryOrSaFile, ((SaDirectorySource) obj).directoryOrSaFile );
+				&& Objects.equals( this.directoryOrSaFile, ((SaDirectorySource) obj).directoryOrSaFile );
 	}
 
 

@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.su.wizards;
 
 import java.io.IOException;
@@ -38,11 +38,11 @@ import com.sun.java.xml.ns.jbi.JbiFactory;
 import com.sun.java.xml.ns.jbi.Provides;
 
 /**
- * @author Micka�l Istria - EBM WebSourcing
+ * @author Mickael Istria - EBM WebSourcing
  */
 public class CreateJBIStrategy implements FinishServiceCreationStrategy {
 
-	private IProject project;
+	protected IProject project;
 
 
 	/*

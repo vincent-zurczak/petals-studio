@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Authentication</b></em>'.
+ * A representation of the model object '<em><b>Authentication</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestAuthentication#getNtlm <em>Ntlm</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestAuthentication()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestAuthentication()
  * @model extendedMetaData="name='RestAuthentication' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface RestAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Basic</em>' containment reference.
 	 * @see #setBasic(RestBasicAuthentication)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestAuthentication_Basic()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestAuthentication_Basic()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='basic' namespace='##targetNamespace'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface RestAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Jwt</em>' containment reference.
 	 * @see #setJwt(RestJwtAuthentication)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestAuthentication_Jwt()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestAuthentication_Jwt()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='jwt' namespace='##targetNamespace'"
 	 * @generated
@@ -96,7 +96,7 @@ public interface RestAuthentication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ntlm</em>' containment reference.
 	 * @see #setNtlm(RestNtlmAuthentication)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestAuthentication_Ntlm()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestAuthentication_Ntlm()
 	 * @model containment="true"
 	 *        extendedMetaData="kind='element' name='ntlm' namespace='##targetNamespace'"
 	 * @generated

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.Condition#getOrderId <em>Order Id</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getCondition()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getCondition()
  * @model extendedMetaData="name='Condition' kind='elementOnly'"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface Condition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Condition</em>' containment reference.
 	 * @see #setCondition(XPathCondition)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getCondition_Condition()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getCondition_Condition()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='condition' namespace='##targetNamespace'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface Condition extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transformation</em>' containment reference.
 	 * @see #setTransformation(Transformation)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getCondition_Transformation()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getCondition_Transformation()
 	 * @model containment="true" required="true"
 	 *        extendedMetaData="kind='element' name='transformation' namespace='##targetNamespace'"
 	 * @generated
@@ -98,7 +98,7 @@ public interface Condition extends EObject {
 	 * @see #isSetOrderId()
 	 * @see #unsetOrderId()
 	 * @see #setOrderId(int)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getCondition_OrderId()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getCondition_OrderId()
 	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Int"
 	 *        extendedMetaData="kind='attribute' name='order-id'"
 	 * @generated

@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.common.internal.provisional.maven;
 
 import java.util.ArrayList;
@@ -27,9 +27,14 @@ import com.ebmwebsourcing.petals.common.internal.provisional.utils.StringUtils;
  */
 public class MavenBean {
 
+	public enum Scope {
+		DEFAULT, PROVIDED, TEST
+	}
+
 	private String artifactId, groupId, name, description, version;
 	private String parentArtifactId, parentGroupId, parentVersion = "";
 	private String componentName, componentVersion;
+	private Scope scope = Scope.DEFAULT;
 
 	public final List<MavenBean> dependencies = new ArrayList<MavenBean> ();
 
@@ -296,5 +301,21 @@ public class MavenBean {
 	 */
 	public final void setComponentVersion( String componentVersion ) {
 		this.componentVersion = componentVersion;
+	}
+
+
+	/**
+	 * @return the scope
+	 */
+	public Scope getScope() {
+		return this.scope;
+	}
+
+
+	/**
+	 * @param scope the scope to set
+	 */
+	public void setScope( Scope scope ) {
+		this.scope = scope;
 	}
 }

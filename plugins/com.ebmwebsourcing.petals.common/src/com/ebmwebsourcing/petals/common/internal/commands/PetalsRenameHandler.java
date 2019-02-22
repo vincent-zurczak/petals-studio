@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.common.internal.commands;
 
 import org.eclipse.core.commands.AbstractHandler;
@@ -84,7 +84,7 @@ public class PetalsRenameHandler extends AbstractHandler {
 		}
 
 		if( part == null ||
-					! PetalsConstants.PETALS_PROJECT_EXPLORER_VIEW_ID.equals( part.getSite().getId())) {
+				! PetalsConstants.PETALS_PROJECT_EXPLORER_VIEW_ID.equals( part.getSite().getId())) {
 			super.setBaseEnabled( false );
 			return;
 		}

@@ -12,8 +12,8 @@
 package com.ebmwebsourcing.petals.services.rest.rest.impl;
 
 import com.ebmwebsourcing.petals.services.rest.rest.JwtClaim;
+import com.ebmwebsourcing.petals.services.rest.rest.RestPackage;
 import com.ebmwebsourcing.petals.services.rest.rest.RestProperty;
-import com.ebmwebsourcing.petals.services.rest.rest.restPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -75,7 +75,7 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return restPackage.Literals.JWT_CLAIM;
+		return RestPackage.Literals.JWT_CLAIM;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 		RestProperty oldName = name;
 		name = newName;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.JWT_CLAIM__NAME, oldName, newName);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.JWT_CLAIM__NAME, oldName, newName);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -111,14 +111,14 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 		if (newName != name) {
 			NotificationChain msgs = null;
 			if (name != null)
-				msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.JWT_CLAIM__NAME, null, msgs);
+				msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.JWT_CLAIM__NAME, null, msgs);
 			if (newName != null)
-				msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.JWT_CLAIM__NAME, null, msgs);
+				msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.JWT_CLAIM__NAME, null, msgs);
 			msgs = basicSetName(newName, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.JWT_CLAIM__NAME, newName, newName));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.JWT_CLAIM__NAME, newName, newName));
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 		RestProperty oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, restPackage.JWT_CLAIM__VALUE, oldValue, newValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RestPackage.JWT_CLAIM__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -154,14 +154,14 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - restPackage.JWT_CLAIM__VALUE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RestPackage.JWT_CLAIM__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - restPackage.JWT_CLAIM__VALUE, null, msgs);
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - RestPackage.JWT_CLAIM__VALUE, null, msgs);
 			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, restPackage.JWT_CLAIM__VALUE, newValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, RestPackage.JWT_CLAIM__VALUE, newValue, newValue));
 	}
 
 	/**
@@ -172,9 +172,9 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case restPackage.JWT_CLAIM__NAME:
+			case RestPackage.JWT_CLAIM__NAME:
 				return basicSetName(null, msgs);
-			case restPackage.JWT_CLAIM__VALUE:
+			case RestPackage.JWT_CLAIM__VALUE:
 				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -188,9 +188,9 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case restPackage.JWT_CLAIM__NAME:
+			case RestPackage.JWT_CLAIM__NAME:
 				return getName();
-			case restPackage.JWT_CLAIM__VALUE:
+			case RestPackage.JWT_CLAIM__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -204,10 +204,10 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case restPackage.JWT_CLAIM__NAME:
+			case RestPackage.JWT_CLAIM__NAME:
 				setName((RestProperty)newValue);
 				return;
-			case restPackage.JWT_CLAIM__VALUE:
+			case RestPackage.JWT_CLAIM__VALUE:
 				setValue((RestProperty)newValue);
 				return;
 		}
@@ -222,10 +222,10 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case restPackage.JWT_CLAIM__NAME:
+			case RestPackage.JWT_CLAIM__NAME:
 				setName((RestProperty)null);
 				return;
-			case restPackage.JWT_CLAIM__VALUE:
+			case RestPackage.JWT_CLAIM__VALUE:
 				setValue((RestProperty)null);
 				return;
 		}
@@ -240,9 +240,9 @@ public class JwtClaimImpl extends MinimalEObjectImpl.Container implements JwtCla
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case restPackage.JWT_CLAIM__NAME:
+			case RestPackage.JWT_CLAIM__NAME:
 				return name != null;
-			case restPackage.JWT_CLAIM__VALUE:
+			case RestPackage.JWT_CLAIM__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

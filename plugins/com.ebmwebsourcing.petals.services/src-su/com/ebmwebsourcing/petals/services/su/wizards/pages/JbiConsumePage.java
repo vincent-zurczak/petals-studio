@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.ebmwebsourcing.petals.services.su.wizards.pages;
 
 import java.util.Arrays;
@@ -94,7 +94,7 @@ public class JbiConsumePage extends JbiAbstractPage {
 
 
 		// Disable invocation by end-point for auto-generated end-points
-		this.edptText.addModifyListener( new ModifyListener() {
+		this.edptText.getStyledText().addModifyListener( new ModifyListener() {
 			@Override
 			public void modifyText( ModifyEvent e ) {
 
@@ -129,7 +129,7 @@ public class JbiConsumePage extends JbiAbstractPage {
 			Label l = SwtFactory.createLabel( container, "Operation Name:", null ); //$NON-NLS-1$
 			GridDataFactory.swtDefaults().indent( 0, 20 ).applyTo( l );
 
-			this.operationQText = SwtFactory.createQNameTextField( container, false, "Operation", "http://Your.Operation.Namespace/" );
+			this.operationQText = SwtFactory.createQNameTextField( container, false, "Operation", "http://your.Operation.Namespace" );
 			GridDataFactory.swtDefaults().align( SWT.FILL, SWT.CENTER ).indent( 0, 20 ).applyTo( this.operationQText );
 			this.operationQText.addModifyListener( new ModifyListener() {
 				@Override

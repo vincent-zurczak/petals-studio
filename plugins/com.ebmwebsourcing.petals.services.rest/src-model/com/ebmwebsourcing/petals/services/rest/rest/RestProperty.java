@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rest Property</b></em>'.
+ * A representation of the model object '<em><b>Property</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.ebmwebsourcing.petals.services.rest.rest.RestProperty#getXpath <em>Xpath</em>}</li>
  * </ul>
  *
- * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestProperty()
+ * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestProperty()
  * @model extendedMetaData="name='RestProperty' kind='elementOnly'"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface RestProperty extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constant</em>' attribute.
 	 * @see #setConstant(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestProperty_Constant()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestProperty_Constant()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='constant' namespace='##targetNamespace'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface RestProperty extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Xpath</em>' attribute.
 	 * @see #setXpath(String)
-	 * @see com.ebmwebsourcing.petals.services.rest.rest.restPackage#getRestProperty_Xpath()
+	 * @see com.ebmwebsourcing.petals.services.rest.rest.RestPackage#getRestProperty_Xpath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='element' name='xpath' namespace='##targetNamespace'"
 	 * @generated
