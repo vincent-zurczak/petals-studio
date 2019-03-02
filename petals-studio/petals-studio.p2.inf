@@ -14,4 +14,6 @@ instructions.configure=\
 	addRepository(type:0,name:Eclipse Oxygen,location:http${#58}//download.eclipse.org/releases/oxygen/);\
 	addRepository(type:1,name:Eclipse Oxygen,location:http${#58}//download.eclipse.org/releases/oxygen/);\
 	addRepository(type:0,name:Camel Tooling,location:https${#58}//camel-tooling.github.io/camel-lsp-client-eclipse-update-site/updatesite/nightly/);\
-	addRepository(type:1,name:Camel Tooling,location:https${#58}//camel-tooling.github.io/camel-lsp-client-eclipse-update-site/updatesite/nightly/);
+	addRepository(type:1,name:Camel Tooling,location:https${#58}//camel-tooling.github.io/camel-lsp-client-eclipse-update-site/updatesite/nightly/);\
+	addRepository(type:0,name:Flowable Tooling,location:https${#58}//www.flowable.org/designer/update/);\
+	addRepository(type:1,name:Flowable Tooling,location:https${#58}//www.flowable.org/designer/update/);

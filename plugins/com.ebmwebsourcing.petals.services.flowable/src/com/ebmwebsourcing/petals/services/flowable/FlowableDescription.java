@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
 
-package com.ebmwebsourcing.petals.services.camel;
+package com.ebmwebsourcing.petals.services.flowable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +21,7 @@ import com.ebmwebsourcing.petals.services.su.extensions.PetalsKeyWords;
 /**
  * @author Vincent Zurczak - Linagora
  */
-public abstract class CamelDescription extends ComponentVersionDescription {
+public abstract class FlowableDescription extends ComponentVersionDescription {
 
 	@Override
 	public boolean isBc() {
@@ -30,12 +30,12 @@ public abstract class CamelDescription extends ComponentVersionDescription {
 
 	@Override
 	public String getComponentName() {
-		return "petals-se-camel";
+		return "petals-se-flowable";
 	}
 
 	@Override
 	public String getComponentAlias() {
-		return "Camel";
+		return "Flowable";
 	}
 
 	@Override
@@ -45,17 +45,17 @@ public abstract class CamelDescription extends ComponentVersionDescription {
 
 	@Override
 	public String getProvideDescription() {
-		return "Execute Camel routes in Petals.";
+		return "Expose Flowable processes as Petals services.";
 	}
 
 	@Override
 	public String getConsumeDescription() {
-		return "Execute Camel routes in Petals.";
+		return null;
 	}
 
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( PetalsKeyWords.composition, PetalsKeyWords.integration );
+		return Arrays.asList( PetalsKeyWords.composition, PetalsKeyWords.soa );
 	}
 
 	@Override
@@ -65,7 +65,7 @@ public abstract class CamelDescription extends ComponentVersionDescription {
 
 	@Override
 	public boolean isConsume() {
-		return true;
+		return false;
 	}
 
 	@Override

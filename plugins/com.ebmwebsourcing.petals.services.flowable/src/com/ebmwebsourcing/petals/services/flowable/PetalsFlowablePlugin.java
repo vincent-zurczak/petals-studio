@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
 
-package com.ebmwebsourcing.petals.services.camel;
+package com.ebmwebsourcing.petals.services.flowable;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -22,18 +22,18 @@ import org.osgi.framework.BundleContext;
  * The activator class controls the plug-in life cycle
  * @author Vincent Zurczak - Linagora
  */
-public class PetalsCamelPlugin extends AbstractUIPlugin {
+public class PetalsFlowablePlugin extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "com.ebmwebsourcing.petals.services.camel";
+	public static final String PLUGIN_ID = "com.ebmwebsourcing.petals.services.flowable";
 
 	// The shared instance
-	private static PetalsCamelPlugin plugin;
+	private static PetalsFlowablePlugin plugin;
 
 	/**
 	 * The constructor
 	 */
-	public PetalsCamelPlugin() {
+	public PetalsFlowablePlugin() {
 		// nothing
 	}
 
@@ -67,7 +67,7 @@ public class PetalsCamelPlugin extends AbstractUIPlugin {
 	 *
 	 * @return the shared instance
 	 */
-	public static PetalsCamelPlugin getDefault() {
+	public static PetalsFlowablePlugin getDefault() {
 		return plugin;
 	}
 

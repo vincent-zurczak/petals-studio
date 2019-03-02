@@ -3,7 +3,7 @@
 
 <!--
  <copyright>
-	 Copyright (c) 2017-2018, Linagora
+	 Copyright (c) 2019, Linagora
 
 	 All rights reserved. This program and the accompanying materials
  	 are made available under the terms of the Eclipse Public License v1.0
@@ -16,23 +16,23 @@
 -->
 
 <plugin>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated rest -->
-      <package
-            uri="http://petals.ow2.org/components/petals-se-flowable/jbi/version-1.0"
-            class="com.ebmwebsourcing.petals.services.flowable.flowable.FlowablePackage"
-            genModel="model/camel.genmodel"/>
-   </extension>
    
    <extension
          point="com.ebmwebsourcing.petals.services.componentExtension">
+         
+      <!-- There is no EMF model extension for this component -->
+      <!--
+      	And we do not provide editor extensions since services extensions are not covered and also because
+      	Flowable, like Camel, requires editor wizards to be different than project creation ones. We must
+      	encourage users to use the source editor for these components. :/
+      	
+      	And since this component does not have editor extensions, the form editor is very incomplete.
+      	So, we removed it.
+      -->
       <ComponentSupport id="flowable">
          <ComponentVersionSupport
-               componentVersionDescription="com.ebmwebsourcing.petals.services.flowable.FlowableDescription13"
-               editorExtension="com.ebmwebsourcing.petals.services.flowable.editor.FlowableEditorContribution"
+               componentVersionDescription="com.ebmwebsourcing.petals.services.flowable.FlowableDescription12"
                id="Flowable 1.2"
-               namespace="http://petals.ow2.org/components/flowable/1.0"
                providesExtensionWizard="com.ebmwebsourcing.petals.services.flowable.v1x.FlowableWizard1x">
          </ComponentVersionSupport>
       </ComponentSupport>

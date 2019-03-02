@@ -10,15 +10,15 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
 
-package com.ebmwebsourcing.petals.services.camel;
+package com.ebmwebsourcing.petals.services.flowable;
 
 /**
  * @author Vincent Zurczak - Linagora
  */
-public class CamelDescription13 extends CamelDescription {
+public class FlowableDescription12 extends FlowableDescription {
 
 	@Override
 	public String getComponentVersion() {
-		return "1.3";
+		return "1.2";
 	}
 }

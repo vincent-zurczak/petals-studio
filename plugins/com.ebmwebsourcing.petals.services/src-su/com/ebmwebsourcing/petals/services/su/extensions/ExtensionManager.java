@@ -229,7 +229,7 @@ public class ExtensionManager {
 		for( List<ComponentVersionDescription> descs : this.namespaceToDescriptions.values())
 			result.addAll( descs );
 
-				return result;
+		return result;
 	}
 
 

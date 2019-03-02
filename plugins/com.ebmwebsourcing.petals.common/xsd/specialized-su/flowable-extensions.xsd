@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema
+		xmlns="http://petals.ow2.org/components/petals-se-flowable/1.0"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		elementFormDefault="qualified"
+		targetNamespace="http://petals.ow2.org/components/petals-se-flowable/1.0">
+	
+	<xs:element name="tenant_id" type="xs:string" />
+	<xs:element name="category_id" type="xs:string" />
+	<xs:element name="process_file" type="xs:string" />
+	<xs:element name="version" type="xs:int" />
+	
+	<xs:group name="FlowableExtensions">
+		<xs:sequence>
+			<xs:element ref="tenant_id" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="category_id" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="process_file" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="version" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:group>
+	
+</xs:schema>

@@ -6,5 +6,12 @@
 	
 		<xs:element name="java-routes" type="xs:string" />
 		<xs:element name="xml-routes" type="xs:string" />
+
+		<xs:group name="CamelExtensions">
+			<xs:sequence>
+				<xs:element ref="java-routes" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="xml-routes" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:group>
 	
 </xs:schema>

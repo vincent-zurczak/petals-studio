@@ -26,6 +26,7 @@
 	xmlns:jbi="http://java.sun.com/xml/ns/jbi" 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:camel="http://petals.ow2.org/components/petals-se-camel/jbi/version-1.0"
+	xmlns:flowable="http://petals.ow2.org/components/petals-se-flowable/1.0"
 	xmlns:cdk40="http://petals.ow2.org/components/extensions/version-4.0"
 	xmlns:cdk50="http://petals.ow2.org/components/extensions/version-5">
 	
@@ -34,10 +35,9 @@
 	<xs:import namespace="http://petals.ow2.org/components/extensions/version-4.0" schemaLocation="cdk4.0.xsd" />
 	<xs:import namespace="http://petals.ow2.org/components/extensions/version-5" schemaLocation="cdk5.0.xsd" />
 	
-	<!-- The Camel component introduced new elements in the base model ("Services" type) :/ -->
-	<xs:import
-		namespace="http://petals.ow2.org/components/petals-se-camel/jbi/version-1.0"
-		schemaLocation="camel-extensions.xsd" />
+	<!-- Recent Petals components introduced new elements in the base model ("Services" type) :/ -->
+	<xs:import namespace="http://petals.ow2.org/components/petals-se-camel/jbi/version-1.0" schemaLocation="camel-extensions.xsd" />
+	<xs:import namespace="http://petals.ow2.org/components/petals-se-flowable/1.0" schemaLocation="flowable-extensions.xsd" />
 	<!-- End of import -->
 
 
@@ -175,9 +175,11 @@
 			<xs:element minOccurs="0" maxOccurs="unbounded" ref="jbi:provides" />
 			<xs:element minOccurs="0" maxOccurs="unbounded" ref="jbi:consumes" />
 			
-			<!-- Camel specific stuff (argh) -->
-			<xs:element ref="camel:java-routes" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element ref="camel:xml-routes" minOccurs="0" maxOccurs="unbounded" />
+			<!-- Camel and Flowable specific stuff (argh) -->
+			<xs:choice>
+				<xs:group ref="camel:CamelExtensions"></xs:group>
+				<xs:group ref="flowable:FlowableExtensions"></xs:group>
+			</xs:choice>
 			<!-- End of specific stuff -->
 
 			<!-- Comment the ANY part after. We use this XSD for auto-completion and validation of Petals jbi.xml files. -->

@@ -31,7 +31,7 @@ import com.ebmwebsourcing.petals.services.su.editor.extensibility.EditorContribu
  */
 public abstract class ComponentVersionDescription implements IComponentDescription, IExecutableExtension {
 
-	protected String namespce;
+	protected String namespace;
 	protected IConfigurationElement configurationElement;
 
 	/*
@@ -42,14 +42,14 @@ public abstract class ComponentVersionDescription implements IComponentDescripti
 	@Override
 	public void setInitializationData(IConfigurationElement config, String propertyName, Object data) {
 		this.configurationElement = config;
-		this.namespce = config.getAttribute("namespace");
+		this.namespace = config.getAttribute("namespace");
 	}
 
 	/**
 	 * @return the name space
 	 */
 	public String getNamespace() {
-		return this.namespce;
+		return this.namespace;
 	}
 
 	/**
