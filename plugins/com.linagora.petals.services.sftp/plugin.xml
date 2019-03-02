@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<!--
+ <copyright>
+	 Copyright (c) 2008-2018, Linagora
+
+	 All rights reserved. This program and the accompanying materials
+ 	 are made available under the terms of the Eclipse Public License v1.0
+ 	 which accompanies this distribution, and is available at
+ 	 http://www.eclipse.org/legal/epl-v10.html
+ 
+ 	 Contributors:
+     	 	Linagora - initial API and implementation
+ </copyright>
+-->
+
+<plugin>
+	<extension
+         point="com.linagora.petals.services.componentExtension">
+      <ComponentSupport
+            id="SFTP">
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.sftp.SftpDescription11"
+               id="SFTP 1.1"
+               namespace="http://petals.ow2.org/components/sftp/version-1"
+               providesExtensionWizard="com.linagora.petals.services.sftp.wizards.SftpProvidesWizard11">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.sftp.SftpDescription12"
+               editorExtension="com.linagora.petals.services.sftp.editor.SftpEditorContribution"
+               id="SFTP 1.2"
+               namespace="http://petals.ow2.org/components/sftp/version-1"
+               providesExtensionWizard="com.linagora.petals.services.sftp.wizards.SftpProvidesWizard12">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.sftp.SftpDescription13"
+               editorExtension="com.linagora.petals.services.sftp.editor.SftpEditorContribution"
+               id="SFTP 1.3"
+               namespace="http://petals.ow2.org/components/sftp/version-1"
+               providesExtensionWizard="com.linagora.petals.services.sftp.wizards.SftpProvidesWizard13">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.sftp.SftpDescription14"
+               editorExtension="com.linagora.petals.services.sftp.editor.SftpEditorContribution"
+               id="SFTP 1.4"
+               namespace="http://petals.ow2.org/components/sftp/version-1"
+               providesExtensionWizard="com.linagora.petals.services.sftp.wizards.SftpProvidesWizard14">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.sftp.SftpDescription15"
+               editorExtension="com.linagora.petals.services.sftp.editor.SftpEditorContribution"
+               id="SFTP 1.5"
+               namespace="http://petals.ow2.org/components/sftp/version-1"
+               providesExtensionWizard="com.linagora.petals.services.sftp.wizards.SftpProvidesWizard15">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.sftp.SftpDescription16"
+               editorExtension="com.linagora.petals.services.sftp.editor.SftpEditorContribution"
+               id="SFTP 1.6"
+               namespace="http://petals.ow2.org/components/sftp/version-1"
+               providesExtensionWizard="com.linagora.petals.services.sftp.wizards.SftpProvidesWizard16">
+         </ComponentVersionSupport>
+      </ComponentSupport>
+   </extension>
+ <extension
+       point="org.eclipse.emf.ecore.generated_package">
+    <package
+          class="com.linagora.petals.services.sftp.sftp.SftpPackage"
+          genModel="model/sftp.genmodel"
+          uri="http://petals.ow2.org/components/sftp/version-1">
+    </package>
+ </extension>
+</plugin>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+
+<!--
+ <copyright>
+	 Copyright (c) 2009-2018, Linagora
+
+	 All rights reserved. This program and the accompanying materials
+ 	 are made available under the terms of the Eclipse Public License v1.0
+ 	 which accompanies this distribution, and is available at
+ 	 http://www.eclipse.org/legal/epl-v10.html
+ 
+ 	 Contributors:
+     	 	Linagora - initial API and implementation
+ </copyright>
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="com.linagora.petals.common.wizards"
+            class="com.linagora.petals.components.wizards.ComponentNewWizard"
+            finalPerspective="com.linagora.petals.common.mainPerspective"
+            icon="icons/obj16/component.png"
+            id="com.linagora.petals.components.wizards.petalsComponent"
+            name="JBI Component"
+            project="true">
+         <description>
+            Create a JBI component based on the Petals CDK and Maven plug-in
+         </description>
+      </wizard>
+      <wizard
+            category="com.linagora.petals.common.wizards"
+            class="com.linagora.petals.components.wizards.SharedLibraryNewWizard"
+            finalPerspective="com.linagora.petals.common.mainPerspective"
+            icon="icons/obj16/sl.png"
+            id="com.linagora.petals.components.wizards.petalsSharedLibrary"
+            name="Shared Library"
+            project="true">
+         <description>
+            Create a JBI Shared Library with the Petals Maven plug-in
+         </description>
+      </wizard>
+      <wizard
+            category="com.linagora.petals.common.wizards.utilities"
+            class="com.linagora.petals.components.drivers.ComponentConfigurationWizard"
+            hasPages="true"
+            icon="icons/obj16/configured_component.png"
+            id="com.linagora.petals.components.wizards.configuredComponent"
+            name="Configured Component"
+            project="false">
+         <description>
+            Update a zipped component to use one or several shared libraries
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="com.linagora.petals.common.internal.provisional.projectscnf.PetalsProjectContentProvider"
+            id="com.linagora.petals.projects.components"
+            labelProvider="com.linagora.petals.common.internal.provisional.projectscnf.PetalsProjectLabelProvider"
+            name="JBI Components"
+            priority="normal">
+         <triggerPoints>
+            <test
+                  property="com.linagora.petals.common.project-category-id"
+                  value="petals.category.components">
+            </test></triggerPoints>
+         <commonSorter
+               class="com.linagora.petals.common.internal.provisional.projectscnf.PetalsProjectsSorter"
+               id="com.linagora.petals.common.projectscnf.PetalsProjectResourceSorter">
+         </commonSorter>
+         <dropAssistant
+               class="org.eclipse.ui.navigator.resources.ResourceDropAdapterAssistant"
+               id="com.linagora.petals.services.dropAssistant">
+            <possibleDropTargets>
+               <or>
+                  <adapt
+                        type="org.eclipse.core.resources.IProject">
+                  </adapt>
+                  <adapt
+                        type="org.eclipse.core.resources.IFolder">
+                  </adapt>
+                  <adapt
+                        type="org.eclipse.core.resources.IFile">
+                  </adapt>
+               </or>
+            </possibleDropTargets>
+         </dropAssistant>
+      </navigatorContent>
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="com.linagora.petals.common.internal.provisional.projectscnf.PetalsProjectContentProvider"
+            id="com.linagora.petals.projects.sharedlibraries"
+            labelProvider="com.linagora.petals.common.internal.provisional.projectscnf.PetalsProjectLabelProvider"
+            name="Shared Libraries"
+            priority="normal">
+         <triggerPoints>
+            <test
+                  property="com.linagora.petals.common.project-category-id"
+                  value="petals.category.shared-libraries">
+            </test></triggerPoints>
+         <commonSorter
+               class="com.linagora.petals.common.internal.provisional.projectscnf.PetalsProjectsSorter"
+               id="com.linagora.petals.common.projectscnf.PetalsProjectResourceSorter">
+         </commonSorter>
+         <dropAssistant
+               class="org.eclipse.ui.navigator.resources.ResourceDropAdapterAssistant"
+               id="com.linagora.petals.services.dropAssistant">
+            <possibleDropTargets>
+               <or>
+                  <adapt
+                        type="org.eclipse.core.resources.IProject">
+                  </adapt>
+                  <adapt
+                        type="org.eclipse.core.resources.IFolder">
+                  </adapt>
+                  <adapt
+                        type="org.eclipse.core.resources.IFile">
+                  </adapt>
+               </or>
+            </possibleDropTargets>
+         </dropAssistant>
+      </navigatorContent>
+      <commonWizard
+            type="export"
+            wizardId="com.linagora.petals.components.componentExportWizard">
+         <enablement></enablement>
+      </commonWizard>
+      <commonWizard
+            type="export"
+            wizardId="com.linagora.petals.components.slExportWizard">
+         <enablement></enablement>
+      </commonWizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:com.linagora.petals.common.petals-toolbar?after=additions">
+         <command
+               commandId="org.eclipse.ui.newWizard"
+               icon="icons/obj16/configured_component.png"
+               label="Configure a zipped component"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+            <parameter
+                  name="newWizardId"
+                  value="com.linagora.petals.components.wizards.configuredComponent">
+            </parameter>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="com.linagora.petals.common.projectCategories">
+      <Category
+            class="com.linagora.petals.components.projectscnf.ComponentProjectCategory">
+      </Category>
+      <Category
+            class="com.linagora.petals.components.projectscnf.SharedLibraryProjectCategory">
+      </Category>
+   </extension>
+
+</plugin>

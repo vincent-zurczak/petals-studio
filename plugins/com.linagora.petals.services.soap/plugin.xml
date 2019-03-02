@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<!--
+ <copyright>
+	 Copyright (c) 2008-2018, Linagora
+
+	 All rights reserved. This program and the accompanying materials
+ 	 are made available under the terms of the Eclipse Public License v1.0
+ 	 which accompanies this distribution, and is available at
+ 	 http://www.eclipse.org/legal/epl-v10.html
+ 
+ 	 Contributors:
+     	 	Linagora - initial API and implementation
+ </copyright>
+-->
+
+<plugin>
+   <extension
+         point="com.linagora.petals.services.componentExtension">
+      <ComponentSupport
+            id="soap">
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.soap.v40.SoapDescription40"
+               consumesExtensionWizard="com.linagora.petals.services.soap.v40.SoapConsumesWizard40"
+               editorExtension="com.linagora.petals.services.soap.editor.SoapEditorContribution"
+               id="SOAP 4.0"
+               namespace="http://petals.ow2.org/components/soap/version-4"
+               providesExtensionWizard="com.linagora.petals.services.soap.v40.SoapProvidesWizard40">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.soap.v41.SoapDescription41"
+               consumesExtensionWizard="com.linagora.petals.services.soap.v41.SoapConsumesWizard41"
+               editorExtension="com.linagora.petals.services.soap.editor.SoapEditorContribution"
+               id="SOAP 4.1"
+               namespace="http://petals.ow2.org/components/soap/version-4"
+               providesExtensionWizard="com.linagora.petals.services.soap.v41.SoapProvidesWizard41">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.soap.v42.SoapDescription42"
+               consumesExtensionWizard="com.linagora.petals.services.soap.v42.SoapConsumesWizard42"
+               editorExtension="com.linagora.petals.services.soap.editor.SoapEditorContribution"
+               id="SOAP 4.2"
+               namespace="http://petals.ow2.org/components/soap/version-4"
+               providesExtensionWizard="com.linagora.petals.services.soap.v42.SoapProvidesWizard42">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.soap.v43.SoapDescription43"
+               consumesExtensionWizard="com.linagora.petals.services.soap.v43.SoapConsumesWizard43"
+               editorExtension="com.linagora.petals.services.soap.editor.SoapEditorContribution"
+               id="SOAP 4.3"
+               namespace="http://petals.ow2.org/components/soap/version-4"
+               providesExtensionWizard="com.linagora.petals.services.soap.v43.SoapProvidesWizard43">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.soap.v44.SoapDescription44"
+               consumesExtensionWizard="com.linagora.petals.services.soap.v44.SoapConsumesWizard44"
+               editorExtension="com.linagora.petals.services.soap.v44.SoapEditorContribution44"
+               id="SOAP 4.4"
+               namespace="http://petals.ow2.org/components/soap/version-4"
+               providesExtensionWizard="com.linagora.petals.services.soap.v44.SoapProvidesWizard44">
+         </ComponentVersionSupport>
+      </ComponentSupport>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="com.linagora.petals.services.soap.soap.SoapPackage"
+            genModel="model/soap.genmodel"
+            uri="http://petals.ow2.org/components/soap/version-4">
+      </package>
+   </extension>
+
+</plugin>

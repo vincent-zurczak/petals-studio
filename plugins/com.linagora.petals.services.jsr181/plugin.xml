@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<!--
+ <copyright>
+	 Copyright (c) 2008-2018, Linagora
+
+	 All rights reserved. This program and the accompanying materials
+ 	 are made available under the terms of the Eclipse Public License v1.0
+ 	 which accompanies this distribution, and is available at
+ 	 http://www.eclipse.org/legal/epl-v10.html
+ 
+ 	 Contributors:
+     	 	Linagora - initial API and implementation
+ </copyright>
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="com.linagora.petals.services.jsr181.jsr181.Jsr181Package"
+            genModel="model/jsr181.genmodel"
+            uri="http://petals.ow2.org/components/jsr181/version-1">
+      </package>
+   </extension>
+
+   <extension
+         point="com.linagora.petals.services.componentExtension">
+      <ComponentSupport
+            id="jsr181">
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.jsr181.v11.Jsr181Description11"
+               editorExtension="com.linagora.petals.services.jsr181.editor.JaxWsEditorContribution"
+               id="Jsr181 1.1"
+               namespace="http://petals.ow2.org/components/jsr181/version-1"
+               providesExtensionWizard="com.linagora.petals.services.jsr181.v11.Jsr181ProvidesWizard11">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.jsr181.v12.Jsr181Description12"
+               editorExtension="com.linagora.petals.services.jsr181.editor.JaxWsEditorContribution"
+               id="Jsr181 1.2"
+               namespace="http://petals.ow2.org/components/jsr181/version-1"
+               providesExtensionWizard="com.linagora.petals.services.jsr181.v12.Jsr181ProvidesWizard12">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.jsr181.v13.Jsr181Description13"
+               editorExtension="com.linagora.petals.services.jsr181.editor.JaxWsEditorContribution"
+               id="Jsr181 1.3"
+               namespace="http://petals.ow2.org/components/jsr181/version-1"
+               providesExtensionWizard="com.linagora.petals.services.jsr181.v13.Jsr181ProvidesWizard13">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.jsr181.v14.Jsr181Description14"
+               editorExtension="com.linagora.petals.services.jsr181.editor.JaxWsEditorContribution"
+               id="Jsr181 1.4"
+               namespace="http://petals.ow2.org/components/jsr181/version-1"
+               providesExtensionWizard="com.linagora.petals.services.jsr181.v14.Jsr181ProvidesWizard14">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.jsr181.v15.Jsr181Description15"
+               editorExtension="com.linagora.petals.services.jsr181.editor.JaxWsEditorContribution"
+               id="Jsr181 1.5"
+               namespace="http://petals.ow2.org/components/jsr181/version-1"
+               providesExtensionWizard="com.linagora.petals.services.jsr181.v15.Jsr181ProvidesWizard15">
+         </ComponentVersionSupport>
+      </ComponentSupport>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="com.linagora.jbi.core.petals-category"
+            defaultHandler="com.linagora.petals.services.jsr181.handlers.Jsr181GenerationHandler"
+            description="Generate JSR-181 files"
+            id="com.linagora.petals.services.jsr181.generate-files"
+            name="Generate JSR-181 Files">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:com.linagora.petals.common.actiongroup?after=com.linagora.petals.common.group.edit">
+         <command
+               commandId="com.linagora.petals.services.jsr181.generate-files"
+               label="Generate WSDL(s)"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <count
+                        value="1">
+                  </count>
+                  <iterate
+                        ifEmpty="false"
+                        operator="and">
+                     <instanceof
+                           value="org.eclipse.core.resources.IProject">
+                     </instanceof>
+                     <and>
+                        <test
+                              property="org.eclipse.core.resources.projectNature"
+                              value="com.linagora.petals.tools.eclipse.su.main.nature">
+                        </test>
+                        <test
+                              property="org.eclipse.core.resources.projectNature"
+                              value="org.eclipse.jdt.core.javanature">
+                        </test>
+                        <test
+                              property="com.linagora.petals.services.component-name"
+                              value="petals-se-jsr181">
+                        </test>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

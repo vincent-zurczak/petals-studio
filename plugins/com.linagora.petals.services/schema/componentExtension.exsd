@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.linagora.petals.services" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="com.linagora.petals.services" id="componentExtension" name="Extension for supporting a component in Petals Studio"/>
+      </appinfo>
+      <documentation>
+         
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence>
+            <element ref="ComponentSupport"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="ComponentSupport">
+      <complexType>
+         <sequence>
+            <element ref="ComponentVersionSupport" minOccurs="1" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="ComponentVersionSupport">
+      <complexType>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="namespace" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="providesExtensionWizard" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="com.linagora.petals.services.su.wizards.AbstractServiceUnitWizard:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="consumesExtensionWizard" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="com.linagora.petals.services.su.wizards.AbstractServiceUnitWizard:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="editorExtension" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="com.linagora.petals.services.su.editor.extensibility.EditorContributionSupport:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="validationExtension" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="componentVersionDescription" type="string" use="required">
+            <annotation>
+               <documentation>
+                  A class that describes a component version.
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="com.linagora.petals.services.su.extensions.ComponentVersionDescription:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+
+
+
+
+
+</schema>

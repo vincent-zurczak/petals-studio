@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Generation API for Petals
+Bundle-SymbolicName: com.linagora.petals.common.generation;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Linagora
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: com.linagora.petals.common.generation,
+ com.linagora.petals.common.generation.cdk4,
+ com.linagora.petals.common.generation.cdk5,
+ com.linagora.petals.common.generation.cdk5.components,
+ com.linagora.petals.common.generation.cdk5.components.eip25
+Bundle-ActivationPolicy: lazy

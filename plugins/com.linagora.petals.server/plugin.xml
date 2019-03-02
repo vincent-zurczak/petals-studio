@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+
+<!--
+ <copyright>
+	 Copyright (c) 2009-2018, Linagora
+
+	 All rights reserved. This program and the accompanying materials
+ 	 are made available under the terms of the Eclipse Public License v1.0
+ 	 which accompanies this distribution, and is available at
+ 	 http://www.eclipse.org/legal/epl-v10.html
+ 
+ 	 Contributors:
+     	 	Linagora - initial API and implementation
+ </copyright>
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.wst.server.core.runtimeTypes">
+      <runtimeType
+            class="com.linagora.petals.server.runtime.PetalsRuntime"
+            description="Interact with a Petals runtime 3.x"
+            id="com.linagora.petals.server.runtime.3x"
+            name="Petals runtime 3.x"
+            vendor="OW2">
+      </runtimeType>
+   </extension>
+   <extension
+         point="org.eclipse.wst.server.core.serverTypes">
+      <serverType
+            behaviourClass="com.linagora.petals.server.PetalsServerBehavior"
+            class="com.linagora.petals.server.server.PetalsServer"
+            description="Deploy JBI artifacts on a Petals server 3.x"
+            hasConfiguration="false"
+            id="com.linagora.petals.server.3x"
+            launchConfigId="petalsLaunchConfigurationType"
+            launchModes="run, debug"
+            name="Petals 3.x"
+            runtime="true"
+            runtimeTypeId="com.linagora.petals.server.runtime.3x"
+            startBeforePublish="true"
+            supportsRemoteHosts="true">
+      </serverType>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="com.linagora.petals.server.PetalsLaunchConfigurationDelegate"
+            delegateDescription="An Eclipse launcher for Petals servers that supports running and debugging."
+            delegateName="Petals Server Launcher"
+            id="petalsLaunchConfigurationType"
+            modes="run, debug"
+            name="Petals launch configuration"
+            public="false"
+            sourceLocatorId="org.eclipse.jdt.launching.sourceLocator.JavaSourceLookupDirector"
+            sourcePathComputerId="org.eclipse.jdt.launching.sourceLookup.javaSourcePathComputer">
+      </launchConfigurationType>
+   </extension>
+   <extension
+         point="org.eclipse.wst.server.ui.serverImages">
+      <image
+            icon="icons/obj16/pstudio_16x16.png"
+            id="com.linagora.petals.server.petalsImg"
+            typeIds="com.linagora.petals.server.3x, com.linagora.petals.server.runtime.3x">
+      </image>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="petalsLaunchConfigurationType"
+            icon="icons/obj16/pstudio_16x16.png"
+            id="com.linagora.petals.server.petalsLaunchConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+   <extension
+         point="org.eclipse.wst.server.ui.wizardFragments">
+      <fragment
+            class="com.linagora.petals.server.ui.wizards.PetalsRuntimeWizardFragment3x"
+            id="com.linagora.petals.runtime.fragment.3x"
+            typeIds="com.linagora.petals.server.runtime.3x">
+      </fragment>
+      <fragment
+            class="com.linagora.petals.server.ui.wizards.PetalsServerWizardFragment3x"
+            id="com.linagora.petals.server.fragment.3x"
+            typeIds="com.linagora.petals.server.3x">
+      </fragment>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="com.linagora.petals.server.petalsServerContribution"
+            objectClass="org.eclipse.wst.server.core.IServer">
+         <action
+               class="com.linagora.petals.server.actions.ShutdownPetalsServerAction"
+               enablesFor="1"
+               icon="icons/obj16/shutdown.gif"
+               id="com.linagora.petals.server.shutdownAction"
+               label="Shutdown"
+               menubarPath="org.eclipse.wst.server.ui.internal.cnf.controlServerSectionEnd"
+               tooltip="Shutdown the selected Petals servers">
+         </action>
+         <visibility>
+            <objectState
+                  name="serverType"
+                  value="com.linagora.petals.server.*">
+            </objectState>
+         </visibility>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.wst.server.core.runtimeLocators">
+      <runtimeLocator
+            class="com.linagora.petals.server.PetalsRuntimeLocator"
+            id="com.linagora.petals.server.runtimeLocator"
+            typeIds="com.linagora.petals.server.runtime.*">
+      </runtimeLocator>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.linagora.petals.common.preferences"
+            class="com.linagora.petals.server.ui.preferences.PetalsServerPreferencePage"
+            id="com.linagora.petals.server.serverPage"
+            name="Server">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.linagora.petals.server.ui.preferences.PetalsServerPreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

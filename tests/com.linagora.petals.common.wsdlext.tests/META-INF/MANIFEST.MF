@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests for WSDL tools
+Bundle-SymbolicName: com.linagora.petals.common.wsdlext.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Linagora
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.junit,
+ com.linagora.petals.common.wsdlext,
+ org.eclipse.core.runtime,
+ com.linagora.petals.tests.common,
+ org.eclipse.swtbot.eclipse.gef.finder,
+ org.eclipse.core.resources,
+ org.eclipse.bpel.common.wsdl,
+ org.eclipse.wst.wsdl,
+ org.eclipse.xsd,
+ org.eclipse.jdt.core

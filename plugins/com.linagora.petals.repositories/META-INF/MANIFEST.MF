@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Petals Service Repositories
+Bundle-SymbolicName: com.linagora.petals.repositories;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ebmwebsoucing.petals.repositories.PetalsRepositoriesPlugin
+Bundle-Vendor: Linagora
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.linagora.petals.common,
+ org.eclipse.ui.navigator,
+ org.eclipse.search,
+ org.eclipse.bpel.common.wsdl
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Petals Studio - Tests for Commons
+Bundle-SymbolicName: com.linagora.petals.common.tests;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Linagora
+Require-Bundle: com.linagora.petals.common,
+ org.eclipse.swtbot.eclipse.gef.finder,
+ com.linagora.petals.tests.common,
+ com.linagora.petals.common.generation,
+ org.eclipse.ui,
+ org.junit
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

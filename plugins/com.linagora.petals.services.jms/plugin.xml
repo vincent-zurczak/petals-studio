@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<!--
+ <copyright>
+	 Copyright (c) 2008-2018, Linagora
+
+	 All rights reserved. This program and the accompanying materials
+ 	 are made available under the terms of the Eclipse Public License v1.0
+ 	 which accompanies this distribution, and is available at
+ 	 http://www.eclipse.org/legal/epl-v10.html
+ 
+ 	 Contributors:
+     	 	Linagora - initial API and implementation
+ </copyright>
+-->
+
+<plugin>
+   <extension
+         point="com.linagora.petals.services.componentExtension">
+      <ComponentSupport
+            id="jms">
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.jms.JmsDescription31"
+               consumesExtensionWizard="com.linagora.petals.services.jms.wizards.JmsConsumesWizard31"
+               editorExtension="com.linagora.petals.services.jms.editor.JMSEditorExtension"
+               id="JMS 3.1"
+               namespace="http://petals.ow2.org/components/jms/version-3"
+               providesExtensionWizard="com.linagora.petals.services.jms.wizards.JmsProvidesWizard31">
+         </ComponentVersionSupport>
+         <ComponentVersionSupport
+               componentVersionDescription="com.linagora.petals.services.jms.JmsDescription32"
+               consumesExtensionWizard="com.linagora.petals.services.jms.wizards.JmsConsumesWizard32"
+               editorExtension="com.linagora.petals.services.jms.editor.JMSEditorExtension"
+               id="JMS 3.2"
+               namespace="http://petals.ow2.org/components/jms/version-3"
+               providesExtensionWizard="com.linagora.petals.services.jms.wizards.JmsProvidesWizard32">
+         </ComponentVersionSupport>
+      </ComponentSupport>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="com.linagora.petals.services.jms.jms.JmsPackage"
+            genModel="model/jms.genmodel"
+            uri="http://petals.ow2.org/components/jms/version-3">
+      </package>
+   </extension>
+
+</plugin>

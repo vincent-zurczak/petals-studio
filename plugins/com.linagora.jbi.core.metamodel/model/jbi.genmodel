@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="/******************************************************************************&#xD;&#xA; * Copyright (c) 2009-2018, Linagora&#xD;&#xA; *&#xD;&#xA; * All rights reserved. This program and the accompanying materials&#xD;&#xA; * are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA; * which accompanies this distribution, and is available at&#xD;&#xA; * http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA; *&#xD;&#xA; * Contributors:&#xD;&#xA; *     Linagora - initial API and implementation&#xD;&#xA; *******************************************************************************/&#xD;&#xA;"
+    modelDirectory="/com.linagora.jbi.core.metamodel/src-model" editDirectory="/com.linagora.jbi.core.metamodel.edit/src-edit"
+    modelPluginID="com.linagora.jbi.core.metamodel" modelName="Jbi" importerID="org.eclipse.emf.importer.java"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/XMLType.genmodel#//type platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>@model</foreignModel>
+  <genPackages prefix="Jbi" basePackage="com.sun.java.xml.ns" resource="XML" disposableProviderFactory="true"
+      multipleEditorPages="false" generateModelWizard="false" fileExtensions="xml"
+      ecorePackage="jbi.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jbi.ecore#//ClassLoaderDelegationType">
+      <genEnumLiterals ecoreEnumLiteral="jbi.ecore#//ClassLoaderDelegationType/parentFirst"/>
+      <genEnumLiterals ecoreEnumLiteral="jbi.ecore#//ClassLoaderDelegationType/selfFirst"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jbi.ecore#//ComponentType">
+      <genEnumLiterals ecoreEnumLiteral="jbi.ecore#//ComponentType/serviceEngine"/>
+      <genEnumLiterals ecoreEnumLiteral="jbi.ecore#//ComponentType/bindingComponent"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="jbi.ecore#//LinkType">
+      <genEnumLiterals ecoreEnumLiteral="jbi.ecore#//LinkType/standard"/>
+      <genEnumLiterals ecoreEnumLiteral="jbi.ecore#//LinkType/hard"/>
+      <genEnumLiterals ecoreEnumLiteral="jbi.ecore#//LinkType/soft"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="jbi.ecore#//ClassLoaderDelegationTypeObject"/>
+    <genDataTypes ecoreDataType="jbi.ecore#//ComponentTypeObject"/>
+    <genDataTypes ecoreDataType="jbi.ecore#//LinkTypeObject"/>
+    <genClasses image="false" ecoreClass="jbi.ecore#//AbstractExtensibleElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute jbi.ecore#//AbstractExtensibleElement/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//AbstractExtensibleElement/other"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//AbstractExtensibleElement/local"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//ClassPath">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//ClassPath/pathElement"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Component">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Component/identification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Component/componentClassName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Component/componentClassPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/bootstrapClassName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Component/bootstrapClassPath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/sharedLibraryList"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference jbi.ecore#//Component/sharedLibrary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/any"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/any1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/bootstrapClassLoaderDelegation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/componentClassLoaderDelegation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Component/type"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//ComponentClassName">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute jbi.ecore#//ComponentClassName/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//ComponentClassName/description"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Connection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Connection/consumer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Connection/provider"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Connections">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Connections/connection"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Consumer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Consumer/endpointName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Consumer/interfaceName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Consumer/serviceName"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference jbi.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference jbi.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//DocumentRoot/jbi"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Identification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Identification/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Identification/description"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Jbi">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Jbi/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Jbi/sharedLibrary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Jbi/serviceAssembly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Jbi/services"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Jbi/version"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Services">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Services/provides"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//Services/consumes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Services/bindingComponent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="jbi.ecore#//AbstractEndpoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//AbstractEndpoint/endpointName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//AbstractEndpoint/interfaceName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//AbstractEndpoint/serviceName"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Consumes"/>
+    <genClasses ecoreClass="jbi.ecore#//Provides"/>
+    <genClasses ecoreClass="jbi.ecore#//Provider">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Provider/endpointName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Provider/serviceName"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//ServiceAssembly">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//ServiceAssembly/identification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//ServiceAssembly/serviceUnit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//ServiceAssembly/connections"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//ServiceUnit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//ServiceUnit/identification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//ServiceUnit/target"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//SharedLibraryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//SharedLibraryType/identification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jbi.ecore#//SharedLibraryType/sharedLibraryClassPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//SharedLibraryType/classLoaderDelegation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//SharedLibraryType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//SharedLibraryType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute jbi.ecore#//SharedLibraryType1/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//SharedLibraryType1/version"/>
+    </genClasses>
+    <genClasses ecoreClass="jbi.ecore#//Target">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Target/artifactsZip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jbi.ecore#//Target/componentName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -5,7 +5,7 @@
 		
 	<modelVersion>4.0.0</modelVersion> 
 	
-	<groupId>com.ebmwebsourcing.petals</groupId>
+	<groupId>com.linagora.petals</groupId>
 	<artifactId>parent</artifactId>
 	<name>Petals Studio :: Parent</name>
 	<version>1.0.0-SNAPSHOT</version>
@@ -16,56 +16,56 @@
 		<module>target-definition</module>
 		
 		<!-- Plug-ins: Libraries -->
-		<module>plugins/com.ebmwebsourcing.petals.libs.cxf</module>
-		<module>plugins/com.ebmwebsourcing.petals.libs.esb</module>
+		<module>plugins/com.linagora.petals.libs.cxf</module>
+		<module>plugins/com.linagora.petals.libs.esb</module>
 	
 		<!-- Plug-ins: Core of Petals tooling -->
-		<module>plugins/com.ebmwebsourcing.jbi.core.metamodel</module>
-		<module>plugins/com.ebmwebsourcing.jbi.core.metamodel.edit</module>
-		<module>plugins/com.ebmwebsourcing.petals.common.generation</module>
-		<module>plugins/com.ebmwebsourcing.petals.common</module>
-		<module>plugins/com.ebmwebsourcing.petals.common.wsdlext</module>
-		<module>plugins/com.ebmwebsourcing.petals.common.xpath</module>
+		<module>plugins/com.linagora.jbi.core.metamodel</module>
+		<module>plugins/com.linagora.jbi.core.metamodel.edit</module>
+		<module>plugins/com.linagora.petals.common.generation</module>
+		<module>plugins/com.linagora.petals.common</module>
+		<module>plugins/com.linagora.petals.common.wsdlext</module>
+		<module>plugins/com.linagora.petals.common.xpath</module>
 		
-		<module>plugins/com.ebmwebsourcing.petals.repositories</module>
-		<module>plugins/com.ebmwebsourcing.petals.components</module>
-		<module>plugins/com.ebmwebsourcing.petals.server</module>
-		<module>plugins/com.ebmwebsourcing.petals.studio</module>
+		<module>plugins/com.linagora.petals.repositories</module>
+		<module>plugins/com.linagora.petals.components</module>
+		<module>plugins/com.linagora.petals.server</module>
+		<module>plugins/com.linagora.petals.studio</module>
 		
-		<module>plugins/com.ebmwebsourcing.petals.services</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.cdk</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.camel</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.eip</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.filetransfer</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.flowable</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.ftp</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.jms</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.jsr181</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.mail</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.pojo</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.quartz</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.rest</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.sftp</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.soap</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.sql</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.validation</module>
-		<module>plugins/com.ebmwebsourcing.petals.services.xslt</module>
+		<module>plugins/com.linagora.petals.services</module>
+		<module>plugins/com.linagora.petals.services.cdk</module>
+		<module>plugins/com.linagora.petals.services.camel</module>
+		<module>plugins/com.linagora.petals.services.eip</module>
+		<module>plugins/com.linagora.petals.services.filetransfer</module>
+		<module>plugins/com.linagora.petals.services.flowable</module>
+		<module>plugins/com.linagora.petals.services.ftp</module>
+		<module>plugins/com.linagora.petals.services.jms</module>
+		<module>plugins/com.linagora.petals.services.jsr181</module>
+		<module>plugins/com.linagora.petals.services.mail</module>
+		<module>plugins/com.linagora.petals.services.pojo</module>
+		<module>plugins/com.linagora.petals.services.quartz</module>
+		<module>plugins/com.linagora.petals.services.rest</module>
+		<module>plugins/com.linagora.petals.services.sftp</module>
+		<module>plugins/com.linagora.petals.services.soap</module>
+		<module>plugins/com.linagora.petals.services.sql</module>
+		<module>plugins/com.linagora.petals.services.validation</module>
+		<module>plugins/com.linagora.petals.services.xslt</module>
 		
 		<!-- Plug-ins: Dev' Tooling -->
-		<module>plugins/com.ebmwebsourcing.petals.studio.dev.properties</module>
+		<module>plugins/com.linagora.petals.studio.dev.properties</module>
 		
 		<!-- Features -->
-		<module>features/com.ebmwebsourcing.petals.studio.core.feature</module>
-		<module>features/com.ebmwebsourcing.petals.studio.rcp.feature</module>
-		<module>features/com.ebmwebsourcing.petals.studio.source.feature</module>
-		<module>features/com.ebmwebsourcing.petals.studio.dev.feature</module>
+		<module>features/com.linagora.petals.studio.core.feature</module>
+		<module>features/com.linagora.petals.studio.rcp.feature</module>
+		<module>features/com.linagora.petals.studio.source.feature</module>
+		<module>features/com.linagora.petals.studio.dev.feature</module>
 		
 		<!-- Product -->
 		<module>petals-studio</module>
 	</modules>
 	
 	<properties>
-		<studio-version>1.4.0</studio-version>
+		<studio-version>1.5.0</studio-version>
 		<studio-version-qualifier></studio-version-qualifier>
 		<!-- M1, RC, Alpha = \u03B1lpha 1, Beta = \u03B2eta -->
 		
@@ -110,7 +110,7 @@
 				<configuration>
 					<target>
 						<artifact>
-							<groupId>com.ebmwebsourcing.petals</groupId>
+							<groupId>com.linagora.petals</groupId>
 							<artifactId>target-definition</artifactId>
 							<version>1.0.0-SNAPSHOT</version>
 						</artifact>
@@ -198,11 +198,11 @@
 		<profile>
 			<id>tests</id>
 			<modules>
-				<module>tests/com.ebmwebsourcing.petals.tests.common</module>
-				<module>tests/com.ebmwebsourcing.petals.common.tests</module>
-				<module>tests/com.ebmwebsourcing.petals.common.wsdlext.tests</module>
-				<module>tests/com.ebmwebsourcing.petals.services.eip.tests</module>
-				<module>tests/com.ebmwebsourcing.petals.studio.dev.properties.tests</module>
+				<module>tests/com.linagora.petals.tests.common</module>
+				<module>tests/com.linagora.petals.common.tests</module>
+				<module>tests/com.linagora.petals.common.wsdlext.tests</module>
+				<module>tests/com.linagora.petals.services.eip.tests</module>
+				<module>tests/com.linagora.petals.studio.dev.properties.tests</module>
 			</modules>
 
 			<properties>
@@ -227,7 +227,7 @@
 								<configuration>
 									<!-- Where to put jacoco coverage report -->
 									<destFile>${sonar.jacoco.itReportPath}</destFile>
-									<includes>com.ebmwebsourcing.*</includes>
+									<includes>com.linagora.*</includes>
 									<append>true</append>
 								</configuration>
 							</execution>
