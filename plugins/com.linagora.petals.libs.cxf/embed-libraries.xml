@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+		
+	<target name="count.existing.jars">
+		<resourcecount property="jars.count">
+			<fileset dir="lib">
+				<include name="*.jar"/>
+			</fileset>
+		</resourcecount>
+		
+		<condition property="exact.jars.count">
+			<equals arg1="${jars.count}" arg2="52" />
+		</condition>
+	</target>
+		
+	<target name="get.them.all" description="Download all the libraries" depends="count.existing.jars" unless="exact.jars.count">
+		<tempfile property="temp.filename" destDir="${java.io.tmpdir}" />
+		<get src="http://central.maven.org/maven2/org/apache/cxf/apache-cxf/2.3.0/apache-cxf-2.3.0.zip" dest="${temp.filename}" skipexisting="true" />
+
+		<tempfile property="temp.unzip.directory" destDir="${java.io.tmpdir}" />
+		<mkdir dir="${temp.unzip.directory}" />
+		<unzip src="${temp.filename}" dest="${temp.unzip.directory}" />
+		<copy todir="lib">
+			<fileset dir="${temp.unzip.directory}/apache-cxf-2.3.0/lib">
+				<exclude name="**/geronimo-activation_*"/>
+				<exclude name="**/geronimo-annotation_*"/>
+				<exclude name="**/geronimo-javamail_*"/>
+				<exclude name="**/geronimo-stax-api_*"/>
+				<exclude name="**/geronimo-ws-metadata_*"/>
+				<exclude name="**/jaxb-api-*"/>
+				<exclude name="**/stax2-api-*"/>
+				<exclude name="**/woodstox-core-asl-*"/>
+				<exclude name="**/xmlbeans-*"/>
+		  </fileset>
+		</copy>
+	</target>
+</project>

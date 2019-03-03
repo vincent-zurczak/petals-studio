@@ -1,0 +1,5 @@
+target/
+*.jar
+*.zip
+lib/WHICH_JARS
+.tmp

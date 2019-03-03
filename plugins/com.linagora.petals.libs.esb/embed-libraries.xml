@@ -6,7 +6,7 @@
 		<antcall target="get.them.for.libs-camel-12" />
 		<antcall target="get.them.for.libs-cdk-p3" />
 		<antcall target="get.them.for.libs-cdk-p4" />
-		<antcall target="libs-jsr181" />
+		<antcall target="get.them.for.libs-jsr181" />
 	</target>
 	
 	<target name="get.them.for.libs-ant-p4">
@@ -32,10 +32,10 @@
 	</target>
 	
 	<target name="get.them.for.libs-cdk-p4">
-		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-api/2.1.1/petals-cdk-api-2.2.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
-		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-core/5.1.1/petals-cdk-core-5.2.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
-		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-jbidescriptor/2.1/petals-cdk-jbidescriptor-2.2.jar" dest="libs-cdk-p4/" skipexisting="true" />
-		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-jbi/1.0.2/petals-jbi-1.1.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-cdk-api/2.2.0/petals-cdk-api-2.2.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-cdk-core/5.2.0/petals-cdk-core-5.2.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-cdk-jbidescriptor/2.2/petals-cdk-jbidescriptor-2.2.jar" dest="libs-cdk-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-jbi/1.1.0/petals-jbi-1.1.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
 	</target>
 	
 	<target name="get.them.for.libs-jsr181">
