@@ -11,9 +11,6 @@
  */
 package com.linagora.petals.services.rest.rest.util;
 
-import com.linagora.petals.services.cdk.cdk5.CDK5Consumes;
-import com.linagora.petals.services.cdk.cdk5.CDK5Provides;
-
 import com.linagora.petals.services.rest.rest.*;
 
 import com.sun.java.xml.ns.jbi.AbstractEndpoint;
@@ -85,12 +82,16 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 	protected RestSwitch<Adapter> modelSwitch =
 		new RestSwitch<Adapter>() {
 			@Override
-			public Adapter caseCondition(Condition object) {
-				return createConditionAdapter();
+			public Adapter caseRestProvides(RestProvides object) {
+				return createRestProvidesAdapter();
 			}
 			@Override
 			public Adapter caseRestConsumes(RestConsumes object) {
 				return createRestConsumesAdapter();
+			}
+			@Override
+			public Adapter caseCondition(Condition object) {
+				return createConditionAdapter();
 			}
 			@Override
 			public Adapter caseConsumesMapping(ConsumesMapping object) {
@@ -99,10 +100,6 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseConsumesOperation(ConsumesOperation object) {
 				return createConsumesOperationAdapter();
-			}
-			@Override
-			public Adapter caseDocumentRoot(DocumentRoot object) {
-				return createDocumentRootAdapter();
 			}
 			@Override
 			public Adapter caseFormData(FormData object) {
@@ -139,10 +136,6 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOtherwise(Otherwise object) {
 				return createOtherwiseAdapter();
-			}
-			@Override
-			public Adapter caseRestProvides(RestProvides object) {
-				return createRestProvidesAdapter();
 			}
 			@Override
 			public Adapter caseProvidesMapping(ProvidesMapping object) {
@@ -205,20 +198,12 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractEndpointAdapter();
 			}
 			@Override
-			public Adapter caseConsumes(Consumes object) {
-				return createConsumesAdapter();
-			}
-			@Override
-			public Adapter caseCDK5Consumes(CDK5Consumes object) {
-				return createCDK5ConsumesAdapter();
-			}
-			@Override
 			public Adapter caseProvides(Provides object) {
 				return createProvidesAdapter();
 			}
 			@Override
-			public Adapter caseCDK5Provides(CDK5Provides object) {
-				return createCDK5ProvidesAdapter();
+			public Adapter caseConsumes(Consumes object) {
+				return createConsumesAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -241,16 +226,16 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.linagora.petals.services.rest.rest.Condition <em>Condition</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.linagora.petals.services.rest.rest.RestProvides <em>Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.linagora.petals.services.rest.rest.Condition
+	 * @see com.linagora.petals.services.rest.rest.RestProvides
 	 * @generated
 	 */
-	public Adapter createConditionAdapter() {
+	public Adapter createRestProvidesAdapter() {
 		return null;
 	}
 
@@ -265,6 +250,20 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRestConsumesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.linagora.petals.services.rest.rest.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.linagora.petals.services.rest.rest.Condition
+	 * @generated
+	 */
+	public Adapter createConditionAdapter() {
 		return null;
 	}
 
@@ -293,20 +292,6 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConsumesOperationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.linagora.petals.services.rest.rest.DocumentRoot <em>Document Root</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot
-	 * @generated
-	 */
-	public Adapter createDocumentRootAdapter() {
 		return null;
 	}
 
@@ -433,20 +418,6 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOtherwiseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.linagora.petals.services.rest.rest.RestProvides <em>Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.linagora.petals.services.rest.rest.RestProvides
-	 * @generated
-	 */
-	public Adapter createRestProvidesAdapter() {
 		return null;
 	}
 
@@ -661,34 +632,6 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.sun.java.xml.ns.jbi.Consumes <em>Consumes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.sun.java.xml.ns.jbi.Consumes
-	 * @generated
-	 */
-	public Adapter createConsumesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.linagora.petals.services.cdk.cdk5.CDK5Consumes <em>CDK5 Consumes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.linagora.petals.services.cdk.cdk5.CDK5Consumes
-	 * @generated
-	 */
-	public Adapter createCDK5ConsumesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link com.sun.java.xml.ns.jbi.Provides <em>Provides</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -703,16 +646,16 @@ public class RestAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.linagora.petals.services.cdk.cdk5.CDK5Provides <em>CDK5 Provides</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.sun.java.xml.ns.jbi.Consumes <em>Consumes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.linagora.petals.services.cdk.cdk5.CDK5Provides
+	 * @see com.sun.java.xml.ns.jbi.Consumes
 	 * @generated
 	 */
-	public Adapter createCDK5ProvidesAdapter() {
+	public Adapter createConsumesAdapter() {
 		return null;
 	}
 

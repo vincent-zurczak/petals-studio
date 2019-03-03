@@ -11,7 +11,7 @@
  */
 package com.linagora.petals.services.rest.rest;
 
-import com.linagora.petals.services.cdk.cdk5.CDK5Consumes;
+import com.sun.java.xml.ns.jbi.Consumes;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,10 +27,10 @@ import com.linagora.petals.services.cdk.cdk5.CDK5Consumes;
  * </ul>
  *
  * @see com.linagora.petals.services.rest.rest.RestPackage#getRestConsumes()
- * @model
+ * @model extendedMetaData="name=''"
  * @generated
  */
-public interface RestConsumes extends CDK5Consumes {
+public interface RestConsumes extends Consumes {
 	/**
 	 * Returns the value of the '<em><b>Base Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -19,9 +19,11 @@ import org.eclipse.core.runtime.Status;
 
 import com.linagora.petals.services.cdk.Cdk5Utils;
 import com.linagora.petals.services.rest.RestDescription12;
+import com.linagora.petals.services.rest.rest.RestPackage;
 import com.linagora.petals.services.su.extensions.ComponentVersionDescription;
 import com.linagora.petals.services.su.wizards.AbstractServiceUnitWizard;
 import com.linagora.petals.services.su.wizards.pages.AbstractSuWizardPage;
+import com.linagora.petals.services.su.wizards.pages.SimpleFeatureListSuWizardPage;
 import com.sun.java.xml.ns.jbi.AbstractEndpoint;
 import com.sun.java.xml.ns.jbi.Provides;
 
@@ -56,7 +58,9 @@ public class RestProvidesWizard1x extends AbstractServiceUnitWizard {
 	 */
 	@Override
 	protected AbstractSuWizardPage[] getLastCustomWizardPages() {
-		return new AbstractSuWizardPage[] { new RestProvidesWizardPage1x()};
+		return new AbstractSuWizardPage[] {
+			new SimpleFeatureListSuWizardPage( RestPackage.Literals.REST_PROVIDES__BASE_PATH )
+		};
 	}
 
 

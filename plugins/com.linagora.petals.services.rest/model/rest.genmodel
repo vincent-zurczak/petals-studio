@@ -3,10 +3,10 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2018, Linagora&#xA;&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;Contributors:&#xA;    EBM WebSourcing - initial API and implementation"
     modelDirectory="/com.linagora.petals.services.rest/src-model" modelPluginID="com.linagora.petals.services.rest"
     modelName="Rest" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    complianceLevel="7.0" copyrightFields="false" usedGenPackages="../../com.linagora.petals.services.cdk/model/cdk5.genmodel#//cdk5 platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../com.linagora.jbi.core.metamodel/model/jbi.genmodel#//jbi platform:/plugin/org.eclipse.emf.ecore/model/XMLType.genmodel#//type">
+    complianceLevel="7.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../com.linagora.jbi.core.metamodel/model/jbi.genmodel#//jbi platform:/plugin/org.eclipse.emf.ecore/model/XMLType.genmodel#//type">
   <foreignModel>rest.ecore</foreignModel>
-  <genPackages prefix="Rest" basePackage="com.linagora.petals.services.rest"
-      resource="XML" disposableProviderFactory="true" ecorePackage="rest.ecore#/">
+  <genPackages prefix="Rest" basePackage="com.linagora.petals.services.rest" resource="XML"
+      disposableProviderFactory="true" ecorePackage="rest.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="rest.ecore#//HttpBodyType">
       <genEnumLiterals ecoreEnumLiteral="rest.ecore#//HttpBodyType/NOBODY"/>
       <genEnumLiterals ecoreEnumLiteral="rest.ecore#//HttpBodyType/XML"/>
@@ -40,14 +40,18 @@
     <genDataTypes ecoreDataType="rest.ecore#//JwtCompressionObject"/>
     <genDataTypes ecoreDataType="rest.ecore#//ResponseBodyAsObject"/>
     <genDataTypes ecoreDataType="rest.ecore#//RestOperationObject"/>
-    <genClasses ecoreClass="rest.ecore#//Condition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//Condition/condition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//Condition/transformation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//Condition/orderId"/>
+    <genClasses ecoreClass="rest.ecore#//RestProvides">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//RestProvides/basePath"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rest.ecore#//RestProvides/mapping"/>
     </genClasses>
     <genClasses ecoreClass="rest.ecore#//RestConsumes">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//RestConsumes/basePath"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rest.ecore#//RestConsumes/mapping"/>
+    </genClasses>
+    <genClasses ecoreClass="rest.ecore#//Condition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//Condition/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//Condition/transformation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//Condition/orderId"/>
     </genClasses>
     <genClasses ecoreClass="rest.ecore#//ConsumesMapping">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//ConsumesMapping/operation"/>
@@ -61,21 +65,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//ConsumesOperation/httpBodyFromJsonVirtualRoot1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//ConsumesOperation/xmlTemplate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//ConsumesOperation/onJbiResponse"/>
-    </genClasses>
-    <genClasses ecoreClass="rest.ecore#//DocumentRoot">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/mixed"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rest.ecore#//DocumentRoot/xMLNSPrefixMap"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rest.ecore#//DocumentRoot/xSISchemaLocation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/basePath"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyFromJsonMultiplePi"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyFromJsonVirtualRoot"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyToJsonAutoArray"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyToJsonAutoPrimitive"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyToJsonMultiplePi"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyToJsonNsDeclarations"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyToJsonPrettyPrint"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/httpBodyToJsonVirtualRoot"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//DocumentRoot/namespaceMapping"/>
     </genClasses>
     <genClasses ecoreClass="rest.ecore#//FormData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//FormData/extractedByXpath"/>
@@ -125,10 +114,6 @@
     </genClasses>
     <genClasses ecoreClass="rest.ecore#//Otherwise">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//Otherwise/transformation"/>
-    </genClasses>
-    <genClasses ecoreClass="rest.ecore#//RestProvides">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rest.ecore#//RestProvides/basePath"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rest.ecore#//RestProvides/mapping"/>
     </genClasses>
     <genClasses ecoreClass="rest.ecore#//ProvidesMapping">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rest.ecore#//ProvidesMapping/operation"/>

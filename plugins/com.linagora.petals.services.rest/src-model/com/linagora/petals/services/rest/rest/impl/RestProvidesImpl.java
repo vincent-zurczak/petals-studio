@@ -11,18 +11,18 @@
  */
 package com.linagora.petals.services.rest.rest.impl;
 
-import com.linagora.petals.services.cdk.cdk5.impl.CDK5ProvidesImpl;
-
 import com.linagora.petals.services.rest.rest.ProvidesMapping;
 import com.linagora.petals.services.rest.rest.RestPackage;
 import com.linagora.petals.services.rest.rest.RestProvides;
 
+import com.sun.java.xml.ns.jbi.impl.ProvidesImpl;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RestProvidesImpl extends CDK5ProvidesImpl implements RestProvides {
+public class RestProvidesImpl extends ProvidesImpl implements RestProvides {
 	/**
 	 * The default value of the '{@link #getBasePath() <em>Base Path</em>}' attribute.
 	 * <!-- begin-user-doc -->

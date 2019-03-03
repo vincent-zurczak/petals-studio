@@ -11,12 +11,9 @@
  */
 package com.linagora.petals.services.rest.rest.impl;
 
-import com.linagora.petals.services.cdk.cdk5.Cdk5Package;
-
 import com.linagora.petals.services.rest.rest.Condition;
 import com.linagora.petals.services.rest.rest.ConsumesMapping;
 import com.linagora.petals.services.rest.rest.ConsumesOperation;
-import com.linagora.petals.services.rest.rest.DocumentRoot;
 import com.linagora.petals.services.rest.rest.FormData;
 import com.linagora.petals.services.rest.rest.HttpBodyType;
 import com.linagora.petals.services.rest.rest.HttpResponse;
@@ -45,10 +42,10 @@ import com.linagora.petals.services.rest.rest.RestPackage;
 import com.linagora.petals.services.rest.rest.RestParam;
 import com.linagora.petals.services.rest.rest.RestProperty;
 import com.linagora.petals.services.rest.rest.RestProvides;
+
 import com.linagora.petals.services.rest.rest.Transformation;
 import com.linagora.petals.services.rest.rest.XPathCondition;
 import com.linagora.petals.services.rest.rest.XslParameter;
-
 import com.sun.java.xml.ns.jbi.JbiPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -75,104 +72,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass conditionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass restConsumesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass consumesMappingEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass consumesOperationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass documentRootEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass formDataEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass httpResponseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass incomingPayloadEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass jwtClaimEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass jwtSignatureEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass onCaseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass onHttpStatusEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass onJbiResponseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass otherwiseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass restProvidesEClass = null;
 
 	/**
@@ -180,155 +79,211 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass restConsumesEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass consumesMappingEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass consumesOperationEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass formDataEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass httpResponseEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass incomingPayloadEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass jwtClaimEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass jwtSignatureEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass onCaseEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass onHttpStatusEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass onJbiResponseEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass otherwiseEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass providesMappingEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass providesOperationEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restAuthenticationEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restBasicAuthenticationEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restHeaderEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restHeadersEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restJwtAuthenticationEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restNtlmAuthenticationEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restParamEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass restPropertyEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass transformationEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass xPathConditionEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass xslParameterEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum httpBodyTypeEEnum = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum jsonXmlMappingConventionEEnum = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum jwtCompressionEEnum = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum responseBodyAsEEnum = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EEnum restOperationEEnum = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType httpBodyTypeObjectEDataType = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType jsonXmlMappingConventionObjectEDataType = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType jwtCompressionObjectEDataType = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EDataType responseBodyAsObjectEDataType = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -384,7 +339,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		Cdk5Package.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
 		JbiPackage.eINSTANCE.eClass();
 		XMLTypePackage.eINSTANCE.eClass();
@@ -401,6 +355,60 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(RestPackage.eNS_URI, theRestPackage);
 		return theRestPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRestProvides() {
+		return restProvidesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRestProvides_BasePath() {
+		return (EAttribute)restProvidesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRestProvides_Mapping() {
+		return (EReference)restProvidesEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRestConsumes() {
+		return restConsumesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRestConsumes_BasePath() {
+		return (EAttribute)restConsumesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRestConsumes_Mapping() {
+		return (EReference)restConsumesEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -437,33 +445,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 	 */
 	public EAttribute getCondition_OrderId() {
 		return (EAttribute)conditionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRestConsumes() {
-		return restConsumesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRestConsumes_BasePath() {
-		return (EAttribute)restConsumesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRestConsumes_Mapping() {
-		return (EReference)restConsumesEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -563,132 +544,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 	 */
 	public EReference getConsumesOperation_OnJbiResponse() {
 		return (EReference)consumesOperationEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDocumentRoot() {
-		return documentRootEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_Mixed() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDocumentRoot_XMLNSPrefixMap() {
-		return (EReference)documentRootEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDocumentRoot_XSISchemaLocation() {
-		return (EReference)documentRootEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_BasePath() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyFromJsonMultiplePi() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyFromJsonVirtualRoot() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyToJsonAutoArray() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyToJsonAutoPrimitive() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyToJsonMultiplePi() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyToJsonNsDeclarations() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyToJsonPrettyPrint() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_HttpBodyToJsonVirtualRoot() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDocumentRoot_NamespaceMapping() {
-		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -1049,33 +904,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 	 */
 	public EReference getOtherwise_Transformation() {
 		return (EReference)otherwiseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRestProvides() {
-		return restProvidesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRestProvides_BasePath() {
-		return (EAttribute)restProvidesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRestProvides_Mapping() {
-		return (EReference)restProvidesEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1736,14 +1564,18 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		conditionEClass = createEClass(CONDITION);
-		createEReference(conditionEClass, CONDITION__CONDITION);
-		createEReference(conditionEClass, CONDITION__TRANSFORMATION);
-		createEAttribute(conditionEClass, CONDITION__ORDER_ID);
+		restProvidesEClass = createEClass(REST_PROVIDES);
+		createEAttribute(restProvidesEClass, REST_PROVIDES__BASE_PATH);
+		createEReference(restProvidesEClass, REST_PROVIDES__MAPPING);
 
 		restConsumesEClass = createEClass(REST_CONSUMES);
 		createEAttribute(restConsumesEClass, REST_CONSUMES__BASE_PATH);
 		createEReference(restConsumesEClass, REST_CONSUMES__MAPPING);
+
+		conditionEClass = createEClass(CONDITION);
+		createEReference(conditionEClass, CONDITION__CONDITION);
+		createEReference(conditionEClass, CONDITION__TRANSFORMATION);
+		createEAttribute(conditionEClass, CONDITION__ORDER_ID);
 
 		consumesMappingEClass = createEClass(CONSUMES_MAPPING);
 		createEReference(consumesMappingEClass, CONSUMES_MAPPING__OPERATION);
@@ -1757,21 +1589,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		createEAttribute(consumesOperationEClass, CONSUMES_OPERATION__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT1);
 		createEReference(consumesOperationEClass, CONSUMES_OPERATION__XML_TEMPLATE);
 		createEReference(consumesOperationEClass, CONSUMES_OPERATION__ON_JBI_RESPONSE);
-
-		documentRootEClass = createEClass(DOCUMENT_ROOT);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__MIXED);
-		createEReference(documentRootEClass, DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
-		createEReference(documentRootEClass, DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__BASE_PATH);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT);
-		createEAttribute(documentRootEClass, DOCUMENT_ROOT__NAMESPACE_MAPPING);
 
 		formDataEClass = createEClass(FORM_DATA);
 		createEAttribute(formDataEClass, FORM_DATA__EXTRACTED_BY_XPATH);
@@ -1821,10 +1638,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 
 		otherwiseEClass = createEClass(OTHERWISE);
 		createEReference(otherwiseEClass, OTHERWISE__TRANSFORMATION);
-
-		restProvidesEClass = createEClass(REST_PROVIDES);
-		createEAttribute(restProvidesEClass, REST_PROVIDES__BASE_PATH);
-		createEReference(restProvidesEClass, REST_PROVIDES__MAPPING);
 
 		providesMappingEClass = createEClass(PROVIDES_MAPPING);
 		createEReference(providesMappingEClass, PROVIDES_MAPPING__OPERATION);
@@ -1938,28 +1751,31 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
-		Cdk5Package theCdk5Package = (Cdk5Package)EPackage.Registry.INSTANCE.getEPackage(Cdk5Package.eNS_URI);
 		JbiPackage theJbiPackage = (JbiPackage)EPackage.Registry.INSTANCE.getEPackage(JbiPackage.eNS_URI);
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		restConsumesEClass.getESuperTypes().add(theCdk5Package.getCDK5Consumes());
+		restProvidesEClass.getESuperTypes().add(theJbiPackage.getProvides());
+		restConsumesEClass.getESuperTypes().add(theJbiPackage.getConsumes());
 		onCaseEClass.getESuperTypes().add(this.getCondition());
-		restProvidesEClass.getESuperTypes().add(theCdk5Package.getCDK5Provides());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCondition_Condition(), this.getXPathCondition(), null, "condition", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_Transformation(), this.getTransformation(), null, "transformation", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCondition_OrderId(), theXMLTypePackage.getInt(), "orderId", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(restProvidesEClass, RestProvides.class, "RestProvides", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRestProvides_BasePath(), theXMLTypePackage.getString(), "basePath", null, 1, 1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRestProvides_Mapping(), this.getProvidesMapping(), null, "mapping", null, 1, 1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restConsumesEClass, RestConsumes.class, "RestConsumes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRestConsumes_BasePath(), theXMLTypePackage.getString(), "basePath", null, 1, 1, RestConsumes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestConsumes_Mapping(), this.getConsumesMapping(), null, "mapping", null, 1, 1, RestConsumes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCondition_Condition(), this.getXPathCondition(), null, "condition", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondition_Transformation(), this.getTransformation(), null, "transformation", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCondition_OrderId(), theXMLTypePackage.getInt(), "orderId", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(consumesMappingEClass, ConsumesMapping.class, "ConsumesMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConsumesMapping_Operation(), this.getConsumesOperation(), null, "operation", null, 1, -1, ConsumesMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1973,21 +1789,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		initEAttribute(getConsumesOperation_HttpBodyFromJsonVirtualRoot1(), theXMLTypePackage.getString(), "httpBodyFromJsonVirtualRoot1", null, 0, 1, ConsumesOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConsumesOperation_XmlTemplate(), ecorePackage.getEObject(), null, "xmlTemplate", null, 0, 1, ConsumesOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConsumesOperation_OnJbiResponse(), this.getOnJbiResponse(), null, "onJbiResponse", null, 1, 1, ConsumesOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null, 0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDocumentRoot_XMLNSPrefixMap(), ecorePackage.getEStringToStringMapEntry(), null, "xMLNSPrefixMap", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDocumentRoot_XSISchemaLocation(), ecorePackage.getEStringToStringMapEntry(), null, "xSISchemaLocation", null, 0, -1, null, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_BasePath(), theXMLTypePackage.getString(), "basePath", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyFromJsonMultiplePi(), theXMLTypePackage.getBoolean(), "httpBodyFromJsonMultiplePi", "false", 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyFromJsonVirtualRoot(), theXMLTypePackage.getString(), "httpBodyFromJsonVirtualRoot", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyToJsonAutoArray(), theXMLTypePackage.getBoolean(), "httpBodyToJsonAutoArray", "false", 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyToJsonAutoPrimitive(), theXMLTypePackage.getBoolean(), "httpBodyToJsonAutoPrimitive", "false", 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyToJsonMultiplePi(), theXMLTypePackage.getBoolean(), "httpBodyToJsonMultiplePi", "false", 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyToJsonNsDeclarations(), theXMLTypePackage.getBoolean(), "httpBodyToJsonNsDeclarations", "false", 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyToJsonPrettyPrint(), theXMLTypePackage.getBoolean(), "httpBodyToJsonPrettyPrint", "false", 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_HttpBodyToJsonVirtualRoot(), theXMLTypePackage.getString(), "httpBodyToJsonVirtualRoot", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDocumentRoot_NamespaceMapping(), theXMLTypePackage.getString(), "namespaceMapping", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(formDataEClass, FormData.class, "FormData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFormData_ExtractedByXpath(), theXMLTypePackage.getString(), "extractedByXpath", null, 1, 1, FormData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2037,10 +1838,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 
 		initEClass(otherwiseEClass, Otherwise.class, "Otherwise", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOtherwise_Transformation(), this.getTransformation(), null, "transformation", null, 1, 1, Otherwise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(restProvidesEClass, RestProvides.class, "RestProvides", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRestProvides_BasePath(), theXMLTypePackage.getString(), "basePath", null, 1, 1, RestProvides.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRestProvides_Mapping(), this.getProvidesMapping(), null, "mapping", null, 1, 1, RestProvides.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(providesMappingEClass, ProvidesMapping.class, "ProvidesMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProvidesMapping_Operation(), this.getProvidesOperation(), null, "operation", null, 1, -1, ProvidesMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2168,6 +1965,54 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 	protected void createExtendedMetaDataAnnotations() {
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
+		  (restProvidesEClass,
+		   source,
+		   new String[] {
+			   "name", ""
+		   });
+		addAnnotation
+		  (getRestProvides_BasePath(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "base-path",
+			   "namespace", "##targetNamespace",
+			   "group", "#group:0"
+		   });
+		addAnnotation
+		  (getRestProvides_Mapping(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "mapping",
+			   "namespace", "##targetNamespace",
+			   "group", "#group:0"
+		   });
+		addAnnotation
+		  (restConsumesEClass,
+		   source,
+		   new String[] {
+			   "name", ""
+		   });
+		addAnnotation
+		  (getRestConsumes_BasePath(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "base-path",
+			   "namespace", "##targetNamespace",
+			   "group", "#group:0"
+		   });
+		addAnnotation
+		  (getRestConsumes_Mapping(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "mapping",
+			   "namespace", "##targetNamespace",
+			   "group", "#group:0"
+		   });
+		addAnnotation
 		  (conditionEClass,
 		   source,
 		   new String[] {
@@ -2196,29 +2041,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		   new String[] {
 			   "kind", "attribute",
 			   "name", "order-id"
-		   });
-		addAnnotation
-		  (restConsumesEClass,
-		   source,
-		   new String[] {
-		   });
-		addAnnotation
-		  (getRestConsumes_BasePath(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "base-path",
-			   "namespace", "##targetNamespace",
-			   "group", "#group:0"
-		   });
-		addAnnotation
-		  (getRestConsumes_Mapping(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "mapping",
-			   "namespace", "##targetNamespace",
-			   "group", "#group:0"
 		   });
 		addAnnotation
 		  (consumesMappingEClass,
@@ -2304,114 +2126,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 		   new String[] {
 			   "kind", "element",
 			   "name", "on-jbi-response",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (documentRootEClass,
-		   source,
-		   new String[] {
-			   "name", "",
-			   "kind", "mixed"
-		   });
-		addAnnotation
-		  (getDocumentRoot_Mixed(),
-		   source,
-		   new String[] {
-			   "kind", "elementWildcard",
-			   "name", ":mixed"
-		   });
-		addAnnotation
-		  (getDocumentRoot_XMLNSPrefixMap(),
-		   source,
-		   new String[] {
-			   "kind", "attribute",
-			   "name", "xmlns:prefix"
-		   });
-		addAnnotation
-		  (getDocumentRoot_XSISchemaLocation(),
-		   source,
-		   new String[] {
-			   "kind", "attribute",
-			   "name", "xsi:schemaLocation"
-		   });
-		addAnnotation
-		  (getDocumentRoot_BasePath(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "base-path",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyFromJsonMultiplePi(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-from-json-multiple-pi",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyFromJsonVirtualRoot(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-from-json-virtual-root",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyToJsonAutoArray(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-to-json-auto-array",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyToJsonAutoPrimitive(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-to-json-auto-primitive",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyToJsonMultiplePi(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-to-json-multiple-pi",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyToJsonNsDeclarations(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-to-json-ns-declarations",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyToJsonPrettyPrint(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-to-json-pretty-print",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_HttpBodyToJsonVirtualRoot(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "http-body-to-json-virtual-root",
-			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (getDocumentRoot_NamespaceMapping(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "namespace-mapping",
 			   "namespace", "##targetNamespace"
 		   });
 		addAnnotation
@@ -2759,29 +2473,6 @@ public class RestPackageImpl extends EPackageImpl implements RestPackage {
 			   "kind", "element",
 			   "name", "transformation",
 			   "namespace", "##targetNamespace"
-		   });
-		addAnnotation
-		  (restProvidesEClass,
-		   source,
-		   new String[] {
-		   });
-		addAnnotation
-		  (getRestProvides_BasePath(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "base-path",
-			   "namespace", "##targetNamespace",
-			   "group", "#group:0"
-		   });
-		addAnnotation
-		  (getRestProvides_Mapping(),
-		   source,
-		   new String[] {
-			   "kind", "element",
-			   "name", "mapping",
-			   "namespace", "##targetNamespace",
-			   "group", "#group:0"
 		   });
 		addAnnotation
 		  (providesMappingEClass,

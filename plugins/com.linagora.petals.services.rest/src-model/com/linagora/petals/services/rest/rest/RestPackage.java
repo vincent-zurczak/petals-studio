@@ -11,7 +11,7 @@
  */
 package com.linagora.petals.services.rest.rest;
 
-import com.linagora.petals.services.cdk.cdk5.Cdk5Package;
+import com.sun.java.xml.ns.jbi.JbiPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -69,6 +69,189 @@ public interface RestPackage extends EPackage {
 	RestPackage eINSTANCE = com.linagora.petals.services.rest.rest.impl.RestPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.RestProvidesImpl <em>Provides</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.linagora.petals.services.rest.rest.impl.RestProvidesImpl
+	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestProvides()
+	 * @generated
+	 */
+	int REST_PROVIDES = 0;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__GROUP = JbiPackage.PROVIDES__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__OTHER = JbiPackage.PROVIDES__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Local</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__LOCAL = JbiPackage.PROVIDES__LOCAL;
+
+	/**
+	 * The feature id for the '<em><b>Endpoint Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__ENDPOINT_NAME = JbiPackage.PROVIDES__ENDPOINT_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Interface Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__INTERFACE_NAME = JbiPackage.PROVIDES__INTERFACE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__SERVICE_NAME = JbiPackage.PROVIDES__SERVICE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Base Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__BASE_PATH = JbiPackage.PROVIDES_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Mapping</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES__MAPPING = JbiPackage.PROVIDES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Provides</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_PROVIDES_FEATURE_COUNT = JbiPackage.PROVIDES_FEATURE_COUNT + 2;
+
+
+	/**
+	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.RestConsumesImpl <em>Consumes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.linagora.petals.services.rest.rest.impl.RestConsumesImpl
+	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestConsumes()
+	 * @generated
+	 */
+	int REST_CONSUMES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Group</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__GROUP = JbiPackage.CONSUMES__GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__OTHER = JbiPackage.CONSUMES__OTHER;
+
+	/**
+	 * The feature id for the '<em><b>Local</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__LOCAL = JbiPackage.CONSUMES__LOCAL;
+
+	/**
+	 * The feature id for the '<em><b>Endpoint Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__ENDPOINT_NAME = JbiPackage.CONSUMES__ENDPOINT_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Interface Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__INTERFACE_NAME = JbiPackage.CONSUMES__INTERFACE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__SERVICE_NAME = JbiPackage.CONSUMES__SERVICE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Base Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__BASE_PATH = JbiPackage.CONSUMES_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Mapping</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES__MAPPING = JbiPackage.CONSUMES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Consumes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_CONSUMES_FEATURE_COUNT = JbiPackage.CONSUMES_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.ConditionImpl <em>Condition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,7 +259,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getCondition()
 	 * @generated
 	 */
-	int CONDITION = 0;
+	int CONDITION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -115,124 +298,6 @@ public interface RestPackage extends EPackage {
 	int CONDITION_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.RestConsumesImpl <em>Consumes</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.linagora.petals.services.rest.rest.impl.RestConsumesImpl
-	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestConsumes()
-	 * @generated
-	 */
-	int REST_CONSUMES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__GROUP = Cdk5Package.CDK5_CONSUMES__GROUP;
-
-	/**
-	 * The feature id for the '<em><b>Other</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__OTHER = Cdk5Package.CDK5_CONSUMES__OTHER;
-
-	/**
-	 * The feature id for the '<em><b>Local</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__LOCAL = Cdk5Package.CDK5_CONSUMES__LOCAL;
-
-	/**
-	 * The feature id for the '<em><b>Endpoint Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__ENDPOINT_NAME = Cdk5Package.CDK5_CONSUMES__ENDPOINT_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Interface Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__INTERFACE_NAME = Cdk5Package.CDK5_CONSUMES__INTERFACE_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__SERVICE_NAME = Cdk5Package.CDK5_CONSUMES__SERVICE_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Timeout</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__TIMEOUT = Cdk5Package.CDK5_CONSUMES__TIMEOUT;
-
-	/**
-	 * The feature id for the '<em><b>Operation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__OPERATION = Cdk5Package.CDK5_CONSUMES__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Mep</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__MEP = Cdk5Package.CDK5_CONSUMES__MEP;
-
-	/**
-	 * The feature id for the '<em><b>Base Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__BASE_PATH = Cdk5Package.CDK5_CONSUMES_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Mapping</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES__MAPPING = Cdk5Package.CDK5_CONSUMES_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Consumes</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_CONSUMES_FEATURE_COUNT = Cdk5Package.CDK5_CONSUMES_FEATURE_COUNT + 2;
-
-	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.ConsumesMappingImpl <em>Consumes Mapping</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,7 +305,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getConsumesMapping()
 	 * @generated
 	 */
-	int CONSUMES_MAPPING = 2;
+	int CONSUMES_MAPPING = 3;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' containment reference list.
@@ -268,7 +333,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getConsumesOperation()
 	 * @generated
 	 */
-	int CONSUMES_OPERATION = 3;
+	int CONSUMES_OPERATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Http Method</b></em>' attribute.
@@ -350,142 +415,6 @@ public interface RestPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONSUMES_OPERATION_FEATURE_COUNT = 8;
-
-	/**
-	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.DocumentRootImpl <em>Document Root</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.linagora.petals.services.rest.rest.impl.DocumentRootImpl
-	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getDocumentRoot()
-	 * @generated
-	 */
-	int DOCUMENT_ROOT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__MIXED = 0;
-
-	/**
-	 * The feature id for the '<em><b>XMLNS Prefix Map</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__XMLNS_PREFIX_MAP = 1;
-
-	/**
-	 * The feature id for the '<em><b>XSI Schema Location</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Base Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__BASE_PATH = 3;
-
-	/**
-	 * The feature id for the '<em><b>Http Body From Json Multiple Pi</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI = 4;
-
-	/**
-	 * The feature id for the '<em><b>Http Body From Json Virtual Root</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Http Body To Json Auto Array</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY = 6;
-
-	/**
-	 * The feature id for the '<em><b>Http Body To Json Auto Primitive</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Http Body To Json Multiple Pi</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI = 8;
-
-	/**
-	 * The feature id for the '<em><b>Http Body To Json Ns Declarations</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS = 9;
-
-	/**
-	 * The feature id for the '<em><b>Http Body To Json Pretty Print</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT = 10;
-
-	/**
-	 * The feature id for the '<em><b>Http Body To Json Virtual Root</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT = 11;
-
-	/**
-	 * The feature id for the '<em><b>Namespace Mapping</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT__NAMESPACE_MAPPING = 12;
-
-	/**
-	 * The number of structural features of the '<em>Document Root</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOCUMENT_ROOT_FEATURE_COUNT = 13;
 
 	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.FormDataImpl <em>Form Data</em>}' class.
@@ -965,151 +894,6 @@ public interface RestPackage extends EPackage {
 	int OTHERWISE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.RestProvidesImpl <em>Provides</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.linagora.petals.services.rest.rest.impl.RestProvidesImpl
-	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestProvides()
-	 * @generated
-	 */
-	int REST_PROVIDES = 14;
-
-	/**
-	 * The feature id for the '<em><b>Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__GROUP = Cdk5Package.CDK5_PROVIDES__GROUP;
-
-	/**
-	 * The feature id for the '<em><b>Other</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__OTHER = Cdk5Package.CDK5_PROVIDES__OTHER;
-
-	/**
-	 * The feature id for the '<em><b>Local</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__LOCAL = Cdk5Package.CDK5_PROVIDES__LOCAL;
-
-	/**
-	 * The feature id for the '<em><b>Endpoint Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__ENDPOINT_NAME = Cdk5Package.CDK5_PROVIDES__ENDPOINT_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Interface Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__INTERFACE_NAME = Cdk5Package.CDK5_PROVIDES__INTERFACE_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Service Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__SERVICE_NAME = Cdk5Package.CDK5_PROVIDES__SERVICE_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Timeout</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__TIMEOUT = Cdk5Package.CDK5_PROVIDES__TIMEOUT;
-
-	/**
-	 * The feature id for the '<em><b>Validate Wsdl</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__VALIDATE_WSDL = Cdk5Package.CDK5_PROVIDES__VALIDATE_WSDL;
-
-	/**
-	 * The feature id for the '<em><b>Forward Security Subject</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__FORWARD_SECURITY_SUBJECT = Cdk5Package.CDK5_PROVIDES__FORWARD_SECURITY_SUBJECT;
-
-	/**
-	 * The feature id for the '<em><b>Forward Message Properties</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__FORWARD_MESSAGE_PROPERTIES = Cdk5Package.CDK5_PROVIDES__FORWARD_MESSAGE_PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Forward Attachments</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__FORWARD_ATTACHMENTS = Cdk5Package.CDK5_PROVIDES__FORWARD_ATTACHMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Wsdl</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__WSDL = Cdk5Package.CDK5_PROVIDES__WSDL;
-
-	/**
-	 * The feature id for the '<em><b>Base Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__BASE_PATH = Cdk5Package.CDK5_PROVIDES_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Mapping</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES__MAPPING = Cdk5Package.CDK5_PROVIDES_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Provides</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_PROVIDES_FEATURE_COUNT = Cdk5Package.CDK5_PROVIDES_FEATURE_COUNT + 2;
-
-	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.impl.ProvidesMappingImpl <em>Provides Mapping</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1117,7 +901,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getProvidesMapping()
 	 * @generated
 	 */
-	int PROVIDES_MAPPING = 15;
+	int PROVIDES_MAPPING = 14;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' containment reference list.
@@ -1145,7 +929,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getProvidesOperation()
 	 * @generated
 	 */
-	int PROVIDES_OPERATION = 16;
+	int PROVIDES_OPERATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Http Method</b></em>' attribute.
@@ -1380,7 +1164,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestAuthentication()
 	 * @generated
 	 */
-	int REST_AUTHENTICATION = 17;
+	int REST_AUTHENTICATION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Basic</b></em>' containment reference.
@@ -1426,7 +1210,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestBasicAuthentication()
 	 * @generated
 	 */
-	int REST_BASIC_AUTHENTICATION = 18;
+	int REST_BASIC_AUTHENTICATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Username</b></em>' containment reference.
@@ -1463,7 +1247,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestHeader()
 	 * @generated
 	 */
-	int REST_HEADER = 19;
+	int REST_HEADER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Constant</b></em>' attribute.
@@ -1500,7 +1284,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestHeaders()
 	 * @generated
 	 */
-	int REST_HEADERS = 20;
+	int REST_HEADERS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Header</b></em>' containment reference list.
@@ -1528,7 +1312,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestJwtAuthentication()
 	 * @generated
 	 */
-	int REST_JWT_AUTHENTICATION = 21;
+	int REST_JWT_AUTHENTICATION = 20;
 
 	/**
 	 * The feature id for the '<em><b>Claim</b></em>' containment reference list.
@@ -1574,7 +1358,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestNtlmAuthentication()
 	 * @generated
 	 */
-	int REST_NTLM_AUTHENTICATION = 22;
+	int REST_NTLM_AUTHENTICATION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Username</b></em>' containment reference.
@@ -1620,7 +1404,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestParam()
 	 * @generated
 	 */
-	int REST_PARAM = 23;
+	int REST_PARAM = 22;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1657,7 +1441,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestProperty()
 	 * @generated
 	 */
-	int REST_PROPERTY = 24;
+	int REST_PROPERTY = 23;
 
 	/**
 	 * The feature id for the '<em><b>Constant</b></em>' attribute.
@@ -1694,7 +1478,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getTransformation()
 	 * @generated
 	 */
-	int TRANSFORMATION = 25;
+	int TRANSFORMATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Xsl</b></em>' attribute.
@@ -1722,7 +1506,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getXPathCondition()
 	 * @generated
 	 */
-	int XPATH_CONDITION = 26;
+	int XPATH_CONDITION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Xpath</b></em>' attribute.
@@ -1750,7 +1534,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getXslParameter()
 	 * @generated
 	 */
-	int XSL_PARAMETER = 27;
+	int XSL_PARAMETER = 26;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1787,7 +1571,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getHttpBodyType()
 	 * @generated
 	 */
-	int HTTP_BODY_TYPE = 28;
+	int HTTP_BODY_TYPE = 27;
 
 	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.JsonXmlMappingConvention <em>Json Xml Mapping Convention</em>}' enum.
@@ -1797,7 +1581,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getJsonXmlMappingConvention()
 	 * @generated
 	 */
-	int JSON_XML_MAPPING_CONVENTION = 29;
+	int JSON_XML_MAPPING_CONVENTION = 28;
 
 	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.JwtCompression <em>Jwt Compression</em>}' enum.
@@ -1807,7 +1591,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getJwtCompression()
 	 * @generated
 	 */
-	int JWT_COMPRESSION = 30;
+	int JWT_COMPRESSION = 29;
 
 	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.ResponseBodyAs <em>Response Body As</em>}' enum.
@@ -1817,7 +1601,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getResponseBodyAs()
 	 * @generated
 	 */
-	int RESPONSE_BODY_AS = 31;
+	int RESPONSE_BODY_AS = 30;
 
 	/**
 	 * The meta object id for the '{@link com.linagora.petals.services.rest.rest.RestOperation <em>Operation</em>}' enum.
@@ -1827,7 +1611,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestOperation()
 	 * @generated
 	 */
-	int REST_OPERATION = 32;
+	int REST_OPERATION = 31;
 
 	/**
 	 * The meta object id for the '<em>Http Body Type Object</em>' data type.
@@ -1837,7 +1621,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getHttpBodyTypeObject()
 	 * @generated
 	 */
-	int HTTP_BODY_TYPE_OBJECT = 33;
+	int HTTP_BODY_TYPE_OBJECT = 32;
 
 	/**
 	 * The meta object id for the '<em>Json Xml Mapping Convention Object</em>' data type.
@@ -1847,7 +1631,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getJsonXmlMappingConventionObject()
 	 * @generated
 	 */
-	int JSON_XML_MAPPING_CONVENTION_OBJECT = 34;
+	int JSON_XML_MAPPING_CONVENTION_OBJECT = 33;
 
 	/**
 	 * The meta object id for the '<em>Jwt Compression Object</em>' data type.
@@ -1857,7 +1641,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getJwtCompressionObject()
 	 * @generated
 	 */
-	int JWT_COMPRESSION_OBJECT = 35;
+	int JWT_COMPRESSION_OBJECT = 34;
 
 	/**
 	 * The meta object id for the '<em>Response Body As Object</em>' data type.
@@ -1867,7 +1651,7 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getResponseBodyAsObject()
 	 * @generated
 	 */
-	int RESPONSE_BODY_AS_OBJECT = 36;
+	int RESPONSE_BODY_AS_OBJECT = 35;
 
 	/**
 	 * The meta object id for the '<em>Operation Object</em>' data type.
@@ -1877,8 +1661,72 @@ public interface RestPackage extends EPackage {
 	 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestOperationObject()
 	 * @generated
 	 */
-	int REST_OPERATION_OBJECT = 37;
+	int REST_OPERATION_OBJECT = 36;
 
+
+	/**
+	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.RestProvides <em>Provides</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Provides</em>'.
+	 * @see com.linagora.petals.services.rest.rest.RestProvides
+	 * @generated
+	 */
+	EClass getRestProvides();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.RestProvides#getBasePath <em>Base Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Base Path</em>'.
+	 * @see com.linagora.petals.services.rest.rest.RestProvides#getBasePath()
+	 * @see #getRestProvides()
+	 * @generated
+	 */
+	EAttribute getRestProvides_BasePath();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.linagora.petals.services.rest.rest.RestProvides#getMapping <em>Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Mapping</em>'.
+	 * @see com.linagora.petals.services.rest.rest.RestProvides#getMapping()
+	 * @see #getRestProvides()
+	 * @generated
+	 */
+	EReference getRestProvides_Mapping();
+
+	/**
+	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.RestConsumes <em>Consumes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Consumes</em>'.
+	 * @see com.linagora.petals.services.rest.rest.RestConsumes
+	 * @generated
+	 */
+	EClass getRestConsumes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.RestConsumes#getBasePath <em>Base Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Base Path</em>'.
+	 * @see com.linagora.petals.services.rest.rest.RestConsumes#getBasePath()
+	 * @see #getRestConsumes()
+	 * @generated
+	 */
+	EAttribute getRestConsumes_BasePath();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.linagora.petals.services.rest.rest.RestConsumes#getMapping <em>Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Mapping</em>'.
+	 * @see com.linagora.petals.services.rest.rest.RestConsumes#getMapping()
+	 * @see #getRestConsumes()
+	 * @generated
+	 */
+	EReference getRestConsumes_Mapping();
 
 	/**
 	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.Condition <em>Condition</em>}'.
@@ -1922,38 +1770,6 @@ public interface RestPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCondition_OrderId();
-
-	/**
-	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.RestConsumes <em>Consumes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Consumes</em>'.
-	 * @see com.linagora.petals.services.rest.rest.RestConsumes
-	 * @generated
-	 */
-	EClass getRestConsumes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.RestConsumes#getBasePath <em>Base Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Base Path</em>'.
-	 * @see com.linagora.petals.services.rest.rest.RestConsumes#getBasePath()
-	 * @see #getRestConsumes()
-	 * @generated
-	 */
-	EAttribute getRestConsumes_BasePath();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.linagora.petals.services.rest.rest.RestConsumes#getMapping <em>Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Mapping</em>'.
-	 * @see com.linagora.petals.services.rest.rest.RestConsumes#getMapping()
-	 * @see #getRestConsumes()
-	 * @generated
-	 */
-	EReference getRestConsumes_Mapping();
 
 	/**
 	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.ConsumesMapping <em>Consumes Mapping</em>}'.
@@ -2073,159 +1889,6 @@ public interface RestPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConsumesOperation_OnJbiResponse();
-
-	/**
-	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.DocumentRoot <em>Document Root</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Document Root</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot
-	 * @generated
-	 */
-	EClass getDocumentRoot();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link com.linagora.petals.services.rest.rest.DocumentRoot#getMixed <em>Mixed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Mixed</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#getMixed()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_Mixed();
-
-	/**
-	 * Returns the meta object for the map '{@link com.linagora.petals.services.rest.rest.DocumentRoot#getXMLNSPrefixMap <em>XMLNS Prefix Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>XMLNS Prefix Map</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#getXMLNSPrefixMap()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EReference getDocumentRoot_XMLNSPrefixMap();
-
-	/**
-	 * Returns the meta object for the map '{@link com.linagora.petals.services.rest.rest.DocumentRoot#getXSISchemaLocation <em>XSI Schema Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>XSI Schema Location</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#getXSISchemaLocation()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EReference getDocumentRoot_XSISchemaLocation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#getBasePath <em>Base Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Base Path</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#getBasePath()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_BasePath();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyFromJsonMultiplePi <em>Http Body From Json Multiple Pi</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body From Json Multiple Pi</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyFromJsonMultiplePi()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyFromJsonMultiplePi();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#getHttpBodyFromJsonVirtualRoot <em>Http Body From Json Virtual Root</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body From Json Virtual Root</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#getHttpBodyFromJsonVirtualRoot()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyFromJsonVirtualRoot();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonAutoArray <em>Http Body To Json Auto Array</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body To Json Auto Array</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonAutoArray()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyToJsonAutoArray();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonAutoPrimitive <em>Http Body To Json Auto Primitive</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body To Json Auto Primitive</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonAutoPrimitive()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyToJsonAutoPrimitive();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonMultiplePi <em>Http Body To Json Multiple Pi</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body To Json Multiple Pi</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonMultiplePi()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyToJsonMultiplePi();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonNsDeclarations <em>Http Body To Json Ns Declarations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body To Json Ns Declarations</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonNsDeclarations()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyToJsonNsDeclarations();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonPrettyPrint <em>Http Body To Json Pretty Print</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body To Json Pretty Print</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#isHttpBodyToJsonPrettyPrint()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyToJsonPrettyPrint();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#getHttpBodyToJsonVirtualRoot <em>Http Body To Json Virtual Root</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Body To Json Virtual Root</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#getHttpBodyToJsonVirtualRoot()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_HttpBodyToJsonVirtualRoot();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.DocumentRoot#getNamespaceMapping <em>Namespace Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Namespace Mapping</em>'.
-	 * @see com.linagora.petals.services.rest.rest.DocumentRoot#getNamespaceMapping()
-	 * @see #getDocumentRoot()
-	 * @generated
-	 */
-	EAttribute getDocumentRoot_NamespaceMapping();
 
 	/**
 	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.FormData <em>Form Data</em>}'.
@@ -2657,38 +2320,6 @@ public interface RestPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOtherwise_Transformation();
-
-	/**
-	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.RestProvides <em>Provides</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Provides</em>'.
-	 * @see com.linagora.petals.services.rest.rest.RestProvides
-	 * @generated
-	 */
-	EClass getRestProvides();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.linagora.petals.services.rest.rest.RestProvides#getBasePath <em>Base Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Base Path</em>'.
-	 * @see com.linagora.petals.services.rest.rest.RestProvides#getBasePath()
-	 * @see #getRestProvides()
-	 * @generated
-	 */
-	EAttribute getRestProvides_BasePath();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link com.linagora.petals.services.rest.rest.RestProvides#getMapping <em>Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Mapping</em>'.
-	 * @see com.linagora.petals.services.rest.rest.RestProvides#getMapping()
-	 * @see #getRestProvides()
-	 * @generated
-	 */
-	EReference getRestProvides_Mapping();
 
 	/**
 	 * Returns the meta object for class '{@link com.linagora.petals.services.rest.rest.ProvidesMapping <em>Provides Mapping</em>}'.
@@ -3470,6 +3101,58 @@ public interface RestPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.RestProvidesImpl <em>Provides</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.linagora.petals.services.rest.rest.impl.RestProvidesImpl
+		 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestProvides()
+		 * @generated
+		 */
+		EClass REST_PROVIDES = eINSTANCE.getRestProvides();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_PROVIDES__BASE_PATH = eINSTANCE.getRestProvides_BasePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Mapping</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_PROVIDES__MAPPING = eINSTANCE.getRestProvides_Mapping();
+
+		/**
+		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.RestConsumesImpl <em>Consumes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.linagora.petals.services.rest.rest.impl.RestConsumesImpl
+		 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestConsumes()
+		 * @generated
+		 */
+		EClass REST_CONSUMES = eINSTANCE.getRestConsumes();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_CONSUMES__BASE_PATH = eINSTANCE.getRestConsumes_BasePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Mapping</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_CONSUMES__MAPPING = eINSTANCE.getRestConsumes_Mapping();
+
+		/**
 		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.ConditionImpl <em>Condition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3502,32 +3185,6 @@ public interface RestPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONDITION__ORDER_ID = eINSTANCE.getCondition_OrderId();
-
-		/**
-		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.RestConsumesImpl <em>Consumes</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.linagora.petals.services.rest.rest.impl.RestConsumesImpl
-		 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestConsumes()
-		 * @generated
-		 */
-		EClass REST_CONSUMES = eINSTANCE.getRestConsumes();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Path</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REST_CONSUMES__BASE_PATH = eINSTANCE.getRestConsumes_BasePath();
-
-		/**
-		 * The meta object literal for the '<em><b>Mapping</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REST_CONSUMES__MAPPING = eINSTANCE.getRestConsumes_Mapping();
 
 		/**
 		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.ConsumesMappingImpl <em>Consumes Mapping</em>}' class.
@@ -3620,120 +3277,6 @@ public interface RestPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONSUMES_OPERATION__ON_JBI_RESPONSE = eINSTANCE.getConsumesOperation_OnJbiResponse();
-
-		/**
-		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.DocumentRootImpl <em>Document Root</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.linagora.petals.services.rest.rest.impl.DocumentRootImpl
-		 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getDocumentRoot()
-		 * @generated
-		 */
-		EClass DOCUMENT_ROOT = eINSTANCE.getDocumentRoot();
-
-		/**
-		 * The meta object literal for the '<em><b>Mixed</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__MIXED = eINSTANCE.getDocumentRoot_Mixed();
-
-		/**
-		 * The meta object literal for the '<em><b>XMLNS Prefix Map</b></em>' map feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOCUMENT_ROOT__XMLNS_PREFIX_MAP = eINSTANCE.getDocumentRoot_XMLNSPrefixMap();
-
-		/**
-		 * The meta object literal for the '<em><b>XSI Schema Location</b></em>' map feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = eINSTANCE.getDocumentRoot_XSISchemaLocation();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Path</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__BASE_PATH = eINSTANCE.getDocumentRoot_BasePath();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body From Json Multiple Pi</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_MULTIPLE_PI = eINSTANCE.getDocumentRoot_HttpBodyFromJsonMultiplePi();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body From Json Virtual Root</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_FROM_JSON_VIRTUAL_ROOT = eINSTANCE.getDocumentRoot_HttpBodyFromJsonVirtualRoot();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body To Json Auto Array</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_ARRAY = eINSTANCE.getDocumentRoot_HttpBodyToJsonAutoArray();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body To Json Auto Primitive</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_TO_JSON_AUTO_PRIMITIVE = eINSTANCE.getDocumentRoot_HttpBodyToJsonAutoPrimitive();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body To Json Multiple Pi</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_TO_JSON_MULTIPLE_PI = eINSTANCE.getDocumentRoot_HttpBodyToJsonMultiplePi();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body To Json Ns Declarations</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_TO_JSON_NS_DECLARATIONS = eINSTANCE.getDocumentRoot_HttpBodyToJsonNsDeclarations();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body To Json Pretty Print</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_TO_JSON_PRETTY_PRINT = eINSTANCE.getDocumentRoot_HttpBodyToJsonPrettyPrint();
-
-		/**
-		 * The meta object literal for the '<em><b>Http Body To Json Virtual Root</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__HTTP_BODY_TO_JSON_VIRTUAL_ROOT = eINSTANCE.getDocumentRoot_HttpBodyToJsonVirtualRoot();
-
-		/**
-		 * The meta object literal for the '<em><b>Namespace Mapping</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOCUMENT_ROOT__NAMESPACE_MAPPING = eINSTANCE.getDocumentRoot_NamespaceMapping();
 
 		/**
 		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.FormDataImpl <em>Form Data</em>}' class.
@@ -4072,32 +3615,6 @@ public interface RestPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OTHERWISE__TRANSFORMATION = eINSTANCE.getOtherwise_Transformation();
-
-		/**
-		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.RestProvidesImpl <em>Provides</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.linagora.petals.services.rest.rest.impl.RestProvidesImpl
-		 * @see com.linagora.petals.services.rest.rest.impl.RestPackageImpl#getRestProvides()
-		 * @generated
-		 */
-		EClass REST_PROVIDES = eINSTANCE.getRestProvides();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Path</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REST_PROVIDES__BASE_PATH = eINSTANCE.getRestProvides_BasePath();
-
-		/**
-		 * The meta object literal for the '<em><b>Mapping</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REST_PROVIDES__MAPPING = eINSTANCE.getRestProvides_Mapping();
 
 		/**
 		 * The meta object literal for the '{@link com.linagora.petals.services.rest.rest.impl.ProvidesMappingImpl <em>Provides Mapping</em>}' class.

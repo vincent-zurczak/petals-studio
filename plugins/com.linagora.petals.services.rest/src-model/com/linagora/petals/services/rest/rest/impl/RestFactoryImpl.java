@@ -66,11 +66,11 @@ public class RestFactoryImpl extends EFactoryImpl implements RestFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case RestPackage.CONDITION: return createCondition();
+			case RestPackage.REST_PROVIDES: return createRestProvides();
 			case RestPackage.REST_CONSUMES: return createRestConsumes();
+			case RestPackage.CONDITION: return createCondition();
 			case RestPackage.CONSUMES_MAPPING: return createConsumesMapping();
 			case RestPackage.CONSUMES_OPERATION: return createConsumesOperation();
-			case RestPackage.DOCUMENT_ROOT: return createDocumentRoot();
 			case RestPackage.FORM_DATA: return createFormData();
 			case RestPackage.HTTP_RESPONSE: return createHttpResponse();
 			case RestPackage.INCOMING_PAYLOAD: return createIncomingPayload();
@@ -80,7 +80,6 @@ public class RestFactoryImpl extends EFactoryImpl implements RestFactory {
 			case RestPackage.ON_HTTP_STATUS: return createOnHttpStatus();
 			case RestPackage.ON_JBI_RESPONSE: return createOnJbiResponse();
 			case RestPackage.OTHERWISE: return createOtherwise();
-			case RestPackage.REST_PROVIDES: return createRestProvides();
 			case RestPackage.PROVIDES_MAPPING: return createProvidesMapping();
 			case RestPackage.PROVIDES_OPERATION: return createProvidesOperation();
 			case RestPackage.REST_AUTHENTICATION: return createRestAuthentication();
@@ -170,9 +169,9 @@ public class RestFactoryImpl extends EFactoryImpl implements RestFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Condition createCondition() {
-		ConditionImpl condition = new ConditionImpl();
-		return condition;
+	public RestProvides createRestProvides() {
+		RestProvidesImpl restProvides = new RestProvidesImpl();
+		return restProvides;
 	}
 
 	/**
@@ -183,6 +182,16 @@ public class RestFactoryImpl extends EFactoryImpl implements RestFactory {
 	public RestConsumes createRestConsumes() {
 		RestConsumesImpl restConsumes = new RestConsumesImpl();
 		return restConsumes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
 	}
 
 	/**
@@ -203,16 +212,6 @@ public class RestFactoryImpl extends EFactoryImpl implements RestFactory {
 	public ConsumesOperation createConsumesOperation() {
 		ConsumesOperationImpl consumesOperation = new ConsumesOperationImpl();
 		return consumesOperation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DocumentRoot createDocumentRoot() {
-		DocumentRootImpl documentRoot = new DocumentRootImpl();
-		return documentRoot;
 	}
 
 	/**
@@ -303,16 +302,6 @@ public class RestFactoryImpl extends EFactoryImpl implements RestFactory {
 	public Otherwise createOtherwise() {
 		OtherwiseImpl otherwise = new OtherwiseImpl();
 		return otherwise;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RestProvides createRestProvides() {
-		RestProvidesImpl restProvides = new RestProvidesImpl();
-		return restProvides;
 	}
 
 	/**

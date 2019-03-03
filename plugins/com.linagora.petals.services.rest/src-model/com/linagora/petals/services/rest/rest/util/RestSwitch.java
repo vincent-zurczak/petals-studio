@@ -11,9 +11,6 @@
  */
 package com.linagora.petals.services.rest.rest.util;
 
-import com.linagora.petals.services.cdk.cdk5.CDK5Consumes;
-import com.linagora.petals.services.cdk.cdk5.CDK5Provides;
-
 import com.linagora.petals.services.rest.rest.*;
 
 import com.sun.java.xml.ns.jbi.AbstractEndpoint;
@@ -83,19 +80,27 @@ public class RestSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case RestPackage.CONDITION: {
-				Condition condition = (Condition)theEObject;
-				T result = caseCondition(condition);
+			case RestPackage.REST_PROVIDES: {
+				RestProvides restProvides = (RestProvides)theEObject;
+				T result = caseRestProvides(restProvides);
+				if (result == null) result = caseProvides(restProvides);
+				if (result == null) result = caseAbstractEndpoint(restProvides);
+				if (result == null) result = caseAbstractExtensibleElement(restProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case RestPackage.REST_CONSUMES: {
 				RestConsumes restConsumes = (RestConsumes)theEObject;
 				T result = caseRestConsumes(restConsumes);
-				if (result == null) result = caseCDK5Consumes(restConsumes);
 				if (result == null) result = caseConsumes(restConsumes);
 				if (result == null) result = caseAbstractEndpoint(restConsumes);
 				if (result == null) result = caseAbstractExtensibleElement(restConsumes);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestPackage.CONDITION: {
+				Condition condition = (Condition)theEObject;
+				T result = caseCondition(condition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -108,12 +113,6 @@ public class RestSwitch<T> extends Switch<T> {
 			case RestPackage.CONSUMES_OPERATION: {
 				ConsumesOperation consumesOperation = (ConsumesOperation)theEObject;
 				T result = caseConsumesOperation(consumesOperation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RestPackage.DOCUMENT_ROOT: {
-				DocumentRoot documentRoot = (DocumentRoot)theEObject;
-				T result = caseDocumentRoot(documentRoot);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -169,16 +168,6 @@ public class RestSwitch<T> extends Switch<T> {
 			case RestPackage.OTHERWISE: {
 				Otherwise otherwise = (Otherwise)theEObject;
 				T result = caseOtherwise(otherwise);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RestPackage.REST_PROVIDES: {
-				RestProvides restProvides = (RestProvides)theEObject;
-				T result = caseRestProvides(restProvides);
-				if (result == null) result = caseCDK5Provides(restProvides);
-				if (result == null) result = caseProvides(restProvides);
-				if (result == null) result = caseAbstractEndpoint(restProvides);
-				if (result == null) result = caseAbstractExtensibleElement(restProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -265,17 +254,17 @@ public class RestSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Provides</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCondition(Condition object) {
+	public T caseRestProvides(RestProvides object) {
 		return null;
 	}
 
@@ -291,6 +280,21 @@ public class RestSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRestConsumes(RestConsumes object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCondition(Condition object) {
 		return null;
 	}
 
@@ -321,21 +325,6 @@ public class RestSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseConsumesOperation(ConsumesOperation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Document Root</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Document Root</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDocumentRoot(DocumentRoot object) {
 		return null;
 	}
 
@@ -471,21 +460,6 @@ public class RestSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOtherwise(Otherwise object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Provides</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRestProvides(RestProvides object) {
 		return null;
 	}
 
@@ -715,36 +689,6 @@ public class RestSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Consumes</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Consumes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseConsumes(Consumes object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>CDK5 Consumes</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>CDK5 Consumes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCDK5Consumes(CDK5Consumes object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -760,17 +704,17 @@ public class RestSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>CDK5 Provides</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Consumes</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>CDK5 Provides</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Consumes</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCDK5Provides(CDK5Provides object) {
+	public T caseConsumes(Consumes object) {
 		return null;
 	}
 

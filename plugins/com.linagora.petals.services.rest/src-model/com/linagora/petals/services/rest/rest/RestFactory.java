@@ -31,13 +31,13 @@ public interface RestFactory extends EFactory {
 	RestFactory eINSTANCE = com.linagora.petals.services.rest.rest.impl.RestFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Condition</em>'.
+	 * Returns a new object of class '<em>Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Condition</em>'.
+	 * @return a new object of class '<em>Provides</em>'.
 	 * @generated
 	 */
-	Condition createCondition();
+	RestProvides createRestProvides();
 
 	/**
 	 * Returns a new object of class '<em>Consumes</em>'.
@@ -47,6 +47,15 @@ public interface RestFactory extends EFactory {
 	 * @generated
 	 */
 	RestConsumes createRestConsumes();
+
+	/**
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
+	Condition createCondition();
 
 	/**
 	 * Returns a new object of class '<em>Consumes Mapping</em>'.
@@ -65,15 +74,6 @@ public interface RestFactory extends EFactory {
 	 * @generated
 	 */
 	ConsumesOperation createConsumesOperation();
-
-	/**
-	 * Returns a new object of class '<em>Document Root</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Document Root</em>'.
-	 * @generated
-	 */
-	DocumentRoot createDocumentRoot();
 
 	/**
 	 * Returns a new object of class '<em>Form Data</em>'.
@@ -155,15 +155,6 @@ public interface RestFactory extends EFactory {
 	 * @generated
 	 */
 	Otherwise createOtherwise();
-
-	/**
-	 * Returns a new object of class '<em>Provides</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Provides</em>'.
-	 * @generated
-	 */
-	RestProvides createRestProvides();
 
 	/**
 	 * Returns a new object of class '<em>Provides Mapping</em>'.
