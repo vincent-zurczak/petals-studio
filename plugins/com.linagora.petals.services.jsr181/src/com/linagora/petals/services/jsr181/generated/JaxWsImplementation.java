@@ -4,7 +4,7 @@ import java.util.Properties;
 import com.linagora.petals.services.jsr181.Jsr181Constants;
 
 /******************************************************************************
- * Copyright (c) 2008-2018, Linagora
+ * Copyright (c) 2008-2019, Linagora
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0

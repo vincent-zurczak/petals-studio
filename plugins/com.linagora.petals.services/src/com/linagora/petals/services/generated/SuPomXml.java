@@ -4,7 +4,7 @@ import com.linagora.petals.common.internal.provisional.maven.MavenBean;
 import com.linagora.petals.common.internal.provisional.utils.StringUtils;
 
 /******************************************************************************
- * Copyright (c) 2008-2018, Linagora
+ * Copyright (c) 2008-2019, Linagora
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -60,7 +60,7 @@ public class SuPomXml {
     final StringBuffer stringBuffer = new StringBuffer();
     
 /******************************************************************************
- * Copyright (c) 2008-2018, Linagora
+ * Copyright (c) 2008-2019, Linagora
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
