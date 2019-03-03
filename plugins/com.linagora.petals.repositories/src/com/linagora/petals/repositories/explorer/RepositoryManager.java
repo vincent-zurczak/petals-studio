@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.explorer;
+package com.linagora.petals.repositories.explorer;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,7 +22,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchListener;
 import org.eclipse.ui.PlatformUI;
 
-import com.ebmwebsoucing.petals.repositories.explorer.model.Repository;
+import com.linagora.petals.repositories.explorer.model.Repository;
 
 /**
  * The class in charge of managing all the end-point sources.

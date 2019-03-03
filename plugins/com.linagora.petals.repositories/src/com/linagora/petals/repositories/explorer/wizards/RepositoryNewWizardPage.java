@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.explorer.wizards;
+package com.linagora.petals.repositories.explorer.wizards;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-import com.ebmwebsoucing.petals.repositories.explorer.model.QueryApiBean;
+import com.linagora.petals.repositories.explorer.model.QueryApiBean;
 import com.linagora.petals.common.internal.provisional.utils.StringUtils;
 
 /**

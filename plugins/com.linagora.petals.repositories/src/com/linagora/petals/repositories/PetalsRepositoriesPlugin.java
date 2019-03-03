@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories;
+package com.linagora.petals.repositories;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -27,7 +27,7 @@ public class PetalsRepositoriesPlugin extends AbstractUIPlugin {
 	/**
 	 * The plug-in ID.
 	 */
-	public static final String PLUGIN_ID = "com.ebmwebsoucing.petals.repositories";
+	public static final String PLUGIN_ID = "com.linagora.petals.repositories";
 
 	/**
 	 * The unique instance of this class.

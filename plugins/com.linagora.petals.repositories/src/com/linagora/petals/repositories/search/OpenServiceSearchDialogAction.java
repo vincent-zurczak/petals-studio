@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.search;
+package com.linagora.petals.repositories.search;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.action.IAction;
@@ -21,7 +21,7 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 import org.eclipse.ui.PlatformUI;
 
-import com.ebmwebsoucing.petals.repositories.PetalsRepositoriesPlugin;
+import com.linagora.petals.repositories.PetalsRepositoriesPlugin;
 
 /**
  * An action that opens the search dialog and shows the "Service Search" tab.
@@ -32,7 +32,7 @@ public class OpenServiceSearchDialogAction implements IWorkbenchWindowActionDele
 	/**
 	 * The ID of the search page for services.
 	 */
-	private static final String SERVICE_SEARCH_PAGE_ID = "com.ebmwebsoucing.petals.repositories.search";
+	private static final String SERVICE_SEARCH_PAGE_ID = "com.linagora.petals.repositories.search";
 
 
 

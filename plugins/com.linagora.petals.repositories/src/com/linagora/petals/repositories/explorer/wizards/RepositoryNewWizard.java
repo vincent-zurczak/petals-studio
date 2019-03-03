@@ -10,12 +10,12 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.explorer.wizards;
+package com.linagora.petals.repositories.explorer.wizards;
 
 import org.eclipse.jface.wizard.Wizard;
 
-import com.ebmwebsoucing.petals.repositories.explorer.RepositoryManager;
-import com.ebmwebsoucing.petals.repositories.explorer.model.Repository;
+import com.linagora.petals.repositories.explorer.RepositoryManager;
+import com.linagora.petals.repositories.explorer.model.Repository;
 
 /**
  * @author Vincent Zurczak - EBM WebSourcing

@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.explorer;
+package com.linagora.petals.repositories.explorer;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.action.Action;
@@ -35,9 +35,9 @@ import org.eclipse.ui.navigator.ICommonActionExtensionSite;
 import org.eclipse.ui.navigator.ICommonViewerSite;
 import org.eclipse.ui.navigator.ICommonViewerWorkbenchSite;
 
-import com.ebmwebsoucing.petals.repositories.PetalsRepositoriesPlugin;
-import com.ebmwebsoucing.petals.repositories.explorer.model.Repository;
-import com.ebmwebsoucing.petals.repositories.explorer.wizards.RepositoryNewWizard;
+import com.linagora.petals.repositories.PetalsRepositoriesPlugin;
+import com.linagora.petals.repositories.explorer.model.Repository;
+import com.linagora.petals.repositories.explorer.wizards.RepositoryNewWizard;
 
 /**
  * Adds actions on elements from the repository explorer.

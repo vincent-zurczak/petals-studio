@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
 
-package com.ebmwebsoucing.petals.repositories.explorer;
+package com.linagora.petals.repositories.explorer;
 
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Image;
@@ -18,7 +18,7 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
-import com.ebmwebsoucing.petals.repositories.explorer.model.Repository;
+import com.linagora.petals.repositories.explorer.model.Repository;
 
 /**
  * @author Vincent Zurczak - EBM WebSourcing

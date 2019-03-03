@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Petals Service Repositories
 Bundle-SymbolicName: com.linagora.petals.repositories;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: com.ebmwebsoucing.petals.repositories.PetalsRepositoriesPlugin
+Bundle-Activator: com.linagora.petals.repositories.PetalsRepositoriesPlugin
 Bundle-Vendor: Linagora
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

@@ -10,9 +10,9 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.explorer;
+package com.linagora.petals.repositories.explorer;
 
-import com.ebmwebsoucing.petals.repositories.explorer.model.Repository;
+import com.linagora.petals.repositories.explorer.model.Repository;
 
 /**
  * @author Vincent Zurczak - EBM WebSourcing

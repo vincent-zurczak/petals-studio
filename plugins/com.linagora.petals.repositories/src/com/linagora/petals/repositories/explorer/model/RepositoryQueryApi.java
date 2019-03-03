@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.explorer.model;
+package com.linagora.petals.repositories.explorer.model;
 
 /**
  * A list of API to query service repositories.

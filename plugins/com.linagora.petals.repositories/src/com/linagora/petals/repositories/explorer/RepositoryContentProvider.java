@@ -10,7 +10,7 @@
  * 		Linagora - initial API and implementation
  *******************************************************************************/
  
-package com.ebmwebsoucing.petals.repositories.explorer;
+package com.linagora.petals.repositories.explorer;
 
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
@@ -18,7 +18,7 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.widgets.Display;
 
-import com.ebmwebsoucing.petals.repositories.explorer.model.Repository;
+import com.linagora.petals.repositories.explorer.model.Repository;
 
 /**
  * @author Vincent Zurczak - EBM WebSourcing
@@ -96,8 +96,8 @@ public class RepositoryContentProvider implements ITreeContentProvider, IReposit
 
 	/*
 	 * (non-Javadoc)
-	 * @see com.ebmwebsoucing.petals.repositories.explorer.IRepositoryChangeListener
-	 * #sourceAdded(com.ebmwebsoucing.petals.repositories.explorer.model.Repository)
+	 * @see com.linagora.petals.repositories.explorer.IRepositoryChangeListener
+	 * #sourceAdded(com.linagora.petals.repositories.explorer.model.Repository)
 	 */
 	public void repositoryAdded( final Repository repository ) {
 
