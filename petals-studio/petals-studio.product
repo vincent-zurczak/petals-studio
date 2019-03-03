@@ -4,17 +4,14 @@
 <product name="Petals Studio" uid="com.linagora.petals.studio.product" id="com.linagora.petals.studio.product" application="org.eclipse.ui.ide.workbench" version="1.5.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
-      <image path="petals-studio/icons/prod/aboutPetalsStudio.png"/>
+      <image path="icons/prod/aboutPetalsStudio.png"/>
    </aboutInfo>
 
    <configIni use="default">
    </configIni>
 
    <launcherArgs>
-      <programArgs>-plugincustomization 
-plugin_customization.ini 
---launcher.XXMaxPermSize
-256m
+      <programArgs>
       </programArgs>
       <vmArgs>-Xms40m
 -Xmx512m
@@ -23,7 +20,7 @@ plugin_customization.ini
       </vmArgsMac>
    </launcherArgs>
 
-   <windowImages i16="petals-studio/icons/prod/pstudio_16x16.png" i32="petals-studio/icons/prod/pstudio_32x32.png" i48="petals-studio/icons/prod/pstudio_48x48.png" i64="petals-studio/icons/prod/pstudio_64x64.png" i128="petals-studio/icons/prod/pstudio_128x128.png"/>
+   <windowImages i16="icons/prod/pstudio_16x16.png" i32="icons/prod/pstudio_32x32.png" i48="icons/prod/pstudio_48x48.png" i64="icons/prod/pstudio_64x64.png" i128="icons/prod/pstudio_128x128.png"/>
 
    <splash
       location="com.linagora.petals.studio,platform:/base/plugins/com.linagora.petals.studio"
@@ -31,9 +28,9 @@ plugin_customization.ini
       startupMessageRect="7,252,445,20"
       startupForegroundColor="000000" />
    <launcher name="PetalsStudio">
-      <linux icon="petals-studio/icons/prod/PetalsStudio_linux.xpm"/>
+      <linux icon="icons/prod/PetalsStudio_linux.xpm"/>
       <win useIco="true">
-         <ico path="petals-studio/icons/prod/PetalsStudio_win32.ico"/>
+         <ico path="icons/prod/PetalsStudio_win32.ico"/>
          <bmp/>
       </win>
    </launcher>
