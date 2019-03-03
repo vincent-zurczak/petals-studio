@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+	<target name="get.them.all" description="Download all the libraries">
+		<antcall target="get.them.for.libs-ant-p4" />
+		<antcall target="get.them.for.libs-camel-12" />
+		<antcall target="get.them.for.libs-cdk-p3" />
+		<antcall target="get.them.for.libs-cdk-p4" />
+		<antcall target="libs-jsr181" />
+	</target>
+	
+	<target name="get.them.for.libs-ant-p4">
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-ant/2.2.0/petals-ant-2.2.0.jar" dest="libs-ant-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-jbi/1.1.0/petals-jbi-1.1.0.jar" dest="libs-ant-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-jbi-descriptor/2.1.0/petals-jbi-descriptor-2.1.0.jar" dest="libs-ant-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-jmx/1.8/petals-jmx-1.8.jar" dest="libs-ant-p4/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-jmx-api/1.4/petals-jmx-api-1.4.jar" dest="libs-ant-p4/" skipexisting="true" />
+		<get src="http://central.maven.org/maven2/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar" dest="libs-ant-p4/" skipexisting="true" />
+	</target>
+	
+	<target name="get.them.for.libs-camel-12">
+		<get src="http://central.maven.org/maven2/org/apache/camel/camel-core/2.17.1/camel-core-2.17.1.jar" dest="libs-camel-12/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/camel-petals/1.2.0/camel-petals-1.2.0.jar" dest="libs-camel-12/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-se-camel-junit/1.2.0/petals-se-camel-junit-1.2.0.jar" dest="libs-camel-12/" skipexisting="true" />
+	</target>
+	
+	<target name="get.them.for.libs-cdk-p3">
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-api/2.1.1/petals-cdk-api-2.1.1.jar" dest="libs-cdk-p3/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-core/5.1.1/petals-cdk-core-5.1.1.jar" dest="libs-cdk-p3/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-jbidescriptor/2.1/petals-cdk-jbidescriptor-2.1.jar" dest="libs-cdk-p3/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-jbi/1.0.2/petals-jbi-1.0.2.jar" dest="libs-cdk-p3/" skipexisting="true" />
+	</target>
+	
+	<target name="get.them.for.libs-cdk-p4">
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-api/2.1.1/petals-cdk-api-2.2.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-core/5.1.1/petals-cdk-core-5.2.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-cdk-jbidescriptor/2.1/petals-cdk-jbidescriptor-2.2.jar" dest="libs-cdk-p4/" skipexisting="true" />
+		<get src="http://repo2.maven.org/maven2/org/ow2/petals/petals-jbi/1.0.2/petals-jbi-1.1.0.jar" dest="libs-cdk-p4/" skipexisting="true" />
+	</target>
+	
+	<target name="get.them.for.libs-jsr181">
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-io/1.0/easycommons-io-1.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-lang/1.0/easycommons-lang-1.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-logger/1.0/easycommons-logger-1.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-properties/1.0/easycommons-properties-1.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-stream/1.0/easycommons-stream-1.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-thread/1.0/easycommons-thread-1.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-util/2.0/easycommons-util-2.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/com/ebmwebsourcing/easycommons/easycommons-uuid/1.0/easycommons-uuid-1.0.jar" dest="libs-jsr181/" skipexisting="true" />
+		<get src="http://maven.petalslink.com/public/org/ow2/petals/petals-se-jsr181-library/1.2.0/petals-se-jsr181-library-1.2.0.jar" dest="libs-jsr181/" skipexisting="true" />
+	</target>
+</project>
