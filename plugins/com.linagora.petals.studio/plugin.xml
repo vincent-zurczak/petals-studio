@@ -121,10 +121,6 @@
                   value="http://doc.petalslink.com/display/petalsstudio/Petals+Studio">
             </parameter>
          </command>
-         <separator
-               name="com.linagora.petals.studio.weblinks.separator1"
-               visible="true">
-         </separator>
          <command
                commandId="com.linagora.petals.common.visitWebLink"
                icon="icons/favicon/favicon_jira.png"
@@ -133,34 +129,6 @@
             <parameter
                   name="url"
                   value="http://jira.petalslink.com/browse/PETALSSTUD">
-            </parameter>
-         </command>
-         <command
-               commandId="com.linagora.petals.common.visitWebLink"
-               label="Share feedback"
-               style="push">
-            <parameter
-                  name="url"
-                  value="http://www.petalslink.com/fr/feedback">
-            </parameter>
-         </command>
-         <command
-               commandId="com.linagora.petals.common.visitWebLink"
-               icon="icons/favicon/favicon_forum.png"
-               label="Ask community&apos;s help!"
-               style="push">
-            <parameter
-                  name="url"
-                  value="http://forum.petalslink.com">
-            </parameter>
-         </command>
-         <command
-               commandId="com.linagora.petals.common.visitWebLink"
-               label="Follow the Petals blogosphere"
-               style="push">
-            <parameter
-                  name="url"
-                  value="http://planet.petalslink.com">
             </parameter>
          </command>
          <separator
@@ -174,7 +142,7 @@
                style="push">
             <parameter
                   name="url"
-                  value="http://www.petalslink.com">
+                  value="https://linagora.com/">
             </parameter>
          </command>
       </menuContribution>
