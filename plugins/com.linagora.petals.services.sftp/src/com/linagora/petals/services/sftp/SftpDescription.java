@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.sftp;
 
 import java.util.Arrays;
@@ -27,6 +27,7 @@ public abstract class SftpDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #isBc()
 	 */
+	@Override
 	public boolean isBc() {
 		return true;
 	}
@@ -36,6 +37,7 @@ public abstract class SftpDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentName()
 	 */
+	@Override
 	public String getComponentName() {
 		return "petals-bc-sftp";
 	}
@@ -45,6 +47,7 @@ public abstract class SftpDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAlias()
 	 */
+	@Override
 	public String getComponentAlias() {
 		return "SFTP";
 	}
@@ -54,6 +57,7 @@ public abstract class SftpDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAnnotation()
 	 */
+	@Override
 	public String getComponentAnnotation() {
 		return null;
 	}
@@ -63,6 +67,7 @@ public abstract class SftpDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getProvideDescription()
 	 */
+	@Override
 	public String getProvideDescription() {
 		return "Create a Petals service to interact with a secured FTP server.";
 	}
@@ -72,6 +77,7 @@ public abstract class SftpDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getConsumeDescription()
 	 */
+	@Override
 	public String getConsumeDescription() {
 		return null;
 	}
@@ -81,7 +87,8 @@ public abstract class SftpDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getKeyWords()
 	 */
+	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.communication });
+		return Arrays.asList( PetalsKeyWords.connector );
 	}
 }

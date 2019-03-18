@@ -20,15 +20,12 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
-import com.linagora.petals.services.Messages;
 import com.linagora.petals.services.su.wizards.pages.ChoicePage;
 
 /**
  * @author Mickael Istria - EBM WebSourcing
  */
 public class NewServiceUnitSelectionWizard extends Wizard implements INewWizard, IExecutableExtension {
-
-	private PetalsMode petalsMode;
 	private FinishServiceCreationStrategy strategy;
 
 
@@ -48,7 +45,6 @@ public class NewServiceUnitSelectionWizard extends Wizard implements INewWizard,
 	public NewServiceUnitSelectionWizard(PetalsMode mode, FinishServiceCreationStrategy strategy) {
 		this();
 		this.strategy = strategy;
-		this.petalsMode = mode;
 		init();
 	}
 
@@ -60,7 +56,6 @@ public class NewServiceUnitSelectionWizard extends Wizard implements INewWizard,
 	 */
 	@Override
 	public void setInitializationData( IConfigurationElement config, String propertyName, Object data ) throws CoreException {
-		this.petalsMode = "provides".equalsIgnoreCase( String.valueOf( data )) ? PetalsMode.provides : PetalsMode.consumes;
 		this.strategy = new CreateJBIStrategy();
 		init();
 	}
@@ -70,11 +65,7 @@ public class NewServiceUnitSelectionWizard extends Wizard implements INewWizard,
 	 * Initializes some data.
 	 */
 	public void init() {
-		if (this.petalsMode == PetalsMode.provides) {
-			setWindowTitle(Messages.provideTitle);
-		} else {
-			setWindowTitle(Messages.consumeTitle);
-		}
+		setWindowTitle( "New Service Unit" );
 	}
 
 
@@ -83,7 +74,7 @@ public class NewServiceUnitSelectionWizard extends Wizard implements INewWizard,
 	 */
 	@Override
 	public void addPages() {
-		addPage( new ChoicePage( this.petalsMode, this.strategy ));
+		addPage( new ChoicePage( this.strategy ));
 	}
 
 

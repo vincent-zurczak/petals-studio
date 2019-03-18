@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.xslt;
 
 import java.util.Arrays;
@@ -32,6 +32,7 @@ public abstract class XsltDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #isBc()
 	 */
+	@Override
 	public boolean isBc() {
 		return false;
 	}
@@ -41,6 +42,7 @@ public abstract class XsltDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentName()
 	 */
+	@Override
 	public String getComponentName() {
 		return "petals-se-xslt";
 	}
@@ -50,6 +52,7 @@ public abstract class XsltDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAlias()
 	 */
+	@Override
 	public String getComponentAlias() {
 		return "XSLT";
 	}
@@ -59,6 +62,7 @@ public abstract class XsltDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAnnotation()
 	 */
+	@Override
 	public String getComponentAnnotation() {
 		return null;
 	}
@@ -68,6 +72,7 @@ public abstract class XsltDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getProvideDescription()
 	 */
+	@Override
 	public String getProvideDescription() {
 		return "Create a Petals service to transform messages with XSL.";
 	}
@@ -77,6 +82,7 @@ public abstract class XsltDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getConsumeDescription()
 	 */
+	@Override
 	public String getConsumeDescription() {
 		return null;
 	}
@@ -86,10 +92,11 @@ public abstract class XsltDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getKeyWords()
 	 */
+	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.miscellaneous, PetalsKeyWords.integration });
+		return Arrays.asList( PetalsKeyWords.engine );
 	}
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription

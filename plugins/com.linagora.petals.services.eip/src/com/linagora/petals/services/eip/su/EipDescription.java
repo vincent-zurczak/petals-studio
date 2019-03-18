@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.eip.su;
 
 import java.util.Arrays;
@@ -27,6 +27,7 @@ public class EipDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #isBc()
 	 */
+	@Override
 	public boolean isBc() {
 		return false;
 	}
@@ -36,6 +37,7 @@ public class EipDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentName()
 	 */
+	@Override
 	public String getComponentName() {
 		return "petals-se-eip";
 	}
@@ -45,6 +47,7 @@ public class EipDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAlias()
 	 */
+	@Override
 	public String getComponentAlias() {
 		return "EIP";
 	}
@@ -54,6 +57,7 @@ public class EipDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAnnotation()
 	 */
+	@Override
 	public String getComponentAnnotation() {
 		return null;
 	}
@@ -63,6 +67,7 @@ public class EipDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getProvideDescription()
 	 */
+	@Override
 	public String getProvideDescription() {
 		return "Assemble Petals services by using Enterprise Integration Patterns.";
 	}
@@ -72,6 +77,7 @@ public class EipDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getConsumeDescription()
 	 */
+	@Override
 	public String getConsumeDescription() {
 		return null;
 	}
@@ -81,8 +87,9 @@ public class EipDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getKeyWords()
 	 */
+	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.composition, PetalsKeyWords.integration });
+		return Arrays.asList( PetalsKeyWords.engine );
 	}
 
 

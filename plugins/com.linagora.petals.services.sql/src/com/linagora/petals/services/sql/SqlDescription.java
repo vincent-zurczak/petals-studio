@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.sql;
 
 import java.util.Arrays;
@@ -89,9 +89,9 @@ public abstract class SqlDescription extends ComponentVersionDescription {
 	 */
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.miscellaneous, PetalsKeyWords.integration, PetalsKeyWords.communication });
+		return Arrays.asList( PetalsKeyWords.connector );
 	}
-	
+
 
 	/*
 	 * (non-Javadoc)

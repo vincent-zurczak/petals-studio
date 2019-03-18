@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.su.extensions.generic;
 
 import java.util.Arrays;
@@ -93,7 +93,7 @@ public class GenericComponentDescription extends ComponentVersionDescription {
 	 */
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.miscellaneous });
+		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.engine });
 	}
 
 

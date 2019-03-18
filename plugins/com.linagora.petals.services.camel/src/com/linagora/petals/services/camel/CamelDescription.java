@@ -55,7 +55,7 @@ public abstract class CamelDescription extends ComponentVersionDescription {
 
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( PetalsKeyWords.composition, PetalsKeyWords.integration );
+		return Arrays.asList( PetalsKeyWords.engine );
 	}
 
 	@Override

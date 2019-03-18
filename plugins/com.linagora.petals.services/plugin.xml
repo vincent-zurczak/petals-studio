@@ -237,7 +237,7 @@
             hasPages="true"
             icon="icons/obj16/service_assembly.png"
             id="com.linagora.petals.services.sa.project"
-            name="Service Assembly"
+            name="Service Assembly (SA)"
             project="true">
          <description>
             Create a Service Assembly project compatible with the Petals Maven plug-in
@@ -245,28 +245,15 @@
       </wizard>
       <wizard
             category="com.linagora.petals.common.wizards"
-            class="com.linagora.petals.services.su.wizards.NewServiceUnitSelectionWizard:provides"
+            class="com.linagora.petals.services.su.wizards.NewServiceUnitSelectionWizard"
             finalPerspective="com.linagora.petals.common.mainPerspective"
             hasPages="true"
-            icon="icons/obj16/provides_3.0.png"
-            id="com.linagora.petals.services.provider.project"
-            name="Service Provider (SU)"
+            icon="icons/obj16/service_unit.png"
+            id="com.linagora.petals.services.su.project"
+            name="Service Unit (SU)"
             project="true">
          <description>
-            Create a Service Unit project to define provide a new Petals service inside the bus.
-         </description>
-      </wizard>
-      <wizard
-            category="com.linagora.petals.common.wizards"
-            class="com.linagora.petals.services.su.wizards.NewServiceUnitSelectionWizard:consumes"
-            finalPerspective="com.linagora.petals.common.mainPerspective"
-            hasPages="true"
-            icon="icons/obj16/consumes_3.0.png"
-            id="com.linagora.petals.services.consumer.project"
-            name="Service Consumer (SU)"
-            project="true">
-         <description>
-            Create a Service Unit project to make a new Petals service available from outside of the bus.
+            Create a Service Unit project for Petals.
          </description>
       </wizard>
    </extension>
@@ -302,10 +289,10 @@
          <command
                commandId="org.eclipse.ui.newWizard"
                icon="icons/obj16/service_assembly.png"
-               label="Service Assembly"
+               label="Service Assembly (SA)"
                mnemonic="A"
                style="push"
-               tooltip="Create a new Service Assembly project">
+               tooltip="Create a new Service Assembly (SA) project">
             <parameter
                   name="newWizardId"
                   value="com.linagora.petals.services.sa.project">
@@ -314,23 +301,12 @@
          <command
                commandId="org.eclipse.ui.newWizard"
                icon="icons/obj16/provides_3.0.png"
-               label="Petals Service Provider"
+               label="Service Unit (SU)"
                style="push"
-               tooltip="Create a new Petals Service Provider (SU project)">
+               tooltip="Create a new Service Unit (SU) project">
             <parameter
                   name="newWizardId"
-                  value="com.linagora.petals.services.provider.project">
-            </parameter>
-         </command>
-         <command
-               commandId="org.eclipse.ui.newWizard"
-               icon="icons/obj16/consumes_3.0.png"
-               label="Petals Service Consumer"
-               style="push"
-               tooltip="Create a new Petals Service Consumer (SU project)">
-            <parameter
-                  name="newWizardId"
-                  value="com.linagora.petals.services.consumer.project">
+                  value="com.linagora.petals.services.su.project">
             </parameter>
          </command>
       </menuContribution>
@@ -339,10 +315,10 @@
          <command
                commandId="org.eclipse.ui.newWizard"
                icon="icons/obj16/service_assembly.png"
-               label="Service Assembly"
+               label="Service Assembly (SA)"
                mnemonic="A"
                style="push"
-               tooltip="Create a new Service Assembly project">
+               tooltip="Create a new Service Assembly (SA) project">
             <parameter
                   name="newWizardId"
                   value="com.linagora.petals.services.sa.project">
@@ -350,24 +326,13 @@
          </command>
          <command
                commandId="org.eclipse.ui.newWizard"
-               icon="icons/obj16/consumes_3.0.png"
-               label="Petals Service Consumer"
-               style="push"
-               tooltip="Create a new Petals Service Consumer (SU project)">
-            <parameter
-                  name="newWizardId"
-                  value="com.linagora.petals.services.consumer.project">
-            </parameter>
-         </command>
-         <command
-               commandId="org.eclipse.ui.newWizard"
                icon="icons/obj16/provides_3.0.png"
-               label="Petals Service Provider"
+               label="Service Unit (SU)"
                style="push"
-               tooltip="Create a new Petals Service Provider (SU project)">
+               tooltip="Create a new Service Unit (SU) project">
             <parameter
                   name="newWizardId"
-                  value="com.linagora.petals.services.provider.project">
+                  value="com.linagora.petals.services.su.project">
             </parameter>
          </command>
       </menuContribution>

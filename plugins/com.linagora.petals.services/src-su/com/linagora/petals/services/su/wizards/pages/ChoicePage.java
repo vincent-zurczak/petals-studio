@@ -9,13 +9,14 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.su.wizards.pages;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -23,6 +24,7 @@ import java.util.TreeSet;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
@@ -79,42 +81,28 @@ public class ChoicePage extends WizardSelectionPage {
 
 	public static final String PAGE_NAME = "ChoicePage";
 
-	private final Map<PetalsKeyWords,Image> keywordToImage;
+	private final FinishServiceCreationStrategy strategy;
+	private final Image bcImg, seImg, tipImg;
+
 	private Image helpImg;
-	private final Image bcImg;
-	private final Image seImg;
 	private Font boldFont;
 	private FixedShellTooltip helpTooltip;
-
-	private final PetalsMode petalsMode;
-	private final FinishServiceCreationStrategy strategy;
 
 
 	/**
 	 * Constructor.
 	 * @param strategy
 	 */
-	public ChoicePage( PetalsMode petalsMode, FinishServiceCreationStrategy strategy ) {
+	public ChoicePage( FinishServiceCreationStrategy strategy ) {
 		super( PAGE_NAME );
-		this.petalsMode = petalsMode;
 		this.strategy = strategy;
 
-		setTitle( petalsMode == PetalsMode.provides ? "Petals Service Provider" : "Petals Service Consumer" );
+		setTitle( "Service Unit Project" );
 		setDescription( "Select the Petals component to configure and its version." );
 
 		this.bcImg = PetalsServicesPlugin.loadImage( "icons/obj16/choice_bc_16x16.png" );
 		this.seImg = PetalsServicesPlugin.loadImage( "icons/obj16/choice_se_16x16.png" );
-
-		this.keywordToImage = new HashMap<PetalsKeyWords,Image> ();
-		for( PetalsKeyWords kw : PetalsKeyWords.values()) {
-			try {
-				Image img = kw.getImageDescriptor().createImage();
-				this.keywordToImage.put( kw, img );
-
-			} catch( Exception e ) {
-				PetalsServicesPlugin.log( e, IStatus.ERROR );
-			}
-		}
+		this.tipImg = PetalsServicesPlugin.loadImage( "icons/obj16/smartmode_co.gif" );
 	}
 
 
@@ -129,7 +117,7 @@ public class ChoicePage extends WizardSelectionPage {
 		// Create the composite container and define its layout
 		final Composite container = SwtFactory.createComposite( parent );
 		setControl( container );
-		SwtFactory.applyNewGridLayout( container, 2, false, 15, 0, 0, 15 );
+		SwtFactory.applyNewGridLayout( container, 2, false, 15, 0, 15, 15 );
 		SwtFactory.applyHorizontalGridData( container );
 
 
@@ -220,24 +208,30 @@ public class ChoicePage extends WizardSelectionPage {
 			}
 		};
 
-		final Map<String,Collection<AbstractServiceUnitWizard>> componentNameToHandler = new TreeMap<String,Collection<AbstractServiceUnitWizard>> ();
-		final Map<PetalsKeyWords,Set<String>> keywordToComponentName = new TreeMap<PetalsKeyWords,Set<String>> ();
-		for( AbstractServiceUnitWizard handler : ExtensionManager.INSTANCE.findComponentWizards( this.petalsMode )) {
-			for( PetalsKeyWords keyword : handler.getComponentVersionDescription().getKeyWords()) {
-				Set<String> list = keywordToComponentName.get( keyword );
-				if( list == null )
-					list = new TreeSet<String> ();
+		final Map<String,Collection<AbstractServiceUnitWizard>> componentNameToHandlers = new TreeMap<> ();
+		final Map<String,AbstractServiceUnitWizard> componentIdToHandler = new TreeMap<> ();
+		final Map<PetalsKeyWords,Set<String>> keywordToComponentName = new TreeMap<> ();
 
-				String componentName = handler.getComponentVersionDescription().getComponentName();
-				list.add( componentName );
-				keywordToComponentName.put( keyword, list );
+		for( PetalsMode petalsMode : PetalsMode.values()) {
+			for( AbstractServiceUnitWizard handler : ExtensionManager.INSTANCE.findComponentWizards( petalsMode )) {
+				for( PetalsKeyWords keyword : handler.getComponentVersionDescription().getKeyWords()) {
+					Set<String> list = keywordToComponentName.get( keyword );
+					if( list == null )
+						list = new TreeSet<> ();
 
-				Collection<AbstractServiceUnitWizard> handlers = componentNameToHandler.get( componentName );
-				if( handlers == null )
-					handlers = new TreeSet<AbstractServiceUnitWizard>( comparator );
+					String componentVersion = handler.getComponentVersionDescription().getComponentVersion();
+					String componentName = handler.getComponentVersionDescription().getComponentName();
+					list.add( componentName );
+					keywordToComponentName.put( keyword, list );
 
-				handlers.add( handler );
-				componentNameToHandler.put( componentName, handlers );
+					Collection<AbstractServiceUnitWizard> handlers = componentNameToHandlers.get( componentName );
+					if( handlers == null )
+						handlers = new TreeSet<>( comparator );
+
+					handlers.add( handler );
+					componentNameToHandlers.put( componentName, handlers );
+					componentIdToHandler.put( componentName + petalsMode + componentVersion, handler );
+				}
 			}
 		}
 
@@ -255,7 +249,8 @@ public class ChoicePage extends WizardSelectionPage {
 
 				String result;
 				if( element instanceof String ) {
-					IComponentDescription desc = componentNameToHandler.get( element ).iterator().next().getComponentVersionDescription();
+
+					IComponentDescription desc = componentNameToHandlers.get( element ).iterator().next().getComponentVersionDescription();
 					String componentName = desc.getComponentName();
 					String componentAlias = desc.getComponentAlias();
 					String annotation = desc.getComponentAnnotation();
@@ -281,13 +276,11 @@ public class ChoicePage extends WizardSelectionPage {
 			@Override
 			public Image getImage( Object element ) {
 
-				Image result = null;
-				if( element instanceof PetalsKeyWords ) {
-					result = ChoicePage.this.keywordToImage.get( element );
-				} else {
-					IComponentDescription desc = componentNameToHandler.get( element ).iterator().next().getComponentVersionDescription();
-					result = desc.isBc() ? ChoicePage.this.bcImg : ChoicePage.this.seImg;
-				}
+				Image result = ChoicePage.this.seImg;
+				if( PetalsKeyWords.connector.equals( element )
+						|| element instanceof String
+						&& componentNameToHandlers.get( element ).iterator().next().getComponentVersionDescription().isBc())
+					result = ChoicePage.this.bcImg;
 
 				return result;
 			}
@@ -368,8 +361,25 @@ public class ChoicePage extends WizardSelectionPage {
 		});
 
 
-		final Label descriptionLabel = new Label( container, SWT.NONE );
-		GridDataFactory.swtDefaults().span( 2, 1 ).indent( 0, 10 ).applyTo( descriptionLabel );
+		// Selection for the mode
+		new Label( container, SWT.NONE ).setText( "Component Mode:" );
+		final ComboViewer modeCombo = new ComboViewer( container, SWT.BORDER | SWT.DROP_DOWN | SWT.READ_ONLY );
+		layoutData = new GridData();
+		layoutData.widthHint = 130;
+		modeCombo.getCombo().setLayoutData( layoutData );
+		modeCombo.setContentProvider( new ArrayContentProvider());
+		modeCombo.setLabelProvider( new LabelProvider());
+
+
+		// The description label
+		Composite subC = new Composite( container, SWT.NONE );
+		GridLayoutFactory.swtDefaults().numColumns( 2 ).margins( 0, 0 ).applyTo( subC );
+		GridDataFactory.swtDefaults().indent( 0, 5 ).span( 2, 1 ).applyTo( subC );
+
+		final Label descriptionImgLabel = new Label( subC, SWT.NONE );
+		descriptionImgLabel.setImage( this.tipImg );
+		descriptionImgLabel.setVisible( false );
+		final Label descriptionLabel = new Label( subC, SWT.NONE );
 
 
 		// Selection listeners
@@ -395,17 +405,20 @@ public class ChoicePage extends WizardSelectionPage {
 				if( o == null || o instanceof PetalsKeyWords )
 					input = Collections.emptyList();
 				else
-					input = componentNameToHandler.get( o );
+					input = componentNameToHandlers.get( o );
 
 				// Default selection - there is always one
 				versionCombo.setInput( input );
 				versionCombo.getCombo().setVisibleItemCount( input.size() > 0 ? input.size() : 1 );
 				if( ! input.isEmpty()) {
+					descriptionImgLabel.setVisible( true );
 					versionCombo.setSelection( new StructuredSelection( input.iterator().next()));
 					versionCombo.getCombo().notifyListeners( SWT.Selection, new Event());
+
 				} else {
 					setPageComplete( false );
 					setSelectedNode( null );
+					descriptionImgLabel.setVisible( false );
 					descriptionLabel.setText( "" );
 					descriptionLabel.getParent().layout();
 				}
@@ -421,13 +434,49 @@ public class ChoicePage extends WizardSelectionPage {
 					return;
 
 				setPageComplete( true );
-				setSelectedNode( getWizardNode( suWizard ));
+				List<PetalsMode> supportedModes = new ArrayList<>( 2 );
+				if( suWizard.getComponentVersionDescription().isProvide() || suWizard.getComponentVersionDescription().isProxy()) {
+					supportedModes.add( PetalsMode.provides );
+				}
 
-				String desc = ChoicePage.this.petalsMode == PetalsMode.provides ?
+				if( suWizard.getComponentVersionDescription().isConsume()) {
+					supportedModes.add( PetalsMode.consumes );
+				}
+
+				PetalsMode currentPetalsMode = (PetalsMode) ((IStructuredSelection) modeCombo.getSelection()).getFirstElement();
+				modeCombo.setInput( supportedModes );
+				PetalsMode nextPetalsMode = supportedModes.contains( currentPetalsMode ) ? currentPetalsMode : supportedModes.get( 0 );
+
+				modeCombo.setSelection( new StructuredSelection( nextPetalsMode ));
+				modeCombo.getCombo().notifyListeners( SWT.Selection, new Event());
+			}
+		});
+
+
+		modeCombo.addSelectionChangedListener( new ISelectionChangedListener() {
+			@Override
+			public void selectionChanged( SelectionChangedEvent event ) {
+
+				// We have the right component and version...
+				AbstractServiceUnitWizard suWizard = (AbstractServiceUnitWizard) ((IStructuredSelection) versionCombo.getSelection()).getFirstElement();
+				if( suWizard == null )
+					return;
+
+				PetalsMode petalsMode = (PetalsMode) ((IStructuredSelection) modeCombo.getSelection()).getFirstElement();
+				String desc = petalsMode == PetalsMode.provides ?
 						suWizard.getComponentVersionDescription().getProvideDescription()
 						: suWizard.getComponentVersionDescription().getConsumeDescription();
+
 				descriptionLabel.setText( desc );
-				descriptionLabel.getParent().layout();
+				descriptionLabel.getParent().getParent().layout();
+
+				// ... but not the right mode (and wizard)
+				String componentVersion = suWizard.getComponentVersionDescription().getComponentVersion();
+				String componentName = suWizard.getComponentVersionDescription().getComponentName();
+				String key = componentName + petalsMode + componentVersion;
+
+				suWizard = componentIdToHandler.get( key );
+				setSelectedNode( getWizardNode( suWizard ));
 			}
 		});
 
@@ -445,7 +494,7 @@ public class ChoicePage extends WizardSelectionPage {
 	 * @return
 	 */
 	protected IWizardNode getWizardNode(AbstractServiceUnitWizard wizard) {
-		wizard.setStrategy(this.strategy);
+		wizard.setStrategy( this.strategy );
 		return new ComponentWizardDescriptionWizardNode(wizard);
 	}
 
@@ -468,13 +517,11 @@ public class ChoicePage extends WizardSelectionPage {
 		if( this.bcImg != null && ! this.bcImg.isDisposed())
 			this.bcImg.dispose();
 
+		if( this.tipImg != null && ! this.tipImg.isDisposed())
+			this.tipImg.dispose();
+
 		if( this.boldFont != null && ! this.boldFont.isDisposed())
 			this.boldFont.dispose();
-
-		for( Image img : this.keywordToImage.values()) {
-			if( img != null && ! img.isDisposed())
-				img.dispose();
-		}
 
 		super.dispose();
 	}

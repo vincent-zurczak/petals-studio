@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.su.wizards;
 
 /**
@@ -19,8 +19,8 @@ package com.linagora.petals.services.su.wizards;
  *  <li><i>Consumes</i> defines pure service consumers.</li>
  *  <li>
  *  <i>Proxies</i> and <i>orchestrators</i> are both providers and consumers. However,
- *  the consume part is considered as a part of the implementation and is thus not considered.
- *  Therefore, proxies and orchestrators are considered as service providers.
+ *  the consume part is considered as a part of the implementation and is thus not relevant.
+ *  Proxies and orchestrators are considered as service providers.
  *  </li>
  * </ul>
  *
@@ -39,10 +39,10 @@ public enum PetalsMode {
 		String result;
 		switch( this ) {
 		case provides:
-			result = "Provide or Import a service in Petals ESB";
+			result = "Provides";
 			break;
 		case consumes:
-			result = "Consume a Petals service (or Expose it outside the bus)";
+			result = "Consumes";
 			break;
 		default:
 			result = "";

@@ -55,7 +55,7 @@ public abstract class FlowableDescription extends ComponentVersionDescription {
 
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( PetalsKeyWords.composition, PetalsKeyWords.soa );
+		return Arrays.asList( PetalsKeyWords.engine );
 	}
 
 	@Override

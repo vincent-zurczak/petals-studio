@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.pojo;
 
 import java.util.Arrays;
@@ -89,6 +89,6 @@ public abstract class PojoDescription extends ComponentVersionDescription {
 	 */
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.integration, PetalsKeyWords.code, PetalsKeyWords.composition });
+		return Arrays.asList( PetalsKeyWords.engine );
 	}
 }

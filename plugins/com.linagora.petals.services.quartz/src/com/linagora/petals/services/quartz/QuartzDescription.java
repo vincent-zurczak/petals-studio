@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.quartz;
 
 import java.util.Arrays;
@@ -27,6 +27,7 @@ public abstract class QuartzDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #isBc()
 	 */
+	@Override
 	public boolean isBc() {
 		return false;
 	}
@@ -36,6 +37,7 @@ public abstract class QuartzDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentName()
 	 */
+	@Override
 	public String getComponentName() {
 		return "petals-se-quartz";
 	}
@@ -45,6 +47,7 @@ public abstract class QuartzDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAlias()
 	 */
+	@Override
 	public String getComponentAlias() {
 		return "Quartz";
 	}
@@ -54,6 +57,7 @@ public abstract class QuartzDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getComponentAnnotation()
 	 */
+	@Override
 	public String getComponentAnnotation() {
 		return null;
 	}
@@ -63,6 +67,7 @@ public abstract class QuartzDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getProvideDescription()
 	 */
+	@Override
 	public String getProvideDescription() {
 		return null;
 	}
@@ -72,6 +77,7 @@ public abstract class QuartzDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getConsumeDescription()
 	 */
+	@Override
 	public String getConsumeDescription() {
 		return "Schedule the invocation of a Petals service.";
 	}
@@ -81,7 +87,8 @@ public abstract class QuartzDescription extends ComponentVersionDescription {
 	 * @see com.linagora.petals.services.su.extensions.ComponentVersionDescription
 	 * #getKeyWords()
 	 */
+	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.miscellaneous, PetalsKeyWords.soa, PetalsKeyWords.integration });
+		return Arrays.asList( PetalsKeyWords.connector );
 	}
 }

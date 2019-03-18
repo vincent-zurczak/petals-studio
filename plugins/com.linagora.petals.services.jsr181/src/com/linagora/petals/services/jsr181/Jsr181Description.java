@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.services.jsr181;
 
 import java.util.Arrays;
@@ -89,6 +89,6 @@ public abstract class Jsr181Description extends ComponentVersionDescription {
 	 */
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( new PetalsKeyWords[] { PetalsKeyWords.soa, PetalsKeyWords.code, PetalsKeyWords.composition });
+		return Arrays.asList( PetalsKeyWords.engine );
 	}
 }

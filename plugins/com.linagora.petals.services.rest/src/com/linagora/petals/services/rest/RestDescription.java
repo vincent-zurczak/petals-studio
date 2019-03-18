@@ -76,6 +76,6 @@ public abstract class RestDescription extends ComponentVersionDescription {
 	 */
 	@Override
 	public List<PetalsKeyWords> getKeyWords() {
-		return Arrays.asList( PetalsKeyWords.communication );
+		return Arrays.asList( PetalsKeyWords.connector );
 	}
 }
