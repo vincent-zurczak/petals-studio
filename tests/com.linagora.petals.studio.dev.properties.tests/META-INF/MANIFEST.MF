@@ -4,7 +4,7 @@ Bundle-Name: Petals Studio - Tests for Petals Properties
 Bundle-SymbolicName: com.linagora.petals.studio.dev.properties.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Linagora
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ClassPath: .
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.linagora.petals.studio.dev.properties,

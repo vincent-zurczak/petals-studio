@@ -15,6 +15,6 @@ Require-Bundle: org.eclipse.ui,
  com.linagora.petals.services.cdk,
  org.eclipse.ui.forms,
  org.eclipse.emf.edit
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: com.linagora.petals.services.pojo.PetalsPojoPlugin

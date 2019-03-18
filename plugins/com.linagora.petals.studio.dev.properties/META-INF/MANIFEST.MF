@@ -4,7 +4,7 @@ Bundle-Name: Petals Properties Model
 Bundle-SymbolicName: com.linagora.petals.studio.dev.properties;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Linagora
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ClassPath: lib/bracket-properties-1.3.2.jar,
  .
 Bundle-ActivationPolicy: lazy

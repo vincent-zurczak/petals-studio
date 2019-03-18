@@ -10,5 +10,5 @@ Require-Bundle: com.linagora.petals.common,
  com.linagora.petals.common.generation,
  org.eclipse.ui,
  org.junit
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

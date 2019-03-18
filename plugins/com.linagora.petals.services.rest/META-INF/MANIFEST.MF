@@ -21,7 +21,7 @@ Require-Bundle: com.linagora.petals.services,
  org.eclipse.emf.edit,
  com.linagora.petals.services.cdk;visibility:=reexport,
  com.linagora.petals.common.generation
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: com.linagora.petals.services.rest.rest,
  com.linagora.petals.services.rest.rest.impl,
  com.linagora.petals.services.rest.rest.util

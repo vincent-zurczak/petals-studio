@@ -16,7 +16,7 @@ Require-Bundle: com.linagora.petals.services,
  org.eclipse.ui.forms,
  org.eclipse.emf.databinding.edit,
  org.eclipse.bpel.common.wsdl
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: com.linagora.petals.services.validation.PetalsValidationPlugin
 

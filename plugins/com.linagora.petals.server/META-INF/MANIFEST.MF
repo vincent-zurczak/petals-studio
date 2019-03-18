@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.debug.ui,
  com.linagora.petals.common,
  org.eclipse.bpel.common.wsdl
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: lib/annotations-1.0.0.jar,
  lib/aopalliance-1.0.jar,
