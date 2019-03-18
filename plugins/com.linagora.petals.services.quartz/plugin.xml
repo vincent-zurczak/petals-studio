@@ -21,34 +21,6 @@
       <ComponentSupport
             id="quartz">
          <ComponentVersionSupport
-               componentVersionDescription="com.linagora.petals.services.quartz.v11.QuartzDescription11"
-               consumesExtensionWizard="com.linagora.petals.services.quartz.v11.QuartzWizard11"
-               editorExtension="com.linagora.petals.services.quartz.editor.QuartzEditorContribution"
-               id="Quartz 1.1"
-               namespace="http://petals.ow2.org/components/quartz/version-1">
-         </ComponentVersionSupport>
-         <ComponentVersionSupport
-               componentVersionDescription="com.linagora.petals.services.quartz.v12.QuartzDescription12"
-               consumesExtensionWizard="com.linagora.petals.services.quartz.v12.QuartzWizard12"
-               editorExtension="com.linagora.petals.services.quartz.editor.QuartzEditorContribution"
-               id="Quartz 1.2"
-               namespace="http://petals.ow2.org/components/quartz/version-1">
-         </ComponentVersionSupport>
-         <ComponentVersionSupport
-               componentVersionDescription="com.linagora.petals.services.quartz.v13.QuartzDescription13"
-               consumesExtensionWizard="com.linagora.petals.services.quartz.v13.QuartzWizard13"
-               editorExtension="com.linagora.petals.services.quartz.editor.QuartzEditorContribution"
-               id="Quartz 1.3"
-               namespace="http://petals.ow2.org/components/quartz/version-1">
-         </ComponentVersionSupport>
-         <ComponentVersionSupport
-               componentVersionDescription="com.linagora.petals.services.quartz.v14.QuartzDescription14"
-               consumesExtensionWizard="com.linagora.petals.services.quartz.v14.QuartzWizard14"
-               editorExtension="com.linagora.petals.services.quartz.editor.QuartzEditorContribution"
-               id="Quartz 1.4"
-               namespace="http://petals.ow2.org/components/quartz/version-1">
-         </ComponentVersionSupport>
-         <ComponentVersionSupport
                componentVersionDescription="com.linagora.petals.services.quartz.v15.QuartzDescription15"
                consumesExtensionWizard="com.linagora.petals.services.quartz.v15.QuartzWizard15"
                editorExtension="com.linagora.petals.services.quartz.editor.QuartzEditorContribution"
