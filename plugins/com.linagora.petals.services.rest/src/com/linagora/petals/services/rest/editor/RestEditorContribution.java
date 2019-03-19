@@ -20,21 +20,13 @@ import com.linagora.petals.services.su.editor.extensibility.JbiEditorDetailsCont
  */
 public class RestEditorContribution extends EditorContributionSupport {
 
-	/* (non-Javadoc)
-	 * @see com.linagora.petals.services.su.editor.extensibility.EditorContributionSupport#getProvidesContribution()
-	 */
 	@Override
 	protected JbiEditorDetailsContribution getProvidesContribution() {
-		// TODO Auto-generated method stub
-		return null;
+		return new RestProvidesEditorContribution();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.linagora.petals.services.su.editor.extensibility.EditorContributionSupport#getConsumesContribution()
-	 */
 	@Override
 	protected JbiEditorDetailsContribution getConsumesContribution() {
-		// TODO Auto-generated method stub
-		return null;
+		return new RestConsumesEditorContribution();
 	}
 }
