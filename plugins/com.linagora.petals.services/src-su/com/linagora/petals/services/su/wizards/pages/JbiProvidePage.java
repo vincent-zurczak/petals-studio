@@ -16,14 +16,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.namespace.QName;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -75,7 +74,7 @@ public class JbiProvidePage extends JbiAbstractPage {
 	@Override
 	public String getDescription() {
 
-		this.jbiBasicBeans = new ArrayList<> ();
+		this.jbiBasicBeans = new ArrayList<WsdlUtils.JbiBasicBean> ();
 		if( getWizard().getComponentVersionDescription().isBc())
 			return "Define the JBI identifier of the resource to expose as a Petals service.";
 		else
@@ -99,21 +98,21 @@ public class JbiProvidePage extends JbiAbstractPage {
 		createAutoGenerationWidget( container );
 		createExplanationBox( container );
 
-		this.srvText.addModifyListener( new ModifyListener() {
+		this.srvQText.getLocalPartText().addModifyListener( new ModifyListener() {
 			@Override
 			public void modifyText( ModifyEvent e ) {
 				if( ! JbiProvidePage.this.edptText.isEnabled())
 					return;
 
-				String srv = ((Text) e.widget).getText().trim();
+				String srv = ((StyledText) e.widget).getText().trim();
 				JbiProvidePage.this.edptText.setText( srv.length() == 0 ? "" : srv + "Endpoint" );
 			}
 		});
 
 		// In provides, there should be default values for triplets
-		getNewlyCreatedEndpoint().setInterfaceName( new QName( this.itfNsText.getText(), this.itfText.getText()));
-		getNewlyCreatedEndpoint().setServiceName( new QName( this.srvNsText.getText(), this.srvText.getText()));
-		this.edptText.setText( this.srvText.getText() + "Endpoint" );
+		getNewlyCreatedEndpoint().setInterfaceName( this.itfQText.getDefaultValue());
+		getNewlyCreatedEndpoint().setServiceName( this.srvQText.getDefaultValue());
+		this.edptText.setText( this.srvQText.getDefaultLocalPart() + "Endpoint" );
 		validate();
 	}
 
@@ -331,16 +330,9 @@ public class JbiProvidePage extends JbiAbstractPage {
 	 */
 	private void selectJbiBasicBean( JbiBasicBean bean ) {
 
+		this.itfQText.setValue( bean.getInterfaceName());
+		this.srvQText.setValue( bean.getServiceName());
 		this.edptText.setText( bean.getEndpointName() != null ? bean.getEndpointName() : "" );
-		if( bean.getInterfaceName() != null ) {
-			this.itfText.setText( bean.getInterfaceName().getLocalPart() != null ? bean.getInterfaceName().getLocalPart() : "" );
-			this.itfNsText.setText( bean.getInterfaceName().getNamespaceURI() != null ? bean.getInterfaceName().getNamespaceURI() : "" );
-		}
-
-		if( bean.getServiceName() != null ) {
-			this.srvText.setText( bean.getServiceName().getLocalPart() != null ? bean.getServiceName().getLocalPart() : "" );
-			this.srvNsText.setText( bean.getServiceName().getNamespaceURI() != null ? bean.getServiceName().getNamespaceURI() : "" );
-		}
 
 		SuWizardSettings settings = getWizard().getSettings();
 		settings.soapAddress = bean.getSoapAddress();
