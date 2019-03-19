@@ -35,10 +35,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Link;
+import org.eclipse.swt.widgets.Text;
 
 import com.linagora.petals.common.generation.Mep;
 import com.linagora.petals.common.internal.provisional.swt.DefaultSelectionListener;
-import com.linagora.petals.common.internal.provisional.swt.QNameText;
 import com.linagora.petals.common.internal.provisional.utils.StringUtils;
 import com.linagora.petals.common.internal.provisional.utils.SwtFactory;
 import com.linagora.petals.services.su.extensions.SuWizardSettings;
@@ -52,12 +52,21 @@ import com.sun.java.xml.ns.jbi.AbstractEndpoint;
 public class JbiConsumePage extends JbiAbstractPage {
 
 	private Button invokeByServiceButton, invokeByEndpointButton;
-	private QNameText operationQText;
+	private Text operationText, operationNsText;
 	private ComboViewer mepViewer;
 
 	private List<Mep> supportedMep;
 	private boolean invokeByServiceName = false;
 	private boolean invokeByEndpointName = false;
+
+
+	/**
+	 * Constructor.
+	 */
+	public JbiConsumePage() {
+		super();
+		this.labelSuffix = "";
+	}
 
 
 	/*
@@ -88,13 +97,14 @@ public class JbiConsumePage extends JbiAbstractPage {
 
 
 		// Usual controls
+		int spacing = getWizard().getSettings().showOperationName || getWizard().getSettings().showMep ? 0 : 20;
 		addWorkspaceBrowser( container );
-		createCommonControls( container, 20 );
+		createCommonControls( container, spacing );
 		createCheckboxes( container );
 
 
 		// Disable invocation by end-point for auto-generated end-points
-		this.edptText.getStyledText().addModifyListener( new ModifyListener() {
+		this.edptText.addModifyListener( new ModifyListener() {
 			@Override
 			public void modifyText( ModifyEvent e ) {
 
@@ -126,22 +136,30 @@ public class JbiConsumePage extends JbiAbstractPage {
 		// Add the MEP and operation widgets
 		SuWizardSettings settings = getWizard().getSettings();
 		if( settings.showOperationName ) {
-			Label l = SwtFactory.createLabel( container, "Operation Name:", null ); //$NON-NLS-1$
+			Label l = SwtFactory.createLabel( container, "Operation Name" + REQUIRED + ":", null ); //$NON-NLS-1$
 			GridDataFactory.swtDefaults().indent( 0, 20 ).applyTo( l );
 
-			this.operationQText = SwtFactory.createQNameTextField( container, false, "Operation", "http://your.Operation.Namespace" );
-			GridDataFactory.swtDefaults().align( SWT.FILL, SWT.CENTER ).indent( 0, 20 ).applyTo( this.operationQText );
-			this.operationQText.addModifyListener( new ModifyListener() {
+			this.operationText = SwtFactory.createSimpleTextField( container, true );
+			GridDataFactory.swtDefaults().align( SWT.FILL, SWT.CENTER ).indent( 0, 20 ).applyTo( this.operationText );
+
+			SwtFactory.createLabel( container, "Operation Namespace" + REQUIRED + ":", null ); //$NON-NLS-1$
+			this.operationNsText = SwtFactory.createSimpleTextField( container, true );
+
+			ModifyListener opListener = new ModifyListener() {
 				@Override
 				public void modifyText( ModifyEvent e ) {
-					getWizard().getSettings().invokedOperation = JbiConsumePage.this.operationQText.getValue();
+					QName qn = new QName( JbiConsumePage.this.operationNsText.getText(), JbiConsumePage.this.operationText.getText());
+					getWizard().getSettings().invokedOperation = qn;
 					validate();
 				}
-			});
+			};
+
+			this.operationText.addModifyListener( opListener );
+			this.operationNsText.addModifyListener( opListener );
 		}
 
 		if( settings.showMep ) {
-			SwtFactory.createLabel( container, "Invocation MEP *:", "The Message Exchange Pattern" );
+			SwtFactory.createLabel( container, "Invocation MEP" + REQUIRED + ":", "The Message Exchange Pattern" );
 			this.mepViewer = SwtFactory.createDefaultComboViewer( container, true, true, Mep.values());
 			this.mepViewer.addSelectionChangedListener( new ISelectionChangedListener() {
 				@Override
@@ -161,7 +179,8 @@ public class JbiConsumePage extends JbiAbstractPage {
 
 				// Update the UI
 				JbiConsumePage.this.invokeByServiceName = ((Button) e.widget).getSelection();
-				JbiConsumePage.this.srvQText.setEnabled( JbiConsumePage.this.invokeByServiceName );
+				JbiConsumePage.this.srvText.setEnabled( JbiConsumePage.this.invokeByServiceName );
+				JbiConsumePage.this.srvNsText.setEnabled( JbiConsumePage.this.invokeByServiceName );
 				if( ! JbiConsumePage.this.invokeByServiceName ) {
 					JbiConsumePage.this.invokeByEndpointName = false;
 					JbiConsumePage.this.invokeByEndpointButton.setSelection( false );
@@ -172,10 +191,14 @@ public class JbiConsumePage extends JbiAbstractPage {
 				JbiConsumePage.this.invokeByEndpointButton.notifyListeners( SWT.Selection, new Event());
 
 				// Update the model
-				if( JbiConsumePage.this.invokeByServiceName )
-					getNewlyCreatedEndpoint().setServiceName( JbiConsumePage.this.srvQText.getValue());
-				else
+				if( JbiConsumePage.this.invokeByServiceName ) {
+					getNewlyCreatedEndpoint().setServiceName( new QName(
+							JbiConsumePage.this.srvNsText.getText(),
+							JbiConsumePage.this.srvText.getText()));
+
+				} else {
 					getNewlyCreatedEndpoint().setServiceName( null );
+				}
 
 				validate();
 			}
@@ -232,16 +255,26 @@ public class JbiConsumePage extends JbiAbstractPage {
 				dlg.setNeedOperation( needOperation );
 
 				if( dlg.open() == Window.OK ) {
-					JbiConsumePage.this.itfQText.setValue( dlg.getItfToInvoke());
-					JbiConsumePage.this.srvQText.setValue( dlg.getSrvToInvoke());
-					JbiConsumePage.this.edptText.setText( dlg.getEdptToInvoke() == null ? "" : dlg.getEdptToInvoke());
+					JbiConsumePage.this.edptText.setText( dlg.getEdptToInvoke() != null ? dlg.getEdptToInvoke() : "" );
+					if( dlg.getItfToInvoke() != null ) {
+						JbiConsumePage.this.itfText.setText( dlg.getItfToInvoke().getLocalPart() != null ? dlg.getItfToInvoke().getLocalPart() : "" );
+						JbiConsumePage.this.itfNsText.setText( dlg.getItfToInvoke().getNamespaceURI() != null ? dlg.getItfToInvoke().getNamespaceURI() : "" );
+					}
+
+					if( dlg.getSrvToInvoke() != null ) {
+						JbiConsumePage.this.srvText.setText( dlg.getSrvToInvoke().getLocalPart() != null ? dlg.getSrvToInvoke().getLocalPart() : "" );
+						JbiConsumePage.this.srvNsText.setText( dlg.getSrvToInvoke().getNamespaceURI() != null ? dlg.getSrvToInvoke().getNamespaceURI() : "" );
+					}
 
 					QName op = dlg.getOperationToInvoke();
-					if( EnhancedConsumeDialog.NO_OPERATION.equals( op ))
+					if( EnhancedConsumeDialog.NO_OPERATION.equals( op )) {
 						op = null;
+					}
 
-					if( JbiConsumePage.this.operationQText != null )
-						JbiConsumePage.this.operationQText.setValue( op );
+					if( JbiConsumePage.this.operationText != null && op != null ) {
+						JbiConsumePage.this.operationText.setText( op.getLocalPart() != null ? op.getLocalPart() : "" );
+						JbiConsumePage.this.operationNsText.setText( op.getNamespaceURI() != null ? op.getNamespaceURI() : "" );
+					}
 
 					if( JbiConsumePage.this.mepViewer != null ) {
 						JbiConsumePage.this.mepViewer.setSelection( new StructuredSelection( dlg.getInvocationMep()));

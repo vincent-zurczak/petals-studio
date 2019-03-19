@@ -758,7 +758,7 @@ public final class SwtFactory {
 							if( result == null )
 								result = new Object[ 0 ];
 
-							List<Object> filteredResult = new ArrayList<Object>();
+							List<Object> filteredResult = new ArrayList<>();
 							for( Object o : result ) {
 								if( o instanceof IFile
 											&& fileExtension.equalsIgnoreCase(((IFile) o).getFileExtension()))

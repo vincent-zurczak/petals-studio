@@ -9,7 +9,7 @@
  * Contributors:
  * 		Linagora - initial API and implementation
  *******************************************************************************/
- 
+
 package com.linagora.petals.common.internal.provisional.databinding;
 
 import javax.xml.namespace.QName;
@@ -35,6 +35,6 @@ public class NamespaceQNameToStringConverter extends Converter {
 	 */
 	@Override
 	public Object convert(Object fromObject) {
-		return ((QName)fromObject).getNamespaceURI();
+		return fromObject != null ? ((QName)fromObject).getNamespaceURI() : "";
 	}
 }
